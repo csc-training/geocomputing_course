@@ -14,7 +14,7 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser', 'sphinx-book-theme']
+extensions = ['myst_parser']
 
 source_suffix = ['.rst','.md']
     
@@ -27,5 +27,5 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx-book-theme'
+html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
