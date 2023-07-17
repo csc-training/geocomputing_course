@@ -3,14 +3,22 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Geocomputing course's documentation!
+Welcome to CSC Geocomputing course!
 ===============================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   01_welcome.md
+   materials/welcome.md
+   materials/webinterface.md
+   materials/supercomputing.md
+   materials/exercise_bascis.md
+   materials/htc.md
+   materials/exercise_cli.md
+   materials/exercise_r_py.md
+   materials/own_software.md
+   materials/data.md
 
 
 Indices and tables
