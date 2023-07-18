@@ -100,19 +100,36 @@ Main differences to own computer:
 * Some pre-installed software
 </div>
 
+# Modules
+
+Applications in Puhti are provided in modules. Use
+
+<br>
+
+`module load <modulename>`
+
+<br>
+
+before every application use to make application available.
+
+Check [`https://docs.csc.fi/apps`](https://docs.csc.fi/apps) for module names and versions.
+
+# Directories
+
+<br>
+
+* HOME – user specific; personal configuration files
+* PROJAPPL – project specific; your installations and shared binaries
+* SCRATCH – project specific; main working area
+
+
 # Puhti 
 
 <p align="center">
   <img src="images/puhti_overview.png" width="50%">
 </p>
 
-# Directories
 
-<br>
-
-* HOME – most important (small) files, personal access only
-* PROJAPPL – project specific / your installations/ shared binaries
-* SCRATCH – main working area, can be used to share with project members
 
 # Jobs and queueing 
 
@@ -122,15 +139,33 @@ Main differences to own computer:
 * Queue for resource management system to grant resources
 * All heavy computing must be done via batch jobs!
 
+# Serial vs array vs parallel
+
+> TODO: image here
+
 # Example sbatch script
 
-<p align="center">
-  <img src="images/sbatch_script.png" width="80%">
-</p>
+```
+#!/bin/bash
+#SBATCH --account=<project>      # Choose the billing project. Has to be defined!
+#SBATCH --time=00:02:00          # Maximum duration of the job. Upper limit depends on the partition. 
+#SBATCH --partition=test         # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
+#SBATCH --ntasks=1               # Number of tasks. Upper limit depends on partition. For a serial job this should be set 1!
+
+srun hostname                    # Print compute node name that has been allocated
+
+``` 
 
 <br>
-<p>&rarr; File `simple_serial.bash` </p> <br>
-<p>&rarr; Submit for computation with `sbatch simple_seria.bash` </p>
+<p>&rarr; File `simple.bash` </p> <br>
+<p>&rarr; Submit for computation with `sbatch simple.bash` </p>
+
+# Monitoring jobs
+
+* Standard output in file: slurm-<jobid>.out
+* `squeue -u $USER`
+* `seff <jobid>`
+* `scancel <jobid>`
 
 
 # Applications available on Puhti
