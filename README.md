@@ -1,2 +1,3 @@
-# geocomputing_course
-Course materials for Geocomputing 
+# CSC Geocomputing course
+
+Work in progress: Course materials for Geocomputing course 2023
