@@ -7,7 +7,7 @@ Welcome to CSC Geocomputing course!
 ====================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Practicalities and Intro:
 
    materials/prerequisites.md
@@ -17,16 +17,17 @@ Welcome to CSC Geocomputing course!
    materials/support.md
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Supercomputer:
    
    materials/supercomputer/webinterface.md
    materials/supercomputer/supercomputing.md
+   materials/supercomputer/scripts.md
    materials/supercomputer/htc.md
    materials/supercomputer/own_software.md
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Data:
 
    materials/data/data_into_csc.md
@@ -34,7 +35,7 @@ Welcome to CSC Geocomputing course!
    materials/data/data_storage.md
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Exercises:
 
    materials/exercises/exercise_bascis.md
@@ -42,7 +43,7 @@ Welcome to CSC Geocomputing course!
    materials/exercises/exercise_r_py.md
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Wrap-up:
 
    materials/wrapup.md
