@@ -11,11 +11,11 @@
 
 \+ User support session in Zoom every Wednesday at 14.00
 
-# Tips for messages to servicedesk
+## Tips for messages to servicedesk
 
 > Summary of https://docs.csc.fi/support/support-howto/
 
-# How we can help
+## How we can help
 
 <div class="column">
 

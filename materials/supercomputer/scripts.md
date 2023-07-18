@@ -5,11 +5,11 @@ Supercomputer != laptop
 </p>
 
 
-# GUI -> script
+## GUI -> script
 
 Why?
 e.g. Getting GDAL commands from QGIS
 
-# CLI, Python, R
+## CLI, Python, R
 
 What to start with?

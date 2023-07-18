@@ -11,14 +11,14 @@
 * Ask for help, if needed, we don't bite :)
 
 
-# Own project hints
+## Own project hints
 
 * keep scripts under version control (also simplifies collaboration and synchronising different computers)
 * on Puhti: 
     * scripts in `/projappl/project_200xxxx/your_groupname`
     * data in `/scratch/project_200xxxx/your_groupname` -> raw data, intermediate and final results
 
-# Training
+## Training
 
 * ['CSC computing environment' self-study course](https://ssl.eventilla.com/csccompenvselflearn)
 * ['Research data management' self-study course](https://ssl.eventilla.com/event/v8B6B)

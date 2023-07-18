@@ -18,7 +18,7 @@
 
 </div>
 
-# CSC services
+## CSC services
 
 [`research.csc.fi/en/service-catalog`](https://research.csc.fi/en/service-catalog)
 

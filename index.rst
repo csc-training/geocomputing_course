@@ -38,9 +38,10 @@ Welcome to CSC Geocomputing course!
    :maxdepth: 1
    :caption: Exercises:
 
-   materials/exercises/exercise_bascis.md
+   materials/exercises/exercise_basics.md
    materials/exercises/exercise_cli.md
-   materials/exercises/exercise_r_py.md
+   materials/exercises/exercise_r.md
+   materials/exercises/exercise_python.md   
 
 .. toctree::
    :maxdepth: 1

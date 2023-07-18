@@ -1,19 +1,19 @@
 # Installing own software
 
 
-# Python
+## Python
 
-## Adding Python packages to existing modules
+### Adding Python packages to existing modules
 
-## Own Python environments
+### Own Python environments
 
-# R
+## R
 
-## Adding R packages to `r-env`
+### Adding R packages to `r-env`
 
-## Own R environment
+### Own R environment
 
-# Other software
+## Other software
 
 * Generally useful? -> ask from servicedesk to install
 * Niche? -> try yourself using containers (tykky)

@@ -1,8 +1,6 @@
 # Getting data into CSC environment
 
-# From own computer to supercomputer
-
-## rysnc   
+## From own computer to supercomputer -> rsync
 
 * does not copy what is already there
 * can resume a copy process which disconnected
@@ -11,7 +9,7 @@
 * can warn against accidental over-writes
 * available on Linux and Mac and WSL (windows subsystem linux)
 
-## rsync syntax
+### rsync syntax
 
 ```
 rsync --info=progress2 -a file-name      username@cluster:receiving-directory
@@ -23,19 +21,19 @@ rsync --info=progress2 -a directory-name username@cluster:receiving-directory/di
 * for puhti: `samantha@puhti.csc.fi`
 * for compression use `-az` instead of `-a`
 
-# From own computer to object storage
+## From own computer to object storage
 
 Linux: https://github.com/CSCfi/allas-cli-utils
 
 Windows/Mac: https://docs.csc.fi/data/Allas/accessing_allas/#accessing-allas-with-windows-or-mac
 
-# From internet to supercomputer
+## From internet to supercomputer
 
 ``` wget URL```
 
-# From Paituli to supercomputer
+## From Paituli to supercomputer
 
-# Data available on Puhti
+## Data available on Puhti
 
 <div class="column">
 
@@ -62,7 +60,7 @@ Windows/Mac: https://docs.csc.fi/data/Allas/accessing_allas/#accessing-allas-wit
 [List of spatial data in computing environment](https://docs.csc.fi/data/datasets/spatial-data-in-csc-computing-env/)
 </div>
 
-# Data available on Allas
+## Data available on Allas
 
 Some users share their downloaded and preprocessed data with everyone: 
 

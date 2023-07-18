@@ -27,6 +27,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+# setting title in left panel (default is <projectname> documentation <release>)
 html_title = ""
 
 html_theme = 'sphinx_book_theme'

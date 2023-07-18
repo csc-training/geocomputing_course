@@ -1,6 +1,6 @@
 # Supercomputing 
 
-# Why use a supercomputer?
+## Why use a supercomputer?
 
 <p style="font-size:40px;">&#8987; Resource needs (time, memory, storage, GPU)</p>
 <p style="font-size:40px;">&#128126; “Outsource” heavy computations, keep own computer free</p>
@@ -11,7 +11,7 @@
 <p style="font-size:40px;">&#10067; CSC specialist support</p>
 <p style="font-size:40px;">&#128184; Free of charge for open science at Finnish universities and research institutes.</p>
 
-# Supercomputer
+## Supercomputer
 
 Main differences to own computer:
 <br><br>
@@ -22,7 +22,7 @@ Main differences to own computer:
 * Non-interactive for heavy computations
 * Resource knowledge
 
-# Possibilities
+## Possibilities
 
 * Use more memory/CPU/GPU than your own computer has available <br>
 <br>
@@ -32,7 +32,7 @@ Main differences to own computer:
 <p>&rarr; doing same thing to multiple map tiles/ data chunks </p>
 
 
-# CSC Supercomputers
+## CSC Supercomputers
 
 <br><br><br>
 
@@ -40,7 +40,7 @@ Main differences to own computer:
 <b>Puhti - Mahti - LUMI</b>
 </p>
 
-# Puhti
+## Puhti
 
 <div class="column">
 
@@ -60,7 +60,7 @@ Main differences to own computer:
 * Wide stack of pre-installed software
 </div>
 
-# Mahti
+## Mahti
 
 <div class="column">
 
@@ -81,7 +81,7 @@ Main differences to own computer:
 
 </div>
 
-# LUMI
+## LUMI
 
 <div class="column">
 
@@ -100,7 +100,7 @@ Main differences to own computer:
 * Some pre-installed software
 </div>
 
-# Modules
+## Modules
 
 Applications in Puhti are provided in modules. Use
 
@@ -114,7 +114,7 @@ before every application use to make application available.
 
 Check [`https://docs.csc.fi/apps`](https://docs.csc.fi/apps) for module names and versions.
 
-# Directories
+## Directories
 
 <br>
 
@@ -131,7 +131,7 @@ Check [`https://docs.csc.fi/apps`](https://docs.csc.fi/apps) for module names an
 
 
 
-# Jobs and queueing 
+## Jobs and queueing 
 
 * **Batch** jobs
 	* resource request
@@ -139,11 +139,11 @@ Check [`https://docs.csc.fi/apps`](https://docs.csc.fi/apps) for module names an
 * Queue for resource management system to grant resources
 * All heavy computing must be done via batch jobs!
 
-# Serial vs array vs parallel
+## Serial vs array vs parallel
 
 > TODO: image here
 
-# Example sbatch script
+## Example sbatch script
 
 ```
 #!/bin/bash
@@ -160,7 +160,7 @@ srun hostname                    # Print compute node name that has been allocat
 <p>&rarr; File `simple.bash` </p> <br>
 <p>&rarr; Submit for computation with `sbatch simple.bash` </p>
 
-# Monitoring jobs
+## Monitoring jobs
 
 * Standard output in file: slurm-<jobid>.out
 * `squeue -u $USER`
@@ -168,7 +168,7 @@ srun hostname                    # Print compute node name that has been allocat
 * `scancel <jobid>`
 
 
-# Applications available on Puhti
+## Applications available on Puhti
 
 <div class="column">
 * CloudCompare

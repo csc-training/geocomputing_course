@@ -2,10 +2,10 @@
 
 -> lightweight entry to the supercomputer
 
-# Applications
+## Applications
 
-# Desktop
+## Desktop
 
-# What the webinterface is for - and what not
+## What the webinterface is for - and what not
 
 
