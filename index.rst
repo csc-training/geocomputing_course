@@ -9,7 +9,7 @@ Welcome to CSC Geocomputing course!
 THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;) 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Practicalities and Intro:
 
    materials/prerequisites.md
@@ -19,7 +19,7 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/support.md
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Supercomputer:
    
    materials/supercomputer/webinterface.md
@@ -29,15 +29,16 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/supercomputer/own_software.md
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Data:
 
    materials/data/data_into_csc.md
    materials/data/data_moving.md
    materials/data/data_storage.md
+   materials/data/stac.md
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Exercises:
 
    materials/exercises/exercise_basics.md
@@ -46,7 +47,7 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/exercises/exercise_python.md   
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Wrap-up:
 
    materials/wrapup.md
