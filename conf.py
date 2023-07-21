@@ -15,7 +15,7 @@ release = '0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = ['myst_parser', 
-              'sphinx-togglebutton']
+              'sphinx_togglebutton']
 
 source_suffix = ['.rst','.md']
     
