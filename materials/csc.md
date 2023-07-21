@@ -12,7 +12,7 @@
 <div class="column">
 
 <p align="center">
-  <img src="../images/kajaani.png" width=95%">
+  <img src="./images/kajaani.png" width=95%">
 
 </p>
 

@@ -20,7 +20,7 @@
 <div class="column">
 
 <p align="center">
-  <img src="../images/help_bubbles.drawio.svg" width="75%">
+  <img src="./images/help_bubbles.drawio.svg" width="75%">
 </p>
 
 <p><b>&rarr; servicedesk@csc.fi</b></p> 
@@ -29,7 +29,7 @@
 <div class="column">
 
 <p align="center">
-  <img src="../images/project_partner.drawio.svg" width="75%">
+  <img src="./images/project_partner.drawio.svg" width="75%">
 </p>
 
 <p><b>&rarr;CSC as project partner / subcontractor</b></p> 

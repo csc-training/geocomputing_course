@@ -45,7 +45,7 @@ Main differences to own computer:
 <div class="column">
 
 <p align="center">
-  <img src="../images/puhti_a4.jpg" width="55%">
+  <img src="./images/puhti_a4.jpg" width="55%">
 </p>
 
 </div>
@@ -65,7 +65,7 @@ Main differences to own computer:
 <div class="column">
 
 <p align="center">
-  <img src="../images/mahti_a4.jpg" width="55%">
+  <img src="./images/mahti_a4.jpg" width="55%">
 </p>
 
 </div>
@@ -86,7 +86,7 @@ Main differences to own computer:
 <div class="column">
 
 <p align="center">
-  <img src="../images/lumi2.jpg" width="95%">
+  <img src="./images/lumi2.jpg" width="95%">
 </p>
 </div>
 
