@@ -55,6 +55,6 @@ Windows/Mac: https://docs.csc.fi/data/Allas/accessing_allas/#accessing-allas-wit
 Some users share their downloaded and preprocessed data with everyone: 
 
 * Sentinel-2 L2A data of Finland, growing season (10.5-1.9) 2016-2020
-
+* Your data?
 
 

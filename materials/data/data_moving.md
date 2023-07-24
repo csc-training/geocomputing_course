@@ -27,4 +27,4 @@ gdalinfo /vsis3/<name_of_your_bucket>/<name_of_your_file>
 
 ## Moving data as part of workflow
 
-> Example of moving data into local scratch eg from Allas
+> TODO: Example of moving data into local scratch eg from Allas
