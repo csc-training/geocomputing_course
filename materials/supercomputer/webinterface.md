@@ -31,7 +31,7 @@ The Desktop application provides a desktop environment on Puhti within your web 
 
 ## What the webinterface is for - and what not
 
-<p>:thumbs_up:</p>
+<p>&#128077;</p>
 
 * View, download and upload files
 * Open a shell on the login node
@@ -43,7 +43,7 @@ The Desktop application provides a desktop environment on Puhti within your web 
     * Visualizations
 * Courses
 
-<p>:thumbs_down:</p>
+<p>&#128078;</p>
 
 * Running a script on multiple input files -> array job or other HTC workflow
 * Running large / long computations -> batch job
