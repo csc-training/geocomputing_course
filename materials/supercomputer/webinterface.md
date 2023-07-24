@@ -1,6 +1,6 @@
 # Puhti webinterface
 
--> lightweight entry to the supercomputer
+<p>&rarr; lightweight entry to the supercomputer</p>
 
 ## Applications
 

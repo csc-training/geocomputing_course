@@ -1,6 +1,5 @@
 # Welcome to Geocomputing course
 
-
 * Are you working with geospatial data and running close to the limits of your own computing environment? 
 * Are you curious on how you can take your geospatial data processing and analysis to the next level? 
 * Or maybe you have been using a supercomputer already, but would like to make sure your are getting the most out of it?

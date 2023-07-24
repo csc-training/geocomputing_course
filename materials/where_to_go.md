@@ -25,5 +25,4 @@
 * [CodeRefinery materials on FAIR research software development](https://coderefinery.org/lessons/core/)
 * [CSC geoinformatics training materials](https://research.csc.fi/gis-learning-materials)
 
-<br><br>
 -> follow our [training calendar](https://www.csc.fi/en/training#training-calendar)

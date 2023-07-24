@@ -1,9 +1,6 @@
 # Harnessing the power
 
-<p align="center">
 Supercomputer != laptop
-</p>
-
 
 ## GUI -> script
 
