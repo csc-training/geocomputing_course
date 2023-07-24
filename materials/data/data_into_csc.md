@@ -35,36 +35,26 @@ Windows/Mac: https://docs.csc.fi/data/Allas/accessing_allas/#accessing-allas-wit
 
 ## Data available on Puhti
 
-<div class="column">
-
 * Large commonly used geospatial datasets with open license
 * Removes transfer bottleneck
 * Located at: `/appl/data/geo/`
 * All Puhti users have read access
 
-</div>
-<div class="column">
+  * ~13 TB of datasets available:
+    * Paituli data 
+    * SYKE open datasets
+    * LUKE Multi-source national forest inventory
+    * NLS Virtual rasters for DEMs
+    * Sentinel and Landsat mosaics
 
-* ~13 TB of datasets available:
-  * Paituli data 
-  * SYKE open datasets
-  * LUKE Multi-source national forest inventory
-  * NLS Virtual rasters for DEMs
-  * Sentinel and Landsat mosaics
-
-</div>
-
-<br>
-
-<div>
 [List of spatial data in computing environment](https://docs.csc.fi/data/datasets/spatial-data-in-csc-computing-env/)
-</div>
+
 
 ## Data available on Allas
 
 Some users share their downloaded and preprocessed data with everyone: 
 
 * Sentinel-2 L2A data of Finland, growing season (10.5-1.9) 2016-2020
-
+* Your data?
 
 

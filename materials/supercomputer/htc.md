@@ -2,7 +2,7 @@
 
 "Running large amount of jobs, often same analysis to different input data."
 
--> Map sheets, tiles, data from different areas
+<p>&rarr;  Map sheets, tiles, data from different areas </p>
 
 
 ## Running things at same time
