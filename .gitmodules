@@ -1,0 +1,3 @@
+[submodule "exercises"]
+	path = exercises
+	url = git@github.com:csc-training/geocomputing_exercises.git
