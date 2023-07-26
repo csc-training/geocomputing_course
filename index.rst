@@ -50,6 +50,7 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    :maxdepth: 2
    :caption: Wrap-up:
 
+   materials/own_project.md
    materials/wrapup.md
    materials/where_to_go.md
 
