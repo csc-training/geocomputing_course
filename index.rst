@@ -41,10 +41,7 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    :maxdepth: 2
    :caption: Exercises:
 
-   materials/exercises/exercise_basics.md
-   materials/exercises/exercise_cli.md
-   materials/exercises/exercise_r.md
-   materials/exercises/exercise_python.md   
+   exercises/README.md  
 
 .. toctree::
    :maxdepth: 2
