@@ -8,6 +8,8 @@ Welcome to CSC Geocomputing course!
 
 THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;) 
 
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Practicalities and Intro:

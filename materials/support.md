@@ -17,11 +17,11 @@
 
 ## How we can help
 
-<img src="./images/help_bubbles.drawio.svg" width="75%">
+<img src="images/help_bubbles.drawio.svg" width="75%">
 
 <p><b>&rarr; servicedesk@csc.fi</b></p> 
 
-<img src="./images/project_partner.drawio.svg" width="75%">
+<img src="images/project_partner.drawio.svg" width="75%">
 
 <p><b>&rarr;CSC as project partner / subcontractor</b></p> 
 

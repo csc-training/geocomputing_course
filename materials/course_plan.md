@@ -1,6 +1,8 @@
 # Geocomputing course plan
 
-
+* CSC 
+* CSC services
+* CSC support
 
 * Start with GUI via webinterface, no in depth info on resources, start QGIS or SNAP
     * talk about usecases
