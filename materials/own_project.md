@@ -14,6 +14,12 @@ On project organization: [CodeRefinery lesson - Reproducible research](https://c
 
 ## Moving from GUI to CLI/scripts
 
+Some GUI tools provide the commands that correspond to GUI tool either in documentation or as part of the tool.
+> Show QGIS -> GDAL commands
+
+Google the toolname from eg QGIS and the desired scripting language to get some ideas.
+
+
 ## Moving from own computer to HPC
 
 ### Your own scripts
@@ -37,7 +43,6 @@ On project organization: [CodeRefinery lesson - Reproducible research](https://c
 
 #### Making use of HPC resources
 
-* internally vs externally of your scripts
+* internal vs external parallelization
 * 
 
-### GUI
