@@ -39,7 +39,7 @@ Puhti - Mahti - LUMI
 ## Puhti
 
 
-<img src="../images/puhti_a4.jpg" width="55%">
+![](../images/puhti_a4.jpg)
 
 
 * Use cases from interactive single core data processing to medium scale parallel simulations
@@ -50,7 +50,7 @@ Puhti - Mahti - LUMI
 
 ## Mahti
 
-<img src="../images/mahti_a4.jpg" width="55%">
+![](../images/mahti_a4.jpg)
 
 
 * Geared towards medium and large scale parallel simulations
@@ -60,7 +60,7 @@ Puhti - Mahti - LUMI
 
 ## LUMI
 
-<img src="../images/lumi2.jpg" width="95%">
+![](../images/lumi2.jpg)
 
 * Research + industry and SME access
 * `~100 000`  AMD EPYK CPUs
@@ -87,7 +87,7 @@ Check [`https://docs.csc.fi/apps`](https://docs.csc.fi/apps) for module names an
 
 # Puhti 
 
-<img src="../images/puhti_overview.png" width="50%">
+![](../images/puhti_overview.png)
 
 ## Jobs and queueing 
 
