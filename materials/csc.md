@@ -5,7 +5,7 @@
 * Headquaters in Keilaniemi, Espoo
 * Side offices and supercomputers in Kajaani
 
-<img src="images/kajaani.png" width=95%>
+![Kajaani](images/kajaani.png){width=95%}
 
 ## CSC services
 
