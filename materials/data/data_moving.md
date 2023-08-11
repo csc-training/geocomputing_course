@@ -5,6 +5,12 @@ module load allas
 allas-conf --mode s3cmd
 ```
 
+> TODO: add some useful s3cmd commands
+
+```
+s3cmd 
+```
+
 ## Accessing data directly from object storage
 
 * GDAL and other GDAL based tools (eg some Python and R packages and QGIS)
