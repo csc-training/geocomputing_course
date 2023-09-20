@@ -31,13 +31,13 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/supercomputer/own_software.md
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Data:
 
-   materials/data/data_into_csc.md
-   materials/data/data_moving.md
-   materials/data/data_storage.md
-   materials/data/stac.md
+   materials/data/puhti_data_storage.md
+   materials/data/moving_data.md   
+   materials/data/allas.md      
+   materials/data/spatial_data_at_csc.md
 
 .. toctree::
    :maxdepth: 2
