@@ -11,6 +11,8 @@ In this section, you will learn how to manage different disk areas in HPC enviro
 |**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/<project>`|No            |50 GiB              |100 000 files  | installation files |
 |**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/<project>` |180 days      |1 TiB              |1 000 000 files  | main working area |
 
+- [LUMI disks](https://docs.lumi-supercomputer.eu/storage/)
+
 # Additional temporary fast local disk areas 
 
 - [Login node local tmp](https://docs.csc.fi/computing/disk/#login-nodes) - `$TMPDIR`, compiling, temporary, 
