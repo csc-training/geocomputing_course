@@ -15,9 +15,9 @@
 ## Command line tools
 - For any amount of data, practically required if data size > 1 Tb.
 
-### scp
+### [`scp`](https://docs.csc.fi/data/moving/scp/) 
 
-- [`scp`](https://docs.csc.fi/data/moving/scp/)  
+- The most usual Linux tool for moving file
 - `scp` works even in Windows Powershell
 
 ```
@@ -49,12 +49,25 @@ rsync --info=progress2 -a /path/to/data_directory cscusername@puhti.csc.fi:/scra
 
 
 
+## From external data services to supercomputer
+
+- When downloading from exernal services try to download directly to CSC, not via your local computer
+- Check what APIs/tools the service supports:
+	- ftp, rsync ?
+	- wget/curl if HTTP-urls avaialable
+	- OGC APIs, STAC ?
+
+### [wget](https://docs.csc.fi/data/moving/wget/)
+- 
+
+``` 
+# One file:
+wget http://wwwd3.ymparisto.fi/d3/gis_data/spesific/syvyyskayra.zip 
+# One folder:
+wget -r -nc ftp://ftp.aineistot.metsaan.fi/Metsamaski/Maakunta/ --cut-dirs=2
+```
+
+
 ## Moving data as part of workflow
 
 > TODO: Example of moving data into local scratch eg from Allas
-
-
-## From internet to supercomputer
-
-``` wget URL```
-
