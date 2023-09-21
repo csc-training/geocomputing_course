@@ -39,7 +39,6 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    :maxdepth: 3
    :caption: Data:
 
-
    materials/data/moving_data.md   
    materials/data/allas.md  
    materials/data/stac.md 
