@@ -18,14 +18,14 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/practicalities.md
    materials/welcome.md
    materials/csc.md
-   materials/support.md
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Supercomputer:
    
    materials/supercomputer/supercomputing.md  
-   materials/supercomputer/data_storage.md 
+   materials/data/data_storage.md 
    materials/supercomputer/software.md
    materials/supercomputer/webinterface.md   
    materials/supercomputer/jobs.md      
@@ -33,7 +33,7 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/supercomputer/exercise_gdal.md     
    materials/supercomputer/exercise_python.md
    materials/supercomputer/exercise_r.md   
-   materials/supercomputer/isntallations.md
+   materials/supercomputer/installations.md
 
 
 .. toctree::
@@ -49,6 +49,7 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    :caption: Wrap-up:
 
    materials/own_project.md
+   materials/support.md   
    materials/wrapup.md
    materials/where_to_go.md
 

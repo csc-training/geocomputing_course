@@ -1,35 +1,43 @@
-# [Moving files between a local computer and Puhti](https://docs.csc.fi/data/moving/)
+# Moving data
 
-## [Puhti Web Interface](puhti.csc.fi)
+## Moving files between a local computer and a supercomputer
+
+* [Moving files between a local computer and a supercomputer](https://docs.csc.fi/data/moving/)
+
+### Puhti Web Interface
 
 - Very easy, no installations needed.
 - For smaller amounts of data, < 10 Gb.
 - Upload, download, moving, creating folders.
+- [Puhti Web Interface](https://puhti.csc.fi)
+- [Puhti Web Interface in Docs](https://docs.csc.fi/computing/webinterface/)
 
-## [Graphical data transfer tools](https://docs.csc.fi/data/moving/graphical_transfer/) on local computer
+### Graphical data transfer tools on local computer
 
 - For example: _FileZilla_ and _WinSCP_
 - For medium amounts of data, < 1 Tb.
 - Very easy, but installation required.
+- [Graphical data transfer tools in Docs](https://docs.csc.fi/data/moving/graphical_transfer/)
    
-## Command line tools
+### Command line tools
 - For any amount of data, practically required if data size > 1 Tb.
 
-### [`scp`](https://docs.csc.fi/data/moving/scp/) 
+#### scp
 
 - The most usual Linux tool for moving file
 - `scp` works even in Windows Powershell
+- [`scp` in Docs](https://docs.csc.fi/data/moving/scp/)
 
 ```
 # One file:
 scp /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_xxxx/data_dir
 # One folder:
-scp -r /path/to/data_directory cscusername@puhti.csc.fi:/scratch/project_#####/data_dir 
+scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_#####/directory 
 ```
 
 
-### rsync
-- [`rsync`](https://docs.csc.fi/data/moving/rsync/)
+#### rsync
+
 - Does not copy what is already there
 - Can resume a copy process which disconnected
 - Efficient for small files 
@@ -38,12 +46,13 @@ scp -r /path/to/data_directory cscusername@puhti.csc.fi:/scratch/project_#####/d
 - Available on Linux and Mac and WSL (windows subsystem linux)
 - Organization firewalls might have forbidden using rsync, especially in Valtori organizations
 - Windows Powershell does not have `rsync`, _MobaXterm_ has `rsync`, but it removes write permissions of copied files
+- [`rsync` in Docs](https://docs.csc.fi/data/moving/rsync/)
 
 ```
 # One file:
 rsync --info=progress2 -a /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_xxxx/data_dir
 # One folder:
-rsync --info=progress2 -a /path/to/data_directory cscusername@puhti.csc.fi:/scratch/project_xxxx/data_dir
+rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/project_xxxx/directory
 ```
 * `progress2` shows time left and percentage
 
@@ -57,8 +66,9 @@ rsync --info=progress2 -a /path/to/data_directory cscusername@puhti.csc.fi:/scra
 	- wget/curl if HTTP-urls avaialable
 	- OGC APIs, STAC ?
 
-### [wget](https://docs.csc.fi/data/moving/wget/)
-- 
+### wget
+
+- [`wget` in Docs](https://docs.csc.fi/data/moving/wget/)
 
 ``` 
 # One file:
@@ -70,4 +80,4 @@ wget -r -nc ftp://ftp.aineistot.metsaan.fi/Metsamaski/Maakunta/ --cut-dirs=2
 
 ## Moving data as part of workflow
 
-> TODO: Example of moving data into local scratch eg from Allas
+> ToDo: Example of moving data into local scratch eg from Allas
