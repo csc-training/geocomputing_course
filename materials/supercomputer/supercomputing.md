@@ -1,4 +1,4 @@
-# Supercomputing 
+# Recources and possibilies 
 
 ## Why use a supercomputer?
 
@@ -65,6 +65,7 @@ Puhti - Mahti - LUMI
 ![](../images/lumi2.jpg)
 
 Name | CPUs | GPUs | Pre-installed GIS tools | Finnish spatial data locally | Scope |
+--- | --- | --- | --- | --- | --- |
 Puhti | 28 000 | 240 Nvidia V100 | 20 | Yes | National |
 Mahti | 90 000 | 96 Nvidia A100 | 1 | No | National |
 LUMI | 100 000 | 10 000 AMD MI250X | 5 | No | EU |

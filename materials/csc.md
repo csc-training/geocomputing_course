@@ -27,16 +27,3 @@
 * Sending data: [Funet FileSender](https://filesender.funet.fi/)
 
 * [CSC service catalog](https://research.csc.fi/en/service-catalog)
-
-
-
-Supercomputers
-How they differ from normal computer
-resources available
-OS and software
-resource allocation
-jobs
-Puhti/Mahti/LUMI
-differences
-Puhti software & data
-Skills needed and how to get them
