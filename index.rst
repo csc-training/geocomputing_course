@@ -24,16 +24,17 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    :maxdepth: 2
    :caption: Supercomputer:
    
+   materials/supercomputer/supercomputing.md  
+   materials/supercomputer/data_storage.md 
+   materials/supercomputer/software.md
    materials/supercomputer/webinterface.md   
-   materials/supercomputer/puhti_data_storage.md 
-   materials/supercomputer/spatial_data_at_csc.md   
-   materials/supercomputer/supercomputing.md
+   materials/supercomputer/jobs.md      
    materials/supercomputer/htc.md
    materials/supercomputer/exercise_gdal.md     
    materials/supercomputer/exercise_python.md
    materials/supercomputer/exercise_r.md   
-   materials/supercomputer/own_software.md
-   materials/supercomputer/scripts.md   
+   materials/supercomputer/isntallations.md
+
 
 .. toctree::
    :maxdepth: 3

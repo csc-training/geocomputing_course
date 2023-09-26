@@ -31,6 +31,21 @@ Main differences to own computer:
 
 <p>&rarr; doing same thing to multiple map tiles/ data chunks </p>
 
+## Harnessing the power
+
+Supercomputer != laptop
+
+### GUI -> script
+
+> Interactive usage is limited in resources. The real power comes from parallelization for which we will need to write scripts.
+> Scripts capture what needs to be done in text format and make it understandable for the computer to work with.
+> Usage of scripts over GUI also increases reproducibility of your work.
+> Demo e.g. Getting GDAL commands from QGIS
+
+### CLI, Python, R
+
+> Simple usecases may be sufficiently run with command line tools only. More complicated workflows can be implemented in any programming language of your choice. If you do not know any, we recommend you start with Python.
+> Googling your usecase may provide an overview if there is Python or R packages or command line tools are available for your usecase. 
 
 ## CSC Supercomputers
 
@@ -38,116 +53,38 @@ Puhti - Mahti - LUMI
 
 ## Puhti
 
-
 ![](../images/puhti_a4.jpg)
-
-
-* Use cases from interactive single core data processing to medium scale parallel simulations
-* `~28 000` Intel CPUs 
-* `240` Nvidia V100 GPUs 
-* Wide stack of pre-installed software
-
 
 ## Mahti
 
 ![](../images/mahti_a4.jpg)
 
 
-* Geared towards medium and large scale parallel simulations
-* `~90 000` Intel CPUs
-* `96` Nvidia A100 GPUs 
-* Some pre-installed software
-
 ## LUMI
 
 ![](../images/lumi2.jpg)
 
+Name | CPUs | GPUs | Pre-installed GIS tools | Finnish spatial data locally | Scope |
+Puhti | 28 000 | 240 Nvidia V100 | 20 | Yes | National |
+Mahti | 90 000 | 96 Nvidia A100 | 1 | No | National |
+LUMI | 100 000 | 10 000 AMD MI250X | 5 | No | EU |
+
+Puhti:
+* Use cases from interactive single core data processing to medium scale parallel simulations
+* The first option to consider for Finnish academic projects
+
+Mahti:
+* Geared towards medium and large scale parallel simulations
+* Projects move from Puhti to Mahti, once Puhti recources become limiting.
+
+LUMI:
 * Research + industry and SME access
-* `~100 000`  AMD EPYK CPUs
-* `~10 000` AMD MI250X GPUs
-* Some pre-installed software
+* Users are mainly expected to install their own tools.
+
+# Skills needed and how to get them
+
+ToDo
 
 
-## Modules
-
-Applications in Puhti are provided in modules. Use
-
-`module load <modulename>`
-
-before every application use to make application available.
-
-Check [`https://docs.csc.fi/apps`](https://docs.csc.fi/apps) for module names and versions.
-
-## Directories
-
-* HOME – user specific; personal configuration files
-* PROJAPPL – project specific; your installations and shared binaries
-* SCRATCH – project specific; main working area
 
 
-# Puhti 
-
-![](../images/puhti_overview.png)
-
-## Jobs and queueing 
-
-* **Batch** jobs
-	* resource request
-	* computing step(s)
-* Queue for resource management system to grant resources
-* All heavy computing must be done via batch jobs!
-
-## Serial vs array vs parallel
-
-> TODO: image here
-
-## Example sbatch script
-
-```
-#!/bin/bash
-#SBATCH --account=<project>      # Choose the billing project. Has to be defined!
-#SBATCH --time=00:02:00          # Maximum duration of the job. Upper limit depends on the partition. 
-#SBATCH --partition=test         # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
-#SBATCH --ntasks=1               # Number of tasks. Upper limit depends on partition. For a serial job this should be set 1!
-
-srun hostname                    # Print compute node name that has been allocated
-
-``` 
-
-
-<p>&rarr; File `simple.bash` </p> 
-<p>&rarr; Submit for computation with `sbatch simple.bash` </p>
-
-## Monitoring jobs
-
-* Standard output in file: slurm-<jobid>.out
-* `squeue -u $USER`
-* `seff <jobid>`
-* `scancel <jobid>`
-
-
-## Applications available on Puhti
-
-
-* CloudCompare
-* FORCE 
-* GDAL/OGR
-* GRASS GIS
-* LasTools
-* MatLab 
-* OpenDroneMap
-* Orfeo Toolbox
-* PCL
-* PDAL
-* Python geospatial packages: geoconda
-* QGIS
-* R geospatial packages: r-env
-* SagaGIS
-* SNAP, Sen2cor, sen2mosaic
-* WhiteboxTools
-* Zonation
-* Deep learning: pytorch, tensorflow
-
- Something missing?
-      Ask us :)
-      servicedesk@csc.fi
