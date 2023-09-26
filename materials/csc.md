@@ -6,7 +6,6 @@
 * Side offices and supercomputers in Kajaani
 * ~650 persons
 
-
 ![Kajaani](images/kajaani.png)
 
 ## Compute services
