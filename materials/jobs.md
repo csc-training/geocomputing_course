@@ -2,7 +2,7 @@
 
 # Jobs 
 
-![](../images/puhti_overview.png)
+![](./images/puhti_overview.png)
 
 ## Jobs and queueing 
 

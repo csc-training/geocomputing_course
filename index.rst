@@ -12,44 +12,70 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
 
 .. toctree::
    :maxdepth: 2
-   :caption: Practicalities and Intro:
+   :caption: Practicalities
 
    materials/prerequisites.md
    materials/practicalities.md
    materials/welcome.md
+   materials/cheatsheet.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: CSC - IT Center for Science
+
    materials/csc.md
+   materials/csc_services.md
+   materials/support.md 
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Supercomputer:
+   :caption: Supercomputer - intro
    
-   materials/supercomputer/supercomputing.md  
-   materials/data/data_storage.md 
-   materials/supercomputer/software.md
-   materials/supercomputer/webinterface.md   
-   materials/supercomputer/jobs.md      
-   materials/supercomputer/htc.md
-   materials/supercomputer/exercise_gdal.md     
-   materials/supercomputer/exercise_python.md
-   materials/supercomputer/exercise_r.md   
-   materials/supercomputer/installations.md
+   materials/supercomputing.md  
+   materials/puhti_data_storage.md 
+   materials/spatial_data_at_csc.md
+   materials/software.md
+   materials/webinterface.md
+   materials/exercise_webinterface.md
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Terminology and concepts
+
+
+   materials/terminology.md
+   materials/terminal.md
+   materials/fair_share.md
+   materials/partitions.md
+   materials/resources.md
+   materials/jobs.md
+   materials/exercise_basics.md
+   materials/htc.md
+   materials/exercise_gdal.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Own environments and code
+
+   materials/exercise_python.md
+   materials/exercise_r.md 
+   materials/installations.md
+   materials/own_project.md
 
 .. toctree::
    :maxdepth: 3
    :caption: Data:
 
-   materials/data/moving_data.md   
-   materials/data/allas.md  
-   materials/data/stac.md 
+   materials/moving_data.md   
+   materials/allas.md  
+   materials/stac.md 
+   materials/exercise_allas.md
 
 .. toctree::
    :maxdepth: 2
    :caption: Wrap-up:
-
-   materials/own_project.md
-   materials/support.md   
+  
    materials/wrapup.md
    materials/where_to_go.md
 

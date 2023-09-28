@@ -1,15 +1,17 @@
-# Storage
+# Disk areas and Allas
 In this section, you will learn how to manage different disk areas in HPC environment at CSC
 
 # Main disk areas in Puhti
 
-![](../../images/disk-systems.svg){width=90%}
+![](./images/disk-systems.svg){width=90%}
 
 | Name     |Owner   |Path                 |Cleaning      |Capacity|Number of files| Use |
 |------------|--------|--------------------|---------------------|--------------|----------------|----------------|
 |**[home](https://docs.csc.fi/computing/disk/#home-directory)**    |Personal|`/users/<user-name>` |No            |10 GiB              |100 000 files  | personal settings and files |
 |**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/<project>`|No            |50 GiB              |100 000 files  | installation files |
 |**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/<project>` |180 days      |1 TiB              |1 000 000 files  | main working area |
+
+- [LUMI disks](https://docs.lumi-supercomputer.eu/storage/)
 
 # Additional temporary fast local disk areas 
 
@@ -29,7 +31,7 @@ In this section, you will learn how to manage different disk areas in HPC enviro
 - use `csc-workspaces` command to display available projects and quotas 
 
 
-![](../../images/disk_status.png){width=50%}
+![](./images/disk_status.png){width=50%}
 
 # Some best practice tips
 
@@ -43,27 +45,3 @@ In this section, you will learn how to manage different disk areas in HPC enviro
 	- Only file databases (SQLite, GeoPackage) can be kept in supercomputer disks, 
 	- For PostgreSQL (but not PostGIS) use CSC [Database-as-service](https://docs.csc.fi/cloud/dbaas/) 
 	- For any other database set up virtual machine in cPouta
-	
-# [Geospatial data available on CSC supercomputer Puhti](https://docs.csc.fi/data/datasets/spatial-data-in-csc-computing-env/)
-
-* Large commonly used geospatial datasets with open license
-* Removes transfer bottleneck
-* Located at: `/appl/data/geo/`
-* All Puhti users have read access
-
-* ~13 TB of datasets available:
-* Paituli data, with virtual mosaics for raster data
-* SYKE open datasets
-* LUKE Multi-source national forest inventory
-* Forest center canopy height etc
-
-
-# [Paituli STAC](https://paituli.csc.fi/stac.html)
-
-- Easy search and download of data
-- Example scripts for Python and R
-- [~100 datasets](https://radiantearth.github.io/stac-browser/#/external/paituli.csc.fi/geoserver/ogc/stac/v1)
-	- Paituli raster datasets
-	- FMI tuulituhohaukka datasets
-	- GeoCubes datasets
-	- Sentinel2 2A images in Allas by 	
