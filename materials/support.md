@@ -1,5 +1,6 @@
 # CSC support
 
+TODO: clean up
 
 [`docs.csc.fi`](https://docs.csc.fi)
 

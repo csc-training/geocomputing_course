@@ -1,5 +1,7 @@
 # High Throughput Computing (HTC) and parallelization
 
+TODO: fix texts and reorder
+
 ## Running things at same time
 
 * within batch script 

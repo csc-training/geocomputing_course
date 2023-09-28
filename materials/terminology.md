@@ -1,5 +1,7 @@
 # Terminology
 
+TODO: clean up and texts
+
 - You can roughly think that one **node** is a single computer
 - A node on a supercomputer contains:
   - One or more central processing units (**CPUs**) with many **cores**

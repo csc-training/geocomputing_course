@@ -1,5 +1,6 @@
 # Fair share of use
 
+TODO: fix texts and reorder
 TODO: restaurant analogy?
 
 

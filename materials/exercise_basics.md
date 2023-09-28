@@ -1,7 +1,8 @@
 # Exercise - basics
 
-## Interactive
+TODO: update to fit here; current texts from env eff course
 
+## Interactive
 
 # Batch job tutorial - Interactive jobs
 

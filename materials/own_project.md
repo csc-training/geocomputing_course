@@ -1,5 +1,7 @@
 # Own project hints
 
+TODO: fix texts and reorder
+
 * keep scripts under version control (also simplifies collaboration and synchronising different computers, e.g. git(hub))
 * on Puhti: 
     * scripts in `/projappl/project_200xxxx/your_groupname/`
