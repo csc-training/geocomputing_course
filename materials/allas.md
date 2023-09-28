@@ -11,7 +11,7 @@
 - For computation the data has to be typically copied to the computing environment
 
 
-!["Allas"](img/allas.png "Allas"){width=90%}
+!["Allas"](./images/allas.png "Allas"){width=90%}
 
 
 # Allas – object storage: what it is NOT

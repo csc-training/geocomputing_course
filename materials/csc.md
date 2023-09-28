@@ -1,4 +1,4 @@
-# CSC -IT center for science
+# [CSC -IT center for Science](https://www.csc.fi/)
 
 * Non-profit company producing IT services for research and higher education
 * Owned by ministry of education and culture (70%) and higher education institutions (30%)
@@ -8,21 +8,14 @@
 
 ![Kajaani](images/kajaani.png)
 
-## Compute services
+## [Geoportti](https://www.geoportti.fi)
 
-* Supercomputers: [Puhti](https://research.csc.fi/-/puhti), [Mahti](https://research.csc.fi/-/mahti), [LUMI](https://www.lumi-supercomputer.eu/)
-* Virtual machines for web services and database: [cPouta](https://research.csc.fi/-/cpouta)
-* Containers for web services : [Rahti](https://research.csc.fi/-/rahti)
-* Sensitive data: [SD services](https://research.csc.fi/sensitive-data-services-for-research), [ePouta](https://research.csc.fi/-/epouta)
-* Juputer and RStudio for courses: [CSC Notebooks](https://docs.csc.fi/cloud/csc_notebooks/)
+Geoportti Research Infrastructure (RI) is a shared service for researchers, teachers and students using geospatial data and geocomputing tools. Geoportti RI helps the researchers in Finland to use, to refine, to preserve and to share their geospatial resources.
 
-## Data services
+TODO: text fix, logo
 
-* Spatial data: [Paituli](https://paituli.csc.fi/)
-* Project lifetime data storage: [Allas](https://research.csc.fi/-/allas)
-* Databases: [Pukki](https://docs.csc.fi/cloud/dbaas/) ([Kaivos](https://research.csc.fi/-/kaivos))
-* Publishing, storing or downloading open data: [OKM Fairdata](https://www.fairdata.fi/en/): IDA, Etsin, Qvain, PAS
-* Teaching materials: [Library of Open Educational Resources](https://aoe.fi/)
-* Sending data: [Funet FileSender](https://filesender.funet.fi/)
+## [Location Innovation Hub](https://locationinnovationhub.eu)
 
-* [CSC service catalog](https://research.csc.fi/en/service-catalog)
+The Location Innovation Hub (LIH) is a centre of excellence in location information coordinated by the Finnish Geospatial Research Institute. Our services are produced in conjunction with a partner network. We help companies to grow their business with location information. We also serve the public sector.
+
+TODO: text fix, logo

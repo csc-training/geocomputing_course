@@ -53,16 +53,16 @@ Puhti - Mahti - LUMI
 
 ## Puhti
 
-![](../images/puhti_a4.jpg)
+![](./images/puhti_a4.jpg)
 
 ## Mahti
 
-![](../images/mahti_a4.jpg)
+![](./images/mahti_a4.jpg)
 
 
 ## LUMI
 
-![](../images/lumi2.jpg)
+![](./images/lumi2.jpg)
 
 Name | CPUs | GPUs | Pre-installed GIS tools | Finnish spatial data locally | Scope |
 --- | --- | --- | --- | --- | --- |
