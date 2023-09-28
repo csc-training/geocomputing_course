@@ -11,6 +11,10 @@
 On project organization: [CodeRefinery lesson - Reproducible research](https://coderefinery.github.io/reproducible-research/organizing-projects/)<br>
 [CodeRefinery lesson - Modular code development](https://coderefinery.github.io/modular-type-along/instructor-guide/)
 
+## Making use of HPC resources
+
+* Just moving a script to HPC does not make it run faster
+* 
 
 ## Moving from GUI to CLI/scripts
 
@@ -32,7 +36,7 @@ Google the toolname from eg QGIS and the desired scripting language to get some 
 * know your resources
 * make sure your code works as expected before moving to HPC
 
-# Before starting large-scale calculations
+## Before starting large-scale calculations
 
 - Check how the software and your actual input performs
     - Common job errors are caused by typos in batch/input scripts
@@ -42,7 +46,7 @@ Google the toolname from eg QGIS and the desired scripting language to get some 
     - It's _much worse_ to always run with excessively large requests "just in case"
 
 
-# Running a new application in Puhti 1/2
+## Running a new application in Puhti 
 
 - If it comes with tutorials, do at least one
    - This will likely be the fastest way forward
@@ -54,9 +58,6 @@ Google the toolname from eg QGIS and the desired scripting language to get some 
    - Perhaps it is easier to find the correct command line options
    - Use the `top` command to get rough estimate of memory use, _etc_.
    - If developers provide some test or example data, run it first and make sure results are correct
-
-# Running a new application in Puhti 2/2
-
 - You can use the _test_ queue to check that your batch job script is correct
    - Limits : 15 min, 2 nodes
    - Job turnaround usually very fast even if machine is "full"
@@ -67,17 +68,8 @@ Google the toolname from eg QGIS and the desired scripting language to get some 
 - How many cores to allocate?
    - This depends on many things, so you have to try, see our [instructions about a scaling test](https://docs.csc.fi/support/tutorials/cmdline-handson/#scaling-test-for-an-mpi-parallel-job)
 
-#### Python
-
-* Package availability: `module load geoconda` and `list-packages` ([adding Python packages for your own usage](https://docs.csc.fi/apps/python/#installing-python-packages-to-existing-modules))
-
-#### R
-
-#### Other
 
 
-#### Making use of HPC resources
 
-* Just moving a script to HPC does not make it run faster
-* 
+
 

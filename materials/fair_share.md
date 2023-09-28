@@ -20,7 +20,7 @@ TODO: restaurant analogy?
 * Getting started with Slurm batch jobs on Puhti/Mahti and LUMI
 
 
-## Queing 
+## Queueing 
 
 - A job is queued and starts when the requested resources become available
 - The order in which the queued jobs start depends on their priority and currently available resources
@@ -29,6 +29,28 @@ TODO: restaurant analogy?
    - Over time (while queueing) its priority _increases_ and eventually it will run
    - Some queues have a lower priority (e.g. _longrun_ -- use shorter if you can!)
 - See our documentation for more information on [Getting started with running batch jobs on Puhti/Mahti](https://docs.csc.fi/computing/running/getting-started/) and [LUMI](https://docs.lumi-supercomputer.eu/runjobs/).
+
+### Optimal usage on multi-user computing platforms
+
+- The computing resources are shared among hundreds of your colleagues, who all have different resource needs
+- Resources allocated to your job are not available for others to use
+   - Important to request only the resources you need and ensure that the resources are used efficiently
+- Even if you _can_ use more resources, should you?
+
+### One resource type will be a bottleneck
+
+<div class="column">
+- A single node can host many jobs from different users
+- Different jobs need different resources
+- Typically, the cores run out before the memory does
+- Sometimes a job uses only one core, but will consume all memory
+   - No further jobs will fit in the node
+   - If the job is _not_ using the memory (just reserving it), resources are wasted
+</div>
+<div class="column">
+![](img/node-cpu-full.svg "Node cpu full"){width=45%}
+![](img/node-mem-full.svg "Node memory full from one job"){width=45%}
+</div>
 
 # Schema of how the batch job scheduler works
 

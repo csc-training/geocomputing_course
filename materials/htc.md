@@ -1,32 +1,17 @@
 # High Throughput Computing (HTC) and parallelization
 
-## Slurm accounting
+## Running things at same time
 
-### Optimal usage on multi-user computing platforms
+* within batch script 
+<p>&rarr; array job, GNU parallel </p>
+* within python script
+<p>&rarr; multiprocessing, joblib, dask </p>
+* within R script
+<p>&rarr; future, foreach, snow </p>
 
-- The computing resources are shared among hundreds of your colleagues, who all have different resource needs
-- Resources allocated to your job are not available for others to use
-   - Important to request only the resources you need and ensure that the resources are used efficiently
-- Even if you _can_ use more resources, should you?
+## Slurm accounting: batch job resource usage 
 
-### One resource type will be a bottleneck
 
-<div class="column">
-- A single node can host many jobs from different users
-- Different jobs need different resources
-- Typically, the cores run out before the memory does
-- Sometimes a job uses only one core, but will consume all memory
-   - No further jobs will fit in the node
-   - If the job is _not_ using the memory (just reserving it), resources are wasted
-</div>
-<div class="column">
-![](img/node-cpu-full.svg "Node cpu full"){width=45%}
-![](img/node-mem-full.svg "Node memory full from one job"){width=45%}
-</div>
-
-### Slurm accounting: batch job resource usage 1/2
-
-<div class="column">
 - Resource usage can be queried with `seff <slurm jobid>`
 - Points to pay attention to:
    - Low CPU Efficiency:
@@ -39,12 +24,9 @@
       - Lots of caveats here
    - Low GPU efficiency:
       - Better to use CPUs? Disk I/O?
-</div>
-<div class="column">
-![](img/seff-output-new.png "Seff output"){width=90%}
-</div>
 
-### Slurm accounting: batch job resource usage 2/2
+![](img/seff-output-new.png "Seff output"){width=90%}
+
 
 - Not all usage is captured by Slurm accounting
    - If CPU efficiency seems too low, look at the completion time
@@ -83,7 +65,7 @@
 - Parallelism simplified:
    - You use hundreds of ordinary computers simultaneously to solve a single problem
 
-# First steps for fast jobs (1/2)
+# First steps for fast jobs 
 
 - Spend a little time to investigate:
    - Which of the available software would be the best to solve the kind of problem you have?
@@ -92,16 +74,13 @@
    - The software that solves your problem fastest might not always be the best
       - Issues like ease-of-use and compute power/memory/disk demands are also highly relevant
    - Quite often it is useful to start simple and gradually use more complex approaches if needed
-
-# First steps for fast jobs (2/2)
-
 - When you've found the software you want to use, check if it is available at CSC as a [pre-installed optimized version](https://docs.csc.fi/apps/)
    - Familiarize yourself with the software manual, if available
 - If you need to install a software package distributed through Conda, [you need to containerize it](https://docs.csc.fi/computing/usage-policy/#conda-installations)
    - Containerizing greatly speeds up performance at startup and can be done easily with the [Tykky wrapper](https://docs.csc.fi/computing/containers/tykky/)
 - If you can't find suitable software, consider writing your own code
 
-# Optimize the performance of your own code (1/2)
+# Optimize the performance of your own code
 
 - If you have written your own code, compile it with optimizing compiler options
    - Docs CSC: compiling on [Puhti](https://docs.csc.fi/computing/compiling-puhti/) and [Mahti](https://docs.csc.fi/computing/compiling-mahti/)
@@ -110,9 +89,6 @@
    - Docs CSC: [Queue options](https://docs.csc.fi/computing/running/batch-job-partitions/)
    - [Available partitions on LUMI](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/)
    - Use the test case to optimize computations before starting massive ones
-
-# Optimize the performance of your own code (2/2)
-
 - Use profiling tools to find out how much time is spent in different parts of the code
    - Docs CSC: [Performance analysis](https://docs.csc.fi/computing/performance/)
    - [Profiling on LUMI](https://docs.lumi-supercomputer.eu/development/profiling/strategies/)
@@ -144,7 +120,13 @@
    - [GPUs in Mahti batch jobs](https://docs.csc.fi/computing/running/creating-job-scripts-mahti/#gpu-batch-jobs)
    - [GPUs in LUMI batch jobs](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/lumig-job/)
 
-# What is MPI?
+
+:::{note}
+:class: dropdown
+
+## Advanced topics
+
+### What is MPI?
 
 - MPI (Message Passing Interface) is a widely used standard for writing software that runs in parallel
 - MPI utilizes parallel **processes** that _do not share memory_
@@ -152,7 +134,7 @@
    - Communication can be a performance bottleneck
 - MPI is required when running on multiple nodes
 
-# What is OpenMP?
+### What is OpenMP?
 
 - OpenMP (Open Multi-Processing) is a standard that utilizes compute cores that share memory, i.e. **threads**
    - They do not need to send messages between each other
@@ -160,13 +142,16 @@
    - This appears when different compute cores process and update the same data without proper synchronization
 - OpenMP is restricted to a single node
 
-# Self study materials for OpenMP and MPI
+### Self study materials for OpenMP and MPI
 
 - There are many tutorials available online
    - Look with simple searches for _e.g._ "MPI tutorial"
 - Check the documented exercise material and model answers from the CSC course "Introduction to Parallel Programming"
    - Available on [GitHub](https://github.com/csc-training/parallel-prog/)
    - See also the [materials of CSC Summer School in HPC](https://github.com/csc-training/summerschool)
+
+
+:::
 
 # Task farming -- running multiple independent jobs simultaneously
 
@@ -177,8 +162,6 @@
 - If running your jobs gets more complex, requiring _e.g._ dependencies between subtasks, workflow tools can be used
    - Guidelines and solutions are suggested in [Docs CSC](https://docs.csc.fi/computing/running/throughput/)
    - Many options: [FireWorks](https://docs.csc.fi/computing/running/fireworks/), [Nextflow](https://docs.csc.fi/support/tutorials/nextflow-puhti/), [Snakemake](https://snakemake.github.io/), [Knime](https://www.knime.com/), [BioBB](http://mmb.irbbarcelona.org/biobb/), ...
-
-# Task farming 2.0
 
 - Before opting for a workflow manager, check if the code you run has built-in high-throughput features
   - Many chemistry software ([CP2K](https://docs.csc.fi/apps/cp2k/#high-throughput-computing-with-cp2k), [GROMACS](https://docs.csc.fi/apps/gromacs/#high-throughput-computing-with-gromacs), [Amber](https://docs.csc.fi/apps/amber/#high-throughput-computing-with-amber), _etc._) provide methods for efficient task farming
@@ -208,15 +191,12 @@
    - Also, if you process lots of data, make sure you [use the disk efficiently](https://docs.csc.fi/support/tutorials/ml-data/#using-the-shared-file-system-efficiently)
 - Does your code run on AMD GPUs? [LUMI](https://docs.lumi-supercomputer.eu/hardware/compute/lumig/) has a massive GPU capacity!
 
-# Tricks of the trade 1/4
+# Tricks of the trade
 
 - Although it is reasonable to try to achieve best performance by using the fastest computers available, it is not the only important issue
 - Different codes may give very different performance for a given use case
     - Compare the options you have in [CSC's software selection](https://docs.csc.fi/apps/)
 - Before launching massive simulations, look for the most efficient algorithms to get the job done
-
-# Tricks of the trade 2/4
-
 - Well-known boosters are:
     - Enhanced sampling methods _vs._ brute force molecular dynamics
     - Machine learning methods
@@ -228,17 +208,11 @@
     - When using separate runs to scan a parameter space, start with a coarse scan, and improve resolution where needed
       - Be mindful of the number of jobs/job steps, use meta-schedulers if needed
     - Try to use or implement checkpoints/restarts in your software, and _check results between restarts_
-
-# Tricks of the trade 3/4
-
 - Try to formulate your scientific results when you have a minimum amount of computational results
     - Helps to clarify what you still need to compute, what computations would be redundant and what data you need to store
 - Reserving more memory and/or more compute cores does not necessary equal faster computations
     - Check with `seff`, `sacct` and from software-specific log files if the memory was used and whether the job ran faster
     - Testing for optimal amount of cores and memory is advised before performing massive computations
-
-# Tricks of the trade 4/4
-
 - If possible, running the same job on a laptop may be useful for comparison
 - Avoid unnecessary reads and writes of data and containerize Conda environments to improve I/O performance
     - Read and write in big chunks and avoid reading/writing lots of small files
@@ -249,22 +223,10 @@
 - Don't run too long jobs without a restart option
     - Increased risk of something going wrong, resulting in lost time/results
 
-## Speed up
-
--> https://a3s.fi/CSC_training/10_speed_up_jobs.html
 
 
-"Running large amount of jobs, often same analysis to different input data."
-
-<p>&rarr;  Map sheets, tiles, data from different areas </p>
 
 
-## Running things at same time
 
-* within batch script 
-<p>&rarr; array job, GNU parallel </p>
-* within python script
-<p>&rarr; multiprocessing, joblib, dask </p>
-* within R script
-<p>&rarr; future, foreach, snow </p>
+
 

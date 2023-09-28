@@ -2,10 +2,6 @@
 
 ## Interactive
 
----
-topic: Batch jobs
-title: Tutorial - Interactive batch jobs
----
 
 # Batch job tutorial - Interactive jobs
 
@@ -160,5 +156,4 @@ squeue -u $USER
 
 💡 [FAQ on CSC batch jobs](https://docs.csc.fi/support/faq/#batch-jobs) in Docs CSC
 
----
 
