@@ -33,3 +33,13 @@ html_title = "CSC Geocomputing course"
 
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
+
+html_theme_options = {
+  "repository_url": "https://github.com/csc-training/geocomputing_course",
+  "announcement": "Psst, remember the [cheatsheet](https://csc-training.github.io/geocomputing_course/materials/cheatsheet.html)!",
+  "use_repository_button": True,
+}
+
+
+
+
