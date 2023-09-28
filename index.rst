@@ -47,8 +47,6 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/terminology.md
    materials/terminal.md
    materials/fair_share.md
-   materials/partitions.md
-   materials/resources.md
    materials/jobs.md
    materials/exercise_basics.md
    materials/htc.md

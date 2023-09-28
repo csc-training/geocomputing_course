@@ -1,5 +1,7 @@
 # Prerequisites
 
+## Knowledge
+
 To make this course as enjoyable as possible for you and to make sure you can get something out of it, we expect you to know about the following:
 
 * General understanding of geoinformatics, vector and raster data, coordinate systems.
@@ -9,3 +11,9 @@ To make this course as enjoyable as possible for you and to make sure you can ge
         * [UNIX tutorial for beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/) (the first two topics are a good start, try also some editor)
         * [Basic Linux Commands 10 min tutorial video](https://www.youtube.com/watch?v=uFPly_nGBMg) (sit back and watch)
         * [CSC and Linux Cheat Sheet](./cheatsheet.md) (one page summary of the most important Linux commands – handy to have near you during the course)
+
+## CSC account
+
+
+For the exercises, a [CSC account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) is needed.
+For self-learning you will also need a project.
