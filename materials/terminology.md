@@ -1,6 +1,5 @@
 # Terminology
 
-TODO: clean up and texts
 
 - You can roughly think that one **node** is a single computer
 - A node on a supercomputer contains:
@@ -18,6 +17,29 @@ TODO: clean up and texts
 
 ![](./images/puhti_overview.png){width=80%} 
 
+:::{admonition} Login node etiquette
+:class: tip
+Which of the following tasks would suit to run on the login node?
+
+
+1. `python join_dataframes.py`
+2. `make`
+3. `create_directories.sh`
+4. `qgis`
+5. `tar -xzf mytool.tar.gz`
+
+:::{admonition} Solution
+:class: tip, dropdown
+
+
+ Options #2 Building software  (make), #3 creating directories (mkdir), and #5 unpacking software (tar) are common and acceptable tasks for the login node. 
+ 
+ >Note that script names do not always reflect their contents: before launching #3, please less create_directories.sh and make sure it does what the name suggests.
+
+Running resource-intensive applications is frowned upon. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will anyway want more resources for these, than the login node can provide.
+
+:::
+:::
 
 # Available batch job partitions
 
@@ -25,13 +47,19 @@ TODO: clean up and texts
 - In order to use the resources in an efficient way, it is important to estimate the request as accurately as possible
 - By avoiding an excessive "just-in-case" request, the job will start earlier
 
+# Interactive jobs
+
+- When you login to CSC's supercomputers, you end up in one of the login nodes of the computer
+    - These login nodes are shared by all users and they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
+- You already got to know the [interactive web interface for Puhti](https://docs.csc.fi/computing/webinterface/)
+- If you have a heavier job that still requires interactive response (_e.g._ testing, prototyping)
+    - Allocate the resource via the the [interactive partition](https://docs.csc.fi/computing/running/interactive-usage/)
+    - This way your work is performed in a compute node, not on the login node
+
 # Different type of HPC jobs
 
-- Typically an HPC job can be classified as serial, parallel or GPU, depending on the main requested resource 
-- The following slides will provide you with an overview of different job types
+- Apart from interactive jobs, an HPC job can be classified as serial, parallel or GPU, depending on the main requested resource 
 - A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity
-- R jobs are typically serial or parallel (few R packages exist with GPU support)
-   - We will cover R-specific topics later during the workshop
 
 # HPC serial jobs
 
@@ -44,10 +72,6 @@ TODO: clean up and texts
     - Readily configured environment / dependencies (e.g. R environment on Puhti)
     - Memory and/or disk demands
 
-# Running multiple serial jobs using job arrays
-- [Job arrays](https://docs.csc.fi/computing/running/array-jobs/) can be used to simultaneously run multiple serial jobs
-- Useful for so-called *embarrassingly parallel* analyses (many identical but separate tasks, e.g. repeating same steps for multiple data sets)
-
 # HPC parallel jobs
 
 - A parallel job distributes the calculation over several cores in order to achieve a shorter wall time (and/or a larger allocatable memory)   
@@ -56,32 +80,6 @@ TODO: clean up and texts
 - Batch job script [how-to create](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/) and [examples](https://docs.csc.fi/computing/running/example-job-scripts-puhti/) for Puhti
 - **The best starting point:** [Software specific batch scripts in docs](https://docs.csc.fi/apps/)
 
-# Parallel resource reservation: a couple of examples
-
-- Multicore OpenMP job
-
-<font size="6">
-```bash
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=X
-```
-</font>
-
-- Multicore MPI job
-
-<font size="6">
-```bash
-#SBATCH --nodes=X
-#SBATCH --ntasks-per-node=Y
-#SBATCH --cpus-per-task=Z
-```
-</font>
-
-- `--cpus-per-task` is typically used for OpenMP jobs
-- `--ntasks` is typically used for MPI jobs
-    - A task cannot be split between nodes, but tasks can be on different nodes
-    - `--ntasks-per-node` can be used for finer control
 
 # HPC GPU jobs 
 
@@ -91,15 +89,10 @@ TODO: clean up and texts
     - A GPU uses 60 times more billing units than a single CPU core - see above for performance requirements
     - In practice, 1-10 CPU cores (but not more) should be allocated per GPU on Puhti
 
-# Interactive jobs
 
-- When you login to CSC's supercomputers, you end up in one of the login nodes of the computer
-    - These login nodes are shared by all users and they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
-- If you have a heavier job that still requires interactive response (_e.g._ a graphical user interface)
-    - Allocate the resource via the the [interactive partition](https://docs.csc.fi/computing/running/interactive-usage/)
-    - This way your work is performed in a compute node, not on the login node
-- We have recently launched an easy-to-use [interactive web interface for Puhti](https://docs.csc.fi/computing/webinterface/)
+# Running multiple serial jobs using job arrays
 
-
+- [Job arrays](https://docs.csc.fi/computing/running/array-jobs/) can be used to simultaneously run multiple serial jobs
+- Useful for so-called *embarrassingly parallel* analyses (many identical but separate tasks, e.g. repeating same steps for multiple data sets)
 
 
