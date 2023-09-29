@@ -99,3 +99,12 @@ To convert the file, run `dos2unix filename`. Conversely, to convert back to Win
 From [HPC Carpentry](https://carpentries-incubator.github.io/hpc-intro/).
 
 :::
+
+:::{admonition} Trouble with script execution
+:class: note
+
+Sometimes when we transfer scripts the permissions might get messed up. A script you could run with `./myscript.sh` on your own computer cannot be run anymore after transfering to the supercomputer.
+
+TODO: write some explanation about `chmod` 
+
+:::
