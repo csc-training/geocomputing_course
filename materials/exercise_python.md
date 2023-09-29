@@ -1,5 +1,19 @@
 # Exercise: Python
 
+:::{admonition} Timing
+:class: note
+
+75 min
+
+:::
+
+:::{admonition} Goals
+:class: note
+
+* 
+
+:::
+
 Shared memory programming
 
 Shared memory programming means using the resources on a single computer, and having multiple threads or processes work together on a single copy of a dataset in memory. This is the most common form of parallel programming and is relatively easy to do. -> multiprocessing.

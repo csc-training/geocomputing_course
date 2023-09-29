@@ -1,10 +1,23 @@
 # Exercise - basics
 
-Goals:
-* get to know the command line
-* get to know sbatch script
-* get to know job submission
-* interactive -> non interactive
+:::{admonition} Timing
+:class: note
+
+45 min
+
+:::
+
+:::{admonition} Goals
+:class: note
+
+* Get to know the command line
+* Get to know sbatch script
+* Get to know job submission
+* Interactive -> non interactive
+
+:::
+
+
 
 
 TODO: update to fit here; current texts from env eff course
