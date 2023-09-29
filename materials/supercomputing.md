@@ -84,7 +84,7 @@ LUMI:
 
 # Skills needed and how to get them
 
-ToDo
+TODO
 
 
 

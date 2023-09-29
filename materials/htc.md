@@ -1,10 +1,7 @@
 
 # Parallizable processes
 
-- Typically, large computers like those at CSC are not much faster than personal ones -- they are simply bigger
-   - For fast computation, they utilize parallelism (and typically have special disk, memory and network solutions, too)
-- Parallelism simplified:
-   - You use hundreds of ordinary computers simultaneously to solve a single problem
+Typically, large computers like those at CSC are not much faster than personal ones -- they are simply bigger. For fast computation, they utilize parallelism (and typically have special disk, memory and network solutions, too). Parallelism simplified: You use hundreds of ordinary computers simultaneously to solve a single problem
 
 :::{admonition} A small thought example
 :class: tip
@@ -35,31 +32,32 @@ From [HPC-Carpentry](http://www.hpc-carpentry.org/hpc-parallel-novice/02-paralle
 
 ## Parallelizing your workflow
 
-- There are multiple ways to parallelize your workflow
-   - Maybe several smaller jobs are better than one large (task farming)?
-   - Is there a more efficient code or algorithm?
-   - Is the file I/O slowing you down (lots of read/write operations)?
-- Optimize usage considering single job wall-time, overall used CPU time, I/O
-- [Docs CSC: Guidelines for high-throughput computing](https://docs.csc.fi/computing/running/throughput/)
+Parallel programs are typically parallelized with the MPI and/or OpenMP standards (we do not talk about this here).
+
+- Maybe several smaller jobs are better than one large (task farming)?
+- Is there a more efficient code or algorithm?
+- Is the file I/O slowing you down (lots of read/write operations)?
+
+-> Optimize usage considering single job wall-time, overall used CPU time, I/O
+-> [Docs CSC: Guidelines for high-throughput computing](https://docs.csc.fi/computing/running/throughput/)
 
 
-## Running things in parallel
-
-- Parallel programs are typically parallelized with the MPI and/or OpenMP standards
-- Further parallelization possible if you can split your whole workflow into smaller independent tasks and run them simultaneously
-   - [HyperQueue](https://docs.csc.fi/apps/hyperqueue/) or [Slurm array jobs](https://docs.csc.fi/computing/running/array-jobs/)
-   - More details about high-throughput computing and workflow automation in [Docs CSC](https://docs.csc.fi/computing/running/throughput/)
-
-:::{admonition} A small thought example
+:::{admonition} Think about your own work
 :class: tip
 
-Think about your work, do you need to run a lot of steps one after another?
+Think about your work, do you need to run a lot of steps one after another? Or few steps that need a lot of memory? Do steps depend on each other? Which steps could be run in parallel? Which steps cannot be run in parallel?
 
 :::
 
-## Task farming -- running multiple independent jobs simultaneously
+## Task farming 
 
-- Task farming == running many similar independent jobs simultaneously
+Task farming means running many similar independent jobs simultaneously.
+
+Check if the code you run has built-in high-throughput features
+- Check for `n_cores`, `cpus` or similar
+- Also [Python](https://docs.csc.fi/apps/python/#python-parallel-jobs) and [R](https://docs.csc.fi/support/tutorials/parallel-r/), if you write your own code
+
+
 - If subtasks are few (<100), an easy solution is [array jobs](https://docs.csc.fi/computing/running/array-jobs/)
    - Individual tasks should run >30 minutes. Otherwise, you're generating too much overhead &rarr; consider another solution
    - Array jobs create _job steps_ and for 1000s of tasks Slurm database will get overloaded &rarr; consider another solution
@@ -67,24 +65,20 @@ Think about your work, do you need to run a lot of steps one after another?
    - Guidelines and solutions are suggested in [Docs CSC](https://docs.csc.fi/computing/running/throughput/)
    - Many options: [FireWorks](https://docs.csc.fi/computing/running/fireworks/), [Nextflow](https://docs.csc.fi/support/tutorials/nextflow-puhti/), [Snakemake](https://snakemake.github.io/), [Knime](https://www.knime.com/), [BioBB](http://mmb.irbbarcelona.org/biobb/), ...
 
-- Before opting for a workflow manager, check if the code you run has built-in high-throughput features
-  - Many chemistry software ([CP2K](https://docs.csc.fi/apps/cp2k/#high-throughput-computing-with-cp2k), [GROMACS](https://docs.csc.fi/apps/gromacs/#high-throughput-computing-with-gromacs), [Amber](https://docs.csc.fi/apps/amber/#high-throughput-computing-with-amber), _etc._) provide methods for efficient task farming
-  - Also [Python](https://docs.csc.fi/apps/python/#python-parallel-jobs) and [R](https://docs.csc.fi/support/tutorials/parallel-r/), if you write your own code
-- Task farming can be combined with _e.g._ OpenMP to accelerate sub-jobs
-  - [HyperQueue](https://docs.csc.fi/apps/hyperqueue/) is the best option for sub-node task scheduling (non-MPI)
-- Finally, MPI can be used to run several jobs in parallel
-   - Three levels of parallelism, requires skill and time to set up
-   - Always test before scaling up -- a small mistake can result in lots of wasted resources!
+- Always test before scaling up -- a small mistake can result in lots of wasted resources!
 
-## Things to consider in task farming
+:::{admonition} Things to consider in task farming
+:class: tip
 
 - In a big allocation, each computing core should have work to do
    - If the separate tasks are different, some might finish before the others, leaving some cores idle &rarr; waste of resources
    - Try combining small and numerous jobs into fewer and bigger ones
-- As always, try to estimate as accurately as possible the required memory and the time it takes for the separate tasks to finish
-   - Consult _e.g._ this [bio job tutorial with examples](https://docs.csc.fi/support/tutorials/biojobs-on-puhti/)
+- Try to estimate as accurately as possible the required memory and the time it takes for the separate tasks to finish
 
-## Tricks of the trade
+:::
+
+:::{admonition} Tricks of the trade
+:class: tip, dropdown
 
 - Although it is reasonable to try to achieve best performance by using the fastest computers available, it is not the only important issue
 - Different codes may give very different performance for a given use case
@@ -115,14 +109,12 @@ Think about your work, do you need to run a lot of steps one after another?
     - Don't run too many/short _job steps_ -- they will bloat Slurm accounting
 - Don't run too long jobs without a restart option
     - Increased risk of something going wrong, resulting in lost time/results
-
+:::
 
 ## Running things at same time
 
-* within batch script 
-<p>&rarr; array job, GNU parallel </p>
-* within python script
-<p>&rarr; multiprocessing, joblib, dask </p>
-* within R script
-<p>&rarr; future, foreach, snow </p>
+* within batch script &rarr; array job, GNU parallel 
+* within python script &rarr; multiprocessing, joblib, dask 
+* within R script &rarr; future, foreach, snow 
 
+TODO image outside/inside

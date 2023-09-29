@@ -1,7 +1,7 @@
 # Terminal
 
 
-TODO: adopt to webinterface  task
+TODO: adopt to webinterface  task, check, and clean
 
 ## Why would you want to use the terminal?
 

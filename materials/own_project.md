@@ -1,11 +1,10 @@
 # Own project hints
 
+TODO: fix texts and reorder
+
 ## Making use of HPC resources
 
 * Just moving a script to HPC does not make it run faster
-
-
-TODO: fix texts and reorder
 
 # First steps for fast jobs 
 

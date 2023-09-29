@@ -10,7 +10,10 @@
 :::{admonition} Goals
 :class: note
 
-* 
+* interactive -> Jupyter
+* multiprocessing
+* dask
+* GNU parallel
 
 :::
 
