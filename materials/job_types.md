@@ -55,27 +55,24 @@ A parallel job distributes the calculation over several cores in order to achiev
    - This appears when different compute cores process and update the same data without proper synchronization
 - OpenMP is restricted to a single node
 
-# Parallel resource reservation: a couple of examples
+**Batch job examples**
 
 - Multicore OpenMP job
 
-<font size="6">
+
 ```bash
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=X
 ```
-</font>
 
 - Multicore MPI job
 
-<font size="6">
 ```bash
 #SBATCH --nodes=X
 #SBATCH --ntasks-per-node=Y
 #SBATCH --cpus-per-task=Z
 ```
-</font>
 
 - `--cpus-per-task` is typically used for OpenMP jobs
 - `--ntasks` is typically used for MPI jobs
@@ -99,7 +96,7 @@ A graphics processing unit (GPU, a video card), is capable of doing certain type
 :::{admonition} More advanced topics - GPU
 :class: dropdown, tip
 
-# GPUs can speed up jobs
+**GPUs can speed up jobs**
 
 - GPUs, or Graphics Processing Units, are extremely powerful processors developed for graphics and gaming
 - They can be used for science, but are often challenging to program
