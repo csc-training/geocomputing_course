@@ -1,5 +1,11 @@
 # Exercise - basics
 
+Goals:
+* get to know the command line
+* get to know sbatch script
+* get to know job submission
+* interactive -> non interactive
+
 TODO: update to fit here; current texts from env eff course
 
 ## Interactive

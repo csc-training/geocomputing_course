@@ -45,6 +45,8 @@ Google the toolname from eg QGIS and the desired scripting language to get some 
 
 ## Moving from own computer to HPC
 
+Think about Git* for sharing your scripts instead of moving them around.
+
 ### Your own scripts
 
 * no hard coded filepaths such as `/my/home/dir/file.txt`

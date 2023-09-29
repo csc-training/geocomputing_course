@@ -1,5 +1,7 @@
 # Exercise - webinterface
 
+> ‼️ To begin make sure you have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) that is a member of a project which [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
+
 Task suggestions:
 
 * Find a file in scratch
@@ -18,6 +20,5 @@ Task suggestions:
     * find the readme and add a note that is been edited with vscode
 
 * check our projects disk quota
-    * add the info to your own readme using login shell and editor (nano, vim)
-
     
+
