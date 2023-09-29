@@ -43,7 +43,6 @@ sinteractive --account <project> --time 00:10:00         # replace <project> wit
 
 💡 You can list your projects with `csc-projects`
 
-{:start="2"}
 2. You should see that the command prompt (initial text on each row on the command-line) has changed from e.g. `puhti-login11` to e.g. `r07c51` which refers to a compute node.
 3. Once on the compute node, you can run commands directly from the command-line without `srun`. You can e.g. load the `python-data` module (e.g. for running Python scripts interactively on Puhti):
 
@@ -51,7 +50,6 @@ sinteractive --account <project> --time 00:10:00         # replace <project> wit
 module load python-data
 ```
 
-{:start="4"}
 4. Quit the interactive batch job with `exit`.
 
 💬 This way you can work interactively for an extended period, using e.g. lots of memory without creating load on the login nodes. Running heavy/long tasks on the login nodes is forbidden according to our [Usage Policy](https://docs.csc.fi/computing/usage-policy/).
@@ -105,14 +103,12 @@ cd /scratch/<project>      # replace <project> with your CSC project, e.g. proje
 
 💡 Note! If you're using a project with other members (like the course project), first make a subdirectory for yourself (e.g. `mkdir $USER` and then move there (`cd $USER`) to not clutter the `/scratch` root of your project)
 
-{:start="2"}
 2. Create a file called `my_serial.bash` e.g. with the `nano` text editor:
 
 ```bash
 nano my_serial.bash
 ```
 
-{:start="3"}
 3. Copy the following **batch script** there and change `<project>` to the CSC project you actually want to use:
 
 ```bash
@@ -126,7 +122,6 @@ srun hostname                    # Run hostname-command
 srun sleep 60                    # Run sleep-command
 ```
 
-{:start="4"}
 4. Submit the job to the batch queue and check its status with the commands:
 
 ```bash

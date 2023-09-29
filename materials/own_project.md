@@ -1,5 +1,10 @@
 # Own project hints
 
+## Making use of HPC resources
+
+* Just moving a script to HPC does not make it run faster
+
+
 TODO: fix texts and reorder
 
 # First steps for fast jobs 
@@ -18,6 +23,12 @@ TODO: fix texts and reorder
 - If you can't find suitable software, consider writing your own code
 
 
+## Running your software
+
+- It is not only how your software is constructed and compiled that affects performance
+- It may also be run in different ways
+
+
 * keep scripts under version control (also simplifies collaboration and synchronising different computers, e.g. git(hub))
 * on Puhti: 
     * scripts in `/projappl/project_200xxxx/your_groupname/`
@@ -29,10 +40,6 @@ TODO: fix texts and reorder
 On project organization: [CodeRefinery lesson - Reproducible research](https://coderefinery.github.io/reproducible-research/organizing-projects/)<br>
 [CodeRefinery lesson - Modular code development](https://coderefinery.github.io/modular-type-along/instructor-guide/)
 
-## Making use of HPC resources
-
-* Just moving a script to HPC does not make it run faster
-* 
 
 ## Moving from GUI to CLI/scripts
 
@@ -55,6 +62,11 @@ Think about Git* for sharing your scripts instead of moving them around.
 * know your dependencies
 * know your resources
 * make sure your code works as expected before moving to HPC
+
+:::{admonition} Well prepared?
+:class: tip
+
+:::
 
 ## Before starting large-scale calculations
 
@@ -90,7 +102,7 @@ Think about Git* for sharing your scripts instead of moving them around.
 
 
 
-# Optimize the performance of your own code
+## Optimize the performance of your own code
 
 - If you have written your own code, compile it with optimizing compiler options
    - Docs CSC: compiling on [Puhti](https://docs.csc.fi/computing/compiling-puhti/) and [Mahti](https://docs.csc.fi/computing/compiling-mahti/)

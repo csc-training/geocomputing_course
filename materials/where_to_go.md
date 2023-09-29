@@ -7,7 +7,7 @@ We have accessed the supercomputer via the webinterface in order to not overwhel
 :::{admonition} SSH keys and setup
 :class: tip, dropdown
 
-## Login with SSH
+**Login with SSH**
 
 - SSH is a terminal program that gives you command-line access on the CSC supercomputer
 - It is a versatile main interface to a supercomputer
@@ -18,7 +18,7 @@ We have accessed the supercomputer via the webinterface in order to not overwhel
 - Plain SSH will not allow displaying remote graphics
    - Puhti web interface is often best for this, but can be enabled also by X11-tunneling (additional installations required on Windows, see link above)
 
-## Setting up SSH keys
+**Setting up SSH keys**
 
 - Using SSH keys is easier and safer than using a password with every login
 - SSH keys can be easily used in Windows, Mac, Linux

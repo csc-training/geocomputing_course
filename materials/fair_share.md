@@ -49,22 +49,19 @@ Unfortunately it’s impossible to give any exact numbers because both Slurm and
     It’s possible to give better limits for global usage of the system.
     When system total load is low, it may be ok to run something that is problematic when system is full.
 
-How many jobs/steps is too many?
+**How many jobs/steps is too many?**
 
 * SHOULD BE OK to run tens of jobs/steps
 * PAY ATTENTION if you run hundreds of jobs/steps
 * DON’T RUN several thousands of jobs*
 
-How many file operations is too many?
+**How many file operations is too many?**
 
 * SHOULD BE OK to access hundreds of files
 * PAY ATTENTION if you need several thousands of files
 * DON’T USE hundreds of thoudsands of files
 
-
 Note that these guideline numbers are for all operations on all jobs.
-
-## Possible solutions
 
 **I have lots of small files**
 

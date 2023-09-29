@@ -43,7 +43,7 @@ From [HPC-Carpentry](http://www.hpc-carpentry.org/hpc-parallel-novice/02-paralle
 - [Docs CSC: Guidelines for high-throughput computing](https://docs.csc.fi/computing/running/throughput/)
 
 
-# Running in parallel
+## Running things in parallel
 
 - Parallel programs are typically parallelized with the MPI and/or OpenMP standards
 - Further parallelization possible if you can split your whole workflow into smaller independent tasks and run them simultaneously
@@ -57,7 +57,7 @@ Think about your work, do you need to run a lot of steps one after another?
 
 :::
 
-# Task farming -- running multiple independent jobs simultaneously
+## Task farming -- running multiple independent jobs simultaneously
 
 - Task farming == running many similar independent jobs simultaneously
 - If subtasks are few (<100), an easy solution is [array jobs](https://docs.csc.fi/computing/running/array-jobs/)
@@ -76,7 +76,7 @@ Think about your work, do you need to run a lot of steps one after another?
    - Three levels of parallelism, requires skill and time to set up
    - Always test before scaling up -- a small mistake can result in lots of wasted resources!
 
-# Things to consider in task farming
+## Things to consider in task farming
 
 - In a big allocation, each computing core should have work to do
    - If the separate tasks are different, some might finish before the others, leaving some cores idle &rarr; waste of resources
@@ -84,7 +84,7 @@ Think about your work, do you need to run a lot of steps one after another?
 - As always, try to estimate as accurately as possible the required memory and the time it takes for the separate tasks to finish
    - Consult _e.g._ this [bio job tutorial with examples](https://docs.csc.fi/support/tutorials/biojobs-on-puhti/)
 
-# Tricks of the trade
+## Tricks of the trade
 
 - Although it is reasonable to try to achieve best performance by using the fastest computers available, it is not the only important issue
 - Different codes may give very different performance for a given use case

@@ -9,6 +9,10 @@ Materials are build to [Geocomputing course main page](https://csc-training.gith
 
 ## Contributing
 
+### Styling
+
+See [MyST-parser guide](https://myst-parser.readthedocs.io/en/latest/index.html).
+
 ### Local build of materials
 
 Materials are build to [Geocomputing course main page](https://csc-training.github.io/geocomputing_course) upon push to main (via PR).

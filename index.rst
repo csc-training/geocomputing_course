@@ -55,7 +55,6 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    :caption: Running jobs efficiently
 
    materials/job_monitoring.md
-   materials/starting_a_project.md
    materials/htc.md
    materials/exercise_gdal.md
 

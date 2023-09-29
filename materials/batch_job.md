@@ -24,7 +24,7 @@ srun hostname                    # Print compute node name that has been allocat
 
 ## Monitoring jobs
 
-* Standard output in file: slurm-<jobid>.out
+* Standard output in file: `slurm-<jobid>.out`
 * `squeue -u $USER`
 * `seff <jobid>`
 * `scancel <jobid>`
