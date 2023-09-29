@@ -49,14 +49,12 @@ Do you remember on how you edited some files in the webinterface? Lets do the sa
 pwd
 ```
 
-{:start="2"}
 2. Check if there are any files:
 
 ```bash
 ls
 ```
 
-{:start="3"}
 3. Make a directory and see if it appears:
 
 ```bash
@@ -64,7 +62,6 @@ mkdir YourNameTestFolder    # replace YourName
 ls
 ```
 
-{:start="4"}
 4. Go to that folder.
 
 ```bash
@@ -100,7 +97,6 @@ Fill it with some content:
 nano YourName-first-file.txt      # replace YourName
 ```
 
-{:start="2"}
 2. Edit the file. Type something there!
 3. Exit `nano` with `Ctrl+X`, type `Y` to confirm saving and press enter to accept the filename.
 4. Check that the modifications are actually there:
@@ -109,7 +105,6 @@ nano YourName-first-file.txt      # replace YourName
 less YourName-first-file.txt      # replace YourName
 ```
 
-{:start="5"}
 5. Exit the preview with `q`.
 
 
@@ -122,26 +117,22 @@ less YourName-first-file.txt      # replace YourName
 wget https://github.com/csc-training/csc-env-eff/raw/master/_hands-on/linux_prerequisites/my-first-file.txt
 ```
 
-{:start="2"}
 2. Check what kind of file you got and what size it is using the `ls` command with some extra options:
 
 ```bash
 ls -lth         # options are l for long format, t for sorting by time and h for convenient size units. Anything that starts with a hashtag is a comment and is not executed
 ```
 
-{:start="3"}
 3. Use the `less` command to check out what the file looks like:
 
 ```bash
 less my-first-file.txt
 ```
 
-{:start="4"}
 4. To exit the `less` preview of the file, hit `q`.
 
 💡 Tip: Instead of `less` you can use `cat` which prints the content of the file(s) straight into the command line. For long texts `less` is recommended.
 
-{:start="5"}
 5. Make a copy of this file:
 
 ```bash
@@ -150,7 +141,6 @@ ls -lth
 less YourName-first-file.txt                    # replace YourName
 ```
 
-{:start="6"}
 6. Remove the file we originally downloaded (leave your own copy).
 
 ```bash
