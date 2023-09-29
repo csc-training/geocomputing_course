@@ -29,11 +29,13 @@ from within the repository directory.
 
 Please send a pull request, explainaing your changes. The changes should be refelcted in commit messages. If not, please provide a list of "bigger changes" (i.e. no need to report each sentence structure,typo change) and their motivation. For additional lessons it might be good to create an issue first. Please also add yourself to the authors as part of your pull request. 
 
-## Authors
+## Contributors
 
 These lesson materials are based on previous geocomputing materials by Kylli Ek, Johannes Hiekkasaari and Eduardo Gonzales. 
 
-New edits and materials by Samantha Wittke.
+Some lessons are partly based on other CSC course materials by Maria Lehtivaara, Rasmus Kronberg, Ari-Matti Saren, Atte Sillanpää, Kimmo Mattila, Laxmana Yetukuri, Maria Dimitrova, Xavier Anthony Raj,  Jesse Harrison, Sami Ilvonen.
+
+New edits and materials by Samantha Wittke, Kylli Ek.
 
 ## License
 
