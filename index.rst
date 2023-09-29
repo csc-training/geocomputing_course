@@ -8,8 +8,6 @@ Welcome to CSC Geocomputing course!
 
 THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;) 
 
-
-
 .. toctree::
    :maxdepth: 2
    :caption: Practicalities
@@ -27,8 +25,6 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/csc_services.md
    materials/resource_monitoring.md
    materials/support.md 
-
-
 
 .. toctree::
    :maxdepth: 2
@@ -73,7 +69,7 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/own_project.md
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Data:
 
    materials/moving_data.md   
@@ -87,11 +83,3 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
   
    materials/wrapup.md
    materials/where_to_go.md
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

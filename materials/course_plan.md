@@ -36,7 +36,7 @@
         * transfer
         * strategies
 
--> Where to put Jupyter/Rstudio? Ask before course about state of scripting? If they all do script it can be in beginning, if not it could be as part of R/Python exercise?
+
 
 
 :::{admonition} Painter analogy
