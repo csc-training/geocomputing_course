@@ -49,7 +49,9 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/fair_share.md
    materials/jobs.md
    materials/exercise_basics.md
+   materials/job_monitoring.md
    materials/htc.md
+   materials/starting_a_project.md
    materials/exercise_gdal.md
 
 .. toctree::
