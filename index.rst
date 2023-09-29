@@ -28,6 +28,7 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/support.md 
 
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Supercomputer - intro
@@ -60,6 +61,17 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/exercise_r.md 
    materials/installations.md
    materials/own_project.md
+   materials/supercomputer/supercomputing.md  
+   materials/data/data_storage.md 
+   materials/supercomputer/software.md
+   materials/supercomputer/webinterface.md   
+   materials/supercomputer/jobs.md      
+   materials/supercomputer/htc.md
+   materials/supercomputer/exercise_gdal.md     
+   materials/supercomputer/exercise_python.md
+   materials/supercomputer/exercise_r.md   
+   materials/supercomputer/installations.md
+
 
 .. toctree::
    :maxdepth: 3
