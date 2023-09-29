@@ -1,98 +1,60 @@
-# Terminology
+# Fundamentals and Terminology
 
+All of the nodes in an HPC system have the same components as your own laptop or desktop: CPUs (sometimes also called processors or cores), memory (or RAM), and disk space. CPUs are a computer’s tool for actually running programs and calculations. Information about a current task is stored in the computer’s memory. Disk refers to all storage that can be accessed like a file system. This is generally storage that can hold data permanently, i.e. data is still there even if the computer has been restarted. While this storage can be local (a hard drive installed inside of it), it is more common for nodes to connect to a shared, remote fileserver or cluster of servers.
 
-- You can roughly think that one **node** is a single computer
-- A node on a supercomputer contains:
-  - One or more central processing units (**CPUs**) with many **cores**
-  - Shared **memory**
-- Some nodes may also have:
-  - **Local storage**
-  - Graphics processing units (**GPUs**)
+**Cluster**
+A cluster is all resources wired together for the purpose of high performance computing, which includes computational devices (servers), networking devices (switches) and storage devices combined.
 
+**Node**
+You can roughly think that one **node** is a single computer.
 
-- Login nodes are used to set up jobs (and to launch them)
-- Jobs are run on the compute nodes
-- A batch job system (scheduler) is used to run and manage the jobs
-  - On CSC machines, we use Slurm
+**Core**
+A node contains one or more central processing units (**CPUs**) with many **cores** plus shared memory.
 
-![](./images/puhti_overview.png){width=80%} 
+**Job**
+When you want the scheduler to execute a program, performing a computation on your behalf, it has to be boxed into an abstraction layer called "job".
 
-:::{admonition} Login node etiquette
+**Partition**
+A partition is a set of compute nodes, grouped logically. We separate our computational resources base on the features of their hardware and the nature of the job.
+For instance, there is an interactive computation partition called `interactive` and a CUDA enabled GPU based partition `gpu``.
+
+**Task**
+It maybe confusing, but tasks in Slurm means processor resource. By default, 1 task uses 1 core. However, this behavior can be altered.
+
+Adapted from [ODU Research Computing Wiki](https://wiki.hpc.odu.edu/)
+
+:::{admonition} What is an HPC system?
 :class: tip
-Which of the following tasks would suit to run on the login node?
 
+The term *HPC system* is a stand-alone resource for computationally intensive workloads. 
+They are typically comprised of a multitude of integrated processing and
+storage elements, designed to handle high volumes of data and/or large numbers of floating-point
+operations ([FLOPS](https://en.wikipedia.org/wiki/FLOPS)) with the highest possible performance.
+For example, all the machines on the [Top-500](https://www.top500.org) list are HPC systems. To
+support these constraints, an HPC resource must exist in a specific, fixed location: networking
+cables can only stretch so far, and electrical and optical signals can travel only so fast.
 
-1. `python join_dataframes.py`
-2. `make`
-3. `create_directories.sh`
-4. `qgis`
-5. `tar -xzf mytool.tar.gz`
+The word `cluster` is often used for small to moderate scale HPC resources. Clusters are often maintained in computing centers that support several such systems, all sharing common networking and storage to support common compute intensive
+tasks.
 
-:::{admonition} Solution
+From [NRIS](https://training.pages.sigma2.no).
+
+:::
+
+:::{admonition} Difference between a HPC computing cluster and the cloud
 :class: tip, dropdown
 
 
- Options #2 Building software  (make), #3 creating directories (mkdir), and #5 unpacking software (tar) are common and acceptable tasks for the login node. 
- 
- >Note that script names do not always reflect their contents: before launching #3, please less create_directories.sh and make sure it does what the name suggests.
+  * All computers involved are located in same location (e.g. in the same room)
+  * All computers are connected to each other with very fast local area network(LAN)
+  * All computers involved are architecturally identical and runs the same operating system
+  * A set of optimised software installed and accessible from all computers
+  * All computers have access to shared storage, if you place a file on one machine you 
+    can access it from all the other machines
+  * All computers have a synchronised clock.
+  * A scheduler is involved (latter lesson)
 
-Running resource-intensive applications is frowned upon. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will anyway want more resources for these, than the login node can provide.
+*A cloud service could have access to a HPC cluster as part of the service as well*
 
+From [NRIS](https://training.pages.sigma2.no).
 :::
-:::
-
-# Available batch job partitions
-
-- [The available batch job partitions](https://docs.csc.fi/computing/running/batch-job-partitions/) are listed in docs.csc.fi
-- In order to use the resources in an efficient way, it is important to estimate the request as accurately as possible
-- By avoiding an excessive "just-in-case" request, the job will start earlier
-
-# Interactive jobs
-
-- When you login to CSC's supercomputers, you end up in one of the login nodes of the computer
-    - These login nodes are shared by all users and they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
-- You already got to know the [interactive web interface for Puhti](https://docs.csc.fi/computing/webinterface/)
-- If you have a heavier job that still requires interactive response (_e.g._ testing, prototyping)
-    - Allocate the resource via the the [interactive partition](https://docs.csc.fi/computing/running/interactive-usage/)
-    - This way your work is performed in a compute node, not on the login node
-
-# Different type of HPC jobs
-
-- Apart from interactive jobs, an HPC job can be classified as serial, parallel or GPU, depending on the main requested resource 
-- A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity
-
-# HPC serial jobs
-
-- Serial jobs only use one core (so don't reserve more)!
-- Why could your serial job benefit from being executed using CSC's resources instead of on your own computer? 
-
-    - Part of a larger workflow
-    - Avoid data transfer between CSC and your own computer
-    - Data sharing among other project members
-    - Readily configured environment / dependencies (e.g. R environment on Puhti)
-    - Memory and/or disk demands
-
-# HPC parallel jobs
-
-- A parallel job distributes the calculation over several cores in order to achieve a shorter wall time (and/or a larger allocatable memory)   
-- There are two major parallelization schemes: [OpenMP](https://en.wikipedia.org/wiki/OpenMP) and [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface)
-   - Note, depending on the parallellization scheme there is a slight difference between _how_ the resource reservation is done  
-- Batch job script [how-to create](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/) and [examples](https://docs.csc.fi/computing/running/example-job-scripts-puhti/) for Puhti
-- **The best starting point:** [Software specific batch scripts in docs](https://docs.csc.fi/apps/)
-
-
-# HPC GPU jobs 
-
-- A graphics processing unit (GPU, a video card), is capable of doing certain type of simultaneous calculations very efficiently
-- In order to take advantage of this power, a computer program must be reprogrammed to adapt on how GPU handles data   
-- CSC's GPU resources are relatively scarce and hence should be used with [particular care](https://docs.csc.fi/computing/overview/#gpu-nodes)
-    - A GPU uses 60 times more billing units than a single CPU core - see above for performance requirements
-    - In practice, 1-10 CPU cores (but not more) should be allocated per GPU on Puhti
-
-
-# Running multiple serial jobs using job arrays
-
-- [Job arrays](https://docs.csc.fi/computing/running/array-jobs/) can be used to simultaneously run multiple serial jobs
-- Useful for so-called *embarrassingly parallel* analyses (many identical but separate tasks, e.g. repeating same steps for multiple data sets)
-
-

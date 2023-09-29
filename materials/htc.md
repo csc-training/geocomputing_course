@@ -1,9 +1,9 @@
-# High Throughput Computing (HTC) and parallelization
+# Parallizable processes
 
-TODO: fix texts and reorder
-
-## Parallizable processes
-
+- Typically, large computers like those at CSC are not much faster than personal ones -- they are simply bigger
+   - For fast computation, they utilize parallelism (and typically have special disk, memory and network solutions, too)
+- Parallelism simplified:
+   - You use hundreds of ordinary computers simultaneously to solve a single problem
 
 :::{admonition} A small thought example
 :class: tip
@@ -32,13 +32,6 @@ From [HPC-Carpentry](http://www.hpc-carpentry.org/hpc-parallel-novice/02-paralle
 
 &rarr; Not everything can be parallelized. Identify serial and parallelizable parts of your code early on.
 
-# The purpose of large computers
-
-- Typically, large computers like those at CSC are not much faster than personal ones -- they are simply bigger
-   - For fast computation, they utilize parallelism (and typically have special disk, memory and network solutions, too)
-- Parallelism simplified:
-   - You use hundreds of ordinary computers simultaneously to solve a single problem
-
 ## Parallelizing your workflow
 
 - There are multiple ways to parallelize your workflow
@@ -48,102 +41,12 @@ From [HPC-Carpentry](http://www.hpc-carpentry.org/hpc-parallel-novice/02-paralle
 - Optimize usage considering single job wall-time, overall used CPU time, I/O
 - [Docs CSC: Guidelines for high-throughput computing](https://docs.csc.fi/computing/running/throughput/)
 
-# Running your software
-
-- It is not only how your software is constructed and compiled that affects performance
-- It may also be run in different ways
-
-# HPC parallel jobs
-
-- A parallel job distributes the calculation over several cores in order to achieve a shorter wall-time (and/or a larger allocatable memory)
-- Examples of batch job scripts for [Puhti](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/) and [Mahti](https://docs.csc.fi/computing/running/example-job-scripts-mahti/)
-- Examples of batch job scripts for [LUMI-C](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/lumic-job/) and [LUMI-G](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/lumig-job/)
-- **The best starting point:** [Software-specific batch scripts in Docs CSC](https://docs.csc.fi/apps/)
-
 # Running in parallel
 
 - Parallel programs are typically parallelized with the MPI and/or OpenMP standards
 - Further parallelization possible if you can split your whole workflow into smaller independent tasks and run them simultaneously
    - [HyperQueue](https://docs.csc.fi/apps/hyperqueue/) or [Slurm array jobs](https://docs.csc.fi/computing/running/array-jobs/)
    - More details about high-throughput computing and workflow automation in [Docs CSC](https://docs.csc.fi/computing/running/throughput/)
-
-
-:::{admonition} More advanced topics - MPI/OpenMP
-:class: dropdown, tip
-
-**What is MPI?**
-
-- MPI (Message Passing Interface) is a widely used standard for writing software that runs in parallel
-- MPI utilizes parallel **processes** that _do not share memory_
-   - To exchange information, processes pass data messages back and forth between the cores
-   - Communication can be a performance bottleneck
-- MPI is required when running on multiple nodes
-
-**What is OpenMP?**
-
-- OpenMP (Open Multi-Processing) is a standard that utilizes compute cores that share memory, i.e. **threads**
-   - They do not need to send messages between each other
-- OpenMP is easier for beginners, but problems quickly arise with so-called _race conditions_
-   - This appears when different compute cores process and update the same data without proper synchronization
-- OpenMP is restricted to a single node
-
-# Parallel resource reservation: a couple of examples
-
-- Multicore OpenMP job
-
-<font size="6">
-```bash
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=X
-```
-</font>
-
-- Multicore MPI job
-
-<font size="6">
-```bash
-#SBATCH --nodes=X
-#SBATCH --ntasks-per-node=Y
-#SBATCH --cpus-per-task=Z
-```
-</font>
-
-- `--cpus-per-task` is typically used for OpenMP jobs
-- `--ntasks` is typically used for MPI jobs
-    - A task cannot be split between nodes, but tasks can be on different nodes
-    - `--ntasks-per-node` can be used for finer control
-
-**Self study materials for OpenMP and MPI**
-
-- There are many tutorials available online
-   - Look with simple searches for _e.g._ "MPI tutorial"
-- Check the documented exercise material and model answers from the CSC course "Introduction to Parallel Programming"
-   - Available on [GitHub](https://github.com/csc-training/parallel-prog/)
-   - See also the [materials of CSC Summer School in HPC](https://github.com/csc-training/summerschool)
-
-:::
-
-:::{admonition} More advanced topics - GPU
-:class: dropdown, tip
-
-# GPUs can speed up jobs
-
-- GPUs, or Graphics Processing Units, are extremely powerful processors developed for graphics and gaming
-- They can be used for science, but are often challenging to program
-   - Not all algorithms can use the full power of GPUs
-- Check the manual if the software can utilize GPUs, don't use GPUs if you're unsure
-   - Consult [how to check if your batch job used GPU](https://docs.csc.fi/support/tutorials/gpu-ml/#gpu-utilization)
-   - The [CSC usage policy](https://docs.csc.fi/computing/usage-policy/#gpu-nodes) limits GPU usage to where it is most efficient
-   - Also, if you process lots of data, make sure you [use the disk efficiently](https://docs.csc.fi/support/tutorials/ml-data/#using-the-shared-file-system-efficiently)
-- Does your code run on AMD GPUs? [LUMI](https://docs.lumi-supercomputer.eu/hardware/compute/lumig/) has a massive GPU capacity!
-
-- Can your software utilize GPUs?
-   - [GPUs in Puhti batch jobs](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#gpus)
-   - [GPUs in Mahti batch jobs](https://docs.csc.fi/computing/running/creating-job-scripts-mahti/#gpu-batch-jobs)
-   - [GPUs in LUMI batch jobs](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/lumig-job/)
-
-:::
 
 :::{admonition} A small thought example
 :class: tip
@@ -214,13 +117,6 @@ Think about your work, do you need to run a lot of steps one after another?
     - Don't run too many/short _job steps_ -- they will bloat Slurm accounting
 - Don't run too long jobs without a restart option
     - Increased risk of something going wrong, resulting in lost time/results
-
-
-
-
-
-
-
 
 ## Running things at same time
 

@@ -12,3 +12,8 @@
 - If you need to install a software package distributed through Conda, [you need to containerize it](https://docs.csc.fi/computing/usage-policy/#conda-installations)
    - Containerizing greatly speeds up performance at startup and can be done easily with the [Tykky wrapper](https://docs.csc.fi/computing/containers/tykky/)
 - If you can't find suitable software, consider writing your own code
+
+# Running your software
+
+- It is not only how your software is constructed and compiled that affects performance
+- It may also be run in different ways

@@ -46,12 +46,20 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
 
    materials/terminal.md
    materials/terminology.md
+   materials/supercomputer_setup.md
+   materials/partitions.md
+   materials/job_types.md
    materials/fair_share.md
-   materials/jobs.md
+   materials/batch_job.md
    materials/exercise_basics.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Running jobs efficiently
+
    materials/job_monitoring.md
-   materials/htc.md
    materials/starting_a_project.md
+   materials/htc.md
    materials/exercise_gdal.md
 
 .. toctree::
