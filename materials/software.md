@@ -64,7 +64,6 @@
 	* ArcGIS, TerraScan 
 
 
-
 ## Skills needed 
 
 * Some GIS tool listed above
@@ -111,4 +110,3 @@ module load r-env
 
 
 
-	

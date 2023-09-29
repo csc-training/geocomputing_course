@@ -2,6 +2,22 @@
 
 TODO: fix texts and reorder
 
+# First steps for fast jobs 
+
+- Spend a little time to investigate:
+   - Which of the available software would be the best to solve the kind of problem you have?
+      - Ask experienced colleagues or <servicedesk@csc.fi> for guidance
+- Consider:
+   - The software that solves your problem fastest might not always be the best
+      - Issues like ease-of-use and compute power/memory/disk demands are also highly relevant
+   - Quite often it is useful to start simple and gradually use more complex approaches if needed
+- When you've found the software you want to use, check if it is available at CSC as a [pre-installed optimized version](https://docs.csc.fi/apps/)
+   - Familiarize yourself with the software manual, if available
+- If you need to install a software package distributed through Conda, [you need to containerize it](https://docs.csc.fi/computing/usage-policy/#conda-installations)
+   - Containerizing greatly speeds up performance at startup and can be done easily with the [Tykky wrapper](https://docs.csc.fi/computing/containers/tykky/)
+- If you can't find suitable software, consider writing your own code
+
+
 * keep scripts under version control (also simplifies collaboration and synchronising different computers, e.g. git(hub))
 * on Puhti: 
     * scripts in `/projappl/project_200xxxx/your_groupname/`
@@ -27,6 +43,8 @@ Google the toolname from eg QGIS and the desired scripting language to get some 
 
 
 ## Moving from own computer to HPC
+
+Think about Git* for sharing your scripts instead of moving them around.
 
 ### Your own scripts
 
@@ -72,6 +90,20 @@ Google the toolname from eg QGIS and the desired scripting language to get some 
 
 
 
+# Optimize the performance of your own code
 
-
+- If you have written your own code, compile it with optimizing compiler options
+   - Docs CSC: compiling on [Puhti](https://docs.csc.fi/computing/compiling-puhti/) and [Mahti](https://docs.csc.fi/computing/compiling-mahti/)
+   - [Compiling on LUMI](https://docs.lumi-supercomputer.eu/development/)
+- Construct a small and quick test case and run it in the test queue
+   - Docs CSC: [Queue options](https://docs.csc.fi/computing/running/batch-job-partitions/)
+   - [Available partitions on LUMI](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/)
+   - Use the test case to optimize computations before starting massive ones
+- Use profiling tools to find out how much time is spent in different parts of the code
+   - Docs CSC: [Performance analysis](https://docs.csc.fi/computing/performance/)
+   - [Profiling on LUMI](https://docs.lumi-supercomputer.eu/development/profiling/strategies/)
+- When the computing bottlenecks are identified, try to figure out ways to improve the code
+   - Again, [servicedesk@csc.fi](mailto:servicedesk@csc.fi) is a channel to ask for help
+      - [The more concrete the problem is described, the better](https://docs.csc.fi/support/support-howto/)
+   - If your issue concerns LUMI, contact the [LUMI User Support Team](https://lumi-supercomputer.eu/user-support/need-help/)
 

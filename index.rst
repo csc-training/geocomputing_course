@@ -25,6 +25,7 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
 
    materials/csc.md
    materials/csc_services.md
+   materials/resource_monitoring.md
    materials/support.md 
 
 
@@ -44,12 +45,21 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    :maxdepth: 2
    :caption: Terminology and concepts
 
-
-   materials/terminology.md
    materials/terminal.md
+   materials/terminology.md
+   materials/supercomputer_setup.md
+   materials/partitions.md
+   materials/job_types.md
    materials/fair_share.md
-   materials/jobs.md
+   materials/batch_job.md
    materials/exercise_basics.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Running jobs efficiently
+
+   materials/job_monitoring.md
+   materials/starting_a_project.md
    materials/htc.md
    materials/exercise_gdal.md
 
@@ -61,8 +71,6 @@ THIS MATERIAL IS WORK IN PROGRESS, do not trust anything ! ;)
    materials/exercise_r.md 
    materials/installations.md
    materials/own_project.md
-
-
 
 .. toctree::
    :maxdepth: 3

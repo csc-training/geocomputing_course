@@ -1,44 +1,37 @@
-# High Throughput Computing (HTC) and parallelization
 
-TODO: fix texts and reorder
+# Parallizable processes
 
-## Running things at same time
+- Typically, large computers like those at CSC are not much faster than personal ones -- they are simply bigger
+   - For fast computation, they utilize parallelism (and typically have special disk, memory and network solutions, too)
+- Parallelism simplified:
+   - You use hundreds of ordinary computers simultaneously to solve a single problem
 
-* within batch script 
-<p>&rarr; array job, GNU parallel </p>
-* within python script
-<p>&rarr; multiprocessing, joblib, dask </p>
-* within R script
-<p>&rarr; future, foreach, snow </p>
+:::{admonition} A small thought example
+:class: tip
 
-## Slurm accounting: batch job resource usage 
+What of the following is a task, that can be parallelized in real life:
 
+1. Manually copying a book and producing a clone
+2. Clearing the table after dinner
+3. Rinsing the dishes with one sink
+4. A family getting dressed to leave the apartment for a birthday party*
 
-- Resource usage can be queried with `seff <slurm jobid>`
-- Points to pay attention to:
-   - Low CPU Efficiency:
-      - Too many cores requested?
-      - Cores waiting for other processes?
-      - Cores waiting for data from disk?
-      - Cores spread over too many nodes?
-   - Low Memory Efficiency:
-      - Too much memory requested?
-      - Lots of caveats here
-   - Low GPU efficiency:
-      - Better to use CPUs? Disk I/O?
+Think about what the inputs are to the task at hand. Can individual items of the inputs be processed independent of each other?
 
-![](img/seff-output-new.png "Seff output"){width=90%}
+From [HPC-Carpentry](http://www.hpc-carpentry.org/hpc-parallel-novice/02-parallel-estimate/index.html)
 
+:::{admonition} Solution
+:class: tip, dropdown 
 
-- Not all usage is captured by Slurm accounting
-   - If CPU efficiency seems too low, look at the completion time
-   - Some applications also print timing data in log files
-   - Jobs launched without `srun` don't record properly (e.g. `orterun`)
-- More detailed queries can be tailored with `sacct`
-   - `sacct -j <slurm jobid> -o jobid,partition,state,elapsed,start,end`
-   - `sacct -S 2022-08-01` will show all jobs started after that date
-   - Note! Querying data from the Slurm accounting database with `sacct` can be a very heavy operation
-      - **Don't** query long time intervals or run `sacct` in a loop/using `watch` as this will degrade the performance of the system for all users
+1. not parallel typically - as we have to start with one book and only have one reader/writer
+2. parallel, the more people help, the better
+3. not parallel, every piece of cutlery and dishes needs to go through one sink
+4. parallel, each family member can get dressed independent of each other
+:::
+
+:::
+
+&rarr; Not everything can be parallelized. Identify serial and parallelizable parts of your code early on.
 
 ## Parallelizing your workflow
 
@@ -49,67 +42,6 @@ TODO: fix texts and reorder
 - Optimize usage considering single job wall-time, overall used CPU time, I/O
 - [Docs CSC: Guidelines for high-throughput computing](https://docs.csc.fi/computing/running/throughput/)
 
-## Reserving and optimizing batch job resources
-
-- **Important resource requests that should be monitored with `seff` are:**
-   - [Memory requirements](https://docs.csc.fi/support/faq/how-much-memory-my-job-needs/)  
-   - [Disk workload](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage)
-   - [GPU efficiency](https://docs.csc.fi/computing/usage-policy/#gpu-nodes)
-   - [Scaling of a job over several cores and nodes](https://docs.csc.fi/computing/running/performance-checklist/#perform-a-scaling-test)
-      - Parallel jobs must always benefit from all requested resources
-      - When you double the number of cores, the job should run _at least_ 1.5x faster
-
-
-# The purpose of large computers
-
-- Typically, large computers like those at CSC are not much faster than personal ones -- they are simply bigger
-   - For fast computation, they utilize parallelism (and typically have special disk, memory and network solutions, too)
-- Parallelism simplified:
-   - You use hundreds of ordinary computers simultaneously to solve a single problem
-
-# First steps for fast jobs 
-
-- Spend a little time to investigate:
-   - Which of the available software would be the best to solve the kind of problem you have?
-      - Ask experienced colleagues or <servicedesk@csc.fi> for guidance
-- Consider:
-   - The software that solves your problem fastest might not always be the best
-      - Issues like ease-of-use and compute power/memory/disk demands are also highly relevant
-   - Quite often it is useful to start simple and gradually use more complex approaches if needed
-- When you've found the software you want to use, check if it is available at CSC as a [pre-installed optimized version](https://docs.csc.fi/apps/)
-   - Familiarize yourself with the software manual, if available
-- If you need to install a software package distributed through Conda, [you need to containerize it](https://docs.csc.fi/computing/usage-policy/#conda-installations)
-   - Containerizing greatly speeds up performance at startup and can be done easily with the [Tykky wrapper](https://docs.csc.fi/computing/containers/tykky/)
-- If you can't find suitable software, consider writing your own code
-
-# Optimize the performance of your own code
-
-- If you have written your own code, compile it with optimizing compiler options
-   - Docs CSC: compiling on [Puhti](https://docs.csc.fi/computing/compiling-puhti/) and [Mahti](https://docs.csc.fi/computing/compiling-mahti/)
-   - [Compiling on LUMI](https://docs.lumi-supercomputer.eu/development/)
-- Construct a small and quick test case and run it in the test queue
-   - Docs CSC: [Queue options](https://docs.csc.fi/computing/running/batch-job-partitions/)
-   - [Available partitions on LUMI](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/)
-   - Use the test case to optimize computations before starting massive ones
-- Use profiling tools to find out how much time is spent in different parts of the code
-   - Docs CSC: [Performance analysis](https://docs.csc.fi/computing/performance/)
-   - [Profiling on LUMI](https://docs.lumi-supercomputer.eu/development/profiling/strategies/)
-- When the computing bottlenecks are identified, try to figure out ways to improve the code
-   - Again, [servicedesk@csc.fi](mailto:servicedesk@csc.fi) is a channel to ask for help
-      - [The more concrete the problem is described, the better](https://docs.csc.fi/support/support-howto/)
-   - If your issue concerns LUMI, contact the [LUMI User Support Team](https://lumi-supercomputer.eu/user-support/need-help/)
-
-# Running your software
-
-- It is not only how your software is constructed and compiled that affects performance
-- It may also be run in different ways
-
-# HPC parallel jobs
-
-- A parallel job distributes the calculation over several cores in order to achieve a shorter wall-time (and/or a larger allocatable memory)
-- Examples of batch job scripts for [Puhti](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/) and [Mahti](https://docs.csc.fi/computing/running/example-job-scripts-mahti/)
-- Examples of batch job scripts for [LUMI-C](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/lumic-job/) and [LUMI-G](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/lumig-job/)
-- **The best starting point:** [Software-specific batch scripts in Docs CSC](https://docs.csc.fi/apps/)
 
 # Running in parallel
 
@@ -117,41 +49,11 @@ TODO: fix texts and reorder
 - Further parallelization possible if you can split your whole workflow into smaller independent tasks and run them simultaneously
    - [HyperQueue](https://docs.csc.fi/apps/hyperqueue/) or [Slurm array jobs](https://docs.csc.fi/computing/running/array-jobs/)
    - More details about high-throughput computing and workflow automation in [Docs CSC](https://docs.csc.fi/computing/running/throughput/)
-- Can your software utilize GPUs?
-   - [GPUs in Puhti batch jobs](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#gpus)
-   - [GPUs in Mahti batch jobs](https://docs.csc.fi/computing/running/creating-job-scripts-mahti/#gpu-batch-jobs)
-   - [GPUs in LUMI batch jobs](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/lumig-job/)
 
+:::{admonition} A small thought example
+:class: tip
 
-:::{note}
-:class: dropdown
-
-## Advanced topics
-
-### What is MPI?
-
-- MPI (Message Passing Interface) is a widely used standard for writing software that runs in parallel
-- MPI utilizes parallel **processes** that _do not share memory_
-   - To exchange information, processes pass data messages back and forth between the cores
-   - Communication can be a performance bottleneck
-- MPI is required when running on multiple nodes
-
-### What is OpenMP?
-
-- OpenMP (Open Multi-Processing) is a standard that utilizes compute cores that share memory, i.e. **threads**
-   - They do not need to send messages between each other
-- OpenMP is easier for beginners, but problems quickly arise with so-called _race conditions_
-   - This appears when different compute cores process and update the same data without proper synchronization
-- OpenMP is restricted to a single node
-
-### Self study materials for OpenMP and MPI
-
-- There are many tutorials available online
-   - Look with simple searches for _e.g._ "MPI tutorial"
-- Check the documented exercise material and model answers from the CSC course "Introduction to Parallel Programming"
-   - Available on [GitHub](https://github.com/csc-training/parallel-prog/)
-   - See also the [materials of CSC Summer School in HPC](https://github.com/csc-training/summerschool)
-
+Think about your work, do you need to run a lot of steps one after another?
 
 :::
 
@@ -181,17 +83,6 @@ TODO: fix texts and reorder
    - Try combining small and numerous jobs into fewer and bigger ones
 - As always, try to estimate as accurately as possible the required memory and the time it takes for the separate tasks to finish
    - Consult _e.g._ this [bio job tutorial with examples](https://docs.csc.fi/support/tutorials/biojobs-on-puhti/)
-
-# GPUs can speed up jobs
-
-- GPUs, or Graphics Processing Units, are extremely powerful processors developed for graphics and gaming
-- They can be used for science, but are often challenging to program
-   - Not all algorithms can use the full power of GPUs
-- Check the manual if the software can utilize GPUs, don't use GPUs if you're unsure
-   - Consult [how to check if your batch job used GPU](https://docs.csc.fi/support/tutorials/gpu-ml/#gpu-utilization)
-   - The [CSC usage policy](https://docs.csc.fi/computing/usage-policy/#gpu-nodes) limits GPU usage to where it is most efficient
-   - Also, if you process lots of data, make sure you [use the disk efficiently](https://docs.csc.fi/support/tutorials/ml-data/#using-the-shared-file-system-efficiently)
-- Does your code run on AMD GPUs? [LUMI](https://docs.lumi-supercomputer.eu/hardware/compute/lumig/) has a massive GPU capacity!
 
 # Tricks of the trade
 
@@ -226,9 +117,12 @@ TODO: fix texts and reorder
     - Increased risk of something going wrong, resulting in lost time/results
 
 
+## Running things at same time
 
-
-
-
-
+* within batch script 
+<p>&rarr; array job, GNU parallel </p>
+* within python script
+<p>&rarr; multiprocessing, joblib, dask </p>
+* within R script
+<p>&rarr; future, foreach, snow </p>
 

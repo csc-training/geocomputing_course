@@ -19,3 +19,4 @@ TODO: text fix, logo
 The Location Innovation Hub (LIH) is a centre of excellence in location information coordinated by the Finnish Geospatial Research Institute. Our services are produced in conjunction with a partner network. We help companies to grow their business with location information. We also serve the public sector.
 
 TODO: text fix, logo
+
