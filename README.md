@@ -15,7 +15,7 @@ Materials are build to [Geocomputing course main page](https://csc-training.gith
 
 Local testing can be done by installing [Sphinx](https://www.sphinx-doc.org/en/master/) and some extensions with for example pip:
 
-`pip install sphinx sphinx-book-theme myst_parser sphinx-togglebutton`
+`pip install sphinx sphinx-book-theme myst_parser sphinx-togglebutton colon-fence`
 
 Then clone this repository and run 
 

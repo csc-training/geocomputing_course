@@ -63,12 +63,7 @@ module load python-data
 
 💡 [FAQ on CSC batch jobs](https://docs.csc.fi/support/faq/#batch-jobs) in Docs CSC
 
----
 
----
-topic: Batch jobs
-title: Tutorial - Serial batch jobs (essential)
----
 
 # Batch job tutorial - Serial jobs
 

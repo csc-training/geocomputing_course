@@ -2,6 +2,39 @@
 
 TODO: fix texts and reorder
 
+## Parallizable processes
+
+:::{admonition} A small thought example
+:class: tip
+Test test
+:::
+
+
+:::{admonition} A small thought example
+:class: tip
+
+What of the following is a task, that can be parallelized in real life:
+
+* Manually copying a book and producing a clone
+* Clearing the table after dinner
+* Rinsing the dishes with one sink
+* A family getting dressed to leave the apartment for a birthday party*
+
+Think about what the inputs are to the task at hand. Can individual items of the inputs be processed independent of each other?
+
+From http://www.hpc-carpentry.org/hpc-parallel-novice/02-parallel-estimate/index.html
+
+:class: dropdown 
+Solution
+
+* not parallel typically - as we have to start with one book and only have one reader/writer
+* parallel, the more people help, the better
+* not parallel, every piece of cutlery and dishes needs to go through one sink
+* parallel, each family member can get dressed independent of each other
+
+:::
+
+
 ## Running things at same time
 
 * within batch script 
