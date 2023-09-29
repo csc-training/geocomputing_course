@@ -1,5 +1,6 @@
 # Terminal
 
+
 TODO: adopt to webinterface  task
 
 ## Why would you want to use the terminal?
@@ -72,6 +73,7 @@ cd YourNameTestFolder       # replace YourName
 
 💡 Note: if you just type `cd` and the first letter of the folder name, then hit `tab` key, the terminal completes the name. Handy!
 
+
 Add an empty file into this directory. 
 
 ```bash
@@ -111,10 +113,8 @@ less YourName-first-file.txt      # replace YourName
 5. Exit the preview with `q`.
 
 
-
 ## Exploring files
 
-We can also do more
 
 1. Download a file into this new folder. Use the command `wget` for downloading from a URL:
 
@@ -169,6 +169,7 @@ ls
 💡 Tip: If you remember *a part of a command* that you have used recently you can search for it with the command `history | grep string`. This will show all your used commands that have included the string `string` (replace this with the pattern you are searching for).
 
 
+
 :::{admonition} Advanced topic: Developing scripts remotely
 :class: tip, dropdown
 
@@ -178,5 +179,4 @@ ls
 - Note that [Visual Studio Code](https://docs.csc.fi/computing/webinterface/vscode/) and [Jupyter Notebooks](https://docs.csc.fi/computing/webinterface/jupyter/) are also available through the Puhti web interface
 
 :::
-
 

@@ -1,5 +1,6 @@
 # Exercise - webinterface
 
+
 > ‼️ To begin make sure you have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) that is a member of a project which [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
 
 Task suggestions:

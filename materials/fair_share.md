@@ -1,3 +1,4 @@
+
 # Fair share of use on multi-user computing platforms
 
 The computing resources are shared among hundreds of users, who all have different resource needs. Resources allocated to a job are not available for others to use. It is important to request only the resources you need and ensure that the resources are used efficiently. A resource/job management system keeps track of the computing resources. It aims to share the resources in an efficient and fair way among all users. It optimizes resource usage by filling the compute nodes so that there will be as little idling resources as possible.
@@ -27,6 +28,7 @@ Slurm controls how a single job request is allocated resources, such as:
 * amount of memory
 * other resources like GPUs, local disk, etc.
 
+
 ## Queueing 
 
 - A job is queued and starts when the requested resources become available
@@ -36,6 +38,7 @@ Slurm controls how a single job request is allocated resources, such as:
    - Over time (while queueing) its priority _increases_ and eventually it will run
    - Some queues have a lower priority (e.g. _longrun_ -- use shorter if you can!)
 - See our documentation for more information on [Getting started with running batch jobs on Puhti/Mahti](https://docs.csc.fi/computing/running/getting-started/) and [LUMI](https://docs.lumi-supercomputer.eu/runjobs/).
+
 
 
 :::{admonition} How many jobs is too many?
@@ -87,3 +90,4 @@ Note that these guideline numbers are for all operations on all jobs.
     * Not all or nothing
 
 :::
+

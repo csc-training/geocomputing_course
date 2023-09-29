@@ -18,7 +18,6 @@ TODO: fix texts and reorder
 - If you can't find suitable software, consider writing your own code
 
 
-
 * keep scripts under version control (also simplifies collaboration and synchronising different computers, e.g. git(hub))
 * on Puhti: 
     * scripts in `/projappl/project_200xxxx/your_groupname/`
@@ -90,6 +89,7 @@ Think about Git* for sharing your scripts instead of moving them around.
    - This depends on many things, so you have to try, see our [instructions about a scaling test](https://docs.csc.fi/support/tutorials/cmdline-handson/#scaling-test-for-an-mpi-parallel-job)
 
 
+
 # Optimize the performance of your own code
 
 - If you have written your own code, compile it with optimizing compiler options
@@ -106,7 +106,4 @@ Think about Git* for sharing your scripts instead of moving them around.
    - Again, [servicedesk@csc.fi](mailto:servicedesk@csc.fi) is a channel to ask for help
       - [The more concrete the problem is described, the better](https://docs.csc.fi/support/support-howto/)
    - If your issue concerns LUMI, contact the [LUMI User Support Team](https://lumi-supercomputer.eu/user-support/need-help/)
-
-
-
 

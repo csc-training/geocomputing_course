@@ -1,3 +1,4 @@
+
 # Parallizable processes
 
 - Typically, large computers like those at CSC are not much faster than personal ones -- they are simply bigger
@@ -41,6 +42,7 @@ From [HPC-Carpentry](http://www.hpc-carpentry.org/hpc-parallel-novice/02-paralle
 - Optimize usage considering single job wall-time, overall used CPU time, I/O
 - [Docs CSC: Guidelines for high-throughput computing](https://docs.csc.fi/computing/running/throughput/)
 
+
 # Running in parallel
 
 - Parallel programs are typically parallelized with the MPI and/or OpenMP standards
@@ -52,8 +54,6 @@ From [HPC-Carpentry](http://www.hpc-carpentry.org/hpc-parallel-novice/02-paralle
 :class: tip
 
 Think about your work, do you need to run a lot of steps one after another?
-
-
 
 :::
 
@@ -83,8 +83,6 @@ Think about your work, do you need to run a lot of steps one after another?
    - Try combining small and numerous jobs into fewer and bigger ones
 - As always, try to estimate as accurately as possible the required memory and the time it takes for the separate tasks to finish
    - Consult _e.g._ this [bio job tutorial with examples](https://docs.csc.fi/support/tutorials/biojobs-on-puhti/)
-
-
 
 # Tricks of the trade
 
@@ -118,6 +116,7 @@ Think about your work, do you need to run a lot of steps one after another?
 - Don't run too long jobs without a restart option
     - Increased risk of something going wrong, resulting in lost time/results
 
+
 ## Running things at same time
 
 * within batch script 
@@ -126,3 +125,4 @@ Think about your work, do you need to run a lot of steps one after another?
 <p>&rarr; multiprocessing, joblib, dask </p>
 * within R script
 <p>&rarr; future, foreach, snow </p>
+

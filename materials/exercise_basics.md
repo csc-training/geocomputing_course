@@ -6,6 +6,7 @@ Goals:
 * get to know job submission
 * interactive -> non interactive
 
+
 TODO: update to fit here; current texts from env eff course
 
 ## Interactive
@@ -68,8 +69,6 @@ module load python-data
 💡 Documentation at Docs CSC on [Interactive usage](https://docs.csc.fi/computing/running/interactive-usage/)
 
 💡 [FAQ on CSC batch jobs](https://docs.csc.fi/support/faq/#batch-jobs) in Docs CSC
-
-
 
 # Batch job tutorial - Serial jobs
 
