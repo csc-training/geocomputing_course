@@ -14,7 +14,6 @@ Geoportti Research Infrastructure (RI) is a shared service for researchers, teac
 
 ![](./images/geoportti.png)
 
-TODO: text fix
 
 ## [Location Innovation Hub](https://locationinnovationhub.eu)
 
@@ -22,5 +21,4 @@ The Location Innovation Hub (LIH) is a centre of excellence in location informat
 
 ![](./images/lih.png)
 
-TODO: text fix
 
