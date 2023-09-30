@@ -1,120 +1,96 @@
 # Own project hints
 
-TODO: fix texts and reorder
+No matter if you are just starting a new project or already have found suitable tools for your task or maybe even written your own tools.
 
 ## Making use of HPC resources
 
-* Just moving a script to HPC does not make it run faster
+Just moving your workflow or script to the supercomputer does not make it run faster. But there is some things that you can do.
 
-# First steps for fast jobs 
+## New project hints
 
-- Spend a little time to investigate:
-   - Which of the available software would be the best to solve the kind of problem you have?
-      - Ask experienced colleagues or <servicedesk@csc.fi> for guidance
+When you start a new project and don't yet know how you are going to approach the task, spend a little time to investigate:
+- Which tools are able to solve the kind of task you have?
+   - Google your task
+   - Ask experienced colleagues or <servicedesk@csc.fi> for guidance
+   - Once you found some, if it comes with tutorials, do at least one
+      - This will likely be the fastest way forward
+      - Naturally, read the manual/instructions
+         - It is not only how your software is constructed and compiled that affects performance
+         - It may also be run in different ways
 - Consider:
    - The software that solves your problem fastest might not always be the best
-      - Issues like ease-of-use and compute power/memory/disk demands are also highly relevant
-   - Quite often it is useful to start simple and gradually use more complex approaches if needed
+   - Issues like ease-of-use and compute power/memory/disk demands are also highly relevant
 - When you've found the software you want to use, check if it is available at CSC as a [pre-installed optimized version](https://docs.csc.fi/apps/)
-   - Familiarize yourself with the software manual, if available
-- If you need to install a software package distributed through Conda, [you need to containerize it](https://docs.csc.fi/computing/usage-policy/#conda-installations)
-   - Containerizing greatly speeds up performance at startup and can be done easily with the [Tykky wrapper](https://docs.csc.fi/computing/containers/tykky/)
+   - If it is, use the batch script example from _there_
+   - Otherwise, use a [general template](https://docs.csc.fi/computing/running/example-job-scripts-puhti/)
+   - If it is not, check if you can install it yourself using [Tykky](https://docs.csc.fi/computing/containers/tykky/) or ask <servicedesk@csc.fi> for help.
+- Quite often it is useful to start simple and gradually use more complex approaches if needed
+   - Try first running interactively (**not** on a login node)
+   - Use the `top` command to get rough estimate of memory use, _etc_.
+   - If developers provide some test or example data, run it first and make sure results are correct
+   - Before large runs, it's a good idea to do a smaller trial run
+      - Check that results are as expected
+      - Check the resource usage after the test run and adjust accordingly
+   - You can use the _test_ queue to check that your batch job script is correct
+      - Limits : 15 min, 2 nodes
+      - Job turnaround usually very fast even if machine is "full"
+      - Can be useful to spot typos, missing files, _etc_. before submitting a job that will idle in the queue
+- How many cores to allocate?
+   - This depends on many things, so you have to try, see our [instructions about a scaling test](https://docs.csc.fi/support/tutorials/cmdline-handson/#scaling-test-for-an-mpi-parallel-job)
 - If you can't find suitable software, consider writing your own code
 
 
-## Running your software
+## Running your own scripts
 
-- It is not only how your software is constructed and compiled that affects performance
-- It may also be run in different ways
+To keep track of your script versions by using a version control system, like Git(Hub). This also simplifies collaboration and synchronising your scripts on different computers.
 
+:::{admonition} Reminder for  Puhti 
+:class: tip,
 
-* keep scripts under version control (also simplifies collaboration and synchronising different computers, e.g. git(hub))
-* on Puhti: 
-    * scripts in `/projappl/project_200xxxx/your_groupname/`
-    * data in `/scratch/project_200xxxx/your_groupname/` -> raw data, intermediate and final results
-    * personal configuration scripts in `/users/your_username/`
-    * Puhti webinterface / `scp` for data transfer: own computer - Puhti
-    * `wget` for data transfer:  internet - Puhti
-
-On project organization: [CodeRefinery lesson - Reproducible research](https://coderefinery.github.io/reproducible-research/organizing-projects/)<br>
-[CodeRefinery lesson - Modular code development](https://coderefinery.github.io/modular-type-along/instructor-guide/)
-
-
-## Moving from GUI to CLI/scripts
-
-Some GUI tools provide the commands that correspond to GUI tool either in documentation or as part of the tool.
-> Show QGIS -> GDAL commands
-
-Google the toolname from eg QGIS and the desired scripting language to get some ideas.
-
-
-## Moving from own computer to HPC
-
-Think about Git* for sharing your scripts instead of moving them around.
-
-### Your own scripts
-
-* no hard coded filepaths such as `/my/home/dir/file.txt`
-  * read from stdin or config file instead
-* modular code
-  * easier to parallelize, if needed
-* know your dependencies
-* know your resources
-* make sure your code works as expected before moving to HPC
-
-:::{admonition} Well prepared?
-:class: tip
+* Keep scripts in `/projappl/project_200xxxx/your_groupname/`
+* Keep data in `/scratch/project_200xxxx/your_groupname/` during processing, Allas for longer term storage
+* Keep personal configuration scripts in `/users/your_username/`
+* Puhti webinterface / `scp` for data transfer: own computer - Puhti
+* `wget` for data transfer:  internet - Puhti
 
 :::
 
-## Before starting large-scale calculations
+## FAIR research code
 
-- Check how the software and your actual input performs
-    - Common job errors are caused by typos in batch/input scripts
-- Use short runs in the queue `--partition=test` to check that the input works and that the resource requests are interpreted correctly
-- Check the output of the `seff` command to ensure that CPU and memory efficiencies are as high as possible
-    - It's OK if a job is (occasionally) killed due to insufficient resource requests: just adjust and rerun/restart
-    - It's _much worse_ to always run with excessively large requests "just in case"
+!()[./images/fair-principles.svg]
+The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807.
 
+Following "good enough" practices for FAIR research code will not only help you rerunning your code again when reviewers would like you to "just run XX again" half a year after you moved on to the next project. It will also make your code more reproducible for others:
+* Version control
+* Clean directory structure
+* Reproducible computing environment
+   * Use existing modules
+   * Know your dependencies 
+   * Containers
+* Documentation with code, minimum: README
+* Modularity -> simplifies reusability and making things parallel
+* License
+* Share your code, data, results
 
-## Running a new application in Puhti 
+You can find self-study materials on these topics from the [CodeRefinery project lessons](https://coderefinery.org/lessons/core/).
 
-- If it comes with tutorials, do at least one
-   - This will likely be the fastest way forward
-   - Naturally, read the manual/instructions
-- Check if there's a page about it in [Docs CSC](https://docs.csc.fi/apps/)
-   - If there is, use the batch script example from _there_
-   - Otherwise, use a [general template](https://docs.csc.fi/computing/running/example-job-scripts-puhti/)
-- Try first running interactively (**not** on a login node)
-   - Perhaps it is easier to find the correct command line options
-   - Use the `top` command to get rough estimate of memory use, _etc_.
-   - If developers provide some test or example data, run it first and make sure results are correct
-- You can use the _test_ queue to check that your batch job script is correct
-   - Limits : 15 min, 2 nodes
-   - Job turnaround usually very fast even if machine is "full"
-   - Can be useful to spot typos, missing files, _etc_. before submitting a job that will idle in the queue
-- Before large runs, it's a good idea to do a smaller trial run
-   - Check that results are as expected
-   - Check the resource usage after the test run and adjust accordingly
-- How many cores to allocate?
-   - This depends on many things, so you have to try, see our [instructions about a scaling test](https://docs.csc.fi/support/tutorials/cmdline-handson/#scaling-test-for-an-mpi-parallel-job)
+Eliminate all hardcoded filepaths in your scripts. Instead read from `stdin` or a configuration file instead.
+
+## Optimizing the performance of your own code
 
 
+You can use profiling tools to find out how much time is spent in different parts of the code
+- Docs CSC: [Performance analysis](https://docs.csc.fi/computing/performance/)
+- [Profiling on LUMI](https://docs.lumi-supercomputer.eu/development/profiling/strategies/)
+When the computing bottlenecks are identified, try to figure out ways to improve the code
+- Again, [servicedesk@csc.fi](mailto:servicedesk@csc.fi) is a channel to ask for help
+   - [The more concrete the problem is described, the better](https://docs.csc.fi/support/support-howto/)
+- If your issue concerns LUMI, contact the [LUMI User Support Team](https://lumi-supercomputer.eu/user-support/need-help/)
 
-## Optimize the performance of your own code
 
-- If you have written your own code, compile it with optimizing compiler options
-   - Docs CSC: compiling on [Puhti](https://docs.csc.fi/computing/compiling-puhti/) and [Mahti](https://docs.csc.fi/computing/compiling-mahti/)
-   - [Compiling on LUMI](https://docs.lumi-supercomputer.eu/development/)
-- Construct a small and quick test case and run it in the test queue
-   - Docs CSC: [Queue options](https://docs.csc.fi/computing/running/batch-job-partitions/)
-   - [Available partitions on LUMI](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/)
-   - Use the test case to optimize computations before starting massive ones
-- Use profiling tools to find out how much time is spent in different parts of the code
-   - Docs CSC: [Performance analysis](https://docs.csc.fi/computing/performance/)
-   - [Profiling on LUMI](https://docs.lumi-supercomputer.eu/development/profiling/strategies/)
-- When the computing bottlenecks are identified, try to figure out ways to improve the code
-   - Again, [servicedesk@csc.fi](mailto:servicedesk@csc.fi) is a channel to ask for help
-      - [The more concrete the problem is described, the better](https://docs.csc.fi/support/support-howto/)
-   - If your issue concerns LUMI, contact the [LUMI User Support Team](https://lumi-supercomputer.eu/user-support/need-help/)
+:::{admonition} Advanced topic: Developing scripts remotely
+:class: tip, dropdown
 
+Instead of developing code on your local machine (e.g. laptop) and moving it to the supercomputer for testing, you can also consider to use a local editor and push edited files directly into the remote system via SSH. This works for example with an IDE like _Visual Studio Code_ or a text editor like _Notepad++_. Follow these [detailed instructions to set them up](https://docs.csc.fi/support/tutorials/remote-dev/). Note that [Visual Studio Code](https://docs.csc.fi/computing/webinterface/vscode/) and [Jupyter Notebooks](https://docs.csc.fi/computing/webinterface/jupyter/) are also available through the Puhti web interface
+
+:::
