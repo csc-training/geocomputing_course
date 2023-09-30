@@ -14,4 +14,19 @@
 
 :::
 
+:::{admonition} Prerequisites
+:class: important
+
+* ...
+
+:::
+
 [R exercise materials in Geocomputing Github](https://github.com/csc-training/geocomputing/tree/master/R/puhti)
+
+:::{admonition} Key points
+:class: important
+
+* ...
+
+
+:::

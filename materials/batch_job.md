@@ -25,10 +25,16 @@ srun hostname                    # Print compute node name that has been allocat
 
 **The best starting point for writing batch job scripts:** [Software specific batch scripts in docs](https://docs.csc.fi/apps/)
 
-:::{admonition} Batch job troubleshooting checklist
+:::{admonition} Task
 :class: tip
 
-What to do if a job fails?
+What other `#SBATCH` arguments can you find in [the SLURM documentation](https://slurm.schedmd.com/sbatch.html) that sound useful? 
+
+:::
+
+
+:::{admonition} What to do if a job fails?
+:class: warning
 
 1. Did the job run out of time?
 2. Did the job run out of memory?

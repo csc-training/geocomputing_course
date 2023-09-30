@@ -25,7 +25,7 @@ It maybe confusing, but tasks in Slurm means processor resource. By default, 1 t
 Adapted from [ODU Research Computing Wiki](https://wiki.hpc.odu.edu/)
 
 :::{admonition} What is an HPC system?
-:class: tip
+:class: seealso
 
 The term *HPC system* is a stand-alone resource for computationally intensive workloads. 
 They are typically comprised of a multitude of integrated processing and
@@ -43,7 +43,7 @@ From [NRIS](https://training.pages.sigma2.no).
 :::
 
 :::{admonition} Difference between a HPC computing cluster and the cloud
-:class: tip, dropdown
+:class: seealso, dropdown
 
 
   * All computers involved are located in same location (e.g. in the same room)

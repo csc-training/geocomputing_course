@@ -17,4 +17,7 @@
 * Teaching materials: [Library of Open Educational Resources](https://aoe.fi/)
 * Sending data: [Funet FileSender](https://filesender.funet.fi/)
 
-* [CSC service catalog](https://research.csc.fi/en/service-catalog)
+:::{admonition} Want to know more?
+:class: tip
+See also [CSC service catalog](https://research.csc.fi/en/service-catalog)
+:::

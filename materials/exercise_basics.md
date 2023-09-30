@@ -18,35 +18,22 @@
 :::
 
 
+:::{admonition} Prerequisites
+:class: important
+
+* Access to Puhti webinterface
+* Own directory within the course directory `/scratch/project_200xxxx/$USER`
+
+:::
 
 
-TODO: update to fit here; current texts from env eff course
+## Batch job tutorial - Interactive jobs
 
-## Interactive
+These examples are done on Puhti. If using the web interface, you can either open a login node shell and follow the steps below or open a compute node shell directly and skip to step 2.
 
-# Batch job tutorial - Interactive jobs
+In an interactive batch job, an interactive shell session is launched on a compute node, for which one can request specific resources (time, memory, cores, disk).
 
-> In this tutorial we'll get familiar with the basic usage of the Slurm batch queue system at CSC
-- The goal is to learn how to request resources that **match** the needs of a job
-
-💬 A job consists of two parts: resource requests and the job step(s)
-
-☝🏻 Examples are done on Puhti. If using the web interface, you can either open a login node shell and follow the steps below or, even better, open a compute node shell directly and skip to step 3.
-
-💡 The benefit of running an interactive session through the Puhti web interface is that the shell is *persistent*, i.e. the session will stay open and any programs started there will keep running even if you would happen to lose internet connection or close the browser tab.
-
-## Interactive jobs
-
-💬 In an interactive batch job, an interactive shell session is launched on a compute node.
-
-- For heavy interactive tasks one can request specific resources (time, memory, cores, disk).
-
-💡 You can also use tools with graphical user interfaces in an interactive shell session.
-
-- For such usage the [Puhti web interface](https://www.puhti.csc.fi/) remote desktop often provides an improved experience.
-- Check also [how to use RStudio and Jupyter Notebooks in Puhti](https://docs.csc.fi/support/tutorials/rstudio-or-jupyter-notebooks/)
-
-### A simple interactive job
+### Launching an interactive job
 
 1. Start an interactive job using one core for ten minutes:
 
@@ -54,67 +41,65 @@ TODO: update to fit here; current texts from env eff course
 sinteractive --account <project> --time 00:10:00         # replace <project> with your CSC project, e.g. project_2001234
 ```
 
-💡 You can list your projects with `csc-projects`
+:::{admonition} Need your project number?
+:class: seealso
+You can list your projects with `csc-projects`
+:::
 
-2. You should see that the command prompt (initial text on each row on the command-line) has changed from e.g. `puhti-login11` to e.g. `r07c51` which refers to a compute node.
-3. Once on the compute node, you can run commands directly from the command-line without `srun`. You can e.g. load the `python-data` module (e.g. for running Python scripts interactively on Puhti):
+Observe that the command prompt (initial text on each row on the command-line) has changed from e.g. `puhti-login11` to e.g. `r07c51` which refers to a compute node.
+
+2. Once on the compute node, you can run commands directly from the command-line. You can e.g. load the `geoconda` module:
 
 ```bash
-module load python-data
+module load geoconda
+```
+
+3. Then we can use for example `gdalinfo` to check the details of some rasterfile.
+
+```bash
+gdalinfo /appl/data/geo/luke/forest_wind_damage_sensitivity/2017/windmap2017_int1k_metsamaa2_cog.tif
 ```
 
 4. Quit the interactive batch job with `exit`.
 
-💬 This way you can work interactively for an extended period, using e.g. lots of memory without creating load on the login nodes. Running heavy/long tasks on the login nodes is forbidden according to our [Usage Policy](https://docs.csc.fi/computing/usage-policy/).
+-> This way you can work interactively for an extended period, using e.g. lots of memory without creating load on the login nodes. Running heavy/long tasks on the login nodes is forbidden according to our [Usage Policy](https://docs.csc.fi/computing/usage-policy/).
 
-‼️ Note that above you asked only for 10 minutes of time.
+Note that above we only asked for 10 minutes of time. Once that is up, you will be automatically logged out from the compute node.
 
-- Once that is up, you will be automatically logged out from the compute node.
+Running `exit` on the login node will log you out from Puhti.
 
-💡 From the command-line prompt you can see whether you're on a compute node (e.g. `r07c51`) or on the login node (e.g. `puhti-login12`).
 
-- Running `exit` on the login node will log you out from Puhti.
+:::{admonition} More information on interactive jobs
+:class: seealso
 
-## More information
+Documentation at Docs CSC on [Interactive usage](https://docs.csc.fi/computing/running/interactive-usage/)
+[FAQ on CSC batch jobs](https://docs.csc.fi/support/faq/#batch-jobs) in Docs CSC
 
-💡 Documentation at Docs CSC on [Interactive usage](https://docs.csc.fi/computing/running/interactive-usage/)
+:::
 
-💡 [FAQ on CSC batch jobs](https://docs.csc.fi/support/faq/#batch-jobs) in Docs CSC
 
-# Batch job tutorial - Serial jobs
+## Batch job tutorial - Serial jobs
 
-> In this tutorial we'll get familiar with the basic usage of the Slurm batch queue system at CSC
-- The goal is to learn how to request resources that **match** the needs of a job
+Examples are done on Puhti. If using the web interface, open a login node shell.
 
-💬 A batch job consists of two parts: resource requests and the job step(s)
+:::{admonition} Remember
+:class: seealso
+A serial program can only use one core (CPU)
 
-☝🏻 Examples are done on Puhti. If using the web interface, open a login node shell.
-
-## Serial jobs
-
-💬 A serial program can only use one core (CPU)
-
-- One should request only a single core from Slurm
+- One should request only a single core from SLURM
 - The job does not benefit from additional cores
 - Excess cores are wasted since they will not be available to other users
+:::
 
-💬 Within the job (or allocation), the actual program is launched using the command `srun`
-
-☝🏻 If you use a software that is pre-installed by CSC, please [check its documentation page](https://docs.csc.fi/apps/); it might have a batch job example with useful default settings.
+If you use a software that is pre-installed by CSC, please [check its documentation page](https://docs.csc.fi/apps/); it might have a batch job example with useful default settings.
 
 ### Launching a serial job
 
 1. Go to the `/scratch` directory of your project:
 
 ```bash
-cd /scratch/<project>      # replace <project> with your CSC project, e.g. project_2001234
+cd /scratch/<project>/$USER      # replace <project> with your CSC project, e.g. project_2001234
 ```
-
-- Now your input (and output) will be on a shared disk that is accessible to the compute nodes.
-
-💡 You can list your projects with `csc-projects`
-
-💡 Note! If you're using a project with other members (like the course project), first make a subdirectory for yourself (e.g. `mkdir $USER` and then move there (`cd $USER`) to not clutter the `/scratch` root of your project)
 
 2. Create a file called `my_serial.bash` e.g. with the `nano` text editor:
 
@@ -131,9 +116,15 @@ nano my_serial.bash
 #SBATCH --partition=test         # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
 #SBATCH --ntasks=1               # Number of tasks. Upper limit depends on partition. For a serial job this should be set 1!
 
-srun hostname                    # Run hostname-command
-srun sleep 60                    # Run sleep-command
+srun hostname                    # Run hostname-command, that will print the name of the Puhti compute node that has been allocated for this particular job
+srun sleep 60                    # Run sleep-command, to keep the job running for an additional 60 seconds, in order to have time to monitor the job
 ```
+
+In the batch job example above we are requesting
+
+- one core (`--ntasks=1`)
+- for two minutes (`--time=00:02:00`)
+- from the test queue (`--partition=test`)  
 
 4. Submit the job to the batch queue and check its status with the commands:
 
@@ -142,27 +133,29 @@ sbatch my_serial.bash
 squeue -u $USER
 ```
 
-💬 In the batch job example above we are requesting
+5. Once the job is done, check how much of the resources have been used with `seff <jobid>`.
 
-- one core (`--ntasks=1`)
-- for two minutes (`--time=00:02:00`)
-- from the test queue (`--partition=test`)  
+:::{admonition} Additional exercises
+:class: tip
 
-💬 We want to run the program `hostname` that will print the name of the Puhti compute node that has been allocated for this particular job
-
-💬 In addition, we are running the `sleep` program to keep the job running for an additional 60 seconds, in order to have time to monitor the job
-
-#### Checking the output and the efficiency
-
-- By default, the output is written to a file named `slurm-<jobid>.out` where `<jobid>` is a unique job ID assigned to the job by Slurm
-- Check the efficiency of the job compared to the reserved resources by issuing the command `seff <jobid>` (replace `<jobid>` with the actual Slurm job ID)
-
-💭 You can get a list of all your jobs that are running or queuing with the command `squeue -u $USER`
-
-🗯 A submitted job can be cancelled using the command `scancel <jobid>`
-
-## More information
-
-💡 [FAQ on CSC batch jobs](https://docs.csc.fi/support/faq/#batch-jobs) in Docs CSC
+1. Where can you find the hostname print?
+2. How could you add a name to the job for easier identification?
 
 
+:::{admonition} Solution
+:class: note, dropdown
+
+1. `slurm-<jobid>.out` in the directory from where you submitted the batch job. You can also change that location by specifying it with `#SBATCH --output=/your/path/slurm-%j.out`.
+2. `#SBATCH --job-name=<myname>`
+
+:::
+
+:::{admonition} Key points
+:class: important
+
+* A batch job script combines resource estimates and computation steps
+    * Resource request lines start with `#SBATCH`
+* You can find the jobs output, errors and prints in `slurm-<jobid>.out`
+
+
+:::

@@ -5,7 +5,7 @@
 We have accessed the supercomputer via the webinterface in order to not overwhelm you with setups before the course. However, this way may not always be the most convenient. If you want to access the supercomputer from your terminal directly, you will have to set up SSH keys:
 
 :::{admonition} SSH keys and setup
-:class: tip, dropdown
+:class: seealso, dropdown
 
 **Login with SSH**
 
@@ -55,3 +55,11 @@ If you used any of our resources for your research, please acknowledge CSC and G
 * [CSC geoinformatics training materials](https://research.csc.fi/gis-learning-materials)
 
 -> follow our [training calendar](https://www.csc.fi/en/training#training-calendar)
+
+:::{admonition} Key points
+:class: important
+
+* ...
+
+
+:::

@@ -11,7 +11,15 @@ Materials are build to [Geocomputing course main page](https://csc-training.gith
 
 ### Styling
 
-See [MyST-parser guide](https://myst-parser.readthedocs.io/en/latest/index.html).
+See [MyST-parser](https://myst-parser.readthedocs.io/en/latest/index.html) and [sphinx book theme guide](https://sphinx-book-theme.readthedocs.io).
+
+#### Admonition usage
+
+* Keypoints: important (yellow)
+* Objectives/Timing/etc: note (blue)
+* Note!: caution (orange)
+* info: seealso (green)
+* Tasks/Questions/Exercises: tip (green)
 
 ### Local build of materials
 

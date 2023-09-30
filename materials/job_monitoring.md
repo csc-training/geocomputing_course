@@ -19,7 +19,7 @@ If after job submission or during runtime you would like to cancel a job, you ca
     - When you double the number of cores, the job should run _at least_ 1.5x faster
 
 :::{admonition} Troubleshooting resource usage
-:class: note
+:class: seealso
 
 Points to pay attention to:
 - Low CPU Efficiency:

@@ -23,7 +23,7 @@ If this was too easy, can you count only files that end with `.tif`? What about 
 You can use the "login shell" via the Puhti webinterface for this exercise.
 
 :::{admonition} Solution
-:class: tip, dropdown
+:class: note, dropdown
 
 `man wc` for finding the documentation. Use `q` to exit the documentation.
 
@@ -43,10 +43,15 @@ Do you remember on how you edited some files in the webinterface? Lets do the sa
 
 ### Navigating folders
 
-1. Login to the Puhti webinterface, and start a login shell; first, check which folder you are in by typing `pwd` and hitting `Enter`:
+1. Login to the Puhti webinterface, and start a login shell; first, check which directory you are in by typing `pwd` and hitting `Enter`:
 
 ```bash
 pwd
+```
+2. We would like to create a new directory in our projects scratch directory with our name, let's move there:
+
+```bash
+cd /scratch/project_200xxxx
 ```
 
 2. Check if there are any files:
@@ -55,46 +60,50 @@ pwd
 ls
 ```
 
-3. Make a directory and see if it appears:
+3. Make a directory with your name and see if it appears:
 
 ```bash
-mkdir YourNameTestFolder    # replace YourName
+mkdir $USER    
 ls
 ```
 
-4. Go to that folder.
+4. Go to that directory.
 
 ```bash
-cd YourNameTestFolder       # replace YourName
+cd $USER      
 ```
 
-💡 Note: if you just type `cd` and the first letter of the folder name, then hit `tab` key, the terminal completes the name. Handy!
+:::{admonition} Auto complete
+:class: seealso
+If you just type `cd` and the first letter of the folder name, then hit `tab` key, the terminal completes the name. Handy!
+:::
 
 
 Add an empty file into this directory. 
 
 ```bash
-touch YourNameFile      # replace YourName
+touch <myfilename>      # replace <myfilename> 
 ```
 
 Check that it is empty:
 
 ```bash
-cat YourNameFile        # replace YourName
+cat <myfilename>        # replace <myfilename> 
 ```
 
 Fill it with some content:
 
-
-💬 These exercises are done with the `nano` editor, but you can use your favorite editor too.
-
-💡 Here's a [nano cheat sheet](https://www.nano-editor.org/dist/latest/cheatsheet.html)
+:::{admonition} Command line editor
+:class: seealso
+These exercises are done with the `nano` editor, but you can use your favorite editor too.
+Here's a [nano cheat sheet](https://www.nano-editor.org/dist/latest/cheatsheet.html).
+:::
 
 
 1. Open the file with `nano`:
 
 ```bash
-nano YourName-first-file.txt      # replace YourName
+nano $USER-first-file.txt     
 ```
 
 2. Edit the file. Type something there!
@@ -102,7 +111,7 @@ nano YourName-first-file.txt      # replace YourName
 4. Check that the modifications are actually there:
 
 ```bash
-less YourName-first-file.txt      # replace YourName
+less $USER-first-file.txt     
 ```
 
 5. Exit the preview with `q`.
@@ -131,14 +140,17 @@ less my-first-file.txt
 
 4. To exit the `less` preview of the file, hit `q`.
 
-💡 Tip: Instead of `less` you can use `cat` which prints the content of the file(s) straight into the command line. For long texts `less` is recommended.
+:::{admonition} Tip
+:class: seealso
+Instead of `less` you can use `cat` which prints the content of the file(s) straight into the command line. For long texts `less` is recommended.
+:::
 
 5. Make a copy of this file:
 
 ```bash
-cp my-first-file.txt YourName-first-file.txt    # replace YourName
+cp my-first-file.txt $USER-second-file.txt    # replace YourName
 ls -lth
-less YourName-first-file.txt                    # replace YourName
+less $USER-second-file.txt                    # replace YourName
 ```
 
 6. Remove the file we originally downloaded (leave your own copy).
@@ -148,24 +160,22 @@ rm my-first-file.txt
 ls
 ```
 
-💡 Tip: If you don't want to have duplicate files you can use `mv` to 'move/rename' the file. Syntax is the same: `mv /path/to/source/oldname /path/to/destination/newname`.
+:::{admonition} Moving files
+:class: seealso
+If you don't want to have duplicate files you can use `mv` to 'move/rename' the file. Syntax is the same: `mv /path/to/source/oldname /path/to/destination/newname`.
+:::
 
 
 :::{admonition} Re-executing commands from `history`
-:class: tip
-
+:class: seealso
 If you remember *a part of a command* that you have used recently you can search for it with the command `history | grep string`. This will show all your used commands that have included the string `string` (replace this with the pattern you are searching for).
-
 :::
 
 
 :::{admonition} Moving from GUI to CLI
-:class: tip
-
+:class: seealso
 If you have only used Graphical User Interfaces thus far, but are curious to get started with the Command Line Interface you can try recreating e.g. GDAL commands shown in some QGIS tools.
-
 ![](./images/QGIS_GDAL.png)
-
 :::
 
 

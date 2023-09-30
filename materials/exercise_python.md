@@ -17,8 +17,20 @@
 
 :::
 
+:::{admonition} Prerequisites
+:class: important
+
+* ...
+
+:::
 
 
 [Python exercise materials in Geocomputing Github](https://github.com/csc-training/geocomputing/tree/master/python/puhti)
 
+:::{admonition} Key points
+:class: important
 
+* ...
+
+
+:::

@@ -8,7 +8,7 @@ The computing resources are shared among hundreds of users, who all have differe
 
 
 :::{admonition} Resource bottleneck
-:class: tip
+:class: seealso
 
 - A single node can host many jobs from different users
 - Different jobs need different resources
@@ -19,10 +19,10 @@ The computing resources are shared among hundreds of users, who all have differe
 
 :::
 
-## Slurm
+## SLURM
 
-CSC uses a batch job system called Slurm to manage resources. Slurm is used to control how the overall computing resources are shared among all jobs and users in an efficient and fair manner.
-Slurm controls how a single job request is allocated resources, such as:
+CSC uses a batch job system called SLURM to manage resources. SLURM is used to control how the overall computing resources are shared among all jobs and users in an efficient and fair manner.
+SLURM controls how a single job request is allocated resources, such as:
 * computing time
 * number of cores
 * amount of memory
@@ -42,12 +42,12 @@ Slurm controls how a single job request is allocated resources, such as:
 
 
 :::{admonition} How many jobs is too many?
-:class: tip
+:class: seealso, dropdown
 
 We mention in documentation and guidelines that users shouldn’t send too many jobs, but how many is too many?
 Unfortunately it’s impossible to give any exact numbers because both Slurm and Lustre are shared resources.
-    It’s possible to give better limits for global usage of the system.
-    When system total load is low, it may be ok to run something that is problematic when system is full.
+* It’s possible to give better limits for global usage of the system.
+* When system total load is low, it may be ok to run something that is problematic when system is full.
 
 **How many jobs/steps is too many?**
 
@@ -72,8 +72,7 @@ Note that these guideline numbers are for all operations on all jobs.
 * Remove intermediate files if possible.
 * Use squashfs for read-only datasets and containers.
 
-
-**I have lots of small tasks for Slurm**
+**I have lots of small tasks for SLURM**
 
 * Check the tool that you are using
     * There may already be support for multiple jobs in a single job (CP2K farming, Gromacs multidir, etc.)

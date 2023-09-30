@@ -45,7 +45,7 @@ When you start a new project and don't yet know how you are going to approach th
 To keep track of your script versions by using a version control system, like Git(Hub). This also simplifies collaboration and synchronising your scripts on different computers.
 
 :::{admonition} Reminder for  Puhti 
-:class: tip,
+:class: seealso
 
 * Keep scripts in `/projappl/project_200xxxx/your_groupname/`
 * Keep data in `/scratch/project_200xxxx/your_groupname/` during processing, Allas for longer term storage
@@ -89,7 +89,7 @@ When the computing bottlenecks are identified, try to figure out ways to improve
 
 
 :::{admonition} Advanced topic: Developing scripts remotely
-:class: tip, dropdown
+:class: seealso, dropdown
 
 Instead of developing code on your local machine (e.g. laptop) and moving it to the supercomputer for testing, you can also consider to use a local editor and push edited files directly into the remote system via SSH. This works for example with an IDE like _Visual Studio Code_ or a text editor like _Notepad++_. Follow these [detailed instructions to set them up](https://docs.csc.fi/support/tutorials/remote-dev/). Note that [Visual Studio Code](https://docs.csc.fi/computing/webinterface/vscode/) and [Jupyter Notebooks](https://docs.csc.fi/computing/webinterface/jupyter/) are also available through the Puhti web interface
 

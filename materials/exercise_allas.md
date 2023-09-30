@@ -13,3 +13,18 @@
 * 
 
 :::
+
+:::{admonition} Prerequisites
+:class: important
+
+* ...
+
+:::
+
+:::{admonition} Key points
+:class: important
+
+* ...
+
+
+:::

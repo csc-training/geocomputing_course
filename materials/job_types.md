@@ -12,9 +12,7 @@ You already got to know the [interactive web interface for Puhti](https://docs.c
 :class: tip
 
 This time, let's start a compute shell from the Puhti webinterface. What is different from starting a login node shell?
-
 What is your hostname? 
-
 -> You are now in an interactive job.
 
 :::
@@ -37,7 +35,7 @@ Why could your serial job benefit from being executed using CSC's resources inst
 A parallel job distributes the calculation over several cores in order to achieve a shorter wall time (and/or a larger allocatable memory). There are two major parallelization schemes: [OpenMP](https://en.wikipedia.org/wiki/OpenMP) and [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface). Depending on the parallellization scheme there is a slight difference between _how_ the resource reservation is done.
 
 :::{admonition} More advanced topics - MPI/OpenMP
-:class: dropdown, tip
+:class: dropdown, seealso
 
 **What is MPI?**
 
@@ -94,7 +92,7 @@ A parallel job distributes the calculation over several cores in order to achiev
 A graphics processing unit (GPU, a video card), is capable of doing certain type of simultaneous calculations very efficiently. In order to take advantage of this power, a computer program must be reprogrammed to adapt on how GPU handles data. CSC's GPU resources are relatively scarce and hence should be used with [particular care](https://docs.csc.fi/computing/overview/#gpu-nodes). A GPU uses 60 times more billing units than a single CPU core. In practice, 1-10 CPU cores (but not more) should be allocated per GPU on Puhti.
 
 :::{admonition} More advanced topics - GPU
-:class: dropdown, tip
+:class: dropdown, seealso
 
 **GPUs can speed up jobs**
 

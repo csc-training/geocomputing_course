@@ -4,7 +4,7 @@
 * Owned by ministry of education and culture (70%) and higher education institutions (30%)
 * Headquaters in Keilaniemi, Espoo
 * Side offices and supercomputers in Kajaani
-* ~650 persons
+* ~650 people
 
 ![Kajaani](images/kajaani.png)
 

@@ -67,7 +67,7 @@ If subtasks are few (<100), an easy solution is [array jobs](https://docs.csc.fi
 You can also run multiple tasks on a single node without using an array job. Tasks that are not run immediately due to space restrictions are queued and are automatically executed as space becomes available. One tool to achieve this is [GNU Parallel](https://docs.csc.fi/support/tutorials/many/).
 
 :::{admonition} Things to consider in task farming
-:class: tip
+:class: warning
 
 - In a big allocation, each computing core should have work to do
    - If the separate tasks are different, some might finish before the others, leaving some cores idle &rarr; waste of resources
@@ -93,14 +93,14 @@ Do you need to run a lot of steps one after another? Or few steps that need a lo
 
 
 :::{admonition} Computations as part of the scientific workflow
-:class: tip
+:class: seealso
 
 Try to formulate your scientific results when you have a minimum amount of computational results. This helps to clarify what you still need to compute, what computations would be redundant and what data you need to store.
 
 :::
 
 :::{admonition} Avoid unneccesary reading and writing
-:class: tip
+:class: seealso
 Avoid unnecessary reads and writes of data and containerize Conda environments to improve I/O performance
 - Read and write in big chunks and avoid reading/writing lots of small files
    - If unavoidable, use [fast local NVMe disk](https://docs.csc.fi/computing/disk/#compute-nodes-with-local-ssd-nvme-disks), not Lustre (i.e. `/scratch`)

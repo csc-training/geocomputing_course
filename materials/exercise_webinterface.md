@@ -7,6 +7,24 @@
 
 :::
 
+:::{admonition} Goals
+:class: note
+
+* Getting familiar with the Webinterface
+* First contact with the supercomputer
+    * Disk areas
+    * File editing
+    * Applications
+    * Shells
+
+:::
+
+:::{admonition} Prerequisites
+:class: important
+
+* Access to Puhti webinterface
+
+:::
 
 > ‼️ To begin make sure you have a [user account at CSC](https://docs.csc.fi/accounts/how-to-create-new-user-account/) that is a member of a project which [has access to the Puhti service](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
 
@@ -29,4 +47,10 @@ Task suggestions:
 
 * check our projects disk quota
     
+:::{admonition} Key points
+:class: important
 
+* ...
+
+
+:::
