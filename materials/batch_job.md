@@ -1,6 +1,9 @@
 # Batch jobs
 
-**Batch** jobs consist of resource request and computing step(s). These requests are submitted from the login node. Every batch job will sit in queue for resource management system to grant resources according to the request. All heavy computing must be done via batch jobs!
+On our own computer, we are used to start a program (job) by clicking on an icon and the job starts instantly. If we start many programns/jobs at the same time, we occasionally run into problems like running out of memory _etc._.  
+In an supercomputing environment, the computer is shared among hundreds of other users who all have different resource needs. 
+
+A **batch job script** is used to request (estimated) resources and consists of two parts: The resource request and the actual computing step collected in a `sbatch script``. When we submit a batch job script, the job is not started directly, but is sent into a **queue**. Depending on the requested resources and load, the job may need to wait to get started. All heavy computing must be done via batch jobs (see [Usage policy](https://docs.csc.fi/computing/overview/#usage-policy))!
 
 ## Example sbatch script
 
@@ -21,9 +24,6 @@ srun hostname                    # Print compute node name that has been allocat
 <p>&rarr; Submit for computation with `sbatch simple.bash` </p>
 
 **The best starting point for writing batch job scripts:** [Software specific batch scripts in docs](https://docs.csc.fi/apps/)
-
-
-
 
 :::{admonition} Batch job troubleshooting checklist
 :class: tip
