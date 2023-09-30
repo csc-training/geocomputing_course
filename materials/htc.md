@@ -126,3 +126,11 @@ Do you need to run a lot of steps one after another? Or few steps that need a lo
 - Always test before scaling up -- a small mistake can result in lots of wasted resources!
 :::
 
+## Before starting large-scale calculations
+
+- Check how the software performs on actual input data
+    - Common job errors are caused by typos in batch/input scripts
+- Use short runs in the queue `--partition=test` to check that the input works and that the resource requests are interpreted correctly
+- Check the output of the `seff` command to ensure that CPU and memory efficiencies are as high as possible
+    - It's OK if a job is (occasionally) killed due to insufficient resource requests: just adjust and rerun/restart
+    - It's _much worse_ to always run with excessively large requests "just in case"
