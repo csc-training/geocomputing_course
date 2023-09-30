@@ -85,7 +85,7 @@ wget -r -nc ftp://ftp.aineistot.metsaan.fi/Metsamaski/Maakunta/ --cut-dirs=2
 
 
 :::{admonition} Possible trouble with file transfer between Windows and Linux
-:class: note, dropdown
+:class: seealso, dropdown
 
 When you transfer text files from a Windows system to a Unix system (Mac, Linux, BSD, Solaris, etc.) this can cause problems. Windows encodes its files slightly different than Unix, and adds an extra character to every line.
 
@@ -102,7 +102,7 @@ From [HPC Carpentry](https://carpentries-incubator.github.io/hpc-intro/).
 :::
 
 :::{admonition} Trouble with script execution?
-:class: note
+:class: seealso, dropdown
 
 Sometimes when we transfer scripts the permissions might get messed up. A script you could run with `./myscript.sh` on your own computer cannot be run anymore after transfering to the supercomputer.
 
@@ -142,7 +142,7 @@ How might we give ourselves and our colleagues within the same project permissio
 From [HPC Carpentry](http://www.hpc-carpentry.org/hpc-shell)
 
 :::{admonition} Solution
-:class: note, dropdown
+:class: topic, dropdown
 
 ```
 chmod 770 example

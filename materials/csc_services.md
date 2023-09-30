@@ -18,6 +18,6 @@
 * Sending data: [Funet FileSender](https://filesender.funet.fi/)
 
 :::{admonition} Want to know more?
-:class: tip
+:class: seealso
 See also [CSC service catalog](https://research.csc.fi/en/service-catalog)
 :::

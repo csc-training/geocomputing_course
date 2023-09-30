@@ -23,7 +23,7 @@ If this was too easy, can you count only files that end with `.tif`? What about 
 You can use the "login shell" via the Puhti webinterface for this exercise.
 
 :::{admonition} Solution
-:class: note, dropdown
+:class: topic, dropdown
 
 `man wc` for finding the documentation. Use `q` to exit the documentation.
 

@@ -143,7 +143,7 @@ squeue -u $USER
 
 
 :::{admonition} Solution
-:class: note, dropdown
+:class: topic, dropdown
 
 1. `slurm-<jobid>.out` in the directory from where you submitted the batch job. You can also change that location by specifying it with `#SBATCH --output=/your/path/slurm-%j.out`.
 2. `#SBATCH --job-name=<myname>`

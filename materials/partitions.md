@@ -19,7 +19,7 @@ TODO: check solutions and more usecases
 4. Neha 
 
 :::{admonition} Solution
-:class: tip, dropdown
+:class: topic, dropdown
 
 1. Based on the requirements, any partition would work for Anna, except `test`. She does not need interactive access to her process, so in order to not block any unnecessary resources, Anna chooses `small` partition.
 2. Based on the requirements, Kalika need to choose `hugemem_longrun` or adapt her code to get under 3 days runtime.

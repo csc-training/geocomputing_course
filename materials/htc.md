@@ -17,7 +17,7 @@ Think about what the inputs are to the task at hand. Can individual items of the
 From [HPC-Carpentry](http://www.hpc-carpentry.org/hpc-parallel-novice/02-parallel-estimate/index.html)
 
 :::{admonition} Solution
-:class: tip, dropdown 
+:class: topic, dropdown 
 
 1. not parallel typically - as we have to start with one book and only have one reader/writer
 2. parallel, the more people help, the better
