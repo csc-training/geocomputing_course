@@ -1,6 +1,6 @@
 # Batch jobs
 
-**Batch** jobs consist of resource request and computing step(s).Every batch job will sit in queue for resource management system to grant resources according to the request. All heavy computing must be done via batch jobs!
+**Batch** jobs consist of resource request and computing step(s). These requests are submitted from the login node. Every batch job will sit in queue for resource management system to grant resources according to the request. All heavy computing must be done via batch jobs!
 
 ## Example sbatch script
 
@@ -22,12 +22,7 @@ srun hostname                    # Print compute node name that has been allocat
 
 **The best starting point for writing batch job scripts:** [Software specific batch scripts in docs](https://docs.csc.fi/apps/)
 
-## Monitoring jobs
 
-* Standard output in file: `slurm-<jobid>.out`
-* `squeue -u $USER`
-* `seff <jobid>`
-* `scancel <jobid>`
 
 
 :::{admonition} Batch job troubleshooting checklist
