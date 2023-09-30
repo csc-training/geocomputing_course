@@ -120,7 +120,7 @@ wget https://github.com/csc-training/csc-env-eff/raw/master/_hands-on/linux_prer
 2. Check what kind of file you got and what size it is using the `ls` command with some extra options:
 
 ```bash
-ls -lth         # options are l for long format, t for sorting by time and h for convenient size units. Anything that starts with a hashtag is a comment and is not executed
+ls -lth         # options are l for long format, t for sorting by time and h for convenient size units. 
 ```
 
 3. Use the `less` command to check out what the file looks like:
@@ -150,23 +150,23 @@ ls
 
 💡 Tip: If you don't want to have duplicate files you can use `mv` to 'move/rename' the file. Syntax is the same: `mv /path/to/source/oldname /path/to/destination/newname`.
 
-## More information
 
-- Learn [how to edit that file](https://csc-training.github.io/csc-env-eff/hands-on/linux_prerequisites/basic-file-editing.html) in the next tutorial!
+:::{admonition} Re-executing commands from `history`
+:class: tip
 
-💡 For more information of a given command line `command`: type `man command` or `command --help` where `command` is replaced with the one that you need help with.
-
-💡 Tip: If you remember *a part of a command* that you have used recently you can search for it with the command `history | grep string`. This will show all your used commands that have included the string `string` (replace this with the pattern you are searching for).
-
-
-
-:::{admonition} Advanced topic: Developing scripts remotely
-:class: tip, dropdown
-
-- It's possible to use a local editor and push edited files easily into Puhti (or Rahti, ...) via SSH
-   - For example, an IDE like _Visual Studio Code_ or a text editor like _Notepad++_
-- Follow these [detailed instructions to set them up](https://docs.csc.fi/support/tutorials/remote-dev/)
-- Note that [Visual Studio Code](https://docs.csc.fi/computing/webinterface/vscode/) and [Jupyter Notebooks](https://docs.csc.fi/computing/webinterface/jupyter/) are also available through the Puhti web interface
+If you remember *a part of a command* that you have used recently you can search for it with the command `history | grep string`. This will show all your used commands that have included the string `string` (replace this with the pattern you are searching for).
 
 :::
+
+
+:::{admonition} Moving from GUI to CLI
+:class: tip
+
+If you have only used Graphical User Interfaces thus far, but are curious to get started with the Command Line Interface you can try recreating e.g. GDAL commands shown in some QGIS tools.
+
+![](./images/QGIS_GDAL.png)
+
+:::
+
+
 
