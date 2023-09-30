@@ -37,6 +37,7 @@ Count all lines that include `2023`:  `cat XX | grep "2023" | wc -w` -> XX
 :::
 :::
 
+
 ## Basic Linux commands
 
 Do you remember on how you edited some files in the webinterface? Lets do the same thing again; only from the command line:

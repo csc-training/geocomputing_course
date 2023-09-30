@@ -1,10 +1,8 @@
 # Exercise - webinterface
 
-:::{admonition} 
+:::{admonition} Timing
 :class: note
-
 * Time: 60 min
-
 :::
 
 :::{admonition} Goals
@@ -51,6 +49,5 @@ Task suggestions:
 :class: important
 
 * ...
-
 
 :::
