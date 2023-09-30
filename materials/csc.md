@@ -12,11 +12,15 @@
 
 Geoportti Research Infrastructure (RI) is a shared service for researchers, teachers and students using geospatial data and geocomputing tools. Geoportti RI helps the researchers in Finland to use, to refine, to preserve and to share their geospatial resources.
 
-TODO: text fix, logo
+![](./images/geoportti.png)
+
+TODO: text fix
 
 ## [Location Innovation Hub](https://locationinnovationhub.eu)
 
 The Location Innovation Hub (LIH) is a centre of excellence in location information coordinated by the Finnish Geospatial Research Institute. Our services are produced in conjunction with a partner network. We help companies to grow their business with location information. We also serve the public sector.
 
-TODO: text fix, logo
+![](./images/lih.png)
+
+TODO: text fix
 
