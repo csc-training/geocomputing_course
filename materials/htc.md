@@ -42,8 +42,8 @@ Parallel programs are typically parallelized with the MPI and/or OpenMP standard
 
 First thing to check, is if the software you are using has built-in support for using multiple CPUs/cores. For command line tools, look for `-n(umber of)_cores`, `-c(ores/pu)`, `-j(obs)`, `-t(hreads)` or similar.
 
-Some example geospatial software with built-in multi CPU support: 
-* GDAL (e.g. `gdalwarp -multi -wo NUM_THREADS=val/ALL_CPUS ...`` )
+Some example geospatial tools with built-in multi CPU support: 
+* GDAL, e.g. `gdalwarp -multi -wo NUM_THREADS=val/ALL_CPUS ...`
 * Orfeo ToolBox; no extra action needed
 * Whiteboxtools; many tools support parallel execution without extra action
 * Lastools; many tools support parallel execution by setting `-cores`
@@ -92,38 +92,18 @@ Do you need to run a lot of steps one after another? Or few steps that need a lo
 :::
 
 
-:::{admonition} Tricks of the trade
-:class: tip, dropdown
+:::{admonition} Computations as part of the scientific workflow
+:class: tip
 
-- best performance is not the only important issue
-- Different codes may give very different performance for a given use case
-    - Compare the tools you have available in [CSC's software selection](https://docs.csc.fi/apps/)
-- Before launching massive simulations, look for the most efficient algorithms to get the job done
-- Well-known boosters are:
-    - Enhanced sampling methods _vs._ brute force 
-    - Machine learning methods
-      - _E.g._ Bayesian optimization structure search ([BOSS](https://cest-group.gitlab.io/boss/), potential energy maps)
-    - Start with coarser models and gradually increase precision (if needed)
-    - When starting a new project, begin with small/fast tests before scaling up
-      - Test that the setup works as intended, before submitting large jobs
-    - When using separate runs to scan a parameter space, start with a coarse scan, and improve resolution where needed
-      - Be mindful of the number of jobs/job steps, use meta-schedulers if needed
-    - Try to use or implement checkpoints/restarts in your software, and _check results between restarts_
-- Try to formulate your scientific results when you have a minimum amount of computational results
-    - Helps to clarify what you still need to compute, what computations would be redundant and what data you need to store
-- Reserving more memory and/or more compute cores does not necessary equal faster computations
-    - Check with `seff`, `sacct` and from software-specific log files if the memory was used and whether the job ran faster
-    - Testing for optimal amount of cores and memory is advised before performing massive computations
-- If possible, running the same job on a laptop may be useful for comparison
-- Avoid unnecessary reads and writes of data and containerize Conda environments to improve I/O performance
-    - Read and write in big chunks and avoid reading/writing lots of small files
-       - If unavoidable, use [fast local NVMe disk](https://docs.csc.fi/computing/disk/#compute-nodes-with-local-ssd-nvme-disks), not Lustre (i.e. `/scratch`)
-- Don't run too short jobs to minimize queuing and scheduling overhead
-    - There's a time overhead in setting up a batch job, aim for >30 minute jobs
-    - Don't run too many/short _job steps_ -- they will bloat Slurm accounting
-- Don't run too long jobs without a restart option
-    - Increased risk of something going wrong, resulting in lost time/results
-- Always test before scaling up -- a small mistake can result in lots of wasted resources!
+Try to formulate your scientific results when you have a minimum amount of computational results. This helps to clarify what you still need to compute, what computations would be redundant and what data you need to store.
+
+:::
+
+:::{admonition} Avoid unneccesary reading and writing
+:class: tip
+Avoid unnecessary reads and writes of data and containerize Conda environments to improve I/O performance
+- Read and write in big chunks and avoid reading/writing lots of small files
+   - If unavoidable, use [fast local NVMe disk](https://docs.csc.fi/computing/disk/#compute-nodes-with-local-ssd-nvme-disks), not Lustre (i.e. `/scratch`)
 :::
 
 ## Before starting large-scale calculations
