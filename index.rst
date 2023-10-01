@@ -86,7 +86,7 @@ The course is meant both for academic researchers planning to use Puhti supercom
 
 .. toctree::
    :maxdepth: 2
-   :caption: Data:
+   :caption: Data
 
    materials/moving_data.md   
    materials/allas.md  
@@ -95,7 +95,7 @@ The course is meant both for academic researchers planning to use Puhti supercom
 
 .. toctree::
    :maxdepth: 2
-   :caption: Wrap-up:
+   :caption: Wrap-up
   
    materials/wrapup.md
    materials/where_to_go.md
