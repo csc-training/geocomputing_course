@@ -45,7 +45,8 @@ The course is meant both for academic researchers planning to use Puhti supercom
 .. toctree::
    :maxdepth: 2
    :caption: Supercomputer - intro
-   
+
+   materials/examples.md
    materials/supercomputing.md  
    materials/puhti_data_storage.md 
    materials/spatial_data_at_csc.md
