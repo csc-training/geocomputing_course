@@ -2,31 +2,32 @@
 
 ## Moving files between a local computer and a supercomputer
 
-* [Moving files between a local computer and a supercomputer](https://docs.csc.fi/data/moving/)
+* [CSC Docs: Moving files between a local computer and a supercomputer](https://docs.csc.fi/data/moving/)
 
 ### Puhti Web Interface
 
 - Very easy, no installations needed.
 - For smaller amounts of data, < 10 Gb.
 - Upload, download, moving, creating folders.
-- [Puhti Web Interface](https://puhti.csc.fi)
-- [Puhti Web Interface in Docs](https://docs.csc.fi/computing/webinterface/)
+- [Puhti Web Interface](https://puhti.csc.fi) -> Files
+- [CSC Docs: Puhti Web Interface](https://docs.csc.fi/computing/webinterface/)
 
 ### Graphical data transfer tools on local computer
 
-- For example: _FileZilla_ and _WinSCP_
+- For example: _FileZilla_,  _WinSCP_ and *CyberDuck*
 - For medium amounts of data, < 1 Tb.
 - Very easy, but installation required.
-- [Graphical data transfer tools in Docs](https://docs.csc.fi/data/moving/graphical_transfer/)
+- WinSCP is slower than others.
+- [CSC Docs: Graphical data transfer tools](https://docs.csc.fi/data/moving/graphical_transfer/)
    
-### Command line tools
+### Command line tools on local computer
 - For any amount of data, practically required if data size > 1 Tb.
 
 #### scp
 
 - The most usual Linux tool for moving file
 - `scp` works even in Windows Powershell
-- [`scp` in Docs](https://docs.csc.fi/data/moving/scp/)
+- [CSC Docs: `scp`](https://docs.csc.fi/data/moving/scp/)
 
 ```
 # One file:
@@ -46,7 +47,7 @@ scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_#####/direct
 - Available on Linux and Mac and WSL (windows subsystem linux)
 - Organization firewalls might have forbidden using rsync, especially in Valtori organizations
 - Windows Powershell does not have `rsync`, _MobaXterm_ has `rsync`, but it removes write permissions of copied files
-- [`rsync` in Docs](https://docs.csc.fi/data/moving/rsync/)
+- [CSC Docs: `rsync`](https://docs.csc.fi/data/moving/rsync/)
 
 ```
 # One file:
@@ -62,13 +63,13 @@ rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/p
 
 - When downloading from exernal services try to download directly to CSC, not via your local computer
 - Check what APIs/tools the service supports:
-	- ftp, rsync ?
+	- OGC APIs, STAC
+	- ftp, rsync
 	- wget/curl if HTTP-urls avaialable
-	- OGC APIs, STAC ?
 
 ### wget
 
-- [`wget` in Docs](https://docs.csc.fi/data/moving/wget/)
+- [CSC Docs: `wget`](https://docs.csc.fi/data/moving/wget/)
 
 ``` 
 # One file:
@@ -76,11 +77,6 @@ wget http://wwwd3.ymparisto.fi/d3/gis_data/spesific/syvyyskayra.zip
 # One folder:
 wget -r -nc ftp://ftp.aineistot.metsaan.fi/Metsamaski/Maakunta/ --cut-dirs=2
 ```
-
-
-## Moving data as part of workflow
-
-> ToDo: Example of moving data into local scratch eg from Allas
 
 
 
