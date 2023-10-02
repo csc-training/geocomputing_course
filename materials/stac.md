@@ -1,4 +1,4 @@
-# Spatio Temporal Asset Catalog
+# STAC
 
 ## STAC - background
 

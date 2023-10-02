@@ -1,6 +1,6 @@
 # Moving data
 
-## Moving files between a local computer and a supercomputer
+## A local computer <-> a supercomputer
 
 * [CSC Docs: Moving files between a local computer and a supercomputer](https://docs.csc.fi/data/moving/)
 
@@ -14,56 +14,57 @@
 
 ### Graphical data transfer tools on local computer
 
-- For example: _FileZilla_,  _WinSCP_ and *CyberDuck*
+- For example: **FileZilla**,  **WinSCP** and **CyberDuck**
 - For medium amounts of data, < 1 Tb.
 - Very easy, but installation required.
 - WinSCP is slower than others.
 - [CSC Docs: Graphical data transfer tools](https://docs.csc.fi/data/moving/graphical_transfer/)
+
+!["FileZilla"](./images/filezilla.jpg "FileZilla")
    
 ### Command line tools on local computer
 - For any amount of data, practically required if data size > 1 Tb.
 
 #### scp
 
-- The most usual Linux tool for moving file
+- The most usual Linux tool for moving files
 - `scp` works even in Windows Powershell
 - [CSC Docs: `scp`](https://docs.csc.fi/data/moving/scp/)
 
 ```
 # One file:
-scp /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_xxxx/data_dir
+scp /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_200xxxx/data_dir
+
 # One folder:
-scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_#####/directory 
+scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_200xxxx/directory 
 ```
 
 
 #### rsync
 
-- Does not copy what is already there
-- Can resume a copy process which disconnected
-- Efficient for small files 
-- Can compress data
-- Can warn against accidental over-writes
-- Available on Linux and Mac and WSL (windows subsystem linux)
+- Best for big data transfers: does not copy what is already there, can resume a copy process which disconnected.
+- Can warn against accidental over-writes.
+- Available on Linux, Mac and Windows Subsystem Linux (WSL).
+- Windows Powershell does not have `rsync`, MobaXterm has `rsync`, but it removes write permissions of copied files
 - Organization firewalls might have forbidden using rsync, especially in Valtori organizations
-- Windows Powershell does not have `rsync`, _MobaXterm_ has `rsync`, but it removes write permissions of copied files
 - [CSC Docs: `rsync`](https://docs.csc.fi/data/moving/rsync/)
 
 ```
 # One file:
-rsync --info=progress2 -a /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_xxxx/data_dir
+rsync --info=progress2 -a /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_200xxxx/data_dir
+
 # One folder:
-rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/project_xxxx/directory
+rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/project_200xxxx/directory
 ```
 * `progress2` shows time left and percentage
 
 
 
-## From external data services to supercomputer
+## External data services -> supercomputer
 
 - When downloading from exernal services try to download directly to CSC, not via your local computer
 - Check what APIs/tools the service supports:
-	- OGC APIs, STAC
+	- OGC APIs, [STAC](stac.html)
 	- ftp, rsync
 	- wget/curl if HTTP-urls avaialable
 
@@ -74,6 +75,7 @@ rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/p
 ``` 
 # One file:
 wget http://wwwd3.ymparisto.fi/d3/gis_data/spesific/syvyyskayra.zip 
+
 # One folder:
 wget -r -nc ftp://ftp.aineistot.metsaan.fi/Metsamaski/Maakunta/ --cut-dirs=2
 ```
@@ -83,15 +85,17 @@ wget -r -nc ftp://ftp.aineistot.metsaan.fi/Metsamaski/Maakunta/ --cut-dirs=2
 :::{admonition} Possible trouble with file transfer between Windows and Linux
 :class: seealso, dropdown
 
-When you transfer text files from a Windows system to a Unix system (Mac, Linux, BSD, Solaris, etc.) this can cause problems. Windows encodes its files slightly different than Unix, and adds an extra character to every line.
+When you transfer text files from a Windows system to a Unix system (Mac, Linux etc.) this can cause problems. Windows encodes its files slightly different than Unix, and adds an extra character to every line.
 
 On a Unix system, every line in a file ends with a `\n`` (newline). On Windows, every line in a file ends with a \r\n (carriage return + newline). This causes problems sometimes.
 
-Though most modern programming languages and software handles this correctly, in some rare instances, you may run into an issue. The solution is to convert a file from Windows to Unix encoding with the `dos2unix`` command.
+Though most modern programming languages and software handles this correctly, in some instances, you may run into an issue. 
 
 You can identify if a file has Windows line endings with `cat -A filename``. A file with Windows line endings will have ^M$ at the end of every line. A file with Unix line endings will have $ at the end of a line.
 
-To convert the file, run `dos2unix filename`. Conversely, to convert back to Windows format, you can run `unix2dos filename`.
+The solution is to convert a file from Windows to Unix encoding. Many code editors have a setting for choosing the correct end-of-line (EOL) character. 
+
+If the Windows style file is already in HPC, it can be fixed with the `dos2unix`` command. To convert the file, run `dos2unix filename`. Conversely, to convert back to Windows format, you can run `unix2dos filename`.
 
 From [HPC Carpentry](https://carpentries-incubator.github.io/hpc-intro/).
 

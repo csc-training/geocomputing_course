@@ -48,7 +48,7 @@ The course is meant both for academic researchers planning to use Puhti supercom
 
    materials/examples.md
    materials/supercomputing.md  
-   materials/puhti_data_storage.md 
+   materials/data_storage.md 
    materials/spatial_data_at_csc.md
    materials/software.md
    materials/webinterface.md
@@ -89,9 +89,8 @@ The course is meant both for academic researchers planning to use Puhti supercom
    :caption: Data
 
    materials/moving_data.md   
+   materials/stac.md    
    materials/allas.md  
-   materials/stac.md 
-   materials/exercise_allas.md
 
 .. toctree::
    :maxdepth: 2
