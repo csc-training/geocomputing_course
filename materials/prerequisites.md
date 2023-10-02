@@ -14,6 +14,7 @@ To make this course as enjoyable as possible for you and to make sure you can ge
 
 ## CSC account
 
+TODO: More details
 
 For the exercises, a [CSC account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) is needed.
 For self-learning you will also need a project.

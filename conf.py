@@ -14,8 +14,9 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser', 
-              'sphinx_togglebutton']
+extensions = ['myst_parser', 'sphinx_togglebutton']
+
+myst_enable_extensions = ['colon_fence']
 
 source_suffix = ['.rst','.md']
     
@@ -29,7 +30,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # setting title in left panel (default is <projectname> documentation <release>)
-html_title = "CSC Geocomputing course"
+#html_title = "CSC Geocomputing course"
+# setting upper left logo
+html_logo = "materials/images/bg.png"
+
 
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
@@ -38,6 +42,7 @@ html_theme_options = {
   "repository_url": "https://github.com/csc-training/geocomputing_course",
   "announcement": 'Psst, remember the <a href="https://csc-training.github.io/geocomputing_course/materials/cheatsheet.html">cheatsheet</a>!',
   "use_repository_button": True,
+  "show_toc_level": 3,
 }
 
 

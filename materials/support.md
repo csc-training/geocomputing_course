@@ -1,18 +1,6 @@
 # CSC support
 
-TODO: clean up
-
-[`docs.csc.fi`](https://docs.csc.fi)
-
-[`research.csc.fi`](https://research.csc.fi)
-
-
-
-+ servicedesk@csc.fi
-
-+ User support session in Zoom every Wednesday at 14.00
-
-# General problem solving
+## General problem solving
 
 1. Go to [docs.csc.fi](https://docs.csc.fi) and check in the right section in the _navigation_
 2. Try the [FAQ](https://docs.csc.fi/support/faq/)
@@ -24,6 +12,18 @@ TODO: clean up
    - Which commands you have given
    - What error messages resulted
    - [More tips to help us quickly solve your issue](https://docs.csc.fi/support/support-howto/)
+
+
+## Support pages and channels
+
+[`docs.csc.fi`](https://docs.csc.fi)
+
+[`research.csc.fi`](https://research.csc.fi)
+
++ servicedesk@csc.fi
+
++ User support session in Zoom every Wednesday at 14.00
+
 
 ## How we can help
 

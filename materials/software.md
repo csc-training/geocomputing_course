@@ -62,7 +62,37 @@
 	* [Installation guidelines for ArcPy, GeoServer, MetaShape, PostGIS and containers (for example OpenDroneMap) in cPouta](https://github.com/csc-training/geocomputing/tree/master/pouta).
 * Tools available for Windows only -> no good option from CSC services
 	* ArcGIS, TerraScan 
-	
+
+
+## Skills needed 
+
+* Some GIS tool listed above
+* Basic Linux skills in commandline: changing folder, running tools, file permissions
+	* [CSC Linux tutorial](https://docs.csc.fi/support/tutorials/env-guide/)
+* Scripting skills: 
+	* Python: [Python GIS learning materials](https://docs.csc.fi/apps/geoconda/#references)
+	* R: [Spatial R learning materials](https://docs.csc.fi/apps/r-env-for-gis/#references) 
+	* bash: [CSC bash tutorial](https://docs.csc.fi/support/tutorials/env-guide/linux-bash-scripts/)
+	* ...
+* Parallelization: Python/Dask, R, GNU-parallel
+
+## GIS tools with R, Python or CLI support
+
+| Software | R | Python | CLI | 
+| --- | --- | --- | --- |
+| CloudCompare | - | [CloudComPy*](https://www.simulation.openfields.fr/documentation/CloudComPy/html/) | Yes |
+| GRASS | [rgrass*](https://cran.r-project.org/web/packages/rgrass/index.html) | [GRASS GIS Python libraries](https://grass.osgeo.org/grass82/manuals/libpython/index.html) | [Yes](https://grasswiki.osgeo.org/wiki/Shell_scripting) |
+| OrfeoToolBox | - | [OTB Python API*](https://www.orfeo-toolbox.org/CookBook/PythonAPI.html) | [Yes](https://www.orfeo-toolbox.org/CookBook/CliInterface.html) |
+| PDAL | - | [pdal](https://pdal.io/en/latest/python.html) | [Yes](https://pdal.io/en/latest/apps/index.html) |
+| QGIS | [qgisprocess*](https://cloud.r-project.org/web/packages/qgisprocess/index.html) | [PyQGIS](https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/) | [qgis_process](https://docs.qgis.org/latest/en/docs/user_manual/processing/standalone.html) |
+| SagaGIS | [Rsagacmd](https://cran.r-project.org/web/packages/Rsagacmd/index.html) | PySAGA* | [saga_cmd](https://sourceforge.net/p/saga-gis/wiki/Executing%20Modules%20with%20SAGA%20CMD/) |
+| SNAP | - | [snappy](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/19300362/How+to+use+the+SNAP+API+from+Python), [snapista](https://snap-contrib.github.io/snapista/gettingstarted.html) | [GPT](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/70503475/Bulk+Processing+with+GPT) |
+| WhiteboxTools | [whiteboxR*](https://github.com/opengeos/whiteboxR) | [WhiteboxTools](https://www.whiteboxgeo.com/manual/wbt_book/python_scripting/using_whitebox_tools.html)| [Yes](https://www.whiteboxgeo.com/manual/wbt_book/command_prompt.html) |
+
+Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonation have commandline interface.
+
+`* are not available in Puhti currently, but should be possible to install, ask if you need.`
+ 
 ## Modules
 
 * Puhti is a shared computing environment 
@@ -80,4 +110,3 @@ module load r-env
 
 
 
-	
