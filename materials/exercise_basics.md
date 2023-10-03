@@ -95,10 +95,10 @@ If you use a software that is pre-installed by CSC, please [check its documentat
 
 ### Launching a serial job
 
-1. Go to the `/scratch` directory of your project:
+1. Go to your own directory in the `/scratch` directory of your project:
 
 ```bash
-cd /scratch/<project>/$USER      # replace <project> with your CSC project, e.g. project_2001234
+cd /scratch/<project>/$USER      # replace <project> with your CSC project, e.g. project_200xxxx
 ```
 
 2. Create a file called `my_serial.bash` e.g. with the `nano` text editor:
@@ -116,8 +116,10 @@ nano my_serial.bash
 #SBATCH --partition=test         # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
 #SBATCH --ntasks=1               # Number of tasks. Upper limit depends on partition. For a serial job this should be set 1!
 
-srun hostname                    # Run hostname-command, that will print the name of the Puhti compute node that has been allocated for this particular job
-srun sleep 60                    # Run sleep-command, to keep the job running for an additional 60 seconds, in order to have time to monitor the job
+echo -n "We are running on"
+hostname                    # Run hostname-command, that will print the name of the Puhti compute node that has been allocated for this particular job
+sleep 60                    # Run sleep-command, to keep the job running for an additional 60 seconds, in order to have time to monitor the job
+echo "This job has finished"
 ```
 
 In the batch job example above we are requesting
@@ -140,13 +142,29 @@ squeue -u $USER
 
 1. Where can you find the hostname print?
 2. How could you add a name to the job for easier identification?
+3. What happens if you run the same script from above, but we request only one minute, and sleep for 2 minutes?
+4. Can you run the gdalinfo command from the interactive job above via a non interactive job? What do you need to change in the sbatch job script?
 
 
 :::{admonition} Solution
-:class: topic, dropdown
+:class: dropdown
 
-1. `slurm-<jobid>.out` in the directory from where you submitted the batch job. You can also change that location by specifying it with `#SBATCH --output=/your/path/slurm-%j.out`.
-2. `#SBATCH --job-name=<myname>`
+1. `slurm-<jobid>.out` in the directory from where you submitted the batch job. You can also change that location by specifying it in your batch job script with `#SBATCH --output=/your/path/slurm-%j.out`.
+2. Add `#SBATCH --job-name=<myname>` to the resource request in the top of your sbatch script.
+3. After the job finished, check the log file with `cat slurm-<jobid>.out`. You should see an an error in the end `slurmstepd: error: *** JOB xxx ON xxx CANCELLED AT xDATE-TIMEx DUE TO TIME LIMIT ***`. This means that our job was killed for exceeding the amount of resources requested. Although this appears harsh, this is actually a feature. Strict adherence to resource requests allows the scheduler to find the best possible place for your jobs. It also ensures the fair share of use of the computing resources.
+4. Since gdalinfo is quite a fast command to run, you will only need to change the script part of your sbatch script, the resources request can stay the same. First we will need to make `gdal` available within the job with `module load geoconda`, then we can run the `gdalinfo` command. After the job is done, you can find the information again in the `slurm-<jobid>.out` file. 
+
+```bash
+#!/bin/bash
+#SBATCH --account=<project>      # Choose the billing project. Has to be defined!
+#SBATCH --time=00:02:00          # Maximum duration of the job. Upper limit depends on the partition. 
+#SBATCH --partition=test         # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
+#SBATCH --ntasks=1               # Number of tasks. Upper limit depends on partition. For a serial job this should be set 1!
+
+module load geoconda
+
+gdalinfo /appl/data/geo/luke/forest_wind_damage_sensitivity/2017/windmap2017_int1k_metsamaa2_cog.tif
+```
 
 :::
 
