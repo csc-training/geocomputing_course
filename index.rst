@@ -39,7 +39,7 @@ The course is meant both for academic researchers planning to use Puhti supercom
 
    materials/csc.md
    materials/csc_services.md
-   materials/resource_monitoring.md
+   materials/account_project.md
    materials/support.md 
 
 .. toctree::
