@@ -10,7 +10,7 @@
 :::{admonition} Goals
 :class: note
 
-* Get to know the command line
+* Get more familiar with command line
 * Get to know sbatch script
 * Get to know job submission
 * Interactive -> non interactive
@@ -29,40 +29,65 @@
 
 ## Batch job tutorial - Interactive jobs
 
-These examples are done on Puhti. If using the web interface, you can either open a login node shell and follow the steps below or open a compute node shell directly and skip to step 2.
+These examples are done on Puhti. When using the web interface, you can open a compute node shell directly.
 
 In an interactive batch job, an interactive shell session is launched on a compute node, for which one can request specific resources (time, memory, cores, disk).
 
-### Launching an interactive job
+### Launching an interactive job / compute node shell
 
-1. Start an interactive job using one core for ten minutes:
+Observe how now you need to define the resources you want to reserve now. 
+Let's reserve 10 minutes. 
+
+:::{admonition} Other ways of starting an interactive session
+:class: seealso
+
+On the login node: Start an interactive job with `srun`, e.g.:
+
+```bash
+srun  --time=00:10:00 --pty --account=<project> --partition=interactive bash
+```
+or on Puhti you can also use `sinteractive` wrapper, which simplifies the call and asks you for the resources step by step: 
+
+```bash
+sinteractive
+```
+or directly: 
 
 ```bash
 sinteractive --account <project> --time 00:10:00         # replace <project> with your CSC project, e.g. project_2001234
 ```
+:::
 
 :::{admonition} Need your project number?
 :class: seealso
-You can list your projects with `csc-projects`
+You can check [my.csc.fi](https://my.csc.fi/) or list your projects with `csc-projects` in a login node shell.
 :::
 
-Observe that the command prompt (initial text on each row on the command-line) has changed from e.g. `puhti-login11` to e.g. `r07c51` which refers to a compute node.
+Observe how the command prompt (initial text on each row on the command-line) looks now compared to a login node shell e.g. `r07c51`,which refers to a compute node, as opposed to e.g. `puhti-login11` .
 
-2. Once on the compute node, you can run commands directly from the command-line. You can e.g. load the `geoconda` module:
+1. Once on the compute node, you can run commands directly from the command-line. You can e.g. load the `geoconda` module:
 
 ```bash
 module load geoconda
 ```
 
-3. Then we can use for example `gdalinfo` to check the details of some rasterfile.
+2. Then we can use for example `gdalinfo` to check the details of some rasterfile.
 
 ```bash
 gdalinfo /appl/data/geo/luke/forest_wind_damage_sensitivity/2017/windmap2017_int1k_metsamaa2_cog.tif
 ```
 
-4. Quit the interactive batch job with `exit`.
+:::{admonition} Task
+:class: tip
 
--> This way you can work interactively for an extended period, using e.g. lots of memory without creating load on the login nodes. Running heavy/long tasks on the login nodes is forbidden according to our [Usage Policy](https://docs.csc.fi/computing/usage-policy/).
+Try out some other command line tool, or maybe even start a `python` or `R` session. What modules do you need to load? 
+
+:::
+
+
+3. Quit the interactive batch job with `exit`. 
+
+-> This way you can work interactively for an extended period, using e.g. lots of memory without creating load on the login nodes. 
 
 Note that above we only asked for 10 minutes of time. Once that is up, you will be automatically logged out from the compute node.
 
@@ -72,8 +97,8 @@ Running `exit` on the login node will log you out from Puhti.
 :::{admonition} More information on interactive jobs
 :class: seealso
 
-Documentation at Docs CSC on [Interactive usage](https://docs.csc.fi/computing/running/interactive-usage/)
-[FAQ on CSC batch jobs](https://docs.csc.fi/support/faq/#batch-jobs) in Docs CSC
+Documentation at [Docs CSC: Interactive usage](https://docs.csc.fi/computing/running/interactive-usage/) and 
+[CSC Docs: FAQ on CSC batch jobs](https://docs.csc.fi/support/faq/#batch-jobs)
 
 :::
 
