@@ -23,7 +23,7 @@ If this was too easy, can you count only files that end with `.tif`? What about 
 You can use the "login shell" via the Puhti webinterface for this exercise.
 
 :::{admonition} Solution
-:class: topic, dropdown
+:class: dropdown
 
 `man wc` for finding the documentation. Use `q` to exit the documentation.
 
@@ -149,9 +149,9 @@ Instead of `less` you can use `cat` which prints the content of the file(s) stra
 5. Make a copy of this file:
 
 ```bash
-cp my-first-file.txt $USER-second-file.txt    # replace YourName
+cp my-first-file.txt $USER-second-file.txt    
 ls -lth
-less $USER-second-file.txt                    # replace YourName
+less $USER-second-file.txt                    
 ```
 
 6. Remove the file we originally downloaded (leave your own copy).

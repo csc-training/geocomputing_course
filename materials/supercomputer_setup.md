@@ -22,7 +22,7 @@ Which of the following tasks would suit to run on the login node?
 5. `tar -xzf mytool.tar.gz`
 
 :::{admonition} Solution
-:class: topic, dropdown
+:class: dropdown
 
 
  Options #2 Building software  (make), #3 creating directories (mkdir), and #5 unpacking software (tar) are common and acceptable tasks for the login node. 
