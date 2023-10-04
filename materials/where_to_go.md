@@ -51,6 +51,7 @@ If you used any of our resources for your research, please acknowledge CSC and G
 
 * ['CSC computing environment' self-study course](https://ssl.eventilla.com/csccompenvselflearn)
 * [CSC geoinformatics training materials](https://research.csc.fi/gis-learning-materials)
+* [CSC Earth Observation tutorial](https://docs.csc.fi/support/tutorials/gis/eo_guide/)
 * [LUMI 1-day training](https://lumi-supercomputer.github.io/LUMI-training-materials/1day-20230921/)
 * ['Research data management' self-study course](https://ssl.eventilla.com/event/v8B6B)
 * [CodeRefinery materials on FAIR research software development](https://coderefinery.org/lessons/core/)
