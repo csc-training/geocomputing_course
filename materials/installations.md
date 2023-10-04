@@ -1,70 +1,64 @@
-# Installing own software
+# Installing own tools
 
-Always remember to add what you did to your PATH or PYTHONPATH!
+## Adding some packages to existing modules
 
-## Python
+* Generally easiest option.
+* [CSC Docs: Installing **Python** packages to existing modules](https://docs.csc.fi/apps/python/#installing-python-packages-to-existing-modules)
+  * geoconda, tensorflow, pytorch, python-data ...
+  * The added package must be available via `pip`.
+* [CSC Docs: **R** package installations](https://docs.csc.fi/apps/r-env/#r-package-installations) 
+* [CSC Docs: **Julia**, adding packages to an environment](https://docs.csc.fi/apps/julia/#adding-packages-to-an-environment)
 
-### Adding Python packages to existing modules
+## Tykky
 
-Add a package on top of a module with pip:
+* The easiest way to create an own installation is with Tykky
+* Tykky has 3 options, new installation based on:
+  * `conda` .yml file
+  * `pip` requirement file
+  * Existing Docker image
+* [CSC Docs: Tykky](https://docs.csc.fi/computing/containers/tykky)
+* [LUMI Docs: container-wrapper](https://docs.lumi-supercomputer.eu/software/installing/container-wrapper/) is the same as Tykky
 
-```
-module load geoconda
-export PYTHONUSERBASE=/projappl/<your_project>/my-python-env
-pip install --user somepackage
-```
+## Other
+* [CSC Docs: Installing software](https://docs.csc.fi/computing/installing/), inc installing from source, Spack
+* [LUMI Docs: Installing additional software](https://docs.lumi-supercomputer.eu/software/#installing-additional-software), inc installing from source, EasyBuild
+* Generally useful? -> ask from servicedesk to install
 
-Using the self-installed packages:
+## Installation exercise 
+### Tykky installation based on existing Docker image
 
-```
-module load geoconda
-export PYTHONPATH=/projappl/<your_project>/my-python-env/lib/python3.9/site-packages/
-```
+* We will install `lastools` based on [pydo's lastools Docker image](https://hub.docker.com/r/pydo/lastools).
+* We use the `projappl` disk, which is the best place for software installations.
 
-### Own Python environments
+> [!IMPORTANT]  
+> In these scripts `project_200xxxx` has been used as example project name. Change the project name to your own CSC project name.
+> `cscusername` is example username, replace with your username.
 
-The easiest way to create an own Python environment when all packages can be installed via Conda or pip is to use [tykky](https://docs.csc.fi/computing/containers/tykky/).
-
-Prerequisites: a Conda `environment.yml`
-
+Make Tykky tools available
 ```
 module purge
 module load tykky
-# create a new directory for the installation
-mkdir /projappl/<your_project>/<yournamehere>
-# create your own environment into the just created installation directory
-conda-containerize new --prefix <install_dir> environment.yml
-# add your environment to your path
-export PATH="<install_dir>/bin:$PATH"
 ```
 
-## R
-
-### Adding R packages to `r-env`
-
-On commandline create a R version specific directory: 
+Create a new directory for the installation and make the folder above it to your working directory
 ```
-mkdir /projappl/<project>/project_rpackages_<rversion>
-```
-In R:
-
-```
-# Add this to your R code:
-.libPaths(c("/projappl/<project>/project_rpackages_<rversion>", .libPaths()))
-libpath <- .libPaths()[1]
-
-# Check that the folder is now visible:
-.libPaths() # It should be first on the list
-
+mkdir -p /scratch/project_200xxxx/students/cscusername/lastools
+cd /scratch/project_200xxxx/students/cscusername
 ```
 
-To use in R script, add:
+Create the new instalaltion
 ```
-.libPaths(c("/projappl/<project>/project_rpackages_<rversion>", .libPaths()))
+wrap-container -w /opt/LAStools docker//:pydo/lastools:latest --prefix lastools
 ```
 
+* `-w /opt/LAStools` - where are the tools located inside the container, that should be available
+* `docker//:pydo/lastools:latest` - the existing Docker iamge
+* `--prefix lastools` - location of the new installation 
 
-## Other software
+Add the location of your new installation to your PATH
+```
+export PATH="/scratch/project_200xxxx/students/cscusername/lastools/bin:$PATH"
+```
 
-* Generally useful? -> ask from servicedesk to install
-* Niche? -> try yourself using containers (tykky)
+> [!IMPORTANT]  
+> PATH defines where system is looking for tools. Changing PATH like above is valid until the Puhti session is alive. PATH (or PYTHONPATH) has to be set each session again, so it is good to add it to your batch job file.
