@@ -1,6 +1,6 @@
 # Moving data
 
-## A local computer <-> a supercomputer
+## Local computer <-> supercomputer
 
 * [CSC Docs: Moving files between a local computer and a supercomputer](https://docs.csc.fi/data/moving/)
 
@@ -64,7 +64,7 @@ rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/p
 
 - When downloading from exernal services try to download directly to CSC, not via your local computer
 - Check what APIs/tools the service supports:
-	- OGC APIs, [STAC](stac.html)
+	- OGC APIs, [STAC](../stac.html)
 	- ftp, rsync
 	- wget/curl if HTTP-urls avaialable
 
@@ -87,15 +87,15 @@ wget -r -nc ftp://ftp.aineistot.metsaan.fi/Metsamaski/Maakunta/ --cut-dirs=2
 
 When you transfer text files from a Windows system to a Unix system (Mac, Linux etc.) this can cause problems. Windows encodes its files slightly different than Unix, and adds an extra character to every line.
 
-On a Unix system, every line in a file ends with a `\n`` (newline). On Windows, every line in a file ends with a \r\n (carriage return + newline). This causes problems sometimes.
+On a Unix system, every line in a file ends with a `\n` (newline). On Windows, every line in a file ends with a `\r\n` (carriage return + newline). This causes problems sometimes.
 
 Though most modern programming languages and software handles this correctly, in some instances, you may run into an issue. 
 
-You can identify if a file has Windows line endings with `cat -A filename``. A file with Windows line endings will have ^M$ at the end of every line. A file with Unix line endings will have $ at the end of a line.
+You can identify if a file has Windows line endings with `cat -A filename`. A file with Windows line endings will have ^M$ at the end of every line. A file with Unix line endings will have $ at the end of a line.
 
 The solution is to convert a file from Windows to Unix encoding. Many code editors have a setting for choosing the correct end-of-line (EOL) character. 
 
-If the Windows style file is already in HPC, it can be fixed with the `dos2unix`` command. To convert the file, run `dos2unix filename`. Conversely, to convert back to Windows format, you can run `unix2dos filename`.
+If the Windows style file is already in HPC, it can be fixed with the `dos2unix` command. To convert the file, run `dos2unix filename`. Conversely, to convert back to Windows format, you can run `unix2dos filename`.
 
 From [HPC Carpentry](https://carpentries-incubator.github.io/hpc-intro/).
 
@@ -126,7 +126,7 @@ L file (-), directory (d), symbolic link (l)
 
 What if we want to give different sets of users different permissions?
 
- The command `chmod ` [among others](https://www.freecodecamp.org/news/how-to-change-file-permissions-with-the-chmod-command-on-linux/) also accepts special numeric codes. The numeric codes are as follows: read = 4, write = 2, execute = 1. For each user we will assign permissions based on the sum of these permissions (must be between 7 and 0).
+ The command [chmod](https://www.freecodecamp.org/news/how-to-change-file-permissions-with-the-chmod-command-on-linux/) among others also accepts special numeric codes. The numeric codes are as follows: read = 4, write = 2, execute = 1. For each user we will assign permissions based on the sum of these permissions (must be between 7 and 0).
 
 Let’s make an example file and give everyone permission to do everything with it.
 
