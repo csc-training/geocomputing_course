@@ -64,7 +64,7 @@ rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/p
 
 - When downloading from exernal services try to download directly to CSC, not via your local computer
 - Check what APIs/tools the service supports:
-	- OGC APIs, [STAC](../stac.html)
+	- OGC APIs, [STAC](https://csc-training.github.io/geocomputing_course/materials/stac.html)
 	- ftp, rsync
 	- wget/curl if HTTP-urls avaialable
 
