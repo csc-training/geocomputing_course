@@ -40,7 +40,8 @@
 * [QGIS](https://docs.csc.fi/apps/qgis.md) General purpose GIS software family for viewing, editing and analysing geospatial data
 * [SAGA GIS](https://docs.csc.fi/apps/saga-gis.md) General purpose GIS software family for viewing, editing and analysing geospatial data
 * [pytorch](https://docs.csc.fi/apps/pytorch.md) for deep learning
-* [tensorflow](https://docs.csc.fi/apps/tensorflow.md) for deep learning 
+* [tensorflow](https://docs.csc.fi/apps/tensorflow.md) for deep learning
+* Additional, easy to install yourself [EasyBuild recepies](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs) for CGAL, GDAL, GEOS, ncview, PROJ, R.
 
 ## Documentation
 * [Puhti and Mahti softwate pages](https://docs.csc.fi/apps/by_discipline/#geosciences)
