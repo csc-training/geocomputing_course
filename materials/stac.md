@@ -1,4 +1,6 @@
-# STAC - Spatio-Temporal Asset Catalogs
+# STAC
+
+STAC - Spatio-Temporal Asset Catalog
 
 ## STAC - background
 
@@ -14,8 +16,7 @@
 
 ## Search with STAC API
 
-* Search API
-* Fits big datasets
+* Suitable also for very big datasets
 * Main focus on Item level
 * Search criteria:
     * Collection
@@ -69,7 +70,7 @@
 
 ## Paituli STAC links
 * **[Paituli STAC description](https://paituli.csc.fi/stac.html)**
-* Paituli STAC end-point: https://paituli.csc.fi/geoserver/ogc/stac/v1
+* Paituli STAC end-point: `https://paituli.csc.fi/geoserver/ogc/stac/v1`
 * [STAC Browser with Paituli STAC data](https://radiantearth.github.io/stac-browser/#/external/paituli.csc.fi/geoserver/ogc/stac/v1?.language=en)
 * Example scripts:
     * **[Python](https://www.github.com/csc-training/geocomputing/blob/master/python/STAC)**
