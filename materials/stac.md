@@ -8,7 +8,7 @@ STAC - Spatio-Temporal Asset Catalog
 * New de facto metadata and **search standard**
 * **Describes datasets at the level of individual files**
 * It is most commonly used for remote sensing data, but it is suitable for any data with time and location information.
-* Users: ESA, USGS, Microsoft Planetary computer, Google Earth Engine,
+* Users: ESA, USGS, Microsoft Planetary computer, Google Earth Engine
 * In Finland: FMI and CSC.
 
 ## STAC concepts
@@ -65,7 +65,7 @@ STAC - Spatio-Temporal Asset Catalog
    * FMI, Daily wind damage risk map.
 * ESA, **[Sentinel-2 products](https://a3s.fi/sentinel-readme/README.txt)**, processed to Level-2A (Surface Reflectance), a selection of mostly cloud-free products from Finland. Downloaded to CSC Allas by Maria Yli-Heikkilä (LUKE), Arttu Kivimäki (NLS/FGI) and Matias Heino (Aalto).
 
-\* These datasets have several bands in on file, Python `stackstac` does not support it, but search works.
+\* These datasets have several bands in one file, Python `stackstac` does not support it, but search works.
 
 
 ## Paituli STAC links
