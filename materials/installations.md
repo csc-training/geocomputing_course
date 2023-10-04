@@ -29,6 +29,7 @@
 
 * We will install `lastools` based on [pydo's lastools Docker image](https://hub.docker.com/r/pydo/lastools).
 * We use the `projappl` disk, which is the best place for software installations.
+* Lastools is in Puhti already available, also as newer Linux-native installation.
 
 > [!IMPORTANT]  
 > In these scripts `project_200xxxx` has been used as example project name. Change the project name to your own CSC project name.
@@ -42,22 +43,27 @@ module load tykky
 
 Create a new directory for the installation and make the folder above it to your working directory
 ```
-mkdir -p /scratch/project_200xxxx/students/cscusername/lastools
-cd /scratch/project_200xxxx/students/cscusername
+mkdir -p /projappl/project_200xxxx/students/cscusername/lastools
+cd /projappl/project_200xxxx/students/cscusername
 ```
 
 Create the new instalaltion
 ```
-wrap-container -w /opt/LAStools docker//:pydo/lastools:latest --prefix lastools
+wrap-container -w /opt/LAStools docker://pydo/lastools:latest --prefix lastools
 ```
 
 * `-w /opt/LAStools` - where are the tools located inside the container, that should be available
 * `docker//:pydo/lastools:latest` - the existing Docker iamge
 * `--prefix lastools` - location of the new installation 
 
-Add the location of your new installation to your PATH
+Add the location of your new installation to your PATH. Note that Tykky prints out the correct command for you.
 ```
 export PATH="/scratch/project_200xxxx/students/cscusername/lastools/bin:$PATH"
+```
+Test your new installation.
+```
+lasinfo -version
+lasinfo -i /appl/data/geo/mml/laserkeilaus/2008_latest/2018/W444/1/W4444G4.laz
 ```
 
 :::{admonition} PATH setting
