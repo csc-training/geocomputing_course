@@ -60,5 +60,8 @@ Add the location of your new installation to your PATH
 export PATH="/scratch/project_200xxxx/students/cscusername/lastools/bin:$PATH"
 ```
 
-> [!IMPORTANT]  
-> PATH defines where system is looking for tools. Changing PATH like above is valid until the Puhti session is alive. PATH (or PYTHONPATH) has to be set each session again, so it is good to add it to your batch job file.
+:::{admonition} PATH setting
+
+PATH defines where system is looking for tools. Changing PATH like above is valid until the Puhti session is alive. PATH (or PYTHONPATH) has to be set each session again, so it is good to add it to your batch job file.
+
+:::
