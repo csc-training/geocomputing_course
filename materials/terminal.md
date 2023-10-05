@@ -173,11 +173,7 @@ If you remember *a part of a command* that you have used recently you can search
 :::
 
 
-:::{admonition} Moving from GUI to CLI
-:class: seealso
-If you have only used Graphical User Interfaces thus far, but are curious to get started with the Command Line Interface you can try recreating e.g. GDAL commands shown in some QGIS tools.
-![](./images/QGIS_GDAL.png)
-:::
+
 
 
 
