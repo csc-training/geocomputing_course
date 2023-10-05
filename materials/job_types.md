@@ -17,7 +17,11 @@ What is your hostname?
 
 :::
 
-Apart from interactive jobs, an HPC job can be classified as **serial, parallel or GPU**, depending on the main requested resource. A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity
+Disadvantages of interactive jobs: 
+* blocks your shell until it finishes
+* connection interruption means that job is gone
+
+Apart from interactive jobs, an HPC job can be classified as **serial, parallel or GPU**, depending on the main requested resource. A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity. So instead of starting 10 shells to run 10 things at once, get to know serial jobs: 
 
 ## Serial jobs
 
@@ -117,10 +121,5 @@ A graphics processing unit (GPU, a video card), is capable of doing certain type
 [Array jobs](https://docs.csc.fi/computing/running/array-jobs/) can be used to simultaneously run multiple serial jobs. These are useful for so-called *embarrassingly parallel* analyses (many identical but separate tasks, e.g. repeating same steps for multiple data sets). 
 
 
-:::{admonition} Check your understanding
-:class: tip
 
-TODO: come up with some usecases, also some that are not parallelizable
-
-:::
 
