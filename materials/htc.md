@@ -5,24 +5,30 @@ Typically, large computers like those at CSC are not much faster than personal o
 :::{admonition} A small thought example
 :class: tip
 
-What of the following is a task, that can be parallelized in real life:
+Let's make some pea soup following this recipe:
 
-1. Manually copying a book and producing a clone
-2. Clearing the table after dinner
-3. Rinsing the dishes with one sink
-4. A family getting dressed to leave the apartment for a birthday party.
+* (1 min) Pour water into a soup pan, add the split peas and bring it to boil.
+* (60 min) Let it simmer under a lid for about 60 minutes.
+* (15 min) Clean and chop the leek, celeriac, onion, carrot and potato.
+* (20 min) Add the vegetables and simmer for 20 more minutes. Stir the soup occasionally.
+* (1 day) Leave the soup for one day. Reheat before serving and add a sliced smoked sausage (vegetarian options are also welcome). Season with pepper and salt.
 
-Think about what the inputs are to the task at hand. Can individual items of the inputs be processed independent of each other?
+Imagine you’re cooking alone.
 
-From [HPC-Carpentry](http://www.hpc-carpentry.org/hpc-parallel-novice/02-parallel-estimate/index.html)
+* How many workers does this process need?
+* Can you identify potential for parallelisation in this recipe?
+* And what if you are cooking with the help of a friend help? Is the soup done any faster?
+
+
+Adjusted from [Introduction to parallel programming in Python by the Carpentries](https://carpentries-incubator.github.io/lesson-parallel-python)
 
 :::{admonition} Solution
 :class: dropdown 
 
-1. not parallel typically - as we have to start with one book and only have one reader/writer
-2. parallel, the more people help, the better
-3. not parallel, every piece of cutlery and dishes needs to go through one sink
-4. parallel, each family member can get dressed independent of each other
+* There are two ‘workers’: the cook and the stove. 
+* You can cut vegetables while simmering the split peas.
+* If you have help, you can parallelize cutting vegetables further.
+* The main part of the process is not parallelizable, so we have to consider if it is worth the effort.
 :::
 
 :::
@@ -47,8 +53,7 @@ Some example geospatial tools with built-in multi CPU support:
 * Orfeo ToolBox; no extra action needed
 * Whiteboxtools; many tools support parallel execution without extra action
 * Lastools; many tools support parallel execution by setting `-cores`
-* PDAL-wrench;  many tools support parallel execution without extra action
-
+* PDAL-wrench (not on Puhti);  many tools support parallel execution without extra action
 
 For your own scripts, do you have **for-loops** or similar that you could replace by using multiple cores instead?
 Many programming languages have packages that support this: 
