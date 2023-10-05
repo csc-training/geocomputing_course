@@ -61,8 +61,12 @@ Also read the [Puhti batch job system documentation](https://docs.csc.fi/computi
 
 ## FAIR research code
 
-!()[./images/fair-principles.svg]
+```{figure} images/fair-principles.svg
+:alt: Scribble image of the FAIR principles
+:width: 700px
+:align: center
 The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807.
+```
 
 Following "good enough" practices for FAIR research code will not only help you rerunning your code again when reviewers would like you to "just run XX again" half a year after you moved on to the next project. It will also make your code more reproducible for others:
 * Version control
