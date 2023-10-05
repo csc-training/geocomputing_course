@@ -13,6 +13,15 @@ Materials are build to [Geocomputing course main page](https://csc-training.gith
 
 See [MyST-parser](https://myst-parser.readthedocs.io/en/latest/index.html) and [sphinx book theme guide](https://sphinx-book-theme.readthedocs.io).
 
+#### Images 
+
+```{figure} images/imagename.png
+:alt: Alt text
+:width: 700px
+:align: center
+Caption here
+```
+
 #### Admonition usage
 
 * Keypoints: important (yellow)
@@ -48,6 +57,11 @@ These lesson materials are based on previous geocomputing materials by Kylli Ek,
 Some lessons are partly based on other CSC course materials by Maria Lehtivaara, Rasmus Kronberg, Ari-Matti Saren, Atte Sillanpää, Kimmo Mattila, Laxmana Yetukuri, Maria Dimitrova, Xavier Anthony Raj,  Jesse Harrison, Sami Ilvonen.
 
 New edits and materials by Samantha Wittke, Kylli Ek.
+
+## Other resources and further reading
+
+[Aalto Scientific Computing Triton tutorial and HPC kickstart materials](https://scicomp.aalto.fi)
+[Sigma2 HPC Onboarding materials](https://documentation.sigma2.no/training/events/2023-10-hpc-on-boarding.html)
 
 ## License
 
