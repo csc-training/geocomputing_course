@@ -11,15 +11,17 @@ CSC services are **free of charge** for open science at Finnish higher education
 :::{admonition} Course project
 :class: hint
 
-You can now also create yourself a `course project`` for e.g. Masters thesis, courses or other short usages. 
-Note: 
+You can now also create so called `course project` for use in education.
 
+Note: 
 * Course projects are valid for maximum 6 months
 * Projects cannot be extended
 * Project data will be deleted when the project has ended
 
 [CSC Docs: Course project](https://docs.csc.fi/accounts/how-to-create-new-project/#how-to-create-a-course-project)
 :::
+
+
 
 
 ## Managing resources
