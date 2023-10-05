@@ -66,6 +66,8 @@ If subtasks are few (<100), an easy solution is [array jobs](https://docs.csc.fi
 
 You can also run multiple tasks on a single node without using an array job. Tasks that are not run immediately due to space restrictions are queued and are automatically executed as space becomes available. One tool to achieve this is [GNU Parallel](https://docs.csc.fi/support/tutorials/many/).
 
+As running programs in an embarassingly parallel fashion (i.e. task farming) is not a feature of the program, but a feature of the workflow itself, any program can be run in an embarassingly parallel fashion if needed.
+
 :::{admonition} Things to consider in task farming
 :class: warning
 
@@ -114,3 +116,19 @@ Avoid unnecessary reads and writes of data and containerize Conda environments t
 - Check the output of the `seff` command to ensure that CPU and memory efficiencies are as high as possible
     - It's OK if a job is (occasionally) killed due to insufficient resource requests: just adjust and rerun/restart
     - It's _much worse_ to always run with excessively large requests "just in case"
+
+
+:::{admonition} Parallelize everything?
+:class: tip
+
+Normal serial code can’t just be run in parallel without modifications. As a user it is your responsibility to understand what parallel model implementation your code has, if any.
+
+When deciding whether using parallel programming is worth the effort, one should be mindful of [Amdahl’s law](https://en.wikipedia.org/wiki/Amdahl%27s_law) and [Gustafson’s law](https://en.wikipedia.org/wiki/Gustafson%27s_law). All programs have some parts that can only be executed in serial fashion and thus speedup that one can get from using parallel execution depends on how much of programs’ execution can be done in parallel.
+
+Thus if your program runs mainly in serial but has a small parallel part, running it in parallel might not be worth it. Sometimes, doing data parallelism with e.g. array jobs is much more fruitful approach.
+
+Another important note regarding parallelism is that all the applications scale good up to some upper limit which depends on application implementation, size and type of problem you solve and some other factors. The best practice is to benchmark your code on different number of CPU cores before you start actual production runs.
+
+From [Aalto Scientific Computing](https://scicomp.aalto.fi/triton/tut/parallel/)
+
+:::
