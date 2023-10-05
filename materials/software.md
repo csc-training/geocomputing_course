@@ -28,7 +28,7 @@
 
 ## GIS tools available in Mahti
 
-* [Geoconda](geoconda.md) - Python spatial analysis libraries
+* [Geoconda](https://docs.csc.fi/apps/geoconda.md) - Python spatial analysis libraries
 * [pytorch](https://docs.csc.fi/apps/pytorch.md) for deep learning
 * [tensorflow](https://docs.csc.fi/apps/tensorflow.md) for deep learning 
 
