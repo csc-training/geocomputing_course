@@ -58,6 +58,16 @@ If you used any of our resources for your research, please acknowledge CSC and G
 
 -> follow our [training calendar](https://www.csc.fi/en/training#training-calendar)
 
+
+## Get to know weekly user support session
+
+Come to chat with our specialists about anything related to CSC resources! 
+Special invite to you for 18.10 at 14, but we keep these sessions every week.
+Sometimes with short talks about interesting topics. 
+
+Details on the event webpage: https://ssl.eventilla.com/usersupportcoffee
+
+
 :::{admonition} Key points
 :class: important
 
