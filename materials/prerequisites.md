@@ -1,6 +1,6 @@
 # Prerequisites
 
-## Experi
+## Experience
 
 To make this course as enjoyable as possible for you and to make sure you can get something out of it, we expect you to know about the following:
 
