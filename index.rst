@@ -48,7 +48,6 @@ The course is meant both for academic researchers planning to use Puhti supercom
 
    materials/examples.md
    materials/supercomputing.md  
-   materials/data_storage.md 
    materials/spatial_data_at_csc.md
    materials/software.md
    materials/webinterface.md
@@ -61,6 +60,7 @@ The course is meant both for academic researchers planning to use Puhti supercom
    materials/terminal.md
    materials/terminology.md
    materials/supercomputer_setup.md
+   materials/disk_areas.md
    materials/partitions.md
    materials/job_types.md
    materials/fair_share.md
