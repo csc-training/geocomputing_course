@@ -4,8 +4,6 @@ In this section, you will learn how to use different disk areas in supercomputin
 
 ## Puhti disk areas
 
-![](./images/disk-systems.svg)
-
 | Name     |Access   |Path                 |Cleaning      |Capacity|Number of files| Use |
 |------------|--------|--------------------|---------------------|--------------|----------------|----------------|
 |**[home](https://docs.csc.fi/computing/disk/#home-directory)**    |Personal|`/users/cscusername` |No            |10 GiB              |100 000 files  | personal settings and files |
@@ -34,10 +32,29 @@ Avoid unnecessary reads and writes of data to improve I/O performance
 
 ## Disk status
 
-- Display usage and quota of all your disk areas: `csc-workspaces` 
+- Display usage and quota of all your disk areas: `csc-workspaces`
 
 ![](./images/disk_status.png)
 
+
+- Display the amount of data and number of files within a given folder: `LUE`
+- [CSC Docs: LUE tutorial](https://docs.csc.fi/support/tutorials/lue/)
+
+```bash
+module load lue
+lue --display-level=2 /scratch/project_200xxxx/
+
+path, total size, in dir size, % of total, % of dir
+---------------------------------------------------
+/scratch/project_200xxxx/dirA        8.4GB  356KB 100.0 100.0
+    results                            3.7GB  458MB 44.15 44.15
+        simu1                              2.8GB  522MB 32.84 74.38 NOSIZE:1
+        simu2                              521MB  521MB 6.02  13.64 NOSIZE:1
+    installation                       1.4GB  48KB  16.2  16.2 
+        gcc10                              351MB  351MB 4.05  25.02
+        clang15                            351MB  351MB 4.05  25.02
+        intel                              350MB  350MB 4.04  24.94
+```
 
 ## Some best practice tips
 

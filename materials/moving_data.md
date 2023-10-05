@@ -46,7 +46,6 @@ scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_200xxxx/dire
 - Can warn against accidental over-writes.
 - Available on Linux, Mac and Windows Subsystem Linux (WSL).
 - Windows Powershell does not have `rsync`, MobaXterm has `rsync`, but it removes write permissions of copied files
-- Organization firewalls might have forbidden using rsync, especially in Valtori organizations
 - [CSC Docs: `rsync`](https://docs.csc.fi/data/moving/rsync/)
 
 ```
@@ -57,6 +56,13 @@ rsync --info=progress2 -a /path/to/a_file cscusername@puhti.csc.fi:/scratch/proj
 rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/project_200xxxx/directory
 ```
 * `progress2` shows time left and percentage
+
+
+:::{admonition} Firewall limitations
+
+Some organizations, for example research institutes with IT-services from Valtori, have stricter rules and need to use proxy for connecting to CSC. Ask your IT-service or other Puhti users in your organization for extra-guidelines. 
+
+:::
 
 
 
