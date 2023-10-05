@@ -6,10 +6,10 @@
 * **All Puhti users have read access**
 
 * ~13 TB of datasets available:
-	* Paituli data, with virtual mosaics for raster data
-	* Finnish Environmental Institute (SYKE) open datasets
-	* LUKE Multi-source national forest inventory: 2013, 2015, 2017, 2019 and 2021.
-	* Forest center: canopy height, forest mask, gridcells, forest resource plots
+	* **Paituli data**, with virtual mosaics for raster data
+	* Finnish Environmental Institute (SYKE) open datasets: **CORINE land use** etc
+	* LUKE, **Multi-source national forest inventory**: 2013, 2015, 2017, 2019 and 2021.
+	* Forest center: **canopy height**, forest mask, gridcells, forest resource plots
 
 * [CSC Docs: Spatial data in CSC computing environment](https://docs.csc.fi/data/datasets/spatial-data-in-csc-computing-env/)
 
@@ -18,15 +18,15 @@
 * **Spatial data download service**
 * ~300 Finnish datasets
 * All datasets open to everyone
-* Also historical versions of several datasets
+* Also **historical versions** of several datasets
 * Possibility to publish own datasets for universities and research institutes
-* OKM supports financially, CSC maintains, free of charge for end users
-* [Paituli service](https://paituli.csc.fi)
+* OKM supports financially, CSC maintains
+* [Paituli](https://paituli.csc.fi)
 
-Paituli data access in Puhti:
+### Paituli data access in Puhti:
 
 * As files in `/appl/data/geo/`
-* Majority via OGC APIs, both old and new standards
+* Majority via [OGC APIs](https://paituli.csc.fi/webservices.html), both old and new standards
 * **Raster datasets via [STAC](stac.md)**
 
 ### Some popular datasets
