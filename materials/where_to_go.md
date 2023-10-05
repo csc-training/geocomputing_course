@@ -1,5 +1,13 @@
 # Where to go from here
 
+:::{admonition} Keep practicing!
+:class: tip
+
+Computing course project available until 20.10.23
+
+:::
+
+
 ## Connecting to the supercomputer via SSH
 
 We have accessed the supercomputer via the webinterface in order to not overwhelm you with setups before the course. However, this way may not always be the most convenient. If you want to access the supercomputer from your terminal directly, you will have to set up SSH keys:
@@ -68,10 +76,3 @@ Sometimes with short talks about interesting topics.
 Details on the event webpage: https://ssl.eventilla.com/usersupportcoffee
 
 
-:::{admonition} Key points
-:class: important
-
-* ...
-
-
-:::

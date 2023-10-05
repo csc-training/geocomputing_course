@@ -106,12 +106,6 @@ Try to formulate your scientific results when you have a minimum amount of compu
 
 :::
 
-:::{admonition} Avoid unneccesary reading and writing
-:class: seealso
-Avoid unnecessary reads and writes of data and containerize Conda environments to improve I/O performance
-- Read and write in big chunks and avoid reading/writing lots of small files
-   - If unavoidable, use [fast local NVMe disk](https://docs.csc.fi/computing/disk/#compute-nodes-with-local-ssd-nvme-disks), not Lustre (i.e. `/scratch`)
-:::
 
 ## Before starting large-scale calculations
 

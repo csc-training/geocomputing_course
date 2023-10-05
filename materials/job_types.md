@@ -21,7 +21,7 @@ Disadvantages of interactive jobs:
 * blocks your shell until it finishes
 * connection interruption means that job is gone
 
-Apart from interactive jobs, an HPC job can be classified as **serial, parallel or GPU**, depending on the main requested resource. A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity. So instead of starting 10 shells to run 10 things at once, get to know serial jobs: 
+Apart from interactive jobs, a job can be classified as **serial, parallel or GPU**, depending on the main requested resource. A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity. So instead of starting 10 shells to run 10 things at once, get to know serial jobs: 
 
 ## Serial jobs
 
@@ -118,8 +118,6 @@ A graphics processing unit (GPU, a video card), is capable of doing certain type
 
 ## Array jobs
 
-[Array jobs](https://docs.csc.fi/computing/running/array-jobs/) can be used to simultaneously run multiple serial jobs. These are useful for so-called *embarrassingly parallel* analyses (many identical but separate tasks, e.g. repeating same steps for multiple data sets). 
-
-
-
+[Array jobs](https://docs.csc.fi/computing/running/array-jobs/) are one way of taking advantage of Puhti's parallel processing capabilities. Array jobs are useful when same code is executed many times for different datasets or with different parameters without the need to change the Python code. In GIS context a typical use case would be to run some model on study area split into multiple files where output from one file doesn't have an impact on result of an other area. 
+Each array job should be "big enough" to account for the overhead of starting it. 
 

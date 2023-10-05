@@ -22,7 +22,7 @@
 :class: important
 
 * Access to Puhti webinterface
-* Own directory within the course directory `/scratch/project_200xxxx/$USER`
+* Own directory within the course directory `/scratch/project_200xxxx/students/cscusername`
 
 :::
 
@@ -44,7 +44,7 @@ Let's reserve 10 minutes.
 On the login node: Start an interactive job with `srun`, e.g.:
 
 ```bash
-srun  --time=00:10:00 --pty --account=<project> --partition=interactive bash
+srun  --time=00:10:00 --pty --account=project_200xxxx --partition=interactive bash
 ```
 or on Puhti you can also use `sinteractive` wrapper, which simplifies the call and asks you for the resources step by step: 
 
@@ -54,7 +54,7 @@ sinteractive
 or directly: 
 
 ```bash
-sinteractive --account <project> --time 00:10:00         # replace <project> with your CSC project, e.g. project_2001234
+sinteractive --account project_200xxxx --time 00:10:00         # replace <project> with your CSC project, e.g. project_2001234
 ```
 :::
 
@@ -80,7 +80,7 @@ gdalinfo /appl/data/geo/luke/forest_wind_damage_sensitivity/2017/windmap2017_int
 :::{admonition} Task
 :class: tip
 
-Try out some other command line tool, or maybe even start a `python` or `R` session. What modules do you need to load? 
+Try out some other command line tool, or maybe even start a `python` or `R` session. What modules do you need to load? Check the [CSC Docs pages about "geo" applications](https://docs.csc.fi/apps/by_discipline/#geosciences).
 
 :::
 
@@ -123,7 +123,7 @@ If you use a software that is pre-installed by CSC, please [check its documentat
 1. Go to your own directory in the `/scratch` directory of your project:
 
 ```bash
-cd /scratch/<project>/$USER      # replace <project> with your CSC project, e.g. project_200xxxx
+cd /scratch/project_200xxxx/students/cscusername      # replace xxxx with your CSC project number
 ```
 
 2. Create a file called `my_serial.bash` e.g. with the `nano` text editor:

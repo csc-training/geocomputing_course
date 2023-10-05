@@ -9,11 +9,5 @@
 * How to get help.
 
 
-:::{admonition} Keep practicing!
-:class: tip
-
-Computing course project available until 20.10.23
-
-:::
 
 

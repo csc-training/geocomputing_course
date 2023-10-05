@@ -1,8 +1,6 @@
 # Terminal
 
 
-TODO: adopt to webinterface  task, check, and clean
-
 ## Why would you want to use the terminal?
 
 A typing-based interface is often called a command-line interface, or CLI, to distinguish it from a graphical user interface, or GUI. The heart of a CLI is a read-evaluate-print loop, or REPL: when the user types a command and then presses the Enter (or Return) key, the computer reads it, executes it, and prints its output. 

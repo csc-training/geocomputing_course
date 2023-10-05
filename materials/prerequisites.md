@@ -1,6 +1,6 @@
 # Prerequisites
 
-## Knowledge
+## Experi
 
 To make this course as enjoyable as possible for you and to make sure you can get something out of it, we expect you to know about the following:
 
@@ -13,8 +13,6 @@ To make this course as enjoyable as possible for you and to make sure you can ge
         * [CSC and Linux Cheat Sheet](./cheatsheet.md) (one page summary of the most important Linux commands – handy to have near you during the course)
 
 ## CSC account
-
-TODO: More details
 
 For the exercises, a [CSC account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) is needed.
 For self-learning you will also need a project.
