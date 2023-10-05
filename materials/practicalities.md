@@ -16,7 +16,11 @@ Hybrid course with lecture and hands-on exercises. It is recommended for online 
 
 ## Information overload
 
-Depending on how you work with a computer, this course may bring you a lot of new information. Please do not get discouraged. This material will be available also after the course for your review. The best way to understand the concepts better is to start implementing your own work and ask for help when you have specific topics to discuss. 
+Depending on how you work with a computer, this course may bring you a lot of new information at once. Please do not get discouraged. This material will be available also after the course for your review. The best way to understand the concepts better is to start implementing your own work and ask for help when you have questions.
+
+## Starting point
+
+There is much more to a supercomputer and the proper use of its resources than this course covers. If this got you interested, please check out our [CSC training calendar](https://www.csc.fi/en/training#training-calendar) for more advanced courses.
 
 ## Course participant statistics
 
