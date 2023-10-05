@@ -15,7 +15,7 @@ Jobs should be submitted to the partition that best matches the required resourc
 2. Kalika has profiled her code, and determined that it can run efficiently on 20 cores with 12 GB of memory each. The complete process should be done within 4 days.
 3. Ben wants to visualize a 80 GB file in QGIS.
 4. Neha has written and run some Python code on her own machine. She now wants to move to Puhti and, before running her full pipeline, test that her code executes correctly with a minimal dataset.
-5. TODO: multi CPU with memory bottleneck
+5. Josh wants to run 4 memory heavy tasks (100GB) in parallel. Each job takes about 30 minutes to execute.
 
 :::{admonition} Solution
 :class: dropdown
@@ -24,6 +24,6 @@ Jobs should be submitted to the partition that best matches the required resourc
 2. Based on the requirements, Kalika need to choose `hugemem_longrun` or adapt her code to get under 3 days runtime (which she might want to do in order to avoid exessively long queueing times).
 3. For the webinterface, only `test`, `small` or `interactive` can be used. According to the resource needs (> 80GB of memory), he needs to use `small` partition. 
 4. This is a very good idea and should always be done first. Neha can get the best and fast experience using `test` partition. This means to keep the runtime under 15 min and the memory needs below 190 GiB at a maximim of 80 tasks.
-5. TODO: multi CPU with memory bottleneck
+5. 400GB memory in total is more than most partitions can take. If this is the least memory possible for the jobs, it has to be run on `hugemem`.
 :::
 :::

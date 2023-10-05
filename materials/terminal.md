@@ -1,8 +1,6 @@
 # Terminal
 
 
-TODO: adopt to webinterface  task, check, and clean
-
 ## Why would you want to use the terminal?
 
 A typing-based interface is often called a command-line interface, or CLI, to distinguish it from a graphical user interface, or GUI. The heart of a CLI is a read-evaluate-print loop, or REPL: when the user types a command and then presses the Enter (or Return) key, the computer reads it, executes it, and prints its output. 
@@ -173,11 +171,7 @@ If you remember *a part of a command* that you have used recently you can search
 :::
 
 
-:::{admonition} Moving from GUI to CLI
-:class: seealso
-If you have only used Graphical User Interfaces thus far, but are curious to get started with the Command Line Interface you can try recreating e.g. GDAL commands shown in some QGIS tools.
-![](./images/QGIS_GDAL.png)
-:::
+
 
 
 

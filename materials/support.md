@@ -11,7 +11,7 @@
    - What you wanted to achieve and on which which computer
    - Which commands you have given
    - What error messages resulted
-   - [More tips to help us quickly solve your issue](https://docs.csc.fi/support/support-howto/)
+   - [More tips to help us to more quickly solve your issue](https://docs.csc.fi/support/support-howto/)
 
 
 ## Support pages and channels
@@ -22,7 +22,7 @@
 
 + servicedesk@csc.fi
 
-+ User support session in Zoom every Wednesday at 14.00
++ User support session in Zoom every Wednesday at 14.00 (join on 18.10 for course specific questions! :) )
 
 
 ## How we can help

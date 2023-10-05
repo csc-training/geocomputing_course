@@ -1,23 +1,30 @@
 # Disk areas
 
-In this section, you will learn how to use different disk areas in HPC environment at CSC.
+In this section, you will learn how to use different disk areas in supercomputing environment at CSC.
 
 ## Puhti disk areas
 
 | Name     |Access   |Path                 |Cleaning      |Capacity|Number of files| Use |
 |------------|--------|--------------------|---------------------|--------------|----------------|----------------|
-|**[home](https://docs.csc.fi/computing/disk/#home-directory)**    |Personal|`/users/<user-name>` |No            |10 GiB              |100 000 files  | personal settings and files |
-|**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/<project>`|No            |50 GiB              |100 000 files  | installation files |
-|**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/<project>` |**180 days**      |**1 TiB**              |1 000 000 files  | main working area |
+|**[home](https://docs.csc.fi/computing/disk/#home-directory)**    |Personal|`/users/cscusername` |No            |10 GiB              |100 000 files  | personal settings and files |
+|**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/project_200xxxx`|No            |50 GiB              |100 000 files  | installation files |
+|**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/project_200xxxx` |**180 days**      |**1 TiB**              |1 000 000 files  | main working area |
 
 ### Temporary fast disks 
 
 - [CSC Docs: Login node local tmp](https://docs.csc.fi/computing/disk/#login-nodes)  `$TMPDIR` for compiling, cleaned frequently.
 	
 - [CSC Docs: NVMe](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage) - `$LOCAL_SCRATCH` in batch jobs, 
-    - NVMe is accessible only during your job allocation, inc. interactive job.
-	- You must copy data in and out during your batch job. 
-    - If your job reads or writes a lot of small files, using this can give 10x performance boost.
+    - NVMe is accessible only during your job allocation, inc. interactive job
+	- You must copy data in and out during your batch job
+    - If your job reads or writes a lot of small files, using this can give 10x performance boost
+
+:::{admonition} Avoid unneccesary reading and writing
+:class: seealso
+Avoid unnecessary reads and writes of data to improve I/O performance
+- Read and write in big chunks and avoid reading/writing lots of small files
+   - If unavoidable, use [fast local NVMe disk](https://docs.csc.fi/computing/disk/#compute-nodes-with-local-ssd-nvme-disks), not Lustre (i.e. `/scratch`)
+:::
 
 ## LUMI disk areas
 - [LUMI docs: storage](https://docs.lumi-supercomputer.eu/storage/)

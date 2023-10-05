@@ -29,7 +29,7 @@
 
 ## GIS tools available in Mahti
 
-* [Geoconda](geoconda.md) - Python spatial analysis libraries
+* [Geoconda](https://docs.csc.fi/apps/geoconda.md) - Python spatial analysis libraries
 * [pytorch](https://docs.csc.fi/apps/pytorch.md) for deep learning
 * [tensorflow](https://docs.csc.fi/apps/tensorflow.md) for deep learning 
 
@@ -107,6 +107,12 @@
 Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonation have commandline interface.
 
 `* are not available in Puhti currently, but should be possible to install, ask if you need.`
+
+:::{admonition} Moving from GUI to CLI
+:class: seealso
+If you have only used Graphical User Interfaces thus far, but are curious to get started with the Command Line Interface you can try recreating e.g. GDAL commands shown in some QGIS tools.
+![](./images/QGIS_GDAL.png)
+:::
  
 ## Modules
 

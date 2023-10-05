@@ -21,7 +21,7 @@
 
 ## Desktop
 
-The Desktop application provides a desktop environment on Puhti within your web browser. From here you have graphical user intergaces of the following software available:
+The Desktop application provides a desktop environment on Puhti within your web browser. From here you have graphical user interfaces of the following software available:
 
 * QGIS
 * GRASS

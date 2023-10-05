@@ -5,24 +5,30 @@ Typically, large computers like those at CSC are not much faster than personal o
 :::{admonition} A small thought example
 :class: tip
 
-What of the following is a task, that can be parallelized in real life:
+Let's make some pea soup following this recipe:
 
-1. Manually copying a book and producing a clone
-2. Clearing the table after dinner
-3. Rinsing the dishes with one sink
-4. A family getting dressed to leave the apartment for a birthday party.
+* (1 min) Pour water into a soup pan, add the split peas and bring it to boil.
+* (60 min) Let it simmer under a lid for about 60 minutes.
+* (15 min) Clean and chop the leek, celeriac, onion, carrot and potato.
+* (20 min) Add the vegetables and simmer for 20 more minutes. Stir the soup occasionally.
+* (1 day) Leave the soup for one day. Reheat before serving and add a sliced smoked sausage (vegetarian options are also welcome). Season with pepper and salt.
 
-Think about what the inputs are to the task at hand. Can individual items of the inputs be processed independent of each other?
+Imagine you’re cooking alone.
 
-From [HPC-Carpentry](http://www.hpc-carpentry.org/hpc-parallel-novice/02-parallel-estimate/index.html)
+* How many workers does this process need?
+* Can you identify potential for parallelisation in this recipe?
+* And what if you are cooking with the help of a friend help? Is the soup done any faster?
+
+
+Adjusted from [Introduction to parallel programming in Python by the Carpentries](https://carpentries-incubator.github.io/lesson-parallel-python)
 
 :::{admonition} Solution
 :class: dropdown 
 
-1. not parallel typically - as we have to start with one book and only have one reader/writer
-2. parallel, the more people help, the better
-3. not parallel, every piece of cutlery and dishes needs to go through one sink
-4. parallel, each family member can get dressed independent of each other
+* There are two ‘workers’: the cook and the stove. 
+* You can cut vegetables while simmering the split peas.
+* If you have help, you can parallelize cutting vegetables further.
+* The main part of the process is not parallelizable, so we have to consider if it is worth the effort.
 :::
 
 :::
@@ -47,8 +53,7 @@ Some example geospatial tools with built-in multi CPU support:
 * Orfeo ToolBox; no extra action needed
 * Whiteboxtools; many tools support parallel execution without extra action
 * Lastools; many tools support parallel execution by setting `-cores`
-* PDAL-wrench;  many tools support parallel execution without extra action
-
+* PDAL-wrench (not on Puhti);  many tools support parallel execution without extra action
 
 For your own scripts, do you have **for-loops** or similar that you could replace by using multiple cores instead?
 Many programming languages have packages that support this: 
@@ -65,6 +70,8 @@ If subtasks are few (<100), an easy solution is [array jobs](https://docs.csc.fi
    - Array jobs create _job steps_ and for 1000s of tasks Slurm database will get overloaded &rarr; consider another solution
 
 You can also run multiple tasks on a single node without using an array job. Tasks that are not run immediately due to space restrictions are queued and are automatically executed as space becomes available. One tool to achieve this is [GNU Parallel](https://docs.csc.fi/support/tutorials/many/).
+
+As running programs in an embarassingly parallel fashion (i.e. task farming) is not a feature of the program, but a feature of the workflow itself, any program can be run in an embarassingly parallel fashion if needed.
 
 :::{admonition} Things to consider in task farming
 :class: warning
@@ -99,12 +106,6 @@ Try to formulate your scientific results when you have a minimum amount of compu
 
 :::
 
-:::{admonition} Avoid unneccesary reading and writing
-:class: seealso
-Avoid unnecessary reads and writes of data and containerize Conda environments to improve I/O performance
-- Read and write in big chunks and avoid reading/writing lots of small files
-   - If unavoidable, use [fast local NVMe disk](https://docs.csc.fi/computing/disk/#compute-nodes-with-local-ssd-nvme-disks), not Lustre (i.e. `/scratch`)
-:::
 
 ## Before starting large-scale calculations
 
@@ -114,3 +115,19 @@ Avoid unnecessary reads and writes of data and containerize Conda environments t
 - Check the output of the `seff` command to ensure that CPU and memory efficiencies are as high as possible
     - It's OK if a job is (occasionally) killed due to insufficient resource requests: just adjust and rerun/restart
     - It's _much worse_ to always run with excessively large requests "just in case"
+
+
+:::{admonition} Parallelize everything?
+:class: tip
+
+Normal serial code can’t just be run in parallel without modifications. As a user it is your responsibility to understand what parallel model implementation your code has, if any.
+
+When deciding whether using parallel programming is worth the effort, one should be mindful of [Amdahl’s law](https://en.wikipedia.org/wiki/Amdahl%27s_law) and [Gustafson’s law](https://en.wikipedia.org/wiki/Gustafson%27s_law). All programs have some parts that can only be executed in serial fashion and thus speedup that one can get from using parallel execution depends on how much of programs’ execution can be done in parallel.
+
+Thus if your program runs mainly in serial but has a small parallel part, running it in parallel might not be worth it. Sometimes, doing data parallelism with e.g. array jobs is much more fruitful approach.
+
+Another important note regarding parallelism is that all the applications scale good up to some upper limit which depends on application implementation, size and type of problem you solve and some other factors. The best practice is to benchmark your code on different number of CPU cores before you start actual production runs.
+
+From [Aalto Scientific Computing](https://scicomp.aalto.fi/triton/tut/parallel/)
+
+:::
