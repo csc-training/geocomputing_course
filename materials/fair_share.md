@@ -39,7 +39,18 @@ SLURM controls how a single job request is allocated resources, such as:
    - Some queues have a lower priority (e.g. _longrun_ -- use shorter if you can!)
 - See our documentation for more information on [Getting started with running batch jobs on Puhti/Mahti](https://docs.csc.fi/computing/running/getting-started/) and [LUMI](https://docs.lumi-supercomputer.eu/runjobs/).
 
+:::{admonition} How many resources to request?
+:class: seealso
 
+* You can use your workstation / laptop as a base measuring stick: If the code runs on your machine, as a first guess you can reserve the same amount of CPUs & RAM as your machine has.
+* Similarly for running time: if you have run it on your machine, you should reserve similar time in the cluster.
+* If your program does the same thing more than once, you can estimate that the total run time is T≈nsteps⋅tstep, where tstep is the time taken by each step.
+* Likewise, if your program runs multiple parameters, the total time needed is Ttotal≈nparameters⋅Tsingle, where Tsingle is time needed to run the program with some parameters.
+* You can also run a smaller version of the problem and try to estimate how the program will scale when you make the problem bigger.
+* You should always monitor jobs to find out what were the actual resources you requested (seff JOBID).
+
+From [Aalto Scientific Computing](https://scicomp.aalto.fi/triton/usage/program-size/)
+:::
 
 :::{admonition} How many jobs is too many?
 :class: seealso, dropdown
