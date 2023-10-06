@@ -39,7 +39,7 @@
 Open interactive session
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
 * Open interactive job: Tools -> Compute node shell
-  * (Reservation: `geocomputing`, only during course)
+  * (Reservation: `geocomputing_fri`, only during course)
   * Project: `project_200xxxx`
   * Partition: `interactive` (`small` during course)
   * Number of CPU cores: 1
