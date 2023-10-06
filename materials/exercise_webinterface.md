@@ -29,7 +29,7 @@
 
 ### Info
 * Puhti general status: bottom of front page
-   * Sometimes reading and writing files might get slow, then the `Disk lag` here is high. 
+   * Sometimes when the `Disk lag` here is high, reading and writing files might get slow.
 * Own projects, remaining billing units: `Tools` -> `Project view`
 * Disk usage of own projects: `Tools` -> `Disk quotas`
 * Running jobs: `Jobs` -> `Active jobs`
