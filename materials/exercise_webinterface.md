@@ -68,7 +68,7 @@ Web interface is for moving up to 10Gb data, if you have more data use other too
 
 * Open the Jupyter launch page: from front page or `Apps -> Jupyter`
 * Use settings: 
-  * (Reservation: `geocomputing`, only during course)
+  * (Reservation: `geocomputing_thu`, only during course)
   * Project: `project_200xxxx`
   * Partition: `interactive` (`small` during course)
   * Number of CPU cores: 1
@@ -101,7 +101,7 @@ src.plot()
 
 * Open the Desktop launch page: from front page or `Apps -> Desktop`
 * Use settings: 
-  * (Reservation: `geocomputing`, only during course)
+  * (Reservation: `geocomputing_thu`, only during course)
   * Project: `project_200xxxx`
   * Partition: interactive (`small` during course)
   * Number of CPU cores: 1
