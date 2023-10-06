@@ -30,14 +30,27 @@
 * We will install `lastools` based on [pydo's lastools Docker image](https://hub.docker.com/r/pydo/lastools).
 * We use the `projappl` disk, which is the best place for software installations.
 * Lastools is in Puhti already available, also as newer Linux-native installation.
+* During the course we will use interactive job for doing the installation because of 50 persons doing it at the same time. Usually installations are done on login node.
 
 > [!IMPORTANT]  
 > In these scripts `project_200xxxx` has been used as example project name. Change the project name to your own CSC project name.
 > `cscusername` is example username, replace with your username.
 
+Open interactive session
+* Open [Puhti web interface](https://puhti.csc.fi) and log in
+* Open interactive job: Tools -> Compute node shell
+  * (Reservation: `geocomputing`, only during course)
+  * Project: `project_200xxxx`
+  * Partition: `interactive` (`small` during course)
+  * Number of CPU cores: 1
+  * Memory (Gb): 4
+  * Local disk: 4
+  * Time: 0:15:00
+  * `Launch`
+* Wait a moment for interactive job to start -> `Connect to ssh session`
+
 Make Tykky tools available
 ```
-module purge
 module load tykky
 ```
 
