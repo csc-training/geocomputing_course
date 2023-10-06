@@ -116,7 +116,7 @@ src.plot()
       * Source Type: `File`
       * Source: `/appl/data/geo/tilastokeskus/paavo/2023/pno_tilasto_2023.shp`
 * See file information with GDAL
-   * `Processing Tools` -> `GDAL` -> `Vector miscellanious` -> `Vector information`
+   * `Processing` -> `Toolbox` -> `GDAL` -> `Vector miscellanious` -> `Vector information`
    * The open dataset is selected by default
    * `Run`
    * Note, if interested in moving from graphical QGIS to scripting:
