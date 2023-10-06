@@ -25,20 +25,20 @@
 
 ## Get familiar with Puhti web interface
 
-* Open [Puhti web interface](https://puhti.csc.fi) and log in with CSC user account.
+* Open [Puhti web interface](https://puhti.csc.fi) and log in
+
+### Info
+* Puhti general status: bottom of front page
+   * Sometimes reading and writing files might get slow, then the `Disk lag` here is high. 
+* Own projects, remaining billing units: `Tools` -> `Project view`
+* Disk usage of own projects: `Tools` -> `Disk quotas`
+* Running jobs: `Jobs` -> `Active jobs`
 
 :::{admonition} Change the default project and username
 
 * `project_200xxxx` is example project name, replace with your own CSC project name.
 * `cscusername` is example username, replace with your username.
 :::
-
-### Info
-* Puhti general status: bottom of front page
-   * Sometimes reading and writing files might get slow, then the `Disk lag` here is high. 
-* Own projects, remaining billing units: `Tools` -> `Project view`
-* Disk usage of own projects: `Tools` -> `Disk quatas`
-* Running jobs: `Jobs` -> `Active jobs`
 
 ### Files 
 * Open home directory: `Files` -> `Home Directory`
@@ -93,7 +93,6 @@ src.plot()
    * Delete the Notebook.
    * Close the web tab
    * In Active sessions view: `Delete`
-      * This only ends the Jupyter session, any files written during the session would be available also afterwards.
 
 #### Desktop with QGIS
 
@@ -115,14 +114,14 @@ src.plot()
 * Open Statistic Finland Paavo post code data
    *  `Layer` -> `Add layer` -> `Add vector layer`
       * Source Type: `File`
-      * Source: '/appl/data/geo/tilastokeskus/paavo/2023/pno_tilasto_2023.shp'
+      * Source: `/appl/data/geo/tilastokeskus/paavo/2023/pno_tilasto_2023.shp`
 * See file information with GDAL
    * `Processing Tools` -> `GDAL` -> `Vector miscellanious` -> `Vector information`
    * The open dataset is selected by default
    * `Run`
    * Note, if interested in moving from graphical QGIS to scripting:
       * The GDAL commandline command is displayed in the lower part of dialog box and log.
-      * `Advanced` menu provides this command also as `qgis_processing` command and as`PyQGIS code.
+      * `Advanced` menu provides this command also as `qgis_processing` command and as PyQGIS code.
 * End the session:
    * Close QGIS.
    * Close the web tab
@@ -131,8 +130,8 @@ src.plot()
 
 :::{admonition} QGIS in practice on supercomputer
 
-* QGIS is designed for desktop use and it mostly it uses only 1 core, so running it on supercomputer is rather slower than on desktop. QGIS is in Puhti and LUMI mainly for easy viewing of input and output data. 
-* With `qgis_processing` or PyQGIS scripts it is possible to paralellize your data analysis, but in general other Python packages are faster.
+* QGIS is designed for desktop use and it mostly uses only 1 core, so running it on supercomputer is rather slower than on desktop. QGIS is in Puhti and LUMI mainly for easy viewing of input and output data. 
+* With `qgis_processing` or PyQGIS scripts it is possible to paralellize your data analysis. In general other Python packages are faster, but if you have these scripts already available, they can be used.
 
 :::
 
