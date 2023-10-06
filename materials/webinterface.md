@@ -1,11 +1,11 @@
-# Puhti webinterface
+# Puhti web interface
 
 * **For lightweight entry to Puhti supercomputer**
-* In webinterface the resources are limited -> suitable for **developing code and small analysis tasks**
+* In web interface the resources are limited -> suitable for **developing code and small analysis tasks**
 * Bigger analysis tasks should be run via batch jobs
     * Web interface can be used for starting batch jobs 
 * [Puhti web interface](https://puhti.csc.fi)
-* [CSC Docs: webinterface](https://docs.csc.fi/computing/webinterface/)
+* [CSC Docs: web interface](https://docs.csc.fi/computing/webinterface/)
 * LUMI at the moment does not have a web interface, but will soon have a similar one, but will less applications available. 
 
 ### Tools in web interface:
