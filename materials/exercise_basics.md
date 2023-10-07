@@ -105,7 +105,7 @@ Documentation at [Docs CSC: Interactive usage](https://docs.csc.fi/computing/run
 
 ## Batch job tutorial - Serial jobs
 
-Examples are done on Puhti. If using the web interface, open a login node shell.
+Examples are done on Puhti. In the Puhti web interface, open a login node shell.
 
 :::{admonition} Remember
 :class: seealso

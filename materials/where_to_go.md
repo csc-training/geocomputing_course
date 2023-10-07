@@ -37,7 +37,7 @@ We have accessed the supercomputer via the webinterface in order to not overwhel
 
 ## Next steps
 
-* (Create or get access to a CSC project
+* (Create or get access to a CSC project)
 * Choose suitable service for your task
   * Contact `servicedesk@csc.fi` if unsure
 * Learn about the service
@@ -66,6 +66,11 @@ If you used any of our resources for your research, please acknowledge CSC and G
 
 -> follow our [training calendar](https://www.csc.fi/en/training#training-calendar)
 
+## "Geo" seminars
+
+Find all materials of previous seminars on our [CSC research pages](https://research.csc.fi/geocomputing-seminars).
+
+Next CSC "geo" seminar will be in beginning of 2024: "Machine Learning with spatial data".
 
 ## Get to know weekly user support session
 
