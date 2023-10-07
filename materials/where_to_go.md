@@ -47,7 +47,7 @@ We have accessed the supercomputer via the webinterface in order to not overwhel
   * [Visit courses, webinars, workshops](https://www.csc.fi/en/training)
 * Ask for help, if needed, we don't bite :)
 
-# How you can help
+## How you can help
 
 
 If you used any of our resources for your research, please acknowledge CSC and Geoportti in your publications, it is important for project continuation and funding reports. As an example, you can write:

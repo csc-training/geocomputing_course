@@ -61,7 +61,7 @@ Many programming languages have packages that support this:
 * R:  `snow`, `parallel` and `future`
 * Julia: built in [multi-threading](https://docs.julialang.org/en/v1/manual/multi-threading/#man-multithreading)
 
-### External tools for running scripts/tools at the same time 
+### Tools for running scripts/tools at the same time 
 
 Apart from in- built features, there is also ways to running scripts at the same time for tools without multi-core support or adapting your own code. Any program may be run in parallel with these tools. This way of running programs is also called task farming or high throughput computing.
 
