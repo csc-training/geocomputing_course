@@ -6,6 +6,17 @@ No matter if you are just starting a new project or already have found suitable 
 
 Just moving your workflow or script to the supercomputer does not make it run faster. But there is some things that you can do.
 
+
+## Before starting large-scale calculations
+
+- Check how the software performs on actual input data
+    - Common job errors are caused by typos in batch/input scripts
+- Use short runs in the queue `--partition=test` to check that the input works and that the resource requests are interpreted correctly
+- Check the output of the `seff` command to ensure that CPU and memory efficiencies are as high as possible
+    - It's OK if a job is (occasionally) killed due to insufficient resource requests: just adjust and rerun/restart
+    - It's _much worse_ to always run with excessively large requests "just in case"
+
+
 ## New project hints
 
 When you start a new project and don't yet know how you are going to approach the task, spend a little time to investigate:

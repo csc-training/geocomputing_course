@@ -2,20 +2,10 @@
 
 ## Interactive jobs
 
-
 You already got to know the [interactive web interface for Puhti](https://docs.csc.fi/computing/webinterface/)
 - If you have a heavier job that still requires interactive response (_e.g._ testing, prototyping)
     - Allocate the resource via the the [interactive partition](https://docs.csc.fi/computing/running/interactive-usage/)
     - This way your work is performed in a compute node, not on the login node
-
-:::{admonition} Exploring the compute node(s)
-:class: tip
-
-This time, let's start a compute shell from the Puhti webinterface. What is different from starting a login node shell?
-What is your hostname? 
--> You are now in an interactive job.
-
-:::
 
 Disadvantages of interactive jobs: 
 * blocks your shell until it finishes
@@ -25,7 +15,7 @@ Apart from interactive jobs, a job can be classified as **serial, parallel or GP
 
 ## Serial jobs
 
-Serial jobs only use one core -> so don't reserve more.
+Serial jobs means that the computer works on only one task at a time following a sequence of instructions, while only use one core.
 
 Why could your serial job benefit from being executed using CSC's resources instead of on your own computer? 
 - Part of a larger workflow
@@ -36,9 +26,11 @@ Why could your serial job benefit from being executed using CSC's resources inst
 
 ## Parallel jobs
 
-A parallel job distributes the calculation over several cores in order to achieve a shorter wall time (and/or a larger allocatable memory). There are two major parallelization schemes: [OpenMP](https://en.wikipedia.org/wiki/OpenMP) and [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface). Depending on the parallellization scheme there is a slight difference between _how_ the resource reservation is done.
+A parallel job distributes the work over several cores in order to achieve a shorter wall time (and/or a larger allocatable memory). 
 
-:::{admonition} More advanced topics - MPI/OpenMP
+In this course we will focus on **embarassingly/naturally/delightfully parallel processes** with methods that are either built-in to the tools or tools that can start multiple jobs from one call. For more advanced usage, there are two major parallelization schemes: [OpenMP](https://en.wikipedia.org/wiki/OpenMP) and [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface). 
+
+:::{admonition} Advanced topics - MPI/OpenMP
 :class: dropdown, seealso
 
 **What is MPI?**
@@ -91,6 +83,10 @@ A parallel job distributes the calculation over several cores in order to achiev
 
 :::
 
+## Array jobs
+
+[Array jobs](https://docs.csc.fi/computing/running/array-jobs/) are another way of taking advantage of Puhti's parallel processing capabilities for embarassingly parallel tasks. Array jobs are useful when same code is executed many times for different datasets or with different parameters without the need to change the Python code. In GIS context a typical use case would be to run some model on study area split into multiple files where output from one file doesn't have an impact on result of an other area. 
+
 ## GPU jobs 
 
 A graphics processing unit (GPU, a video card), is capable of doing certain type of simultaneous calculations very efficiently. In order to take advantage of this power, a computer program must be reprogrammed to adapt on how GPU handles data. CSC's GPU resources are relatively scarce and hence should be used with [particular care](https://docs.csc.fi/computing/overview/#gpu-nodes). A GPU uses 60 times more billing units than a single CPU core. In practice, 1-10 CPU cores (but not more) should be allocated per GPU on Puhti.
@@ -116,8 +112,5 @@ A graphics processing unit (GPU, a video card), is capable of doing certain type
 
 :::
 
-## Array jobs
 
-[Array jobs](https://docs.csc.fi/computing/running/array-jobs/) are one way of taking advantage of Puhti's parallel processing capabilities. Array jobs are useful when same code is executed many times for different datasets or with different parameters without the need to change the Python code. In GIS context a typical use case would be to run some model on study area split into multiple files where output from one file doesn't have an impact on result of an other area. 
-Each array job should be "big enough" to account for the overhead of starting it. 
 
