@@ -6,7 +6,7 @@
     * Web interface can be used for starting batch jobs 
 * [Puhti web interface](https://puhti.csc.fi)
 * [CSC Docs: web interface](https://docs.csc.fi/computing/webinterface/)
-* LUMI at the moment does not have a web interface, but will soon have a similar one, but will less applications available. 
+* LUMI at the moment does not have a web interface, but will soon have a similar one (with less applications). 
 
 ### Tools in web interface:
 - View, download and upload files

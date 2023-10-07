@@ -54,7 +54,7 @@ sinteractive
 or directly: 
 
 ```bash
-sinteractive --account project_200xxxx --time 00:10:00         # replace <project> with your CSC project, e.g. project_2001234
+sinteractive --account project_200xxxx --time 00:10:00         # replace xxxx with your CSC project, e.g. project_2001234
 ```
 :::
 
@@ -63,7 +63,7 @@ sinteractive --account project_200xxxx --time 00:10:00         # replace <projec
 You can check [my.csc.fi](https://my.csc.fi/) or list your projects with `csc-projects` in a login node shell.
 :::
 
-Observe how the command prompt (initial text on each row on the command-line) looks now compared to a login node shell e.g. `r07c51`,which refers to a compute node, as opposed to e.g. `puhti-login11` .
+Observe how the command prompt (initial text on each row on the command-line) looks now compared to a login node shell e.g. `r07c51`, which refers to a compute node, as opposed to e.g. `puhti-login11`.
 
 1. Once on the compute node, you can run commands directly from the command-line. You can e.g. load the `geoconda` module:
 
@@ -123,7 +123,7 @@ If you use a software that is pre-installed by CSC, please [check its documentat
 1. Go to your own directory in the `/scratch` directory of your project:
 
 ```bash
-cd /scratch/project_200xxxx/students/cscusername      # replace xxxx with your CSC project number
+cd /scratch/project_200xxxx/students/cscusername      # replace xxxx with your CSC project number and cscusername with your username
 ```
 
 2. Create a file called `my_serial.bash` e.g. with the `nano` text editor:
@@ -132,14 +132,14 @@ cd /scratch/project_200xxxx/students/cscusername      # replace xxxx with your C
 nano my_serial.bash
 ```
 
-3. Copy the following **batch script** there and change `<project>` to the CSC project you actually want to use:
+3. Copy the following **batch script** there and change `xxxx` to the CSC project you actually want to use:
 
 ```bash
 #!/bin/bash
-#SBATCH --account=<project>      # Choose the billing project. Has to be defined!
-#SBATCH --time=00:02:00          # Maximum duration of the job. Upper limit depends on the partition. 
-#SBATCH --partition=test         # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
-#SBATCH --ntasks=1               # Number of tasks. Upper limit depends on partition. For a serial job this should be set 1!
+#SBATCH --account=project_200xxxx   # Choose the billing project. Has to be defined!
+#SBATCH --time=00:02:00             # Maximum duration of the job. Upper limit depends on the partition. 
+#SBATCH --partition=test            # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
+#SBATCH --ntasks=1                  # Number of tasks. Upper limit depends on partition. For a serial job this should be set 1!
 
 echo -n "We are running on"
 hostname                    # Run hostname-command, that will print the name of the Puhti compute node that has been allocated for this particular job
@@ -198,7 +198,7 @@ gdalinfo /appl/data/geo/luke/forest_wind_damage_sensitivity/2017/windmap2017_int
 
 * A batch job script combines resource estimates and computation steps
     * Resource request lines start with `#SBATCH`
-* You can find the jobs output, errors and prints in `slurm-<jobid>.out`
+* You can find the jobs output, errors and prints in `slurm-jobid.out`
 
 
 :::
