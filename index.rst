@@ -30,6 +30,7 @@ The course is meant both for academic researchers planning to use Puhti supercom
    :caption: Practicalities
 
    materials/prerequisites.md
+   materials/terminal.md
    materials/practicalities.md
    materials/cheatsheet.md
 
@@ -57,7 +58,6 @@ The course is meant both for academic researchers planning to use Puhti supercom
    :maxdepth: 2
    :caption: Terminology and concepts
 
-   materials/terminal.md
    materials/terminology.md
    materials/supercomputer_setup.md
    materials/disk_areas.md
