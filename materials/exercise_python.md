@@ -27,6 +27,7 @@
 
 [Python exercise materials in Geocomputing Github](https://github.com/csc-training/geocomputing/tree/master/python/puhti)
 
+Check out at least the sections about [serial jobs](https://github.com/csc-training/geocomputing/blob/master/python/puhti/README.md#serial-job) and [parallelizing within Python](https://github.com/csc-training/geocomputing/blob/master/python/puhti/README.md#internal-parallelization).
 
 Additional example to check out from Jupyter application in the webinterface: [https://github.com/csc-training/geocomputing/blob/dask_stac_example/python/STAC/stac_dask_download_data_example.ipynb]
 
