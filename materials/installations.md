@@ -32,9 +32,11 @@
 * Lastools is in Puhti already available, also as newer Linux-native installation.
 * During the course we will use interactive job for doing the installation because of 50 persons doing it at the same time. Usually installations are done on login node.
 
-> [!IMPORTANT]  
-> In these scripts `project_200xxxx` has been used as example project name. Change the project name to your own CSC project name.
-> `cscusername` is example username, replace with your username.
+:::{admonition} Change the default project and username
+
+* `project_200xxxx` is example project name, replace with your own CSC project name.
+* `cscusername` is example username, replace with your username.
+:::
 
 Open interactive session
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
