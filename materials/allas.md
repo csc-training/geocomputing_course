@@ -4,12 +4,12 @@ What it is?
 
 * Allas is a **storage service**, technically object storage
 * **For CSC project lifetime: 1-5 years**
-* **Capacity: 10 - 200 for free**, more with contract
+* **Capacity: 10 - 200 Tb for free**, more with contract
 * Accessible from CSC computing services, own laptop or other servers
 * Private data - access for project members only
 * Possibility to make data public or share with other CSC project
 * For computation the data has to typically be copied to the computing environment
-* [CSC Dosc: Allas](https://docs.csc.fi/data/Allas/)
+* [CSC Docs: Allas](https://docs.csc.fi/data/Allas/)
 * LUMI-O is very similar to Allas
 * [LUMI Docs: LUMI-O](https://docs.lumi-supercomputer.eu/storage/lumio/)
 	
@@ -52,7 +52,7 @@ What it is NOT?
 
 - **Web interfaces**:
 	- **cPouta**, soon also Puhti and Mahti web interface
-  	- [cPouta webinterface](https://pouta.csc.fi/dashboard) -> object store -> containers
+  	- [cPouta web interface](https://pouta.csc.fi/dashboard) -> object store -> containers
 	- See what data is in Allas, upload/download of single files.
 	- Log in with CSC username and password
 - **Graphical tools**:
@@ -81,4 +81,4 @@ What it is NOT?
 * **ArcGIS** Pro can read rasters.
 * [CSC Docs: Tutorial - Using geospatial files directly from cloud, inc Allas](https://docs.csc.fi/support/tutorials/gis/gdal_cloud/)
 	* [Example Python code for working with Allas and rasterio and geopandas](https://github.com/csc-training/geocomputing/blob/master/python/allas)
-	* [Example R code for workign with Allas and terra and sf](https://github.com/csc-training/geocomputing/blob/master/R/allas/working_with_allas_from_R_S3.R)
+	* [Example R code for working with Allas and terra and sf](https://github.com/csc-training/geocomputing/blob/master/R/allas/working_with_allas_from_R_S3.R)

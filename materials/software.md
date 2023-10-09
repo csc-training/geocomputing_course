@@ -1,5 +1,10 @@
 # GIS tools
 
+* Puhti has the widest GIS software portfolio of CSC supercomputers, and possibly of all supercomputers in the world
+* Pre-installed software makes it easy to start working with Puhti.
+* GIS tools are originally not planned for supercomputers -> limited ability to utilize the computing power.
+* GIS installations at CSC have been done partly with GeoPortti funding.
+
 ## GIS tools available in Puhti
 
 * [Ames Stereo Pipeline](https://docs.csc.fi/apps/ames-stereo.md) for processing stereo images
@@ -44,7 +49,7 @@
 * [tensorflow](https://docs.csc.fi/apps/tensorflow.md) for deep learning
 * Additional, easy to install yourself [EasyBuild recepies](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs) for CGAL, GDAL, GEOS, ncview, PROJ, R.
 
-## Geospatial software NOT available in supercomputers
+## GIS tools NOT available in supercomputers
 
 * **Servers** -> these can be run in cPouta
 	* Web map servers:
@@ -56,9 +61,9 @@
 	* [Installation guidelines for ArcPy, GeoServer, MetaShape, PostGIS and containers (for example OpenDroneMap) in cPouta](https://github.com/csc-training/geocomputing/tree/master/pouta).
 * Tools available for **Windows only** -> no good option from CSC services
 	* ArcGIS, TerraScan
-* Tools with node-locked licenses -> cPouta  
 
-## Commercial tools
+:::{admonition} Commercial tools
+:class: seealso, dropdown
 
 * MATLAB:
 	* Users from universities: license from university + CSC license -> OK
@@ -69,27 +74,9 @@
   	* Easy to use own license
 * ArcGIS Python API:
 	* For many tools connection to ArcGIS Online required.
- * In general only tools with floating licenses possible   
-
-## Documentation
-* [Puhti and Mahti softwate pages](https://docs.csc.fi/apps/by_discipline/#geosciences)
-* [LUMI software pages](https://docs.lumi-supercomputer.eu/software/)
-
- Something missing?
-      Ask us :)
-      servicedesk@csc.fi
-
-## Skills needed 
-
-* Some GIS tool listed above
-* Basic Linux skills in commandline: changing folder, running tools, file permissions
-	* [CSC Linux tutorial](https://docs.csc.fi/support/tutorials/env-guide/)
-* Scripting skills: 
-	* Python: [Python GIS learning materials](https://docs.csc.fi/apps/geoconda/#references)
-	* R: [Spatial R learning materials](https://docs.csc.fi/apps/r-env-for-gis/#references) 
-	* bash: [CSC bash tutorial](https://docs.csc.fi/support/tutorials/env-guide/linux-bash-scripts/)
-	* ...
-* Parallelization: Python/Dask, R, GNU-parallel
+* In general only tools with floating licenses possible
+ 	* Tools with node-locked licenses -> cPouta  
+:::
 
 ## GIS tools with R, Python or CLI support
 
@@ -106,14 +93,20 @@
 
 Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonation have commandline interface.
 
-`* are not available in Puhti currently, but should be possible to install, ask if you need.`
+\* are not available in Puhti currently, but should be possible to install, ask if you need.
 
-:::{admonition} Moving from GUI to CLI
-:class: seealso
-If you have only used Graphical User Interfaces thus far, but are curious to get started with the Command Line Interface you can try recreating e.g. GDAL commands shown in some QGIS tools.
-![](./images/QGIS_GDAL.png)
-:::
- 
+## Skills needed 
+
+* Some GIS tool listed above
+* Basic Linux skills in commandline: changing folder, running tools, file permissions
+	* [CSC Linux tutorial](https://docs.csc.fi/support/tutorials/env-guide/)
+* Scripting skills, one of these: 
+	* Python: [Python GIS learning materials](https://docs.csc.fi/apps/geoconda/#references)
+	* R: [Spatial R learning materials](https://docs.csc.fi/apps/r-env-for-gis/#references) 
+	* bash: [CSC bash tutorial](https://docs.csc.fi/support/tutorials/env-guide/linux-bash-scripts/)
+	* ...
+* Parallelization: Python/Dask, R, GNU-parallel
+
 ## Modules
 
 * Puhti is a shared computing environment 
@@ -129,5 +122,12 @@ Example. Loading module for R
 module load r-env 
 ```
 
+## Documentation
 
-
+* [CSC Docs: Applications -> geosciences](https://docs.csc.fi/apps/by_discipline/#geosciences)
+* [LUMI Docs: Software pages](https://docs.lumi-supercomputer.eu/software/)
+* [CSC Research pages: GIS software](https://research.csc.fi/gis-software)
+ 
+Something missing?
+      Ask us :)
+      servicedesk@csc.fi

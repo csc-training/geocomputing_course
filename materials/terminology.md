@@ -3,7 +3,7 @@
 
 :::{admonition} HPC?
 :class: seealso
-While for some there might be differences, the terms **computing cluster", "High Performance Computer (HPC)" and "supercomputer" are also often used interchangeably.
+While for some there might be differences, the terms "computing cluster", "High Performance Computer (HPC)" and "supercomputer" are also often used interchangeably.
 :::
 
 **Cluster**
@@ -19,8 +19,8 @@ A node contains one or more central processing units (**CPUs**) with many **core
 When you want the scheduler to execute a program, performing a computation on your behalf, it has to be boxed into an abstraction layer called "job".
 
 **Partition**
-A partition is a set of compute nodes, grouped logically. We separate our computational resources base on the features of their hardware and the nature of the job.
-For instance, there is an interactive computation partition called `interactive` and a CUDA enabled GPU based partition `gpu``.
+A partition is a set of compute nodes, grouped logically. We separate our computational resources based on the features of their hardware and the nature of the job.
+For instance, there is an interactive computation partition called `interactive` and a CUDA enabled GPU based partition `gpu`.
 
 **Task**
 It maybe confusing, but tasks in Slurm means processor resource. By default, 1 task uses 1 core. However, this behavior can be altered.
@@ -42,27 +42,26 @@ For example, all the machines on the [Top-500](https://www.top500.org) list are 
 support these constraints, an HPC resource must exist in a specific, fixed location: networking
 cables can only stretch so far, and electrical and optical signals can travel only so fast.
 
-The word `cluster` is often used for small to moderate scale HPC resources. Clusters are often maintained in computing centers that support several such systems, all sharing common networking and storage to support common compute intensive
-tasks.
+The word `cluster` is often used for small to moderate scale HPC resources. Clusters are often maintained in computing centers that support several such systems, all sharing common networking and storage to support common compute intensive tasks.
 
 From [NRIS](https://training.pages.sigma2.no).
 
 :::
 
-:::{admonition} Difference between a HPC computing cluster and the cloud
+:::{admonition} Difference between an HPC computing cluster and the cloud
 :class: seealso, dropdown
 
 
-  * All computers involved are located in same location (e.g. in the same room)
-  * All computers are connected to each other with very fast local area network(LAN)
-  * All computers involved are architecturally identical and runs the same operating system
+  * All computers involved are located in the same location (e.g. in the same room)
+  * All computers are connected to each other with very fast local area network (LAN)
+  * All computers involved are architecturally identical and run the same operating system
   * A set of optimised software installed and accessible from all computers
   * All computers have access to shared storage, if you place a file on one machine you 
     can access it from all the other machines
   * All computers have a synchronised clock.
   * A scheduler is involved (latter lesson)
 
-*A cloud service could have access to a HPC cluster as part of the service as well*
+*A cloud service could have access to an HPC cluster as part of the service as well*
 
 From [NRIS](https://training.pages.sigma2.no).
 :::

@@ -21,10 +21,6 @@ div.body {
 }
 
 
-.admonition-warning {
-    border-color: #830051 !important;
-  }
-
 html[data-theme="dark"], html[data-theme="light"]{
     --pst-color-warning: #830051 !important ;
     --pst-color-important: #830051 !important ;
