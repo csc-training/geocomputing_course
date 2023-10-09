@@ -16,7 +16,7 @@ You can roughly think that one **node** is a single computer.
 A node contains one or more central processing units (**CPUs**) with many **cores** plus shared memory.
 
 **Job**
-When you want the scheduler to execute a program, performing a computation on your behalf, it has to be boxed into an abstraction layer called "job".
+When you want to execute a program on the supercomputer, it has to be boxed into an abstraction layer called "job".
 
 **Partition**
 A partition is a set of compute nodes, grouped logically. We separate our computational resources based on the features of their hardware and the nature of the job.

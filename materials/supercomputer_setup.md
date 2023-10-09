@@ -27,9 +27,9 @@ Which of the following tasks would suit to run on the login node?
 
  Options #2 Building software  (make), #3 creating directories (mkdir), and #5 unpacking software (tar) are common and acceptable tasks for the login node. 
  
- >Note that script names do not always reflect their contents: before launching #3, please less create_directories.sh and make sure it does what the name suggests.
+ >Note that script names do not always reflect their contents: before launching #3, please check what is inside create_directories.sh and make sure it does what the name suggests.
 
-Running resource-intensive applications is frowned upon. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will anyway want more resources for these, than the login node can provide.
+Running resource-intensive applications on the login node is frowned upon. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will anyway want more resources for these, than the login node can provide.
 
 :::
 :::
