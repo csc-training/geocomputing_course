@@ -5,9 +5,10 @@
 - Login nodes are used to set up jobs (and to launch them)
 - Jobs are run on the compute nodes
 - A batch job system (scheduler) is used to run and manage the jobs
-  - On CSC machines, we use Slurm
+  - On CSC supercomputers, we use Slurm
+- CSC supercomputers use Lustre as the parallel distributed file system
 
-- When you login to CSC's supercomputers, you end up in one of the login nodes of the computer
+- When you login to CSC's supercomputers, you enter one of the login nodes of the computer
     - These login nodes are shared by all users and they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
 
 :::{admonition} Login node etiquette
