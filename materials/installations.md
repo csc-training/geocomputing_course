@@ -54,7 +54,7 @@ Make Tykky tools available
 module load tykky
 ```
 
-Create a new directory for the installation and make the folder above it to your working directory
+Create a new directory for the installation and make the folder **above** it to your working directory
 ```
 mkdir -p /projappl/project_200xxxx/students/cscusername/lastools
 cd /projappl/project_200xxxx/students/cscusername
