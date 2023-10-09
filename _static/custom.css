@@ -28,5 +28,6 @@ html[data-theme="dark"], html[data-theme="light"]{
     --pst-color-caution: #830051 !important;
     --pst-color-seealso: #830051 !important;
     --pst-color-tip: #830051 !important;
+    --pst-color-warning-bg: #830051 !important ;
 }
 
