@@ -33,7 +33,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #html_title = "CSC Geocomputing course"
 # setting upper left logo
 html_logo = "materials/images/bg.png"
-
+html_favicon = "materials/images/csc.png"
 
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
