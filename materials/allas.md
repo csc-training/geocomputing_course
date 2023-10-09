@@ -4,13 +4,15 @@ What it is?
 
 * Allas is a **storage service**, technically object storage
 * **For CSC project lifetime: 1-5 years**
-* **Capacity: 10 - 200 TB**
+* **Capacity: 10 - 200 for free**, more with contract
 * Accessible from CSC computing services, own laptop or other servers
 * Private data - access for project members only
 * Possibility to make data public or share with other CSC project
 * For computation the data has to typically be copied to the computing environment
 * [CSC Dosc: Allas](https://docs.csc.fi/data/Allas/)
-
+* LUMI-O is very similar to Allas
+* [LUMI Docs: LUMI-O](https://docs.lumi-supercomputer.eu/storage/lumio/)
+	
 What it is NOT?
 
 - A file system (even though many tools try to fool you to think so). It is just a place to store static data objects.
@@ -72,8 +74,47 @@ What it is NOT?
 ### s3cmd
 - [CSC Docs: s3cmd](https://docs.csc.fi/data/Allas/using_allas/s3_client/) 
 
+## Accessing data directly from object storage
+
+* Many GIS tools have good support for working with cloud storage, look for S3 in documentation.
+* **GDAL** supports reading and writing directly to Allas.
+	* Applies also to other GDAL based tools: **Python (rasterio, geopandas)** and **R (sf, terra)**.
+ 	* Writing might be more limited.
+* **QGIS** can read rasters and vectors.
+* **ArcGIS** Pro can read rasters.
+* [CSC Docs: Tutorial - Using geospatial files directly from cloud, inc Allas](https://docs.csc.fi/support/tutorials/gis/gdal_cloud/)
+	* [Example Python code for working with Allas and rasterio and geopandas](https://github.com/csc-training/geocomputing/blob/master/python/allas)
+	* [Example R code for workign with Allas and terra and sf](https://github.com/csc-training/geocomputing/blob/master/R/allas/working_with_allas_from_R_S3.R)
+
+## Allas exercise
+
+:::{admonition} Timing :class: note
+
+10 min
+
+:::
+
+:::{admonition} Goals :class: note
+
+Learn how to:
+* Configure connection to Allas and get S3 credentials
+* Sync local folder to Allas (manual back-up)
+* See what data is Allas
+:::
+
+:::{admonition} Prerequisites :class: important
+
+* Access to Puhti
+	* Alternatively this can be run on local desktop, but then [s3cmd](https://s3tools.org/s3cmd) and [allas-cli-utils](https://github.com/CSCfi/allas-cli-utils) have been installed.	`allas-cli-utils` is avaialbe only for Linux and Mac.
+* Basic Linux skills
+
+:::
+
+* Open login node shell in Puhti.
+* Set up Allas connection
+	* Any project with Allas service can be selected for connection.
+ 		* During the course, select the course project
 ```bash
-# Set up Allas connection
 module load allas
 allas-conf --mode s3cmd
 ```
@@ -87,11 +128,12 @@ allas-conf --mode s3cmd
 ```
 # Create a new bucket
 # s3cmd mb <name_of_your_bucket>
+
 s3cmd mb s3://project_200xxxx-cscusername
 
 # Upload (later syncronize) a folder to Allas
 # s3cmd sync <local_folder> s3://<name_of_your_bucket>
-s3cmd sync /scratch/project_2000xxxx/students/cscusername/geocomputing/gdal s3://project_200xxxx-cscusername
+s3cmd sync /scratch/project_200xxxx/students/cscusername/geocomputing/gdal s3://project_200xxxx-cscusername
 
 # List all buckets
 s3cmd ls
@@ -100,16 +142,30 @@ s3cmd ls
 # s3cmd ls s3://<name_of_your_bucket>
 s3cmd ls s3://project_200xxxx-cscusername
 s3cmd ls s3://project_200xxxx-cscusername/gdal
+
+# Read and write directly to Allas with GDAL
+# Make GDAL avaialble
+module load geoconda
+
+# See metadata of a file from GDAL exercise
+gdalinfo /vsis3/project_200xxxx-cscusername/gdal/W3333.tif
+
+# Enable writing with GDAL
+export CPL_VSIL_USE_TEMP_FILE_FOR_RANDOM_WRITE=YES
+
+# Make the .tif file to Cloud-Optimized GeoTiff
+gdal_translate /vsis3/project_200xxxx-cscusername/gdal/W3333.tif /vsis3/project_200xxxx-cscusername/gdal/W3333_COG.tif -of COG
+
+# See metadata of the new file
+gdalinfo /vsis3/project_200xxxx-cscusername/gdal/W3333_COG.tif
+
+# Delete all from Allas
+s3cmd ls s3://project_200xxxx-cscusername
 ```
 
-## Accessing data directly from object storage
+:::{admonition} Key points :class: important
 
-* Many GIS tools have good support for working with cloud storage, look for S3 in documentation.
-* **GDAL** supports reading and writing directly to Allas.
-	* Applies also to other GDAL based tools: **Python (rasterio, geopandas)** and **R (sf, terra)**.
- 	* Writing might be more limited.
-* **QGIS** can read rasters and vectors.
-* **ArcGIS** Pro can read rasters.
-* [CSC Docs: Tutorial - Using geospatial files directly from cloud, inc Allas](https://docs.csc.fi/support/tutorials/gis/gdal_cloud/)
-	* [Example Python code for working with Allas and rasterio and geopandas](https://github.com/csc-training/geocomputing/blob/master/python/allas)
-	* [Example R code for workign with Allas and terra and sf](https://github.com/csc-training/geocomputing/blob/master/R/allas/working_with_allas_from_R_S3.R)
+* Take a moment to plan your bucket and object naming, so that it would be easy to use later.
+* Allas is a good place to keep a back-up of your data.
+* Many GIS tools can read (and write) directly to Allas.
+:::
