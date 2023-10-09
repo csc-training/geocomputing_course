@@ -4,7 +4,7 @@ What it is?
 
 * Allas is a **storage service**, technically object storage
 * **For CSC project lifetime: 1-5 years**
-* **Capacity: 10 - 200 for free**, more with contract
+* **Capacity: 10 - 200 Tb for free**, more with contract
 * Accessible from CSC computing services, own laptop or other servers
 * Private data - access for project members only
 * Possibility to make data public or share with other CSC project
