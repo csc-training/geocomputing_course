@@ -2,7 +2,7 @@
 
 Check out what others have achieved using CSC supercomputers:
 
-## Some interesting CSC seminar presentations
+## Some interesting usecases from CSC seminars
 
 ```{figure} images/Atherton.png
 :alt: Path from drone imagery to they can be processed using Puhti batch job with OpenDronemap

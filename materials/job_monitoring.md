@@ -1,11 +1,11 @@
 # Job monitoring
 
-By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from SLURM, your tool or package) are written to a file `slurm-<jobid>.out` / `slurm-<jobid>.err` respectively.
+By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from SLURM, your tool or package) are written to a file `slurm-jobid.out` / `slurm-jobid.err` respectively.
 
 You can check the status of your job and follow its progress with the `squeue -u $USER` command.
-Resource usage while the job runs, can be queried with `seff <slurm jobid>`.
+Resource usage while the job runs, can be queried with `seff jobid`.
 
-If after job submission or during runtime you would like to cancel a job, you can do so with `scancel <jobid>`.
+If after job submission or during runtime you would like to cancel a job, you can do so with `scancel jobid`.
 
 
 ## Resource monitoring
@@ -33,14 +33,12 @@ Points to pay attention to:
 - Low GPU efficiency:
    - Better to use CPUs? Disk I/O?
 
-Also note that not all usage is captured by SLURM accounting. E.g. if CPU efficiency seems too low, look at the completion time, some applications also print timing data in log files.
-
 :::
 
 :::{admonition} `sacct`
 :class: warning
 More detailed queries can be tailored with `sacct`
-- `sacct -j <slurm jobid> -o jobid,partition,state,elapsed,start,end`
+- `sacct -j jobid -o jobid,partition,state,elapsed,start,end`
 - `sacct -S 2022-08-01` will show all jobs started after that date
 **Note!** Querying data from the Slurm accounting database with `sacct` can be a very heavy operation. **Don't** query long time intervals or run `sacct` in a loop/using `watch` as this will degrade the performance of the system for all users.
 :::

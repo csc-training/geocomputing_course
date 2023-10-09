@@ -13,10 +13,10 @@ Shell is standard way to interact with a supercomputer. It is worth learning the
 Did you every want to count all the files in a directory? Or lines in a file? Apart from opening the file in an editor, turning on line numbers or counting them manually you can also use a neat little command line tool called `wc`.
 
 Check out the documentation for `wc` and see if you can find out how to 
-1. Count the number of lines/characters of file XX.
-2. Count all files in our course scratch directory.
+1. Count the number of lines/characters of file `/appl/data/geo/syke/Readme_natura.txt`.
+2. Count all directories in `/appl/data/geo/syke`.
 
-If this was too easy, can you count only files that end with `.tif`? What about only those lines in our file XX that include the string `2023` ?
+If this was too easy, can you count only directory and file names that include `2021` in the syke directory? 
 
 You can use the "login shell" via the Puhti webinterface for this exercise.
 
@@ -25,12 +25,11 @@ You can use the "login shell" via the Puhti webinterface for this exercise.
 
 `man wc` for finding the documentation. Use `q` to exit the documentation.
 
-1. `wc -m XX` to count the characters in the file. Or `cat XX | wc -m` -> XX
-2. `ls /scratch/project_200xxxx | wc -l` , we pipe the output of `ls` which is a list of files into `wc` which by defining `-l`
- prints out the amount of newlines (= number of lines) -> XX
+1. `wc -m /appl/data/geo/syke/Readme_natura.txt` to count the characters in the file. Or `cat /appl/data/geo/syke/Readme_natura.txt | wc -m` -> 177
+2. `ls /appl/data/geo/syke | wc -l` , we pipe the output of `ls` which is a list of files into `wc` which by defining `-l`
+ prints out the amount of newlines (= number of lines) -> 200
 
-Count all tif files: `ls *.tif | wc -l` -> XX
-Count all lines that include `2023`:  `cat XX | grep "2023" | wc -w` -> XX
+Count all directory and file names that include `2021`:  `ls *2021* | wc -l` -> 156
 
 :::
 :::
@@ -47,10 +46,10 @@ Do you remember on how you edited some files in the webinterface? Lets do the sa
 ```bash
 pwd
 ```
-2. We would like to create a new directory in our projects scratch directory with our name, let's move there:
+2. We would like to create a new directory in our projects scratch students directory with our name, let's move there:
 
 ```bash
-cd /scratch/project_200xxxx
+cd /scratch/project_200xxxx/students
 ```
 
 2. Check if there are any files:
@@ -59,7 +58,7 @@ cd /scratch/project_200xxxx
 ls
 ```
 
-3. Make a directory with your name and see if it appears:
+3. Make a directory with your name (you can either type it or use the variable $USER) and see if it appears:
 
 ```bash
 mkdir $USER    
@@ -81,13 +80,13 @@ If you just type `cd` and the first letter of the folder name, then hit `tab` ke
 Add an empty file into this directory. 
 
 ```bash
-touch <myfilename>      # replace <myfilename> 
+touch $USER-first-file.txt    
 ```
 
 Check that it is empty:
 
 ```bash
-cat <myfilename>        # replace <myfilename> 
+cat $USER-first-file.txt        
 ```
 
 Fill it with some content:
