@@ -30,5 +30,6 @@ html[data-theme="dark"], html[data-theme="light"]{
     --pst-color-tip: #830051 !important;
     --sd-color-warning-bg: #830051 !important ;
     --pst-color-warning-bg: #830051 !important ;
+    --pst-color-warning-highlight: #830051 !important ;
 }
 
