@@ -107,12 +107,27 @@ Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonati
 	* ...
 * Parallelization: Python/Dask, R, GNU-parallel
 
+## Modules
+
+* Puhti is a shared computing environment 
+* Software is loaded with modules
+	* Mutually incompatible software
+	* One module: single program or group of similar programs
+	* Modules load applications, adjust path settings and set environment variables
+	* Check documentation for available module names and versions.
+
+Example. Loading module for R
+
+```
+module load r-env 
+```
+
 ## Documentation
 
 * [CSC Docs: Applications -> geosciences](https://docs.csc.fi/apps/by_discipline/#geosciences)
 * [LUMI Docs: Software pages](https://docs.lumi-supercomputer.eu/software/)
 * [CSC Research pages: GIS software](https://research.csc.fi/gis-software)
-
- Something missing?
+ 
+Something missing?
       Ask us :)
       servicedesk@csc.fi
