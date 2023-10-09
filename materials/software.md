@@ -1,5 +1,10 @@
 # GIS tools
 
+* Puhti has the widest GIS software portfolio of CSC supercomputers, and possibly of all supercomputers in the world :smiley: 
+* Pre-installed software makes it easy to start working with Puhti.
+* GIS tools are originally not planned for supercomputers -> limited ability to utilize the computing power.
+* GIS installations at CSC have been done partly with GeoPortti funding.
+
 ## GIS tools available in Puhti
 
 * [Ames Stereo Pipeline](https://docs.csc.fi/apps/ames-stereo.md) for processing stereo images
