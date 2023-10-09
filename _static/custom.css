@@ -1,0 +1,32 @@
+h1 {
+    color: #830051 !important;
+}
+
+h2 {
+    color: #006778 !important;
+}
+
+h3,h4 {
+    color: #5e6a71 !important;
+}
+
+* {
+    font-family: Corbel;
+}
+
+div.body {
+    min-width: 360px;
+    max-width: 700px;
+}
+
+html {
+    pst-color-warning: #830051 ;
+    pst-color-important: #830051 ;
+    pst-color-note:#830051 ;
+    pst-color-caution: #830051 ;
+    pst-color-seealso: #830051 ;
+    pst-color-tip: #830051 ;
+
+
+}
+
