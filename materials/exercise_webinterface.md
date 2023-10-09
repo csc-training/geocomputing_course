@@ -122,6 +122,9 @@ src.plot()
    * Note, if interested in moving from graphical QGIS to scripting:
       * The GDAL commandline command is displayed in the lower part of dialog box and log.
       * `Advanced` menu provides this command also as `qgis_processing` command and as PyQGIS code.
+
+![](./images/QGIS_GDAL.png)
+      
 * End the session:
    * Close QGIS.
    * Close the web tab
