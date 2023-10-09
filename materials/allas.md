@@ -88,13 +88,15 @@ What it is NOT?
 
 ## Allas exercise
 
-:::{admonition} Timing :class: note
+:::{admonition} Timing 
+:class: note
 
-10 min
+15 min
 
 :::
 
-:::{admonition} Goals :class: note
+:::{admonition} Goals 
+:class: note
 
 Learn how to:
 * Configure connection to Allas and get S3 credentials
@@ -102,16 +104,22 @@ Learn how to:
 * See what data is Allas
 :::
 
-:::{admonition} Prerequisites :class: important
+:::{admonition} Prerequisites 
+:class: important
 
-* Access to Puhti
-	* Alternatively this can be run on local desktop, but then [s3cmd](https://s3tools.org/s3cmd) and [allas-cli-utils](https://github.com/CSCfi/allas-cli-utils) have been installed.	`allas-cli-utils` is avaialbe only for Linux and Mac.
+* [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and [project](https://docs.csc.fi/accounts/how-to-create-new-project/) with [access to Puhti and Allas](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
 * Basic Linux skills
-* [GDAL exercise](exercise_gdal.md) done for example files, OR adapt the folder to something else that includes some raster data.
 
 :::
 
-* Open login node shell in Puhti.
+:::{admonition} Change the default project and username
+
+* `project_200xxxx` is example project name, replace with your own CSC project name.
+* `cscusername` is example username, replace with your username.
+:::
+
+* Open [Puhti web interface](https://puhti.csc.fi) and log in
+* Open `Login node shell` from Tools menu.
 * Set up Allas connection
 	* Any project with Allas service can be selected for connection.
  		* During the course, select the course project
@@ -119,6 +127,8 @@ Learn how to:
 ```bash
 module load allas
 allas-conf --mode s3cmd
+# It asks to select the project, select the project by number. During course, select the course project.
+# The configuration takes a moment, please wait.
 ```
 
 :::{admonition} Get your S3 credentials
@@ -135,7 +145,7 @@ s3cmd mb s3://project_200xxxx-cscusername
 
 # Upload (later syncronize) a folder to Allas
 # s3cmd sync <local_folder> s3://<name_of_your_bucket>
-s3cmd sync /scratch/project_200xxxx/students/cscusername/geocomputing/gdal s3://project_200xxxx-cscusername
+s3cmd sync /appl/data/geo/mml/dem10m/2019/W3/W33/ s3://project_200xxxx-cscusername
 
 # List all buckets
 s3cmd ls
@@ -143,29 +153,29 @@ s3cmd ls
 # List all files in one bucket
 # s3cmd ls s3://<name_of_your_bucket>
 s3cmd ls s3://project_200xxxx-cscusername
-s3cmd ls s3://project_200xxxx-cscusername/gdal
 
 # Read and write directly to Allas with GDAL
 # Make GDAL avaialble
 module load geoconda
 
 # See metadata of a file from GDAL exercise
-gdalinfo /vsis3/project_200xxxx-cscusername/gdal/W3333.tif
+gdalinfo /vsis3/project_200xxxx-cscusername/W3333.tif
 
 # Enable writing with GDAL
 export CPL_VSIL_USE_TEMP_FILE_FOR_RANDOM_WRITE=YES
 
 # Make the .tif file to Cloud-Optimized GeoTiff
-gdal_translate /vsis3/project_200xxxx-cscusername/gdal/W3333.tif /vsis3/project_200xxxx-cscusername/gdal/W3333_COG.tif -of COG
+gdal_translate /vsis3/project_200xxxx-cscusername/W3333.tif /vsis3/project_200xxxx-cscusername/W3333_COG.tif -of COG
 
 # See metadata of the new file
-gdalinfo /vsis3/project_200xxxx-cscusername/gdal/W3333_COG.tif
+gdalinfo /vsis3/project_200xxxx-cscusername/W3333_COG.tif
 
 # Delete all from Allas
-s3cmd ls s3://project_200xxxx-cscusername
+s3cmd del --recursive --force s3://project_200xxxx-cscusername
 ```
 
-:::{admonition} Key points :class: important
+:::{admonition} Key points 
+:class: important
 
 * Take a moment to plan your bucket and object naming, so that it would be easy to use later.
 * Allas is a good place to keep a back-up of your data.
