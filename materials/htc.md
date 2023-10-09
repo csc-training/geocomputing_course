@@ -83,7 +83,7 @@ See also [CSC Docs: Array jobs](https://docs.csc.fi/computing/running/array-jobs
 
 Array jobs are only a good option , if the independent jobs are "large" enough, so that the batch system overhead is not relevant (more than 30 minutes per job, for example), and the total number of independent jobs is not huge (less than 1000 per month, for example).
 
-
+:::
 
 :::{admonition} Things to consider in task farming
 :class: warning
