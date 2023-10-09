@@ -20,13 +20,19 @@ div.body {
     max-width: 700px;
 }
 
+/*
 
 html[data-theme="dark"], html[data-theme="light"]{
     --pst-color-warning: #830051 !important ;
+    --sd-color-warning-bg: #83000051 !important ;
+    --pst-color-warning-bg: #83000051 !important ;
+    --pst-color-warning-highlight: #83000051 !important ;
+    
     --pst-color-important: #830051 !important ;
     --pst-color-note:#830051 !important;
     --pst-color-caution: #830051 !important;
     --pst-color-seealso: #830051 !important;
     --pst-color-tip: #830051 !important;
-}
 
+}
+*/
