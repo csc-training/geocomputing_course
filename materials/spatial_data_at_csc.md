@@ -4,13 +4,11 @@
 * Removes transfer bottleneck
 * Located at: `/appl/data/geo/`
 * **All Puhti users have read access**
-
 * ~13 TB of datasets available:
 	* **Paituli data**, with virtual mosaics for raster data
-	* Finnish Environmental Institute (SYKE) open datasets: **CORINE land use** etc
-	* LUKE, **Multi-source national forest inventory**: 2013, 2015, 2017, 2019 and 2021.
-	* Forest center: **canopy height**, forest mask, gridcells, forest resource plots
-
+	* **Finnish Environmental Institute (SYKE) open datasets**: CORINE land use etc
+	* **LUKE, Multi-source national forest inventory**: 2013, 2015, 2017, 2019 and 2021.
+	* **Forest center: canopy height**, forest mask, gridcells, forest resource plots
 * [CSC Docs: Spatial data in CSC computing environment](https://docs.csc.fi/data/datasets/spatial-data-in-csc-computing-env/)
 
 ## Paituli
@@ -23,11 +21,24 @@
 * OKM supports financially, CSC maintains
 * [Paituli](https://paituli.csc.fi)
 
+!["Paituli"](./images/paituli.png "Paituli")
+
 ### Paituli data access in Puhti:
 
 * As files in `/appl/data/geo/`
-* Majority via [OGC APIs](https://paituli.csc.fi/webservices.html), both old and new standards
 * **Raster datasets via [STAC](stac.md)**
+* Rasters divided to mapsheets as **virtual rasters**
+* Majority via [OGC APIs](https://paituli.csc.fi/webservices.html), both old and new standards
+
+:::{admonition} Virtual rasters
+:class: seealso, dropdown
+
+Virtual rasters is a useful GDAL concept for managing large raster datasets that are split into not overlapping map sheets. Technically a virtual raster is just a small XML file that tells GDAL where the actual data files are, but from user's point of view virtual rasters can be treated much like any other raster format. Virtual rasters can include raster data in any file format GDAL supports. Virtual rasters are useful because they allow handling of large datasets as if they were a single file eliminating need for locating correct files.
+
+* Virtual rasters are not useful for managing time-series or overlapping rasters, for example remote sensing tiles.
+* Supported by any GDAL based tool, including Python and R spatial packages, ArcGIS, FME, GrassGIS, MapInfo, QGIS, and SagaGIS. 
+* [CSC Docs: Virtual rasters tutorial](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/), inc code examples for R and Python.
+:::
 
 ### Some popular datasets
 
