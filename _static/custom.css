@@ -1,0 +1,36 @@
+h1 {
+    color: #830051 !important;
+}
+
+h2 {
+    color: #006778 !important;
+}
+
+h3,h4 {
+    color: #5e6a71 !important;
+}
+
+/*
+* {
+    font-family: Corbel;
+}*/
+
+div.body {
+    min-width: 360px;
+    max-width: 700px;
+}
+
+
+.admonition-warning {
+    border-color: #830051 !important;
+  }
+
+html[data-theme="dark"], html[data-theme="light"]{
+    --pst-color-warning: #830051 !important ;
+    --pst-color-important: #830051 !important ;
+    --pst-color-note:#830051 !important;
+    --pst-color-caution: #830051 !important;
+    --pst-color-seealso: #830051 !important;
+    --pst-color-tip: #830051 !important;
+}
+
