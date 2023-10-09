@@ -4,7 +4,7 @@
 
 * Generally easiest option.
 * [CSC Docs: Installing **Python** packages to existing modules](https://docs.csc.fi/apps/python/#installing-python-packages-to-existing-modules)
-  * geoconda, tensorflow, pytorch, python-data ...
+  * geoconda, tensorflow, pytorch, python-data etc.
   * The added package must be available via `pip`.
 * [CSC Docs: **R** package installations](https://docs.csc.fi/apps/r-env/#r-package-installations) 
 * [CSC Docs: **Julia**, adding packages to an environment](https://docs.csc.fi/apps/julia/#adding-packages-to-an-environment)
@@ -71,7 +71,7 @@ wrap-container -w /opt/LAStools docker://pydo/lastools:latest --prefix lastools
 
 Add the location of your new installation to your PATH. Note that Tykky prints out the correct command for you.
 ```
-export PATH="/scratch/project_200xxxx/students/cscusername/lastools/bin:$PATH"
+export PATH="/projappl/project_200xxxx/students/cscusername/lastools/bin:$PATH"
 ```
 Test your new installation.
 ```
