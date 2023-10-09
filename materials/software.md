@@ -73,14 +73,6 @@
  	* Tools with node-locked licenses -> cPouta  
 :::
 
-## Parallelization support
-
-* Most of tools above have some support for parallelization
- 	* Usually only some parts of the funcionality are implemented
-* Check the tool's documentation for details
-* Alternative, **parallelize via scripting yourself**
-
-
 ## GIS tools with R, Python or CLI support
 
 | Software | R | Python | CLI | 
