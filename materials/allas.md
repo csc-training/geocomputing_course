@@ -107,6 +107,7 @@ Learn how to:
 * Access to Puhti
 	* Alternatively this can be run on local desktop, but then [s3cmd](https://s3tools.org/s3cmd) and [allas-cli-utils](https://github.com/CSCfi/allas-cli-utils) have been installed.	`allas-cli-utils` is avaialbe only for Linux and Mac.
 * Basic Linux skills
+* [GDAL exercise](exercise_gdal.md) done for example files, OR adapt the folder to something else that includes some raster data.
 
 :::
 
@@ -114,6 +115,7 @@ Learn how to:
 * Set up Allas connection
 	* Any project with Allas service can be selected for connection.
  		* During the course, select the course project
+     
 ```bash
 module load allas
 allas-conf --mode s3cmd
