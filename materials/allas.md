@@ -121,13 +121,12 @@ Learn how to:
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
 * Open `Login node shell` from Tools menu.
 * Set up Allas connection
-	* Any project with Allas service can be selected for connection.
- 		* During the course, select the course project
+
      
 ```bash
 module load allas
 allas-conf --mode s3cmd
-# It asks to select the project, select the project by number. During course, select the course project.
+# It asks to select the project, select the project by number. 
 # The configuration takes a moment, please wait.
 ```
 
