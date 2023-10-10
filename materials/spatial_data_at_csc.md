@@ -9,6 +9,7 @@
 	* **Finnish Environmental Institute (SYKE) open datasets**: CORINE land use etc
 	* **LUKE, Multi-source national forest inventory**: 2013, 2015, 2017, 2019 and 2021.
 	* **Forest center: canopy height**, forest mask, gridcells, forest resource plots
+* LUMI and Mahti do not have spatial data on local disk.
 * [CSC Docs: Spatial data in CSC computing environment](https://docs.csc.fi/data/datasets/spatial-data-in-csc-computing-env/)
 
 ## Paituli
@@ -18,7 +19,7 @@
 * All datasets open to everyone
 * Also **historical versions** of several datasets
 * Possibility to publish own datasets for universities and research institutes
-* OKM supports financially, CSC maintains
+* Ministry of education and culture supports financially, CSC maintains
 * [Paituli](https://paituli.csc.fi)
 
 !["Paituli"](./images/paituli.png "Paituli")
