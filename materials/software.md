@@ -49,7 +49,9 @@
 * [tensorflow](https://docs.csc.fi/apps/tensorflow.md) for deep learning
 * Additional, easy to install yourself [EasyBuild recepies](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs) for CGAL, GDAL, GEOS, ncview, PROJ, R.
 
-## GIS tools NOT available in supercomputers
+
+:::{admonition} GIS tools NOT available in supercomputers
+:class: caution
 
 * **Servers** -> these can be run in cPouta
 	* Web map servers:
@@ -61,6 +63,8 @@
 	* [Installation guidelines for ArcPy, GeoServer, MetaShape, PostGIS and containers (for example OpenDroneMap) in cPouta](https://github.com/csc-training/geocomputing/tree/master/pouta).
 * Tools available for **Windows only** -> no good option from CSC services
 	* ArcGIS, TerraScan
+
+:::
 
 :::{admonition} Commercial tools
 :class: seealso, dropdown
@@ -95,17 +99,7 @@ Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonati
 
 \* are not available in Puhti currently, but should be possible to install, ask if you need.
 
-## Skills needed 
 
-* Some GIS tool listed above
-* Basic Linux skills in commandline: changing folder, running tools, file permissions
-	* [CSC Linux tutorial](https://docs.csc.fi/support/tutorials/env-guide/)
-* Scripting skills, one of these: 
-	* Python: [Python GIS learning materials](https://docs.csc.fi/apps/geoconda/#references)
-	* R: [Spatial R learning materials](https://docs.csc.fi/apps/r-env-for-gis/#references) 
-	* bash: [CSC bash tutorial](https://docs.csc.fi/support/tutorials/env-guide/linux-bash-scripts/)
-	* ...
-* Parallelization: Python/Dask, R, GNU-parallel
 
 :::{admonition} Modules
 :class: important
