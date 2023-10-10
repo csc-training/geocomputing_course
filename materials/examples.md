@@ -45,7 +45,7 @@ Arttu Kivimäki, FGI/NLS: [Mosaicking Sentinel-2 data in Puhti](https://a3s.fi/g
 Tapio Friberg, ICEYE: [LUMI usecase](https://gis-seminars.a3s.fi/2023-06-08-lumi-for-gis-iceye-use-case.pdf)
 
 ```
-
+You can find all CSC seminar presentations on [CSC geocomputing research pages](https://research.csc.fi/geocomputing-seminars).
 
 ## Some publications from Finland that used Puhti
 
