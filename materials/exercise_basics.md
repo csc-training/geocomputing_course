@@ -41,21 +41,22 @@ Let's reserve 10 minutes.
 :::{admonition} Other ways of starting an interactive session
 :class: seealso
 
-On the login node: Start an interactive job with `srun`, e.g.:
+On the **login node**: Start an interactive job with `srun`, e.g.:
 
 ```bash
 srun  --time=00:10:00 --pty --account=project_200xxxx --partition=interactive bash
 ```
-or on Puhti you can also use `sinteractive` wrapper, which simplifies the call and asks you for the resources step by step: 
+**or** on Puhti you can also use `sinteractive` wrapper to start an interactive session from the **login node**, which simplifies the call and asks you for the resources step by step: 
 
 ```bash
-sinteractive
+sinteractive -i
 ```
-or directly: 
+**or** directly: 
 
 ```bash
 sinteractive --account project_200xxxx --time 00:10:00         # replace xxxx with your CSC project, e.g. project_2001234
 ```
+
 :::
 
 :::{admonition} Need your project number?
