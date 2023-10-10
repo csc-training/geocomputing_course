@@ -2,6 +2,9 @@
 
 ![](./images/puhti_overview.png)
 
+
+An supercomputer has a lot of **nodes** (you can roughly think that one node is a single computer) which have the same components as your laptop or desktop computer: CPUs (sometimes also called processors or cores), memory (or RAM), and disk space. However, the supercomputer has some additional/specialized components:
+
 - Login nodes are used to set up jobs (and to launch them)
 - Jobs are run on the compute nodes
 - A batch job system (scheduler) is used to run and manage the jobs

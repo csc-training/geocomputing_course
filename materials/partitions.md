@@ -1,6 +1,6 @@
 # Partitions
 
-Partitions are logical sets of nodes. Resource limitations for a job are defined by the partition (or queue) the job is submitted to. The limitations affect the maximum run time, the amount of memory, and the number of available CPU cores (which are called CPUs in Slurm). In addition, partitions may also define default resources that are automatically allocated for jobs if nothing has been specified.
+A **partition** is a set of compute nodes, grouped logically. Resource limitations for a job are defined by the partition (or queue) the job is submitted to. The limitations affect the maximum run time, the amount of memory, and the number of available CPU cores (which are called CPUs in Slurm). In addition, partitions may also define default resources that are automatically allocated for jobs if nothing has been specified.
 
 Jobs should be submitted to the partition that best matches the required resources. That way, as few resources as possible are blocked and another user with a higher demand in memory can run a job earlier. Of course, other considerations may also influence the choice of a partition. 
 
@@ -11,6 +11,8 @@ Jobs should be submitted to the partition that best matches the required resourc
 
 :::{admonition} Which partition to choose?
 :class: tip
+
+Check [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/running/batch-job-partitions/) and find suitable partitions for these tasks:
 
 1. Through trial and error Anna has determined that her image processing process takes about 60 min, 16 GB of memory on a single CPU. 
 2. Kalika has profiled her code, and determined that it can run efficiently on 20 cores with 12 GB of memory each. The complete process should be done within 4 days.
