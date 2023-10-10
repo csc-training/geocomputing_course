@@ -110,17 +110,20 @@ Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonati
 :::{admonition} Modules
 :class: important
 
-* Puhti is a shared computing environment 
-* Software is loaded with modules
-	* Mutually incompatible software
-	* One module: single program or group of similar programs
-	* Modules load applications, adjust path settings and set environment variables
+* Supercomputers are shared computing environment with many mutually incompatible tools installed
+* By default only basic Linux tools are available
+* Pre-installed tools are available via modules
+* One module: single program or group of similar programs
+* Usage:
 	* Check documentation for available module names and versions.
+ 	* Load a module(s) -> the system can find the tools provided by the module
+	* Use tools from the loaded module
 
-Example. Loading module for R
+Example. Loading module for GDAL
 
 ```
-module load r-env 
+module load gdal
+gdalinfo /xx/data.tif
 ```
 
 :::
