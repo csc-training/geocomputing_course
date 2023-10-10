@@ -158,7 +158,7 @@ In the batch job example above we are requesting
 
 ```bash
 sbatch my_serial.bash
-squeue -u $USER
+squeue --me
 ```
 
 5. Once the job is done, check how much of the resources have been used with `seff <jobid>`.
@@ -175,10 +175,10 @@ squeue -u $USER
 :::{admonition} Solution
 :class: dropdown
 
-1. `slurm-<jobid>.out` in the directory from where you submitted the batch job. You can also change that location by specifying it in your batch job script with `#SBATCH --output=/your/path/slurm-%j.out`.
+1. `slurm-jobid.out` in the directory from where you submitted the batch job. You can also change that location by specifying it in your batch job script with `#SBATCH --output=/your/path/slurm-%j.out`.
 2. Add `#SBATCH --job-name=<myname>` to the resource request in the top of your sbatch script.
 3. After the job finished, check the log file with `cat slurm-<jobid>.out`. You should see an an error in the end `slurmstepd: error: *** JOB xxx ON xxx CANCELLED AT xDATE-TIMEx DUE TO TIME LIMIT ***`. This means that our job was killed for exceeding the amount of resources requested. Although this appears harsh, this is actually a feature. Strict adherence to resource requests allows the scheduler to find the best possible place for your jobs. It also ensures the fair share of use of the computing resources.
-4. Since gdalinfo is quite a fast command to run, you will only need to change the script part of your sbatch script, the resources request can stay the same. First we will need to make `gdal` available within the job with `module load geoconda`, then we can run the `gdalinfo` command. After the job is done, you can find the information again in the `slurm-<jobid>.out` file. 
+4. Since gdalinfo is quite a fast command to run, you will only need to change the script part of your sbatch script, the resources request can stay the same. First we will need to make `gdal` available within the job with `module load geoconda`, then we can run the `gdalinfo` command. After the job is done, you can find the information again in the `slurm-jobid.out` file. 
 
 ```bash
 #!/bin/bash
