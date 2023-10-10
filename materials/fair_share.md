@@ -46,13 +46,13 @@ SLURM job allocations
 :::{admonition} How many resources to request?
 :class: seealso
 
-* You can use your workstation / laptop as a base measuring stick: If the code runs on your machine, as a first guess you can reserve the same amount of CPUs & RAM as your machine has.
+* You can use your workstation / laptop as a base measuring stick: If the code runs on your machine, as a first guess you can reserve the same amount of CPUs & memory as your machine has. Before reserving multiple CPUs, check if your code can make use them.
 * You can also check more closely what resources are used with `top` when running on your machine
 * Similarly for running time: if you have run it on your machine, you should reserve similar time in the cluster.
 * If your program does the same thing more than once, you can estimate that the total run time is T≈n_steps⋅t_step, where tstep is the time taken by each step.
 * Likewise, if your program runs multiple parameters, the total time needed is T_total≈n_parameters⋅T_single, where T_single is time needed to run the program with some parameters.
 * You can also run a smaller version of the problem and try to estimate how the program will scale when you make the problem bigger.
-* You should always monitor jobs to find out what were the actual resources you requested (seff JOBID).
+* You should always monitor jobs to find out what were the actual resources you requested (seff jobid).
 
 Adapted from [Aalto Scientific Computing](https://scicomp.aalto.fi/triton/usage/program-size/)
 :::

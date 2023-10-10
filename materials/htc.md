@@ -1,4 +1,4 @@
-# Parallizable processes
+# Parallel processes
 
 Typically, large computers like those at CSC are not much faster than personal ones -- they are simply bigger. For fast computation, they utilize parallelism (and typically have special disk, memory and network solutions, too). Parallelism simplified: You use hundreds of ordinary computers simultaneously to solve a single problem.
 
@@ -94,6 +94,13 @@ Array jobs are only a good option , if the independent jobs are "large" enough, 
 - Try to estimate as accurately as possible the required memory and the time it takes for the separate tasks to finish
 
 :::
+
+#### Hyperqueue
+
+Instead of submitting each of your computational tasks as separate Slurm jobs or job steps, you can also allocate a large resource block and then use HyperQueue to submit your tasks to this allocation.
+
+See also [CSC Docs: Hyperqueue](https://docs.csc.fi/apps/hyperqueue/)
+
 
 ### Workflow tools
 

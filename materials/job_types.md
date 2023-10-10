@@ -8,8 +8,8 @@ You already got to know the [interactive web interface for Puhti](https://docs.c
     - This way your work is performed in a compute node, not on the login node
 
 Disadvantages of interactive jobs: 
-* blocks your shell until it finishes
-* connection interruption means that job is gone
+* Blocks your shell until it finishes
+* Connection interruption means that job is gone
 
 Apart from interactive jobs, a job can be classified as **serial, parallel or GPU**, depending on the main requested resource. A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity. So instead of starting 10 shells to run 10 things at once, get to know serial jobs: 
 
@@ -65,7 +65,7 @@ In this course we will focus on **embarrassingly/naturally/delightfully parallel
 ```bash
 #SBATCH --nodes=X
 #SBATCH --ntasks-per-node=Y
-#SBATCH --cpus-per-task=Z
+#SBATCH --cpus-per-task=1
 ```
 
 - `--cpus-per-task` is typically used for OpenMP jobs
