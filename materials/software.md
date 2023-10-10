@@ -107,7 +107,8 @@ Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonati
 	* ...
 * Parallelization: Python/Dask, R, GNU-parallel
 
-## Modules
+:::{admonition} Modules
+:class: important
 
 * Puhti is a shared computing environment 
 * Software is loaded with modules
@@ -121,6 +122,8 @@ Example. Loading module for R
 ```
 module load r-env 
 ```
+
+:::
 
 ## Documentation
 
