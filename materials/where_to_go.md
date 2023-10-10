@@ -45,6 +45,7 @@ We have accessed the supercomputer via the webinterface in order to not overwhel
   * [Geocomputing using CSC resources](https://research.csc.fi/geocomputing)
   * [Geocomputing examples in github](https://github.com/csc-training/geocomputing)
   * [Visit courses, webinars, workshops](https://www.csc.fi/en/training)
+* [Sign-up for CSC gis-hpc mailing list ](https://postit.csc.fi/sympa/subscribe/gis-hpc)
 * Ask for help, if needed, we don't bite :)
 
 ## How you can help

@@ -6,7 +6,9 @@ Every CSC account must be linked with a **CSC project**, which enables you to sh
 
 CSC services are **free of charge** for open science at Finnish higher education institutions and research institutes.
 
-[CSC Docs: Accounts and projects](https://docs.csc.fi/accounts/)
+* [CSC Docs: Accounts and projects](https://docs.csc.fi/accounts/)
+* [LUMI, get started](https://lumi-supercomputer.eu/get-started/)
+* [CSC, LUMI high performance computing services offer companies a competitive advantage](https://csc.fi/web/guest/solutions-for-business)
 
 :::{admonition} Course project
 :class: hint
@@ -47,7 +49,8 @@ Your first steps into many CSC services goes via [`https://my.csc.fi`](https://m
    - Amount of resources allocated: All requested resources are billed ie. number of cores, amount of memory
    - Time allocated: Resources are billed based on the actual (wall) _time_ a job has **used**, not the reserved maximum time
 
-[CSC Docs: Billing units](https://docs.csc.fi/accounts/billing/)
+* [CSC Docs: Billing units](https://docs.csc.fi/accounts/billing/)
+* [LUMI Docs: Billing policy](https://docs.lumi-supercomputer.eu/runjobs/lumi_env/billing/)
 
 ### Applying for billing units
 
