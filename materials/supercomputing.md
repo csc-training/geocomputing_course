@@ -44,7 +44,7 @@ LUMI:
 
 ## Puhti compared to other options
 
-|  | Puhti supercomputer*| cPouta virtual machine| my laptop |
+|  | Puhti supercomputer| cPouta virtual machine| my laptop |
 |---|---| ---|---|
 |Max per job: CPU | **4000** | 48 | 4 |
 |Max per job: memory, Gb | **1500** | 240 | 18 |
