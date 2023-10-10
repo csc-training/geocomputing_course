@@ -2,9 +2,10 @@
 
 Partitions are logical sets of nodes. Resource limitations for a job are defined by the partition (or queue) the job is submitted to. The limitations affect the maximum run time, the amount of memory, and the number of available CPU cores (which are called CPUs in Slurm). In addition, partitions may also define default resources that are automatically allocated for jobs if nothing has been specified.
 
-Jobs should be submitted to the partition that best matches the required resources. That way, as few resources as possible are blocked and another user with a higher demand in RAM can run a job earlier. Of course, other considerations may also influence the choice of a partition. 
+Jobs should be submitted to the partition that best matches the required resources. That way, as few resources as possible are blocked and another user with a higher demand in memory can run a job earlier. Of course, other considerations may also influence the choice of a partition. 
 
-- [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/running/batch-job-partitions/) 
+- [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/running/batch-job-partitions/)
+- [LUMI Docs: Slurm particions](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/)
 - In order to use the resources in an efficient way, it is important to estimate the request as accurately as possible
 - By avoiding an excessive "just-in-case" request, the job will start earlier
 
