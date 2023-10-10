@@ -13,7 +13,7 @@
 * Collaborate with your project members
 * “Outsource” heavy computations, keep own computer for other usage
 * **Good documentation, examples for spatial data analysis**
-* **CSC specialist support**, 
+* **CSC specialist support** 
 * **Free of charge for open science** at Finnish universities and research institutes.
 
 ## Supercomputers in Kajaani
@@ -58,7 +58,7 @@ LUMI:
 :class: important
 
 * Single core speed: supercompter ~ laptop
-* **For speed up, use many cores**:
+* **To increase speed, use many cores**:
   * **Scripts for parallization**
   * Tools that support parallelization out-of-the-box
   * GPU tools
