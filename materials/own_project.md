@@ -59,7 +59,7 @@ You can find self-study materials on these topics from the [CodeRefinery project
 
 ## Running own scripts on the supercomputer
 
-To keep track of your script versions by using a version control system, like Git(Hub). This also simplifies collaboration and synchronising your scripts on different computers.
+Keep track of your script versions by using a version control system, like Git(Hub). This also simplifies collaboration and synchronising your scripts on different computers.
 
 :::{admonition} Reminder for  Puhti 
 :class: seealso
@@ -69,7 +69,7 @@ To keep track of your script versions by using a version control system, like Gi
 * Keep personal configuration scripts in `/users/cscusername/`
 :::
 
-When moving a script from your own computer to Puhti, take care of any hard-coded file dependencies (e.g. `/my/home/dir/file.txt` ). It is not recommended to have hard-coded file paths in your scripts, instead, provide them as command line input to your script or make use of configuration files. No matter where you input your file paths, always make sure that you have the actual data files also available on the supercomputer. Also check that all used packages are available on the supercomputer, on Puhti, e.g. within the [geoconda module](https://docs.csc.fi/apps/geoconda) or [r-env module](https://docs.csc.fi/apps/r-env). 
+When moving a script from your own computer to Puhti, take care of any hard-coded file dependencies (e.g. `/my/home/dir/file.txt` ). It is not recommended to have hard-coded file paths in your scripts, instead, provide them as command line input to your script or make use of configuration files. No matter where you input your file paths, always make sure that you have the actual data files also available on the supercomputer. Also check that all used packages are available on the supercomputer, on Puhti, e.g. within the [geoconda module](https://docs.csc.fi/apps/geoconda) or the [r-env module](https://docs.csc.fi/apps/r-env). 
 
 
 ## Optimizing the performance of your own code
