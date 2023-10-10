@@ -13,6 +13,8 @@ To make this course as enjoyable as possible for you and to make sure you can ge
         * [CSC and Linux Cheat Sheet](./cheatsheet.md) (one page summary of the most important Linux commands – handy to have near you during the course)
         * [Terminal intro](terminal.md)
 
+This also means that this course is not an introduction to either of the topics. Please refer to other courses to learn more about the topics that interest you.
+
 ## CSC account
 
 For the exercises, [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and [project](https://docs.csc.fi/accounts/how-to-create-new-project/) with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/). For Allas exercise also Allas service must be enabled for the project.
