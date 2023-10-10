@@ -9,7 +9,7 @@ You already got to know the [interactive web interface for Puhti](https://docs.c
 
 Disadvantages of interactive jobs: 
 * Blocks your shell until it finishes
-* Connection interruption means that job is gone
+* Connection interruption means that job is gone (except when running a compute node shell from the web interface)
 
 Apart from interactive jobs, a job can be classified as **serial, parallel or GPU**, depending on the main requested resource. A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity. So instead of starting 10 shells to run 10 things at once, get to know serial jobs: 
 
@@ -85,7 +85,14 @@ In this course we will focus on **embarrassingly/naturally/delightfully parallel
 
 ## Array jobs
 
-[Array jobs](https://docs.csc.fi/computing/running/array-jobs/) are another way of taking advantage of Puhti's parallel processing capabilities for embarrassingly parallel tasks. Array jobs are useful when same code is executed many times for different datasets or with different parameters without the need to change the Python code. In GIS context a typical use case would be to run some model on study area split into multiple files where output from one file doesn't have an impact on the result of an other area. 
+[Array jobs](https://docs.csc.fi/computing/running/array-jobs/) are another way of taking advantage of Puhti's parallel processing capabilities for embarrassingly parallel tasks. Array jobs are useful when same code is executed many times for different datasets or with different parameters without the need to change your code. In GIS context, a typical use case would be to run some model on study area split into multiple files where output from one file doesn't have an impact on the result of another area. 
+
+:::{admonition} Maximum job limits
+:class: warning
+
+Submitting an array job of 100 members counts the same as 100 individual jobs from the batch queue system's perspective. The maximum number of jobs that each user can submit per month should be kept below one thousand. 
+
+:::
 
 ## GPU jobs 
 
