@@ -21,7 +21,8 @@ Most of the course content also applies to LUMI supercomputer, which is availabl
 
 The course is meant both for academic researchers planning to use Puhti supercomputer and for data analysts from private companies planning to use LUMI.
 
-## Table of contents
+Table of contents
+###################
 
 .. toctree::
    :maxdepth: 2
