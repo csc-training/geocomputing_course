@@ -15,9 +15,9 @@ Apart from interactive jobs, a job can be classified as **serial, parallel or GP
 
 ## Serial jobs
 
-Serial jobs means that the computer works on only one task at a time following a sequence of instructions, while only using one core.
+Serial job means that the computer works on only one task at a time following a sequence of instructions, while only using one core.
 
-Why could your serial job benefit from being executed using CSC's resources instead of on your own computer? 
+Why would your serial job benefit from being executed using CSC's resources instead of on your own computer? 
 - Part of a larger workflow
 - Avoid data transfer between CSC and your own computer
 - Data sharing among other project members

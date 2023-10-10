@@ -1,12 +1,10 @@
 # Moving data
 
 ## Local computer <-> supercomputer
-
-* [CSC Docs: Moving files between a local computer and a supercomputer](https://docs.csc.fi/data/moving/)
-
 ### Puhti Web Interface
 
-- Very easy, no installations needed.
+- Graphical, no installations needed.
+- Limited functionality compared to other options.
 - For smaller amounts of data, < 10 Gb.
 - Upload, download, moving, creating folders.
 - [Puhti Web Interface](https://puhti.csc.fi) -> Files
@@ -16,7 +14,7 @@
 
 - For example: **FileZilla**,  **WinSCP** and **CyberDuck**
 - For medium amounts of data, < 1 Tb.
-- Very easy, but installation required.
+- Easy drag-and-drop for moving, but installation required.
 - WinSCP is slower than others.
 - [CSC Docs: Graphical data transfer tools](https://docs.csc.fi/data/moving/graphical_transfer/)
 
@@ -24,6 +22,7 @@
    
 ### Command line tools on local computer
 - For any amount of data, practically required if data size > 1 Tb.
+- Requires knowing the commands.
 
 #### scp
 
@@ -55,7 +54,7 @@ rsync --info=progress2 -a /path/to/a_file cscusername@puhti.csc.fi:/scratch/proj
 # One folder:
 rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/project_200xxxx/directory
 ```
-* `progress2` shows time left and percentage
+* `--info=progress2` shows time left and percentage
 
 
 :::{admonition} Firewall limitations
@@ -70,8 +69,9 @@ Some organizations, for example research institutes with IT-services from Valtor
 
 - When downloading from exernal services try to download directly to CSC, not via your local computer
 - Check what APIs/tools the service supports:
-	- OGC APIs, [STAC](https://csc-training.github.io/geocomputing_course/materials/stac.html)
-	- ftp, rsync
+	- Standard APIs: OGC APIs, [STAC](https://csc-training.github.io/geocomputing_course/materials/stac.html)
+	- Custom service APIs
+  	- ftp, rsync
 	- wget/curl if HTTP-urls avaialable
 
 ### wget
@@ -85,6 +85,12 @@ wget http://wwwd3.ymparisto.fi/d3/gis_data/spesific/syvyyskayra.zip
 # One folder:
 wget -r -nc ftp://ftp.aineistot.metsaan.fi/Metsamaski/Maakunta/ --cut-dirs=2
 ```
+
+:::{admonition} More options :class: note
+
+* [CSC Docs: Moving files between a local computer and a supercomputer](https://docs.csc.fi/data/moving/)
+
+:::
 
 
 

@@ -35,7 +35,7 @@ In an interactive batch job, an interactive shell session is launched on a compu
 
 ### Launching an interactive job / compute node shell
 
-Observe how now you need to define the resources you want to reserve now. 
+Observe how you need to now define the resources you want to reserve. 
 Let's reserve 10 minutes. 
 
 :::{admonition} Other ways of starting an interactive session

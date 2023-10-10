@@ -21,3 +21,9 @@
 :class: seealso
 See also [CSC service catalog](https://research.csc.fi/en/service-catalog)
 :::
+
+:::{admonition} Sensitive data
+:class: important
+
+Sensiteve data should be saved and processed only in services for sensitive data: [SD services](https://research.csc.fi/sensitive-data-services-for-research), [ePouta](https://research.csc.fi/-/epouta) Encrypted files can be stored also to [Allas](https://research.csc.fi/-/allas). Supercomputers and cPouta should not be used for sensitive data. 
+:::

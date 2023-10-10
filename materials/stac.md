@@ -68,10 +68,14 @@ STAC - Spatio-Temporal Asset Catalog
 \* These datasets have several bands in one file, Python `stackstac` does not support it, but search works.
 
 
-## Paituli STAC links
-* **[Paituli STAC description](https://paituli.csc.fi/stac.html)**
-* Paituli STAC end-point: `https://paituli.csc.fi/geoserver/ogc/stac/v1`
-* [STAC Browser with Paituli STAC data](https://radiantearth.github.io/stac-browser/#/external/paituli.csc.fi/geoserver/ogc/stac/v1?.language=en)
-* Example scripts:
+ 
+:::{admonition} Next steps 
+:class: important
+
+* Read more about STAC in general from [Paituli STAC description](https://paituli.csc.fi/stac.html)
+* [See what data is available with Paiituli STAC](https://radiantearth.github.io/stac-browser/#/external/paituli.csc.fi/geoserver/ogc/stac/v1?.language=en)
+* **Test out the example scripts**:
     * **[Python](https://www.github.com/csc-training/geocomputing/blob/master/python/STAC)**
     * [R](https://www.github.com/csc-training/geocomputing/blob/master/R/STAC)
+* Use Paituli STAC, end-point: `https://paituli.csc.fi/geoserver/ogc/stac/v1`
+::: 
