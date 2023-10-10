@@ -69,7 +69,7 @@ Unfortunately it’s impossible to give any exact numbers because both Slurm and
 
 * SHOULD BE OK to run tens of jobs/steps
 * PAY ATTENTION if you run hundreds of jobs/steps
-* DON’T RUN several thousands of jobs*
+* DON’T RUN several thousands of jobs
 
 **How many file operations is too many?**
 

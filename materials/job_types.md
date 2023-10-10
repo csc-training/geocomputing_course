@@ -103,7 +103,7 @@ A graphics processing unit (GPU, a video card), is capable of doing certain type
    - Consult [how to check if your batch job used GPU](https://docs.csc.fi/support/tutorials/gpu-ml/#gpu-utilization)
    - The [CSC usage policy](https://docs.csc.fi/computing/usage-policy/#gpu-nodes) limits GPU usage to where it is most efficient
    - Also, if you process lots of data, make sure you [use the disk efficiently](https://docs.csc.fi/support/tutorials/ml-data/#using-the-shared-file-system-efficiently)
-- Does your code run on AMD GPUs? [LUMI](https://docs.lumi-supercomputer.eu/hardware/compute/lumig/) has a massive GPU capacity!
+- Does your code run on AMD GPUs? [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumig/) has a massive GPU capacity!
 
 - Can your software utilize GPUs?
    - [GPUs in Puhti batch jobs](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#gpus)
