@@ -27,6 +27,12 @@
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
 
+:::{admonition} Change the default project and username
+
+* `project_200xxxx` is example project name, replace with your own CSC project name.
+* `cscusername` is example username, replace with your username.
+:::
+
 ### Info
 * Puhti general status: bottom of front page
    * Sometimes when the `Disk lag` here is high, reading and writing files might get slow.
@@ -34,31 +40,24 @@
 * Disk usage of own projects: `Tools` -> `Disk quotas`
 * Running jobs: `Jobs` -> `Active jobs`
 
-:::{admonition} Change the default project and username
-
-* `project_200xxxx` is example project name, replace with your own CSC project name.
-* `cscusername` is example username, replace with your username.
-:::
 
 ### Files 
 * Open home directory: `Files` -> `Home Directory`
-* Create new directory and open it
-* Create new `.txt` file with your name
-* Move the new file under scratch: 
+* Create new `myfile.txt` file and add some text to it.
+* Create new directory `mydata`
+* Move the new file under `mydata`: 
    * Mark check-box in front of the file
    * Click `Copy/Move`
-   * Open `/scratch/project_200xxxx`
+   * Open `mydata`
    * Click `Move`
-* Open your scratch folder
+* Open your `mydata` folder
 * Download your file to your local computer
-* Delete the file
   
 :::{admonition} Moving data
 
 Web interface is for moving up to 10Gb data, if you have more data use other tools. More info in [moving data](moving_data.md)
 
 :::
-  
 
 ### Graphical applications
 #### Jupyter
