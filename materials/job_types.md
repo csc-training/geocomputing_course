@@ -15,7 +15,7 @@ Apart from interactive jobs, a job can be classified as **serial, parallel or GP
 
 ## Serial jobs
 
-Serial jobs means that the computer works on only one task at a time following a sequence of instructions, while only use one core.
+Serial jobs means that the computer works on only one task at a time following a sequence of instructions, while only using one core.
 
 Why could your serial job benefit from being executed using CSC's resources instead of on your own computer? 
 - Part of a larger workflow
@@ -28,7 +28,7 @@ Why could your serial job benefit from being executed using CSC's resources inst
 
 A parallel job distributes the work over several cores in order to achieve a shorter wall time (and/or a larger allocatable memory). 
 
-In this course we will focus on **embarassingly/naturally/delightfully parallel processes** with methods that are either built-in to the tools or tools that can start multiple jobs from one call. For more advanced usage, there are two major parallelization schemes: [OpenMP](https://en.wikipedia.org/wiki/OpenMP) and [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface). 
+In this course we will focus on **embarrassingly/naturally/delightfully parallel processes** with methods that are either built-in to the tools or tools that can start multiple jobs from one call. For more advanced usage, there are two major parallelization schemes: [OpenMP](https://en.wikipedia.org/wiki/OpenMP) and [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface). 
 
 :::{admonition} Advanced topics - MPI/OpenMP
 :class: dropdown, seealso
@@ -85,7 +85,7 @@ In this course we will focus on **embarassingly/naturally/delightfully parallel 
 
 ## Array jobs
 
-[Array jobs](https://docs.csc.fi/computing/running/array-jobs/) are another way of taking advantage of Puhti's parallel processing capabilities for embarassingly parallel tasks. Array jobs are useful when same code is executed many times for different datasets or with different parameters without the need to change the Python code. In GIS context a typical use case would be to run some model on study area split into multiple files where output from one file doesn't have an impact on result of an other area. 
+[Array jobs](https://docs.csc.fi/computing/running/array-jobs/) are another way of taking advantage of Puhti's parallel processing capabilities for embarrassingly parallel tasks. Array jobs are useful when same code is executed many times for different datasets or with different parameters without the need to change the Python code. In GIS context a typical use case would be to run some model on study area split into multiple files where output from one file doesn't have an impact on the result of an other area. 
 
 ## GPU jobs 
 

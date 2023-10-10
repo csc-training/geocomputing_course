@@ -82,7 +82,7 @@ Note that these guideline numbers are for all operations on all jobs.
 **I have lots of small files**
 
 * Check the tool that you are using
-    * There may be different options for data storage,
+    * There may be different options for data storage
 * Tar/untar and compress your datasets.
 * Use local disk (NVMe on Puhti, ramdisk on Mahti).
 * Remove intermediate files if possible.
@@ -95,7 +95,7 @@ Note that these guideline numbers are for all operations on all jobs.
 * Regroup your tasks and execute larger group of tasks in single job/step.
     * Manual or automatic (if feature is present in your tool)
     * Horizontal and vertical packing
-    * Tradeoff (redundancy, parallelism, utilization )
+    * Tradeoff (redundancy, parallelism, utilization)
 * Do a larger job and use another scheduler (hyperqueue, flux).
     * Integration for nextflow and snakemake already exists
     * CSC has some tools for farming type jobs
