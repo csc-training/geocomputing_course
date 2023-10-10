@@ -21,9 +21,9 @@ Jobs should be submitted to the partition that best matches the required resourc
 :class: dropdown
 
 1. Based on the requirements, any partition would work for Anna, except `test`. She does not need interactive access to her process, so in order to not block any unnecessary resources, Anna chooses `small` partition.
-2. Based on the requirements, Kalika need to choose `hugemem_longrun` or adapt her code to get under 3 days runtime (which she might want to do in order to avoid exessively long queueing times).
+2. Based on the requirements, Kalika needs to choose `hugemem_longrun` or adapt her code to get under 3 days runtime (which she might want to do in order to avoid exessively long queueing times).
 3. For the webinterface, only `test`, `small` or `interactive` can be used. According to the resource needs (> 80GB of memory), he needs to use `small` partition. 
-4. This is a very good idea and should always be done first. Neha can get the best and fast experience using `test` partition. This means to keep the runtime under 15 min and the memory needs below 190 GiB at a maximim of 80 tasks.
+4. This is a very good idea and should always be done first. Neha can get the best and fast experience using `test` partition. This means to keep the runtime under 15 min and the memory needs below 190 GiB at a maximum of 80 tasks.
 5. 400GB memory in total is more than most partitions can take. If this is the least memory possible for the jobs, it has to be run on `hugemem`.
 :::
 :::
