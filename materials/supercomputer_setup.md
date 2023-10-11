@@ -3,13 +3,14 @@
 ![](./images/puhti_overview.png)
 
 
-An supercomputer has a lot of **nodes** (you can roughly think that one node is a single computer) which have the same components as your laptop or desktop computer: CPUs (sometimes also called processors or cores), memory (or RAM), and disk space. However, the supercomputer has some additional/specialized components:
+A supercomputer has a lot of **nodes** (you can roughly think that one node is a single computer) which have the same components as your laptop or desktop computer: CPUs (sometimes also called processors or cores), memory (or RAM), and disk space. However, the supercomputer has some additional/specialized components:
 
-- Login nodes are used to set up jobs (and to launch them)
-- Jobs are run on the compute nodes
-- A batch job system (scheduler) is used to run and manage the jobs
+- When you want to execute a program on the supercomputer, it has to be boxed into an abstraction layer called **job**.
+- **Login nodes** are used to set up jobs (and to launch them)
+- Jobs are run on the **compute nodes**
+- A **batch job system (scheduler)** is used to run and manage the jobs
   - On CSC supercomputers, we use Slurm
-- CSC supercomputers use Lustre as the parallel distributed file system
+- CSC supercomputers use Lustre as the **parallel distributed file system**
 
 - When you login to CSC's supercomputers, you enter one of the login nodes of the computer
     - These login nodes are shared by all users and they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
