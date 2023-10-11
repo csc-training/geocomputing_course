@@ -1,4 +1,4 @@
-# Batch jobs
+if# Batch jobs
 
 On our own computer, we are used to start a program (job) by clicking on an icon and the program starts instantly. If we start many programs/jobs at the same time, we occasionally run into problems like running out of memory _etc_.  
 In an supercomputing environment, the computer is shared among hundreds of other users who all have different resource needs.
@@ -38,6 +38,7 @@ What other `#SBATCH` arguments can you find in [the SLURM documentation](https:/
 :class: warning
 
 Does `sacct` show you that your job failed? Or did your job not do what you expected (e.g. write some files, etc)? 
+Some things to check:
 
 1. Did the job run out of time?
 2. Did the job run out of memory?
