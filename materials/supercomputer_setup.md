@@ -3,7 +3,7 @@
 ![](./images/puhti_overview.png)
 
 
-A supercomputer has a lot of **nodes** (you can roughly think that one node is a single computer) which have the same components as your laptop or desktop computer: CPUs (sometimes also called processors or cores), memory (or RAM), and disk space. However, the supercomputer has some additional/specialized components:
+A supercomputer has a lot of **nodes** which have the same components as your laptop or desktop computer: CPUs (sometimes also called processors or cores), memory (or RAM), and disk space. However, the supercomputer has some additional/specialized components:
 
 - When you want to execute a program on the supercomputer, it has to be boxed into an abstraction layer called **job**.
 - **Login nodes** are used to set up jobs (and to launch them)
