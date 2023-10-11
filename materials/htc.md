@@ -104,7 +104,7 @@ See also [CSC Docs: HyperQueue](https://docs.csc.fi/apps/hyperqueue/)
 
 ### Workflow tools
 
-If running your jobs gets more complex, requiring _e.g._ dependencies between subtasks, workflow tools can be an another or additional option. Workflow tools also help with making your work more reproducible by recording the computational steps and data. You can find some guidelines and suggestions in [CSC Docs: High Throughput Computing page](https://docs.csc.fi/computing/running/throughput/).
+If running your jobs gets more complex, requiring _e.g._ dependencies between subtasks, workflow tools can be another or additional option. Workflow tools also help with making your work more reproducible by recording the computational steps and data. You can find some guidelines and suggestions in [CSC Docs: High Throughput Computing page](https://docs.csc.fi/computing/running/throughput/).
 Many tools available:
 - [Make](https://www.gnu.org/software/make/)
 - [Snakemake](https://snakemake.github.io/)
