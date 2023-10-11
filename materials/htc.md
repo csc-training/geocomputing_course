@@ -118,3 +118,48 @@ Many tools available:
 Do you need to run a lot of steps one after another? Or few steps that need a lot of memory? Do steps depend on each other? Which steps could be run in parallel? Which steps cannot be run in parallel?
 
 :::
+
+:::{admonition} How many jobs is too many?
+:class: seealso, dropdown
+
+We mention in documentation and guidelines that users shouldn’t send too many jobs, but how many is too many?
+
+Unfortunately it’s impossible to give any exact numbers because both Slurm and Lustre are shared resources.
+* It’s possible to give better limits for global usage of the system.
+* When system total load is low, it may be ok to run something that is problematic when system is full.
+
+**How many jobs is too many?**
+
+* SHOULD BE OK to run tens of jobs
+* PAY ATTENTION if you run hundreds of jobs
+* DON’T RUN several thousands of jobs
+
+**How many file operations is too many?**
+
+* SHOULD BE OK to access hundreds of files
+* PAY ATTENTION if you need several thousands of files
+* DON’T USE hundreds of thoudsands of files
+
+Note that these guideline numbers are for all operations on all jobs.
+
+**I have lots of small files**
+
+* Check the tool that you are using
+    * There may be different options for data storage
+* Tar/untar and compress your datasets.
+* Use local disk (NVMe on Puhti, ramdisk on Mahti).
+* Remove intermediate files if possible.
+* Use squashfs for read-only datasets and containers.
+
+**I have lots of small tasks for Slurm**
+
+* Regroup your tasks and execute larger group of tasks in single job.
+    * Manual or automatic (if feature is present in your tool)
+    * Horizontal and vertical packing
+    * Tradeoff (redundancy, parallelism, utilization)
+* Do a larger job and use another scheduler (hyperqueue, flux).
+    * Integration for nextflow and snakemake already exists
+    * CSC has some tools for farming type jobs
+    * Not all or nothing
+
+:::

@@ -97,7 +97,7 @@ Submitting an array job of 100 members counts the same as 100 individual jobs fr
 
 ## GPU jobs 
 
-A graphics processing unit (GPU, a video card), is capable of doing certain type of simultaneous calculations very efficiently. In order to take advantage of this power, a computer program must be reprogrammed to adapt on how GPU handles data. For spatial computations on the GPU, check out for example [RAPIDS cuSpatial](https://docs.rapids.ai/api/cuspatial/stable/user_guide/cuspatial_api_examples/). [CSC's GPU resources](https://docs.csc.fi/computing/overview/#gpu-nodes) are relatively scarce and hence should be used with particular care. A GPU uses 60 times more billing units than a single CPU core. In practice, 1-10 CPU cores (but not more) should be allocated per GPU on Puhti.
+A GPU is capable of doing certain type of simultaneous calculations very efficiently. In order to take advantage of this power, a computer program must be programmed to adapt on how GPU handles data. For spatial computations on the GPU, check out for example [RAPIDS cuSpatial](https://docs.rapids.ai/api/cuspatial/stable/user_guide/cuspatial_api_examples/). [CSC's GPU resources](https://docs.csc.fi/computing/overview/#gpu-nodes) are relatively scarce and hence should be used with particular care. A GPU uses 60 times more billing units than a single CPU core. In practice, 1-10 CPU cores (but not more) should be allocated per GPU on Puhti.
 
 :::{admonition} More advanced topics - GPU
 :class: dropdown, seealso
