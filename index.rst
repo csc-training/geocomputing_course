@@ -57,9 +57,9 @@ Table of contents
 
    materials/terminology.md
    materials/supercomputer_setup.md
-   materials/disk_areas.md
    materials/partitions.md
    materials/job_types.md
+   materials/disk_areas.md
    materials/fair_share.md
    materials/batch_job.md
    materials/terminal.md
