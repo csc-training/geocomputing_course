@@ -17,7 +17,7 @@ Imagine you’re cooking alone.
 
 * How many workers does this process need?
 * Can you identify potential for parallelisation in this recipe?
-* And what if you are cooking with the help of a friend help? Is the soup done any faster?
+* And what if you are cooking with the help of a friend? Is the soup done any faster?
 
 
 Adjusted from [Introduction to parallel programming in Python by the Carpentries](https://carpentries-incubator.github.io/lesson-parallel-python)
@@ -39,14 +39,14 @@ So what options do we have to run things at the same time?
 
 :::{admonition} Parallel programming
 :class: warning
-Parallel programs are typically parallelized with the MPI and/or OpenMP standards or using GPUs. In this course we are focusing on making use of multiple CPUs and dealing with so called "embarrasingly/naturally/delightfully parallel" tasks. If you are interested in more advanced topics, please check our [CSC training calender](https://www.csc.fi/en/training#training-calendar).
+Parallel programs are typically parallelized with the MPI and/or OpenMP standards or using GPUs. In this course we are focusing on making use of multiple CPUs and dealing with so called "embarrasingly/naturally/delightfully parallel" tasks. If you are interested in more advanced topics, please check our [CSC training calendar](https://www.csc.fi/en/training#training-calendar).
 :::
 
 ## Using multiple cores
 
 ### In-built multi core support
 
-First thing to check, is if the software you are using has built-in support for using multiple CPUs/cores. For command line tools, look for `-n(umber of)_cores`, `-c(ores/pu)`, `-j(obs)`, `-t(hreads)` or similar .
+First thing to check, is if the software you are using has built-in support for using multiple CPUs/cores. For command line tools, look for `-n(umber of)_cores`, `-c(ores/pu)`, `-j(obs)`, `-t(hreads)` or similar.
 
 Some example geospatial tools with built-in multi CPU support: 
 * GDAL, e.g. `gdalwarp -multi -wo NUM_THREADS=val/ALL_CPUS ...`
@@ -63,7 +63,7 @@ Many programming languages have packages that support this:
 
 ### Tools for running scripts/tools at the same time 
 
-Apart from in- built features, there is also ways to running scripts at the same time for tools without multi-core support or adapting your own code. Any program may be run in parallel with these tools. This way of running programs is also called task farming or high throughput computing.
+Apart from in-built features, there is also ways of running scripts at the same time for tools without multi-core support or adapting your own code. Any program may be run in parallel with these tools. This way of running programs is also called task farming or high throughput computing.
 
 #### GNU Parallel
 
@@ -95,16 +95,16 @@ Array jobs are only a good option , if the independent jobs are "large" enough, 
 
 :::
 
-#### Hyperqueue
+#### HyperQueue
 
 Instead of submitting each of your computational tasks as separate Slurm jobs or job steps, you can also allocate a large resource block and then use HyperQueue to submit your tasks to this allocation.
 
-See also [CSC Docs: Hyperqueue](https://docs.csc.fi/apps/hyperqueue/)
+See also [CSC Docs: HyperQueue](https://docs.csc.fi/apps/hyperqueue/)
 
 
 ### Workflow tools
 
-If running your jobs gets more complex, requiring _e.g._ dependencies between subtasks, workflow tools can be a another or additional option. Workflow tools also help with making your work more reproducible by recording the computational steps and data. You can find some guidelines and suggestions in [CSC Docs: High Throughput Computing page](https://docs.csc.fi/computing/running/throughput/).
+If running your jobs gets more complex, requiring _e.g._ dependencies between subtasks, workflow tools can be an another or additional option. Workflow tools also help with making your work more reproducible by recording the computational steps and data. You can find some guidelines and suggestions in [CSC Docs: High Throughput Computing page](https://docs.csc.fi/computing/running/throughput/).
 Many tools available:
 - [Make](https://www.gnu.org/software/make/)
 - [Snakemake](https://snakemake.github.io/)
@@ -157,8 +157,8 @@ Note that these guideline numbers are for all operations on all jobs.
     * Manual or automatic (if feature is present in your tool)
     * Horizontal and vertical packing
     * Tradeoff (redundancy, parallelism, utilization)
-* Do a larger job and use another scheduler (hyperqueue, flux).
-    * Integration for nextflow and snakemake already exists
+* Do a larger job and use another scheduler (HyperQueue, flux).
+    * Integration for Nextflow and Snakemake already exists
     * CSC has some tools for farming type jobs
     * Not all or nothing
 
