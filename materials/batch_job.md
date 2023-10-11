@@ -1,7 +1,7 @@
 # Batch jobs
 
-On our own computer, we are used to start a program (job) by clicking on an icon and the "job" starts instantly. If we start many programs/jobs at the same time, we occasionally run into problems like running out of memory _etc_.  
-In an supercomputing environment, the computer is shared among hundreds of other users who all have different resource needs. 
+On our own computer, we are used to start a program (job) by clicking on an icon and the program starts instantly. If we start many programs/jobs at the same time, we occasionally run into problems like running out of memory _etc_.  
+In an supercomputing environment, the computer is shared among hundreds of other users who all have different resource needs.
 
 A **batch job script** is used to request (estimated) resources and consists of two parts: The resource request and the actual computing step collected in a `sbatch script`. When we submit a batch job script, the job is not started directly, but is sent into a **queue**. Depending on the requested resources and load, the job may need to wait to get started. All heavy computing must be done via batch jobs (see [Usage policy](https://docs.csc.fi/computing/overview/#usage-policy))!
 
@@ -16,12 +16,12 @@ Batch job script [how-to create](https://docs.csc.fi/computing/running/creating-
 #SBATCH --partition=test            # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
 #SBATCH --ntasks=1                  # Number of tasks. Upper limit depends on partition. For a serial job this should be set 1!
 
-srun hostname                    # Print compute node name that has been allocated
+hostname                    # Print compute node name that has been allocated
 
 ``` 
 
-<p>&rarr; File `simple.bash` </p> 
-<p>&rarr; Submit for computation with `sbatch simple.bash` </p>
+<p>&rarr; File `simple.sh` </p> 
+<p>&rarr; Submit for computation with `sbatch simple.sh` </p>
 
 **The best starting point for writing batch job scripts:** [Software specific batch scripts in docs](https://docs.csc.fi/apps/)
 
