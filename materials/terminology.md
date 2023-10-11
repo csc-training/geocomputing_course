@@ -16,7 +16,7 @@ cables can only stretch so far, and electrical and optical signals can travel on
 
 **CPUs** (central processing unit) are a computer’s processors for actually running programs and calculations. 
 
-A Graphical Processing Units (**GPU**) does certain linear algebra operations extremely efficiently, such as those encountered when processing computer graphics.
+**GPU** (graphical processing unit) does certain linear algebra operations extremely efficiently, such as those encountered when processing computer graphics. Widely used also for speeding up model training in deep learning.
 
 Both CPUs and GPUs contain many **cores** plus shared memory.
 
