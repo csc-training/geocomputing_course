@@ -12,7 +12,7 @@ Disadvantages of interactive jobs:
 * Connection interruption means that job is gone.
      * Note: With persistent `compute node shell` from the web interface or using Linux tool [screen](https://www.geeksforgeeks.org/screen-command-in-linux-with-examples/) it is possible to keep a job running while closing the terminal.
 
-Apart from interactive jobs, a job can be classified as **serial, parallel or GPU**, depending on the main requested resource. A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity. So instead of starting 10 shells to run 10 things at once, get to know serial jobs: 
+Apart from interactive jobs, a job can be classified as **serial, parallel or GPU**, depending on the main requested resource. A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity. 
 
 ## Serial jobs
 
@@ -86,12 +86,12 @@ In this course we will focus on **embarrassingly/naturally/delightfully parallel
 
 ## Array jobs
 
-[Array jobs](https://docs.csc.fi/computing/running/array-jobs/) are another way of taking advantage of Puhti's parallel processing capabilities for embarrassingly parallel tasks. Array jobs are useful when same code is executed many times for different datasets or with different parameters without the need to change your code. In GIS context, a typical use case would be to run some model on study area split into multiple files where output from one file doesn't have an impact on the result of another area. 
+[Array jobs](https://docs.csc.fi/computing/running/array-jobs/) are one way of taking advantage of Puhti's parallel processing capabilities for embarrassingly parallel tasks. Array jobs are useful when same code is executed many times for different datasets or with different parameters without the need to change your code. In GIS context, a typical use case would be to run some model on study area split into multiple files where output from one file doesn't have an impact on the result of another area. 
 
 :::{admonition} Maximum job limits
 :class: warning
 
-Submitting an array job of 100 members counts the same as 100 individual jobs from the batch queue system's perspective. In Puhti, one can submit/run a maximum of 400/200 jobs at the same time (except for `interactive`, `test` and `gputest`, where the limits are  one or two. The maximum number of jobs that each user can submit per month should be kept below one thousand. 
+Submitting an array job of 100 members counts the same as 100 individual jobs from the batch queue system's perspective. In Puhti, one can submit/run a maximum of 400/200 jobs at the same time (except for `interactive`, `test` and `gputest`, where the limits are one or two). The number of submitted jobs per user per month should be kept below one thousand. 
 
 :::
 
@@ -99,16 +99,15 @@ Submitting an array job of 100 members counts the same as 100 individual jobs fr
 
 A GPU is capable of doing certain type of simultaneous calculations very efficiently. In order to take advantage of this power, a computer program must be programmed to adapt on how GPU handles data. For spatial computations on the GPU, check out for example [RAPIDS cuSpatial](https://docs.rapids.ai/api/cuspatial/stable/user_guide/cuspatial_api_examples/). [CSC's GPU resources](https://docs.csc.fi/computing/overview/#gpu-nodes) are relatively scarce and hence should be used with particular care. A GPU uses 60 times more billing units than a single CPU core. In practice, 1-10 CPU cores (but not more) should be allocated per GPU on Puhti.
 
-:::{admonition} More advanced topics - GPU
+:::{admonition} Advanced topics - GPU
 :class: dropdown, seealso
 
 **GPUs can speed up jobs**
 
-- GPUs, or Graphics Processing Units, are extremely powerful processors developed for graphics and gaming
-- They can be used for science, but are often challenging to program
+- GPUs can be used for science, but are often challenging to program
    - Not all algorithms can use the full power of GPUs
 - Check the manual if the software can utilize GPUs, don't use GPUs if you're unsure
-   - Consult [how to check if your batch job used GPU](https://docs.csc.fi/support/tutorials/gpu-ml/#gpu-utilization)
+   - See our [CSC Docs page on how to check if your batch job used GPU](https://docs.csc.fi/support/tutorials/gpu-ml/#gpu-utilization)
    - The [CSC usage policy](https://docs.csc.fi/computing/usage-policy/#gpu-nodes) limits GPU usage to where it is most efficient
    - Also, if you process lots of data, make sure you [use the disk efficiently](https://docs.csc.fi/support/tutorials/ml-data/#using-the-shared-file-system-efficiently)
 - Does your code run on AMD GPUs? [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumig/) has a massive GPU capacity!
@@ -121,4 +120,9 @@ A GPU is capable of doing certain type of simultaneous calculations very efficie
 :::
 
 
+:::{admonition} Think about your work
+:class: info
 
+Which job type sounds like it could benefit your work? 
+
+:::
