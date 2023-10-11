@@ -16,14 +16,16 @@ We have accessed the supercomputer via the webinterface in order to not overwhel
 :class: seealso, dropdown
 
 - SSH clients give command-line access to a supercomputer or any other Linux server.
-- Basic SSH connection will not allow displaying remote graphics, but it is possible to set up with extra settings, but in case of Puhti web interface is recommended.
+- Basic SSH connection will not allow displaying remote graphics, but it is possible to set up with extra settings.
 - SSH clients:
    - Mac and Linux have Terminal for SSH connections.
    - In Windows:
       - `Command Prompt` or `Powershell` are always avaialbe and can be used for basic connections.
       - Special tools like [PuTTY](https://www.putty.org/) or [MobaXterm](https://mobaxterm.mobatek.net/) provide more options, inc possibility to save settings, but need installation.
+- To avoid typing your password every time again and to make your connection more secure, you can [set up SSH-keys](https://docs.csc.fi/computing/connecting/#setting-up-ssh-keys).
 - [CSC Docs: Connecting to CSC supercomputers](https://docs.csc.fi/computing/connecting/)
 - [LUMI Docs: Get started](https://docs.lumi-supercomputer.eu/firststeps/).
+- 
 
 :::
 
