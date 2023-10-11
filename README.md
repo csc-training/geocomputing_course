@@ -55,7 +55,7 @@ These lesson materials are based on previous geocomputing materials by Kylli Ek,
 
 Some lessons are partly based on other CSC course materials by Maria Lehtivaara, Rasmus Kronberg, Ari-Matti Saren, Atte Sillanpää, Kimmo Mattila, Laxmana Yetukuri, Maria Dimitrova, Xavier Anthony Raj,  Jesse Harrison, Sami Ilvonen.
 
-New edits and materials by Samantha Wittke, Kylli Ek.
+New edits and materials by Samantha Wittke, Kylli Ek. Review by Eetu Huusko, Rasmus Kronberg, Antoni Golos, Katri Tegel, Juha Lento.
 
 ## Other resources and further reading
 
