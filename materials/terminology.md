@@ -14,7 +14,7 @@ operations ([FLOPS](https://en.wikipedia.org/wiki/FLOPS)) with the highest possi
 To support these constraints, an HPC resource must exist in a specific, fixed location: networking
 cables can only stretch so far, and electrical and optical signals can travel only so fast.
 
-**CPUs** are a computer’s tool for actually running programs and calculations. 
+**CPUs** (central processing unit) are a computer’s processors for actually running programs and calculations. 
 
 A Graphical Processing Units (**GPU**) does certain linear algebra operations extremely efficiently, such as those encountered when processing computer graphics.
 
