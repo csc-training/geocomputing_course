@@ -3,9 +3,13 @@
 
 ## Why would you want to use the terminal?
 
+A terminal is a text input and output environment. A shell is the primary interface that users see when they log in, whose primary purpose is to start other programs. 
+
 A typing-based interface is often called a command-line interface, or CLI, to distinguish it from a graphical user interface, or GUI. The heart of a CLI is a read-evaluate-print loop, or REPL: when the user types a command and then presses the Enter (or Return) key, the computer reads it, executes it, and prints its output. 
 
-Shell is the standard way to interact with a supercomputer. It is worth learning the basics and getting comfortable with the "black box".
+Shell is the standard way to interact with a supercomputer. It is worth learning the basics and getting comfortable with the "black box", to make efficient use of the resources.
+
+The terms terminal, command line and shell are often used interchangably, even though they mean slightly different things. 
 
 :::{admonition} Some terminal magic
 :class: tip
@@ -46,6 +50,12 @@ Do you remember on how you edited some files in the web interface? Let's do the 
 ```bash
 pwd
 ```
+2. Then check your username, by typing `echo $USER` and `Enter`. `$USER` (note the `$` in the beginning) is an environment variable which stores your CSC username. `echo` is a command that allows us to display text that is given as an argument (try also `echo hello`).
+
+```bash
+echo $USER
+```
+
 2. We would like to create a new directory in our projects scratch students directory with our name, let's move there:
 
 ```bash

@@ -31,7 +31,6 @@ Table of contents
    materials/prerequisites.md
    materials/practicalities.md
    materials/cheatsheet.md
-   materials/terminal.md
 
 .. toctree::
    :maxdepth: 2
@@ -63,6 +62,7 @@ Table of contents
    materials/job_types.md
    materials/fair_share.md
    materials/batch_job.md
+   materials/terminal.md
    materials/exercise_basics.md
 
 .. toctree::
