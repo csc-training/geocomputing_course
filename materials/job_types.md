@@ -9,7 +9,8 @@ You already got to know the [interactive web interface for Puhti](https://docs.c
 
 Disadvantages of interactive jobs: 
 * Blocks your shell until it finishes
-* Connection interruption means that job is gone (except when running a compute node shell from the web interface)
+* Connection interruption means that job is gone.
+     * Note: With persistent `compute node shell` from the web interface or using Linux tool [screen](https://www.geeksforgeeks.org/screen-command-in-linux-with-examples/) it is possible to keep a job running while closing the terminal.
 
 Apart from interactive jobs, a job can be classified as **serial, parallel or GPU**, depending on the main requested resource. A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity. So instead of starting 10 shells to run 10 things at once, get to know serial jobs: 
 
