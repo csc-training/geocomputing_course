@@ -1,5 +1,6 @@
 # CSC and Unix cheatsheet
-adapted from https://docs.csc.fi/img/csc-quick-reference/csc-quick-reference.pdf
+Adapted from [CSC Quick Reference](https://docs.csc.fi/img/csc-quick-reference/csc-quick-reference.pdf)
+
 Note that this is simplified for beginners usage, once you get more experienced, you'll notice that there is more (and better) options for everything, and that not everything written here is "the whole truth".
 
 ## Service names
