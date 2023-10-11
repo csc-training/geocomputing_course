@@ -31,7 +31,7 @@ Text adapted from [ODU Research Computing Wiki](https://wiki.hpc.odu.edu/) and [
   * All computers have access to shared storage, if you place a file on one machine you 
     can access it from all the other machines
   * All computers have a synchronised clock.
-  * A scheduler is involved (latter lesson)
+  * A scheduler is involved (next lesson)
 
 A cloud service could have access to an HPC system as part of the service as well.
 
