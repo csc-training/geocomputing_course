@@ -1,6 +1,6 @@
 # Disk areas
 
-In this section, you will learn how to use different disk areas in supercomputing environment at CSC.
+Similar to your own computer, also supercomputers have different directories readily available. Their use and names are a bit different though: 
 
 ## Puhti disk areas
 
