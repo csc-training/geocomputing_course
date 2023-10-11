@@ -10,17 +10,11 @@ All hands-on activities of this course can be carried out with [CSC's supercompu
 
 For using Puhti, a [CSC account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) is needed.
 
+You will also need to have access to a CSC project. For the course version, we will use a course project provided by CSC which you got access to by providing your username to us through the pre course survey. If you haven't done so, please share your CSC username in the collaborative document. The course project will also give you access to a resource reservation.
+
 ## Course format
 
-Hybrid course with lecture and hands-on exercises. It is recommended for online participants to have an extra screen available, to be able to follow the meeting, as well as the lecture materials and the Puhti webinterface. All questions should go to the collaborative document. This ensures fair chance for everyone to ask questions, and also to archive Q&A for everyone.
-
-## Information overload
-
-Depending on how you work with a computer, this course may bring you a lot of new information at once. Please do not get discouraged. This material will be available also after the course for your review. The best way to understand the concepts better is to start implementing your own work and ask for help when you have questions.
-
-## Starting point
-
-There is much more to a supercomputer and the proper use of its resources than this course covers. If this got you interested, please check out our [CSC training calendar](https://www.csc.fi/en/training#training-calendar) for more advanced courses.
+Hybrid course with lecture and hands-on exercises. It is recommended for online participants to have an extra screen available, to be able to follow the meeting, as well as the lecture materials and the Puhti webinterface. All questions should go to the collaborative document. This ensures fair chance for everyone to ask questions, and also to archive Q&A for everyone. During the exercise sessions we will in addition make use of red/green sticky notes on site and the "raise hand" feature in Zoom, if you run into trouble that needs immediate support.
 
 ## Course participant statistics
 
@@ -83,6 +77,14 @@ Course participant of 2023 answers summarized and categorized:
 ### Python or R
 
 75% of course participants (of 2023 edition) are more interested in learning how to use Python on supercomputer than R.
+
+## Information overload
+
+Depending on how you work with a computer, this course may bring you a lot of new information at once. Please do not get discouraged. This material will be available also after the course for your review. The best way to understand the concepts better is to start implementing your own work and ask for help when you have questions.
+
+## Starting point
+
+There is much more to a supercomputer and the proper use of its resources than this course covers. If this got you interested, please check out our [CSC training calendar](https://www.csc.fi/en/training#training-calendar) for more advanced courses.
 
 ## Code of Conduct
 
