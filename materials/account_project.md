@@ -28,7 +28,7 @@ Note:
 
 ## Managing resources
 
-Your first steps into many CSC services goes via [`https://my.csc.fi`](https://my.csc.fi):
+Your first steps into many CSC services goes via [MyCSC](https://my.csc.fi):
 
 * Create an account
 * Manage your account
@@ -55,9 +55,9 @@ Your first steps into many CSC services goes via [`https://my.csc.fi`](https://m
 ### Applying for billing units
 
 - Billing units can be also applied via [My Projects page in MyCSC](https://my.csc.fi/welcome)
-   - Please acknowledge use of CSC resources in your publications ([CSC Docs: CSC Acknowledgement](https://docs.csc.fi/support/faq/how-to-cite-csc/)); many tools pages also provide a copyable acknowledgement examples (see for example [CSC Docs: QGIS acknowledgement](https://docs.csc.fi/apps/qgis/#acknowledgement))
+   - Please acknowledge the use of CSC resources in your publications ([CSC Docs: CSC Acknowledgement](https://docs.csc.fi/support/faq/how-to-cite-csc/)); many tools pages also provide a copyable acknowledgement examples (see for example [CSC Docs: QGIS Acknowledgement](https://docs.csc.fi/apps/qgis/#acknowledgement))
    - Please also inform us about your work by adding your publications to the resource application!
-- Academic usage is one of the [free-of-use cases](https://research.csc.fi/pricing)
+- Academic usage is one of the [free-of-charge use cases](https://research.csc.fi/pricing)
 - You can estimate [usage with the online billing calculator](https://research.csc.fi/billing-and-monitoring#buc) 
    - The calculator can also be used to estimate the value of the resources
 
