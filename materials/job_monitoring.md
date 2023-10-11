@@ -1,6 +1,6 @@
 # Job monitoring
 
-By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from SLURM, your tool or package) are written to a file `slurm-jobid.out` respectively.
+By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from SLURM, your tool or package) are written to files `slurm-jobid.out` and `slurm-jobid.err` respectively. The file names can be changed from batch job script.
 
 You can check the status of your job and follow its progress with the `squeue --me` command.
 Resource usage while the job runs, can be queried with `seff jobid` (note that `seff` output can only be trusted after a job has finished).
