@@ -26,22 +26,21 @@ Table of contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Practicalities
+   :caption: Welcome
 
    materials/prerequisites.md
-   materials/terminal.md
    materials/practicalities.md
    materials/cheatsheet.md
+   materials/terminal.md
 
 .. toctree::
    :maxdepth: 2
    :caption: CSC - IT Center for Science
 
    materials/csc.md
+   materials/examples.md
    materials/csc_services.md
    materials/account_project.md
-   materials/support.md 
-   materials/examples.md
 
 .. toctree::
    :maxdepth: 2
@@ -96,5 +95,6 @@ Table of contents
    :maxdepth: 2
    :caption: Wrap-up
   
+   materials/support.md
    materials/wrapup.md
    materials/where_to_go.md
