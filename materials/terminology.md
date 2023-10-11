@@ -11,23 +11,17 @@ This also means that a supercomputer must exist in a specific, fixed location: n
 
 Typical parts of a supercomputer:
 
-**CPUs** (central processing unit) are a computer’s processors for actually running programs and calculations. 
+* **CPUs** (central processing unit) are a computer’s processors for actually running programs and calculations. 
+* **GPU** (graphical processing unit) does certain linear algebra operations extremely efficiently, such as those encountered when processing computer graphics. Widely used also for speeding up model training in deep learning.
+* Both CPUs and GPUs contain many **cores** plus shared memory.
+* Information about a current task is stored in the computer’s **memory**. 
+* **Disk** refers to all storage that can be accessed like a file system. This is generally storage that can hold data permanently, i.e. data is still there even if the computer has been restarted. While this storage can be local (a hard drive installed inside of it), it is more common for nodes to connect to a shared, remote fileserver or cluster of servers. 
 
-**GPU** (graphical processing unit) does certain linear algebra operations extremely efficiently, such as those encountered when processing computer graphics. Widely used also for speeding up model training in deep learning.
-
-Both CPUs and GPUs contain many **cores** plus shared memory.
-
-Information about a current task is stored in the computer’s **memory**. 
-
-**Disk** refers to all storage that can be accessed like a file system. This is generally storage that can hold data permanently, i.e. data is still there even if the computer has been restarted. While this storage can be local (a hard drive installed inside of it), it is more common for nodes to connect to a shared, remote fileserver or cluster of servers. 
-
-
-
-Adapted from [ODU Research Computing Wiki](https://wiki.hpc.odu.edu/) and [NRIS](https://training.pages.sigma2.no).
+Text adapted from [ODU Research Computing Wiki](https://wiki.hpc.odu.edu/) and [NRIS](https://training.pages.sigma2.no).
 
 
 :::{admonition} Difference between a supercomputer and the cloud
-:class: seealso, dropdown
+:class: seealso
 
 
   * All computers involved are located in the same location (e.g. in the same room)
