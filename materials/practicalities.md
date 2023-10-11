@@ -10,7 +10,7 @@ All hands-on activities of this course can be carried out with [CSC's supercompu
 
 For using Puhti, a [CSC account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) is needed.
 
-You will also need to have access to a CSC project. For the course version, we will use a course project provided by CSC which you got access to by providing your username to us through the pre course survey. If you haven't done so, please share your CSC username in the collaborative document. The course project will also give you access to a resource reservation.
+You will also need to have access to a CSC project. For the course version, we will use a course project (`project_2008648`) provided by CSC which you got access to by providing your username to us through the pre course survey. If you haven't done so, please share your CSC username in the collaborative document. The course project will also give you access to a resource reservation (on Thursday: `geocomputing_thu` , on Friday: `geocomputing_fri`).
 
 ## Course format
 

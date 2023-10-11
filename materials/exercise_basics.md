@@ -44,8 +44,9 @@ Let's reserve 10 minutes.
 On the **login node**: Start an interactive job with `srun`, e.g.:
 
 ```bash
-srun  --time=00:10:00 --pty --account=project_200xxxx --partition=interactive bash
+srun  --time=00:10:00 --pty --account=project_200xxxx --partition=interactive  bash      ##replace xxxx with your project number; you can also add --reservation=geocomputing_thu here for the course (not available at other times), change partition to small then
 ```
+
 **or** on Puhti you can also use `sinteractive` wrapper to start an interactive session from the **login node**, which simplifies the call and asks you for the resources step by step: 
 
 ```bash
@@ -161,7 +162,7 @@ sbatch my_serial.bash
 squeue --me
 ```
 
-5. Once the job is done, check how much of the resources have been used with `seff <jobid>`.
+5. Once the job is done, check how much of the resources have been used with `seff jobid` (replace jobid with the number that was displayed after you ran sbatch command).
 
 :::{admonition} Additional exercises
 :class: tip
@@ -176,7 +177,7 @@ squeue --me
 :class: dropdown
 
 1. `slurm-jobid.out` in the directory from where you submitted the batch job. You can also change that location by specifying it in your batch job script with `#SBATCH --output=/your/path/slurm-%j.out`.
-2. Add `#SBATCH --job-name=<myname>` to the resource request in the top of your sbatch script.
+2. Add `#SBATCH --job-name=myname` to the resource request in the top of your sbatch script, to rename the job to myname.
 3. After the job finished, check the log file with `cat slurm-<jobid>.out`. You should see an an error in the end `slurmstepd: error: *** JOB xxx ON xxx CANCELLED AT xDATE-TIMEx DUE TO TIME LIMIT ***`. This means that our job was killed for exceeding the amount of resources requested. Although this appears harsh, this is actually a feature. Strict adherence to resource requests allows the scheduler to find the best possible place for your jobs. It also ensures the fair share of use of the computing resources.
 4. Since gdalinfo is quite a fast command to run, you will only need to change the script part of your sbatch script, the resources request can stay the same. First we will need to make `gdal` available within the job with `module load geoconda`, then we can run the `gdalinfo` command. After the job is done, you can find the information again in the `slurm-jobid.out` file. 
 
@@ -193,6 +194,7 @@ gdalinfo /appl/data/geo/luke/forest_wind_damage_sensitivity/2017/windmap2017_int
 ```
 
 :::
+
 
 :::{admonition} Key points
 :class: important
