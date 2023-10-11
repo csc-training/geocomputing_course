@@ -91,7 +91,7 @@ In this course we will focus on **embarrassingly/naturally/delightfully parallel
 :::{admonition} Maximum job limits
 :class: warning
 
-Submitting an array job of 100 members counts the same as 100 individual jobs from the batch queue system's perspective. The maximum number of jobs that each user can submit per month should be kept below one thousand. 
+Submitting an array job of 100 members counts the same as 100 individual jobs from the batch queue system's perspective. In Puhti, one can submit/run a maximum of 400/200 jobs at the same time (except for `interactive`, `test` and `gputest`, where the limits are  one or two. The maximum number of jobs that each user can submit per month should be kept below one thousand. 
 
 :::
 
