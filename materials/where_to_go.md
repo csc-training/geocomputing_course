@@ -10,7 +10,7 @@ Computing course project available until 20.10.23
 
 ## Connecting to the supercomputer via SSH
 
-We have accessed the supercomputer via the webinterface in order to not overwhelm you with setups before the course. However, this way may not always be the most convenient. Direct SSH connection likely works better.
+We have accessed the supercomputer via the webinterface in order to not overwhelm you with setups before the course. However, this way may not always be the most convenient. You can also directly connect your computer to the supercomputer via SSH.
 
 :::{admonition} Connecting with SSH clients
 :class: seealso, dropdown
