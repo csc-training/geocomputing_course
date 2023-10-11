@@ -14,7 +14,7 @@ The terms terminal, command line and shell are often used interchangably, even t
 :::{admonition} Some terminal magic
 :class: tip
 
-Did you every want to count all the files in a directory? Or lines in a file? Apart from opening the file in an editor, turning on line numbers or counting them manually you can also use a neat little command line tool called `wc`.
+Did you ever want to count all the files in a directory? Or lines in a file? Apart from opening the file in an editor, turning on line numbers or counting them manually you can also use a neat little command line tool called `wc`.
 
 Check out the documentation for `wc` and see if you can find out how to 
 1. Count the number of lines/characters of file `/appl/data/geo/syke/natura/Readme_natura.txt`.
