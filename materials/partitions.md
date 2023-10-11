@@ -1,6 +1,6 @@
 # Partitions
 
-A **partition** is a set of compute nodes, grouped logically. Resource limitations for a job are defined by the partition (or queue) the job is submitted to. The limitations affect the **maximum run time, the amount of memory, and the number of available CPU/GPU cores** (which are called CPUs in Slurm). In addition, partitions may also define default resources that are automatically allocated for jobs, if nothing has been specified.
+A **partition** is a set of compute nodes, grouped logically. Resource limitations for a job are defined by the partition (or queue) the job is submitted to. The limitations affect the **maximum run time, the amount of memory, and the number of available CPU/GPU cores**. In addition, partitions may also define default resources that are automatically allocated for jobs, if nothing has been specified.
 
 **Jobs should be submitted to the partition that best matches the required resources.** That way, as few resources as possible are blocked and another user with a higher demand in memory can run a job earlier. Of course, other considerations may also influence the choice of a partition. 
 
