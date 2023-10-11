@@ -2,11 +2,10 @@
 
 By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from SLURM, your tool or package) are written to the file `slurm-jobid.out`. 
 
-You can check the status of your job and follow its progress with the `squeue --me` command.
+You can check the status of your job and follow its progress with the `sacct` or `squeue --me` command (see also [Slurm documentation of job code states](https://slurm.schedmd.com/squeue.html#SECTION_JOB-STATE-CODES))
 Resource usage while the job runs, can be queried with `seff jobid` (note that `seff` output can only be trusted after a job has finished).
 
 If you would like to cancel a job after job submission or during runtime, you can do so with `scancel jobid`.
-
 
 ## Resource monitoring
 
@@ -16,7 +15,7 @@ If you would like to cancel a job after job submission or during runtime, you ca
 - [GPU efficiency](https://docs.csc.fi/computing/usage-policy/#gpu-nodes)
 - [Scaling of a job over several cores and nodes](https://docs.csc.fi/computing/running/performance-checklist/#perform-a-scaling-test)
     - Parallel jobs must always benefit from all requested resources
-    - When you double the number of cores, the job should run _at least_ 1.5x faster
+    - **When you double the number of cores, the job should run _at least_ 1.5x faster**
 
 :::{admonition} Troubleshooting resource usage
 :class: seealso
