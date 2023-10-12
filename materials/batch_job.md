@@ -1,4 +1,4 @@
-if# Batch jobs
+# Batch jobs
 
 On our own computer, we are used to start a program (job) by clicking on an icon and the program starts instantly. If we start many programs/jobs at the same time, we occasionally run into problems like running out of memory _etc_.  
 In an supercomputing environment, the computer is shared among hundreds of other users who all have different resource needs.
