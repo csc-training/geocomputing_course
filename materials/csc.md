@@ -28,6 +28,7 @@ Geoportti Research Infrastructure (RI) is a shared service for researchers, teac
 The Location Innovation Hub (LIH) is a centre of excellence in location information coordinated by the Finnish Geospatial Research Institute. Our services are produced in conjunction with a partner network. We help companies to grow their business with location information. We also serve the public sector.
 
 * [Location Innovation Hub](https://locationinnovationhub.eu)
+* Consulting to companies and other organizations how to use GIS, trainings, test environments
 * At CSC: introducing LUMI to geospatial companies
 
 ![](./images/lih.png)
