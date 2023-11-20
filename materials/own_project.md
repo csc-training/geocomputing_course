@@ -15,7 +15,7 @@ When you start a new project and don't yet know how you are going to approach th
 - When you've found the software you want to use, check if it is available at CSC as a [pre-installed optimized version](https://docs.csc.fi/apps/)
    - If it is, check if it has an example batch script 
    - Otherwise, use a [general batch job script template](https://docs.csc.fi/computing/running/example-job-scripts-puhti/)
-- If it is not, check if you can install it yourself using [Tykky](https://docs.csc.fi/computing/containers/tykky/) or ask <servicedesk@csc.fi> for help.
+- If it is not, check if you can [install it yourself](installations.md) or ask <servicedesk@csc.fi> for help.
 - Start simple and gradually use more complex approaches if needed
    - Try first running interactively (**not** on a login node) to check how the tool performs on actual input data
    - Use the `top` command to get rough estimate of memory use, _etc_.
@@ -26,7 +26,7 @@ When you start a new project and don't yet know how you are going to approach th
    - You can use the `--partition=test` to check that your batch job script is correct and everything is interpreted correctly
       - Limits : 15 min, 2 nodes
       - Job turnaround usually very fast even if machine is "full"
-      - Can be useful to spot typos, missing files, _etc_. before submitting a job that will idle in the queue
+      - Can be useful to spot typos, missing files, _etc_. before submitting a job that migh stay waiting in the queue
 - How many cores and memory to allocate?
    - This depends on many things, so you have to try it out
    - Check the output of the `seff` command to ensure that CPU and memory efficiencies are as high as possible
