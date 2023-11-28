@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Geocomputing course'
-copyright = '2023, CSC - IT center for Science'
+#copyright = '2023, CSC - IT center for Science'
 author = 'CSC - IT center for Science'
 release = '0.1'
 
