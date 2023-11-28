@@ -3,11 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: ./materials/images/banner_all_organizers.png
+.. image:: ./materials/images/banner_all_organizers2.png
     :class: dark-light
 
 Welcome to Geocomputing on the supercomputer course!
-====================================
+=====================================================
 
 * Are you working with geospatial data and running close to the limits of your own computing environment? 
 * Are you curious on how you can take your geospatial data processing and analysis to the next level? 
