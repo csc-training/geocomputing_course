@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: ./materials/images/banner.png
+.. image:: ./materials/images/banner_all_organizers.png
     :class: dark-light
 
 Welcome to CSC Geocomputing course!

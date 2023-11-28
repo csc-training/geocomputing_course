@@ -1,4 +1,6 @@
-# [CSC - IT center for Science](https://www.csc.fi/)
+# Organizers of this course
+
+## [CSC - IT center for Science](https://www.csc.fi/)
 
 * Non-profit company producing IT services for research and higher education
 * Owned by ministry of education and culture (70%) and higher education institutions (30%)
