@@ -30,10 +30,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # setting title in left panel (default is <projectname> documentation <release>)
-#html_title = "CSC Geocomputing course"
+#html_title = "Geocomputing course"
 # setting upper left logo
-html_logo = "materials/images/bg.png"
-html_favicon = "materials/images/csc.png"
+#html_logo = "materials/images/bg.png"
+#html_favicon = "materials/images/csc.png"
 
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
