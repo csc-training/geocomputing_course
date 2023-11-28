@@ -6,7 +6,7 @@
 .. image:: ./materials/images/banner_all_organizers.png
     :class: dark-light
 
-Welcome to CSC Geocomputing course!
+Welcome to Geocomputing on the supercomputer course!
 ====================================
 
 * Are you working with geospatial data and running close to the limits of your own computing environment? 
