@@ -36,7 +36,7 @@ Table of contents
    :maxdepth: 2
    :caption: Background info
 
-   materials/organizers.md
+   materials/orga.md
    materials/examples.md
    materials/csc_services.md
    materials/account_project.md
