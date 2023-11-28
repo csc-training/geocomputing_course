@@ -34,9 +34,9 @@ Table of contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: CSC - IT Center for Science
+   :caption: Background info
 
-   materials/csc.md
+   materials/organizers.md
    materials/examples.md
    materials/csc_services.md
    materials/account_project.md
