@@ -127,3 +127,4 @@ gdalinfo /xx/data.tif
 * [CSC Docs: Applications -> geosciences](https://docs.csc.fi/apps/by_discipline/#geosciences)
 * [LUMI Docs: Software pages](https://docs.lumi-supercomputer.eu/software/)
 * [CSC Research pages: GIS software](https://research.csc.fi/gis-software)
+* [Geocomputing examples](https://github.com/csc-training/geocomputing)
