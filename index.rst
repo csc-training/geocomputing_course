@@ -3,11 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: ./materials/images/banner.png
+.. image:: ./materials/images/banner_all_organizers2.png
     :class: dark-light
 
-Welcome to CSC Geocomputing course!
-====================================
+Welcome to Geocomputing with Puhti supercomputer course!
+=========================================================
 
 * Are you working with geospatial data and running close to the limits of your own computing environment? 
 * Are you curious on how you can take your geospatial data processing and analysis to the next level? 
@@ -31,13 +31,13 @@ Table of contents
    materials/prerequisites.md
    materials/practicalities.md
    materials/cheatsheet.md
+   materials/orga.md
+   materials/examples.md
 
 .. toctree::
    :maxdepth: 2
    :caption: CSC - IT Center for Science
 
-   materials/csc.md
-   materials/examples.md
    materials/csc_services.md
    materials/account_project.md
 
