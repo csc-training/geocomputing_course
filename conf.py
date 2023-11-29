@@ -8,7 +8,7 @@
 
 project = 'Geocomputing course'
 #copyright = '2023, CSC - IT center for Science'
-#author = 'CSC - IT center for Science'
+author = 'CSC - IT center for Science. This page is available under the Creative Commons 4.0 Share-Alike License.'
 #release = '0.1'
 
 # -- General configuration ---------------------------------------------------
@@ -30,10 +30,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # setting title in left panel (default is <projectname> documentation <release>)
-#html_title = "Geocomputing course"
+#html_title = "Geocomputing with Puhti supercomputer course"
 # setting upper left logo
 html_logo = "materials/images/course_name.png"
-html_favicon = "materials/images/course_name.png"
+html_favicon = "materials/images/csc.png"
 
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']

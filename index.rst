@@ -6,7 +6,7 @@
 .. image:: ./materials/images/banner_all_organizers2.png
     :class: dark-light
 
-Welcome to Geocomputing on the supercomputer course!
+Welcome to Geocomputing with Puhti supercomputer course!
 =====================================================
 
 * Are you working with geospatial data and running close to the limits of your own computing environment? 
@@ -31,13 +31,12 @@ Table of contents
    materials/prerequisites.md
    materials/practicalities.md
    materials/cheatsheet.md
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Background info
-
    materials/orga.md
    materials/examples.md
+.. toctree::
+   :maxdepth: 2
+   :caption: CSC - IT Center for Science
+
    materials/csc_services.md
    materials/account_project.md
 
