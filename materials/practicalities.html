@@ -1,0 +1,637 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Practicalities &#8212; Geocomputing course  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'materials/practicalities';</script>
+    <link rel="icon" href="../_static/csc.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CSC and Unix cheatsheet" href="cheatsheet.html" />
+    <link rel="prev" title="Prerequisites" href="prerequisites.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Psst, remember the <a href="https://csc-training.github.io/geocomputing_course/materials/cheatsheet.html">cheatsheet</a>!</div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/course_name_logos.png" class="logo__image only-light" alt="Geocomputing course  documentation - Home"/>
+    <script>document.write(`<img src="../_static/course_name_logos.png" class="logo__image only-dark" alt="Geocomputing course  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Practicalities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">CSC and Unix cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orga.html">Organizers of this course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Research usecases for Puhti</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">CSC - IT Center for Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="csc_services.html">CSC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_project.html">CSC accounts and projects</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supercomputer - intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="supercomputing.html">Supercomputers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data_at_csc.html">Spatial data in Puhti</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">GIS tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webinterface.html">Puhti web interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_webinterface.html">Exercise - Puhti web interface</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Terminology and concepts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="terminology.html">Fundamentals and Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer_setup.html">Supercomputer setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="partitions.html">Partitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job_types.html">Job types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="disk_areas.html">Disk areas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fair_share.html">Fair share of use on multi-user computing platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="batch_job.html">Batch jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_basics.html">Exercise - basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Running jobs efficiently</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="job_monitoring.html">Job monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="htc.html">Parallel processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_gdal.html">Exercise: GDAL</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Own environments and code</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="exercise_python.html">Exercise: Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_r.html">Exercise: R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installations.html">Installing own tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="own_project.html">Own project hints</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="moving_data.html">Moving data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stac.html">STAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="allas.html">Allas – object storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_allas.html">Allas exercise</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Wrap-up</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="support.html">CSC support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrapup.html">What we hope you have learned</a></li>
+<li class="toctree-l1"><a class="reference internal" href="where_to_go.html">Where to go from here</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/csc-training/geocomputing_course" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/materials/practicalities.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Practicalities</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-materials">New materials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csc-account">CSC account</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-format">Course format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-participant-statistics">Course participant statistics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#familiarity">Familiarity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-use">Computer use</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">Expectations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#we-will-learn-about">We will learn about …</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#we-will-mention">We will mention …</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#not-part-of-this-course">Not part of this course</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-or-r">Python or R</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-overload">Information overload</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-point">Starting point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-of-conduct">Code of Conduct</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="practicalities">
+<h1>Practicalities<a class="headerlink" href="#practicalities" title="Permalink to this heading">#</a></h1>
+<section id="new-materials">
+<h2>New materials<a class="headerlink" href="#new-materials" title="Permalink to this heading">#</a></h2>
+<p>This is a new way for us to give this course, please excuse any small inconsistencies etc and give us feedback on how this works for you.</p>
+</section>
+<section id="csc-account">
+<h2>CSC account<a class="headerlink" href="#csc-account" title="Permalink to this heading">#</a></h2>
+<p>All hands-on activities of this course can be carried out with <a class="reference external" href="https://puhti.csc.fi">CSC’s supercomputer Puhti’s webinterface</a>, which you can access via your favorite webbrowser. For this, you do not need any additional software installed on your own computer.</p>
+<p>For using Puhti, a <a class="reference external" href="https://docs.csc.fi/accounts/how-to-create-new-user-account/">CSC account</a> is needed.</p>
+<p>You will also need to have access to a CSC project. For the course version, we will use a course project (<code class="docutils literal notranslate"><span class="pre">project_2008648</span></code>) provided by CSC which you got access to by providing your username to us through the pre course survey. If you haven’t done so, please share your CSC username in the collaborative document. The course project will also give you access to a resource reservation (on Thursday: <code class="docutils literal notranslate"><span class="pre">geocomputing_thu</span></code> , on Friday: <code class="docutils literal notranslate"><span class="pre">geocomputing_fri</span></code>).</p>
+<p>Let’s all check now at <a class="reference external" href="https://my.csc.fi">https://my.csc.fi</a> that you see the course project, and have accepted the terms and conditions of Puhti and Allas. We will need this later.</p>
+</section>
+<section id="course-format">
+<h2>Course format<a class="headerlink" href="#course-format" title="Permalink to this heading">#</a></h2>
+<p>Hybrid course with lecture and hands-on exercises. It is recommended for online participants to have an extra screen available, to be able to follow the meeting, as well as the lecture materials and the Puhti webinterface. All questions should go to the collaborative document. This ensures fair chance for everyone to ask questions, and also to archive Q&amp;A for everyone. During the exercise sessions we will in addition make use of red/green sticky notes on site and the “raise hand” feature in Zoom, if you run into trouble that needs immediate support.</p>
+</section>
+<section id="course-participant-statistics">
+<h2>Course participant statistics<a class="headerlink" href="#course-participant-statistics" title="Permalink to this heading">#</a></h2>
+<section id="familiarity">
+<h3>Familiarity<a class="headerlink" href="#familiarity" title="Permalink to this heading">#</a></h3>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/familiarity.png"><img alt="Familiarity of course participants with different topics related to this course" src="../_images/familiarity.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-text">Familiarity of course participants 2023 with different topics related to this course</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="computer-use">
+<h3>Computer use<a class="headerlink" href="#computer-use" title="Permalink to this heading">#</a></h3>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/computer_usage.png"><img alt="Computer usage of course participants" src="../_images/computer_usage.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-text">Computer usage of course participants 2023</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="expectations">
+<h3>Expectations<a class="headerlink" href="#expectations" title="Permalink to this heading">#</a></h3>
+<p>Course participant of 2023 answers summarized and categorized:</p>
+<section id="we-will-learn-about">
+<h4>We will learn about …<a class="headerlink" href="#we-will-learn-about" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>All of the topics: Using Raster data, Vector data, Point cloud data,Geoportti resources, and Spatio Temporal Access Catalog (STAC) training on : CSC Puhti supercomputer, CSC Mahti supercomputer, LUMI supercomputer, CSC Pouta cloud</p></li>
+<li><p>Getting an insight into the supercomputing environment to have an idea how my research project could benefit</p></li>
+<li><p>Big raster/vector data GIS-analytics / Working with Spatial Big Data</p></li>
+<li><p>Efficient R scripting in CSC Puhti for geospatial data</p></li>
+<li><p>CSC general stuff, what things are there, how to use</p></li>
+<li><p>GIS/spatial possibilities with csc computers</p></li>
+<li><p>To improve my knowledge of spatial data processing</p></li>
+<li><p>Parallelization, high throughput</p></li>
+<li><p>Use of QGIS and other pre-installed GIS-software via the Puhti webinterface</p></li>
+<li><p>I am most interested to learn about how to flexibly customize the bash (*.sh) script for running array jobs and parallel computing in R through Puhti’s compute node shell.</p></li>
+<li><p>Working with supercomputers / Enchance my skills about supercomputer</p></li>
+<li><p>Working with Allas</p></li>
+<li><p>Adapting own scripts to the supercomputer</p></li>
+<li><p>How to run own software in CSC supercomputer.</p></li>
+</ul>
+</section>
+<section id="we-will-mention">
+<h4>We will mention …<a class="headerlink" href="#we-will-mention" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Using Geoportti and Paituli more efficiently</p></li>
+<li><p>Puhti configuration</p></li>
+<li><p>Using virtual rasters</p></li>
+<li><p>Setting up processing chains and running them on CSC services</p></li>
+<li><p>Learn how to use more computer tools and try to find its connction with geography.</p></li>
+<li><p>Processing point cloud data in Supercomputers</p></li>
+</ul>
+</section>
+<section id="not-part-of-this-course">
+<h4>Not part of this course<a class="headerlink" href="#not-part-of-this-course" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>I want to learn about using Vector data such as different raster layer population density, rivers, and elevation and make this data resolution and projection comparable with the Climate model data sets.</p></li>
+<li><p>spatial econometrics</p></li>
+<li><p>How to use CSC for running deep learning for big raster data?</p></li>
+<li><p>Data Visualization</p></li>
+<li><p>Introduction and working with Taito. (Taito was the predecessor of Puhti :) )</p></li>
+</ul>
+</section>
+</section>
+<section id="python-or-r">
+<h3>Python or R<a class="headerlink" href="#python-or-r" title="Permalink to this heading">#</a></h3>
+<p>75% of course participants (of 2023 edition) are more interested in learning how to use Python on supercomputer than R.</p>
+</section>
+</section>
+<section id="information-overload">
+<h2>Information overload<a class="headerlink" href="#information-overload" title="Permalink to this heading">#</a></h2>
+<p>Depending on how you work with a computer, this course may bring you a lot of new information at once. Please do not get discouraged. This material will be available also after the course for your review. The best way to understand the concepts better is to start implementing your own work and ask for help when you have questions.</p>
+</section>
+<section id="starting-point">
+<h2>Starting point<a class="headerlink" href="#starting-point" title="Permalink to this heading">#</a></h2>
+<p>There is much more to a supercomputer and the proper use of its resources than this course covers. If this got you interested, please check out our <a class="reference external" href="https://www.csc.fi/en/training#training-calendar">CSC training calendar</a> for more advanced courses.</p>
+</section>
+<section id="code-of-conduct">
+<h2>Code of Conduct<a class="headerlink" href="#code-of-conduct" title="Permalink to this heading">#</a></h2>
+<p>We strive to follow the <a class="reference external" href="https://www.contributor-covenant.org/">Contributor Covenant Code of Conduct</a> to foster an inclusive and welcoming environment for everyone.</p>
+<p>In short:</p>
+<ul class="simple">
+<li><p>Use welcoming and inclusive language</p></li>
+<li><p>Be respectful of different viewpoints and experiences</p></li>
+<li><p>Gracefully accept constructive criticism</p></li>
+<li><p>Focus on what is best for the community</p></li>
+<li><p>Show courtesy and respect towards other community members</p></li>
+<li><p>Contact details to report CoC violations: katri.tegel&#64;csc.fi</p></li>
+</ul>
+<p>Furthermore, as this is a hands-on, interactive workshop:</p>
+<ul class="simple">
+<li><p>Be kind to each other and help each other as best you can.</p></li>
+<li><p>If you can’t help someone or there is some problem, let someone know.</p></li>
+</ul>
+<p>Finally, if you notice something that prevents you from learning as well as you can, let us know and don’t suffer silently, even the “little things”:</p>
+<ul class="simple">
+<li><p>Volume too low?</p></li>
+<li><p>Font size too small?</p></li>
+<li><p>Generally confusing instructor?</p></li>
+<li><p>Not enough breaks?</p></li>
+</ul>
+<p>This CoC text is provided by <a class="reference external" href="https://enccs.github.io/instructor-training/">ENCCS instructor training</a>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="prerequisites.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Prerequisites</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cheatsheet.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CSC and Unix cheatsheet</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#new-materials">New materials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csc-account">CSC account</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-format">Course format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-participant-statistics">Course participant statistics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#familiarity">Familiarity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-use">Computer use</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">Expectations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#we-will-learn-about">We will learn about …</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#we-will-mention">We will mention …</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#not-part-of-this-course">Not part of this course</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-or-r">Python or R</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-overload">Information overload</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-point">Starting point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-of-conduct">Code of Conduct</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CSC - IT center for Science. This page is available under the Creative Commons 4.0 Share-Alike License.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
