@@ -3,8 +3,6 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: ./materials/images/banner_all_organizers2.png
-    :class: dark-light
 
 Welcome to Geocomputing with Puhti supercomputer course!
 =========================================================
@@ -20,6 +18,8 @@ Welcome to Geocomputing with Puhti supercomputer course!
 Most of the course content also applies to LUMI supercomputer, which is available for academic users and companies. 
 
 The course is meant both for academic researchers planning to use Puhti supercomputer and for data analysts from private companies planning to use LUMI.
+
+This course is organized by CSC - IT Center for Science and funded by `Geoportti Research Infrastructure <https://www.geoportti.fi/>`_ and the `Location Innvation Hub <https://locationinnovationhub.eu/en/home/>`_.
 
 Table of contents
 ###################

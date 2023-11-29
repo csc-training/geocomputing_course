@@ -32,7 +32,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # setting title in left panel (default is <projectname> documentation <release>)
 #html_title = "Geocomputing with Puhti supercomputer course"
 # setting upper left logo
-html_logo = "materials/images/name_orga2.png"
+
+html_logo = "materials/images/course_name_logos.png"
 html_favicon = "materials/images/csc.png"
 
 html_theme = 'sphinx_book_theme'
