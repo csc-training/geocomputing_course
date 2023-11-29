@@ -7,7 +7,7 @@
     :class: dark-light
 
 Welcome to Geocomputing with Puhti supercomputer course!
-=====================================================
+=========================================================
 
 * Are you working with geospatial data and running close to the limits of your own computing environment? 
 * Are you curious on how you can take your geospatial data processing and analysis to the next level? 
@@ -33,6 +33,7 @@ Table of contents
    materials/cheatsheet.md
    materials/orga.md
    materials/examples.md
+
 .. toctree::
    :maxdepth: 2
    :caption: CSC - IT Center for Science
