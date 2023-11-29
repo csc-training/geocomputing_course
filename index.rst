@@ -3,8 +3,6 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: ./materials/images/banner_name.png
-    :class: dark-light
 
 Welcome to Geocomputing with Puhti supercomputer course!
 =========================================================
