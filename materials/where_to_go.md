@@ -1,37 +1,8 @@
 # Where to go from here
 
-:::{admonition} Keep practicing!
-:class: tip
-
-Computing course project available until 20.10.23
-
-:::
-
-
-## Connecting to the supercomputer via SSH
-
-We have accessed the supercomputer via the webinterface in order to not overwhelm you with setups before the course. However, this way may not always be the most convenient. You can also directly connect your computer to the supercomputer via SSH.
-
-:::{admonition} Connecting with SSH clients
-:class: seealso, dropdown
-
-- SSH clients give command-line access to a supercomputer or any other Linux server.
-- Basic SSH connection will not allow displaying remote graphics, but it is possible to set up with extra settings.
-- SSH clients:
-   - Mac and Linux have Terminal for SSH connections.
-   - In Windows:
-      - `Command Prompt` or `Powershell` are always avaialbe and can be used for basic connections.
-      - Special tools like [PuTTY](https://www.putty.org/) or [MobaXterm](https://mobaxterm.mobatek.net/) provide more options, inc possibility to save settings, but need installation.
-- To avoid typing your password every time again and to make your connection more secure, you can [set up SSH-keys](https://docs.csc.fi/computing/connecting/#setting-up-ssh-keys).
-- [CSC Docs: Connecting to CSC supercomputers](https://docs.csc.fi/computing/connecting/)
-- [LUMI Docs: Get started](https://docs.lumi-supercomputer.eu/firststeps/).
-- 
-
-:::
-
 ## Next steps
 
-* (Create or get access to a CSC project)
+* (Create or get access to a CSC project with your CSC user account)
 * Choose suitable service for your task
   * Contact `servicedesk@csc.fi` if unsure
 * Learn about the service
@@ -66,14 +37,34 @@ If you used any of our resources for your research, please acknowledge CSC and G
 
 Find all materials of previous seminars on our [CSC research pages](https://research.csc.fi/geocomputing-seminars).
 
-Next CSC "geo" seminar will be in beginning of 2024: "Machine Learning with spatial data".
+You can find all upcoming seminars in our [training calendar](https://www.csc.fi/en/training#training-calendar).
 
 ## Get to know weekly user support session
 
 Come to chat with our specialists about anything related to CSC resources! 
-Special invite to you for 18.10 at 14, but we keep these sessions every week.
+Every Wednesday at 14 in Zoom.
 Sometimes with short talks about interesting topics. 
 
 Details on the event webpage: https://ssl.eventilla.com/usersupportcoffee
 
 
+## Extra: Connecting to the supercomputer via SSH
+
+We have accessed the supercomputer via the webinterface in order to not overwhelm you with setups before the course. However, this way may not always be the most convenient. You can also directly connect your computer to the supercomputer via SSH.
+
+:::{admonition} Connecting with SSH clients
+:class: seealso, dropdown
+
+- SSH clients give command-line access to a supercomputer or any other Linux server.
+- Basic SSH connection will not allow displaying remote graphics, but it is possible to set up with extra settings.
+- SSH clients:
+   - Mac and Linux have Terminal for SSH connections.
+   - In Windows:
+      - `Command Prompt` or `Powershell` are always avaialbe and can be used for basic connections.
+      - Special tools like [PuTTY](https://www.putty.org/) or [MobaXterm](https://mobaxterm.mobatek.net/) provide more options, inc possibility to save settings, but need installation.
+- To avoid typing your password every time again and to make your connection more secure, you can [set up SSH-keys](https://docs.csc.fi/computing/connecting/#setting-up-ssh-keys).
+- [CSC Docs: Connecting to CSC supercomputers](https://docs.csc.fi/computing/connecting/)
+- [LUMI Docs: Get started](https://docs.lumi-supercomputer.eu/firststeps/).
+- 
+
+:::
