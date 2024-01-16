@@ -88,3 +88,18 @@ Instead of developing code on your local machine (e.g. laptop) and moving it to 
 
 :::
 
+## Data transfer recommendations
+
+### Moving data from own computing environment to CSC supercomputers
+
+* *Supercomputer webinterface is easiest option* (no installation needed), but only for *small amounts of data* (and files smaller 10 Gb), 
+* *[FileZilla](https://filezilla-project.org/) is best general option with Graphical User Interface* for all platforms 
+* *[Rsync](https://linux.die.net/man/1/rsync) is best option for commandline tool*:  can handle lots of data, fast, can resume download when interrupted and warns about overwriting, available by default on Linux and OSX, also possible to install to Windows
+* Valtori organizations: [*WinSCP*](https://winscp.net/eng/index.php) should be available for self-installation from Valtori software center, but is slower than other options.
+
+### Moving data to CSC object storage Allas
+
+* *General recommendation: [rclone](https://rclone.org/)* command line tool, also available in CSC computing environments
+* *[CyberDuck](https://cyberduck.io/) is best general option with Graphical User Interface* for all platforms, on Windows also S3Browser could be considered.
+* Valtori organizations: [*WinSCP*](https://winscp.net/eng/index.php) should be available for self-installation from Valtori software center, but very slow, consider moving data via CSC computing environment. 
+* [*cPouta Graphical User Interface*](https://pouta.csc.fi) is easy option to check Allas buckets' contents or to transfer single files, no installation needed.
