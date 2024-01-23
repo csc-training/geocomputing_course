@@ -12,7 +12,7 @@
 
 ### Graphical data transfer tools on local computer
 
-- For example: **FileZilla**,  **WinSCP** and **CyberDuck**
+- For example: **FileZilla**,  WinSCP and CyberDuck
 - For medium amounts of data, < 1 Tb.
 - Easy drag-and-drop for moving, but installation required.
 - WinSCP is slower than others.
@@ -37,7 +37,6 @@ scp /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_200xxxx/data_dir
 # One folder:
 scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_200xxxx/directory 
 ```
-
 
 #### rsync
 
