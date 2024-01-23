@@ -51,25 +51,25 @@ What it is NOT?
 ## Tools for Allas
 
 - **Web interfaces**:
-	- **cPouta**, soon also Puhti and Mahti web interface
+	- **cPouta, Mahti web interface**, soon also Puhti web interface 
   	- [cPouta web interface](https://pouta.csc.fi/dashboard) -> object store -> containers
-	- See what data is in Allas, upload/download of single files.
+	- cPouta web interface only to see what data is in Allas, upload/download of single files.
+ 	- [Mahti web interface](https://mahti.csc.fi) also for bigger amounts of data (based on rclone) 
 	- Log in with CSC username and password
 - **Graphical tools**:
-	- **S3 browser**, Cyberduck, WinSCP
+	- **Cyberduck, S3 browser** (only for Windows), WinSCP
 	- For medium amounts of data, < 1 Tb.
 	- Very easy, but installation required.
 	- WinSCP is slower than others. 
 - **Command line tools**:
-	- **s3cmd**, a-commands, rclone
+	- **s3cmd, rclone**, a-commands
 	- For any amount of data, practically required if data size > 1 Tb.
 - **For scripting**:
 	- Python: **boto3** library
 	- R: **aws3** library
 - For connecting, these require **S3 access key and secret key**
-	- Easiest to use Puhti for getting these
+	- Easiest to [use Puhti for getting these](https://docs.csc.fi/data/Allas/using_allas/s3_client/#configuring-s3-connection-in-supercomputers)
 - [CSC Docs: Allas clients](https://docs.csc.fi/data/Allas/) -> Allas clients
-
 
 ## Accessing data directly from object storage
 
