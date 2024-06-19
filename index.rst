@@ -35,8 +35,8 @@ Table of contents
    materials/practicalities.md
    materials/orga.md
    materials/csc_services.md
+   materials/account_project.md
    materials/examples.md
-
 
 .. toctree::
    :maxdepth: 2
@@ -44,40 +44,33 @@ Table of contents
    materials/supercomputing.md  
    materials/spatial_data_at_csc.md
    materials/software.md
+   materials/terminology.md
+   materials/supercomputer_setup.md
+   materials/disk_areas.md
    materials/webinterface.md
    materials/exercise_webinterface.md
 
 .. toctree::
    :maxdepth: 2
-   :caption: Terminology and concepts
+   :caption: Jobs
 
-   materials/terminology.md
-   materials/supercomputer_setup.md
    materials/partitions.md
    materials/job_types.md
-   materials/disk_areas.md
    materials/fair_share.md
    materials/batch_job.md
-   materials/terminal.md
-   materials/account_project.md
-   materials/exercise_basics.md
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Running jobs efficiently
-
    materials/job_monitoring.md
    materials/htc.md
+   materials/exercise_basics.md
    materials/exercise_gdal.md
+   materials/exercise_python.md
+   materials/exercise_r.md 
 
 .. toctree::
    :maxdepth: 2
    :caption: Own environments and code
-
-   materials/exercise_python.md
-   materials/exercise_r.md 
    materials/installations.md
    materials/own_project.md
+
 
 .. toctree::
    :maxdepth: 2
@@ -96,3 +89,4 @@ Table of contents
    materials/wrapup.md
    materials/where_to_go.md
    materials/cheatsheet.md
+   materials/terminal.md
