@@ -43,11 +43,11 @@ Table of contents
    :caption: Supercomputer - intro
 
    materials/supercomputing.md  
-   materials/spatial_data_at_csc.md
-   materials/software.md
    materials/terminology.md
    materials/supercomputer_setup.md
    materials/disk_areas.md
+   materials/spatial_data_at_csc.md
+   materials/software.md
    materials/webinterface.md
    materials/exercise_webinterface.md
 
