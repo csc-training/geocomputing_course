@@ -33,21 +33,14 @@ Table of contents
 
    materials/prerequisites.md
    materials/practicalities.md
-   materials/cheatsheet.md
    materials/orga.md
+   materials/csc_services.md
    materials/examples.md
 
-.. toctree::
-   :maxdepth: 2
-   :caption: CSC - IT Center for Science
-
-   materials/csc_services.md
-   materials/account_project.md
 
 .. toctree::
    :maxdepth: 2
    :caption: Supercomputer - intro
-
    materials/supercomputing.md  
    materials/spatial_data_at_csc.md
    materials/software.md
@@ -66,6 +59,7 @@ Table of contents
    materials/fair_share.md
    materials/batch_job.md
    materials/terminal.md
+   materials/account_project.md
    materials/exercise_basics.md
 
 .. toctree::
@@ -101,3 +95,4 @@ Table of contents
    materials/support.md
    materials/wrapup.md
    materials/where_to_go.md
+   materials/cheatsheet.md
