@@ -2,18 +2,34 @@
 
 ![](./images/puhti_overview.png)
 
+Typical physical parts of a supercomputer:
+* Login-nodes
+* Compute nodes
+* Storage
+* High-speed networks between these
 
-A supercomputer has a lot of **nodes** which have the same components as your laptop or desktop computer: CPUs (sometimes also called processors or cores), memory (or RAM), and disk space. However, the supercomputer has some additional/specialized components:
+## Login-nodes
+- Login nodes are used for moving data and scripts, script editing and for starting jobs.
+- When you login to CSC's supercomputers, you enter one of the login nodes of the computer
+- There is only a few login-nodes and they are shared by all users, so they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
+ 
+## Compute-nodes
+- The heavy computing should be done on compute-nodes. 
+- One compute node has similar components as your laptop: processors, memory and sometimes also local disk space.
+- Each node has **memory**, which is used for storing information about a current task.
+- Some nodes might have also **local disk space**. 
+- Compute nodes have 2 main types: 
+  * **CPU-nodes** have only CPU (central processing unit). One CPU-node includes 40 cores in Puhti and 128 in Mahti and LUMI.
+  * **GPU-nodes** have both GPU (graphical processing unit) and CPU. GPUs are widely used for deep learning.
+  * It depends on the used software, if it benefits from GPU or not. Most GIS-tools can not use GPUs.
+  * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, that it would be reasonable to use GPU-nodes.
+- While using compute nodes the compute resources have to be defined in advance, and specified if CPU, GPU or local is needed, how many cores or nodes and how much memory.
+- Specifics of [Puhti](https://docs.csc.fi/computing/systems-puhti/#nodes), [Mahti](https://docs.csc.fi/computing/systems-mahti/) and [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumic/) compute nodes.
 
-- When you want to execute a program on the supercomputer, it has to be boxed into an abstraction layer called **job**.
-- **Login nodes** are used to set up jobs (and to launch them)
-- Jobs are run on the **compute nodes**
-- A **batch job system (scheduler)** is used to run and manage the jobs
-  - On CSC supercomputers, we use Slurm
+## Storage
+- **Disk** refers to all storage that can be accessed like a file system. This is generally storage that can hold data permanently, i.e. data is still there even if the computer has been restarted.
 - CSC supercomputers use Lustre as the **parallel distributed file system**
 
-- When you login to CSC's supercomputers, you enter one of the login nodes of the computer
-    - These login nodes are shared by all users and they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
 
 :::{admonition} Login node etiquette
 :class: tip
