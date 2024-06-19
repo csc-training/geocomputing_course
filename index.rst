@@ -41,6 +41,7 @@ Table of contents
 .. toctree::
    :maxdepth: 2
    :caption: Supercomputer - intro
+
    materials/supercomputing.md  
    materials/spatial_data_at_csc.md
    materials/software.md
@@ -68,6 +69,7 @@ Table of contents
 .. toctree::
    :maxdepth: 2
    :caption: Own environments and code
+
    materials/installations.md
    materials/own_project.md
 
