@@ -43,10 +43,9 @@ Table of contents
    :caption: Supercomputer - intro
 
    materials/supercomputing.md  
-   materials/terminology.md
    materials/supercomputer_setup.md
-   materials/disk_areas.md
    materials/spatial_data_at_csc.md
+   materials/stac.md
    materials/software.md
    materials/webinterface.md
    materials/exercise_webinterface.md
@@ -79,7 +78,7 @@ Table of contents
    :caption: Data
 
    materials/moving_data.md   
-   materials/stac.md    
+   materials/data_tips.md    
    materials/allas.md  
    materials/exercise_allas.md 
 
