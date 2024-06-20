@@ -4,7 +4,7 @@
 
 Typical physical parts of a supercomputer:
 * Login-nodes
-* Compute nodes
+* Compute-nodes
 * Storage
 * High-speed networks between these
 
@@ -29,7 +29,6 @@ Typical physical parts of a supercomputer:
 - While using compute nodes the compute resources have to be defined in advance, and specified if CPU, GPU or local is needed, how many cores or nodes and how much memory.
 - Specifics of [Puhti](https://docs.csc.fi/computing/systems-puhti/#nodes), [Mahti](https://docs.csc.fi/computing/systems-mahti/) and [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumic/) compute nodes.
 
-![](./images/HPC_nodes.png)
 
 ## Storage
 ![](./images/HPC_disks.png)
