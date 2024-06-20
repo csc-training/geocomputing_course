@@ -20,11 +20,12 @@ CSC:
    * [CSC Docs: `docs.csc.fi`](https://docs.csc.fi)
    * [`research.csc.fi`](https://research.csc.fi)
    * servicedesk@csc.fi
-   * [CSC user support session in Zoom](https://ssl.eventilla.com/usersupportcoffee/EN) every Wednesday at 14.00. Join on 18.10.2023 for course specific questions! :) 
+      * CSC has a team of people helping computing services users with their cases 
+   * [CSC user support session in Zoom](https://ssl.eventilla.com/usersupportcoffee/EN) every Wednesday at 14.00. Sometimes with short talks about interesting topics. 
 
 LUMI:
    * [LUMI Docs: Helpdesk](https://docs.lumi-supercomputer.eu/helpdesk/)
-
+   * [LUMI monthly coffee breaks](https://www.lumi-supercomputer.eu/events/usercoffeebreaks/)
 
 ## How we can help
 
