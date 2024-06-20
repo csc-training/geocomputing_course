@@ -84,16 +84,3 @@ Running resource-intensive applications on the login node are forbidden. Unless 
 
 :::
 :::
-
-:::{admonition} Exploring the login node(s)
-:class: tip
-
-Let's start a login shell from the Puhti webinterface. Which login node are you on?
-
-`username@puhti-loginXX`
-
-Close the shell and open another one, which login node are you on now? puhti-loginXX is also called the hostname which you can also retrieve using the `hostname` command.
-
--> Every time you login, you will get to a random login node. This usually does not matter, but has some side effects in more advanced topics, so it is good to always be aware where you are within the supercomputer.
-
-:::
