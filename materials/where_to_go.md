@@ -13,7 +13,7 @@
 
 ## Self-study courses
 * [Spatial data analysis with R](https://e-learn.csc.fi/course/view.php?id=120)
-* [University of Helsinki: Automating GIS Processes (Python)]](https://autogis-site.readthedocs.io/)
+* [University of Helsinki: Automating GIS Processes (Python)](https://autogis-site.readthedocs.io/)
 * [CSC computing environment](https://ssl.eventilla.com/csccompenvselflearn)
 * [Elements of supercomputing](https://edukamu.fi/elements-of-supercomputing)
 * [Research data management](https://ssl.eventilla.com/event/v8B6B)
