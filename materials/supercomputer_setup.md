@@ -36,7 +36,7 @@ Typical physical parts of a supercomputer:
 - **Disk** refers to all storage that can be accessed like a file system. This is generally storage that can hold data permanently, i.e. data is still there even if the computer has been restarted.
 - CSC supercomputers use Lustre as the **parallel distributed file system**
 
-## Puhti disk areas
+### Puhti disk areas
 
 | Name     |Access   |Path                 |Cleaning      |Capacity|Number of files| Use |
 |------------|--------|--------------------|---------------------|--------------|----------------|----------------|
@@ -46,7 +46,7 @@ Typical physical parts of a supercomputer:
 
 * `scratch` space can be extended, but it would use billing units then.
 
-### Temporary fast disks 
+#### Temporary fast disks 
 
 - [CSC Docs: Login node local tmp](https://docs.csc.fi/computing/disk/#login-nodes)  `$TMPDIR` for compiling, cleaned frequently.
 	
@@ -62,7 +62,7 @@ Avoid unnecessary reads and writes of data to improve I/O performance
    - If unavoidable, use [fast local NVMe disk](https://docs.csc.fi/computing/disk/#compute-nodes-with-local-ssd-nvme-disks), not Lustre (i.e. `/scratch`)
 :::
 
-## LUMI disk areas
+### LUMI disk areas
 - [LUMI docs: storage](https://docs.lumi-supercomputer.eu/storage/)
 - LUMI has similar main disks, but different temporary disks.
 
