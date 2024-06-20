@@ -19,8 +19,9 @@ Typical physical parts of a supercomputer:
 - Each node has **memory**, which is used for storing information about a current task.
 - Some nodes might have also **local disk space**. 
 - Compute nodes have 2 main types: 
-  * **CPU-nodes** have only CPU (central processing unit). One CPU-node includes 40 cores in Puhti and 128 in Mahti and LUMI.
-  * **GPU-nodes** have both GPU (graphical processing unit) and CPU. GPUs are widely used for deep learning.
+  * **CPU-nodes** have only CPUs (central processing unit).
+  * **GPU-nodes** have both GPUs (graphical processing unit) and CPUs. GPUs are widely used for deep learning.
+  * Each CPU-node includes **cores**, which are the basic computing. There are 40 cores in Puhti and 128 in Mahti and LUMI CPU-nodes.
   * It depends on the used software, if it benefits from GPU or not. Most GIS-tools can not use GPUs.
   * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, that it would be reasonable to use GPU-nodes.
 - While using compute nodes the compute resources have to be defined in advance, and specified if CPU, GPU or local is needed, how many cores or nodes and how much memory.
