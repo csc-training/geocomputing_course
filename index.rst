@@ -44,11 +44,16 @@ Table of contents
 
    materials/supercomputing.md  
    materials/supercomputer_setup.md
-   materials/spatial_data_at_csc.md
-   materials/stac.md
-   materials/software.md
    materials/webinterface.md
    materials/exercise_webinterface.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: GIS tools and data
+
+   materials/software.md
+   materials/spatial_data_at_csc.md
+   materials/stac.md
 
 .. toctree::
    :maxdepth: 2
