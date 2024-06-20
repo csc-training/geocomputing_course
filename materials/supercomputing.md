@@ -85,25 +85,3 @@ LUMI:
 * Note, that especially with map sheets extra care might be needed for border areas, for example use overlapping map sheets with [virtual rasters](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/).
 
 :::
-
-## Technical skills needed for using supercomputers
-
-* Domain knowledge:
-   * [GIS tools](software.md)
-   * [Spatial data sources](https://research.csc.fi/open-gis-data)
-* Basic Linux skills: 
-    * [Terminal](terminal.md)
-    * [Moving data](moving_data.md)
-	   * [CSC Linux tutorial](https://docs.csc.fi/support/tutorials/env-guide/)
-* Supercomputer basics
-* **Scripting skills and how to write parallel scripts**, one of these: 
-   * Python:
-       * [CSC Docs: Python GIS learning materials](https://docs.csc.fi/apps/geoconda/#references)
-       * [CSC Docs: Python parallel jobs](https://docs.csc.fi/apps/python/#python-parallel-jobs)
-       * [CSC Docs: Dask tutorial](https://docs.csc.fi/support/tutorials/dask-python/)
-    * R:
-       * [CSC Docs: Spatial R learning materials](https://docs.csc.fi/apps/r-env-for-gis/#references)
-       * [CSC Docs: Parallel jobs using R](https://docs.csc.fi/support/tutorials/parallel-r/)
-    * bash:
-       * [CSC bash tutorial](https://docs.csc.fi/support/tutorials/env-guide/linux-bash-scripts/)
-    * Julia, MATLAB etc
