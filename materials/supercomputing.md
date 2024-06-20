@@ -1,4 +1,4 @@
-# Supercomputers
+# Why and how?
 
 ## Why use a supercomputer?
 
@@ -15,18 +15,28 @@
 * **Good documentation, examples for spatial data analysis**
 * **CSC specialist support** 
 * **Free of charge for open science** at Finnish universities and research institutes.
+  
 
-
- 
-
+## How to use supercomputers? 
 ### Graphical tools -> scripts
 ![](./images/gui_script.png)
 
-* Supercomputers have some support for working with graphical tools
-* GIS tools have often weak support for parallization 
 * **Main work is done with scripts**
-* Scripts can make analysis parallel
+* Also graphical tools available on supercomputers, but mainly for viewing input and output files
+* Many graphical tools also have scripting options, see [GIS tools](software.md) for more info.
 * Scripts also increase reproducibility of your work
+
+### Faster computing
+* Running most common GIS scripts will be as fast on supercomputer as on laptop
+* To speed up use **parallel computing** OR GPUs.
+ * Most GIS-tools have no GPU-support, so the main option is to use parallel computing
+ * Deep learning libraries run much faster on GPU.
+
+#### Parallel computing
+* GIS tools have often weak built-in support for parallization 
+* Scripts can make analysis parallel
+* Running a single core tool/script on many cores will not help
+
 
 :::{admonition} Embarrassingly parallel analyses
 :class: note
@@ -37,15 +47,4 @@
   * Analysis parameters: different scenarios, different variables etc.
 * Note, that especially with map sheets extra care might be needed for border areas, for example use overlapping map sheets with [virtual rasters](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/).
 
-:::
 
-:::{admonition} Computing speed
-:class: important
-
-* Single core speed: supercompter ~ laptop
-* **To increase speed, use many cores**:
-  * **Scripts for parallization**
-  * Tools that support parallelization out-of-the-box
-  * GPU tools
-* Running a single core tool/script on many cores will not help
-:::
