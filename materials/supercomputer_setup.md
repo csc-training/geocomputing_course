@@ -1,6 +1,6 @@
 # Supercomputer setup
 
-![](./images/puhti_overview.png)
+![](./images/HPC_basic.png)
 
 Typical physical parts of a supercomputer:
 * Login-nodes
@@ -12,6 +12,8 @@ Typical physical parts of a supercomputer:
 - Login nodes are used for moving data and scripts, script editing and for starting jobs.
 - When you login to CSC's supercomputers, you enter one of the login nodes of the computer
 - There is only a few login-nodes and they are shared by all users, so they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
+
+![](./images/HPC_nodes.png)
  
 ## Compute-nodes
 - The heavy computing should be done on compute-nodes. 
@@ -27,7 +29,11 @@ Typical physical parts of a supercomputer:
 - While using compute nodes the compute resources have to be defined in advance, and specified if CPU, GPU or local is needed, how many cores or nodes and how much memory.
 - Specifics of [Puhti](https://docs.csc.fi/computing/systems-puhti/#nodes), [Mahti](https://docs.csc.fi/computing/systems-mahti/) and [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumic/) compute nodes.
 
+![](./images/HPC_nodes.png)
+
 ## Storage
+![](./images/HPC_disks.png)
+
 - **Disk** refers to all storage that can be accessed like a file system. This is generally storage that can hold data permanently, i.e. data is still there even if the computer has been restarted.
 - CSC supercomputers use Lustre as the **parallel distributed file system**
 
