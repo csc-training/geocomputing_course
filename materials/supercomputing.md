@@ -28,23 +28,17 @@
 
 ### Faster computing
 * Running most common GIS scripts will be as fast on supercomputer as on laptop
-* To speed up use **parallel computing** OR GPUs.
- * Most GIS-tools have no GPU-support, so the main option is to use parallel computing
- * Deep learning libraries run much faster on GPU.
+* To speed up use **parallel computing** or GPUs.
+   * Most GIS-tools have no GPU-support, so the main option is to use parallel computing
+   * Deep learning libraries run much faster on GPU.
 
 #### Parallel computing
-* GIS tools have often weak built-in support for parallization 
-* Scripts can make analysis parallel
-* Running a single core tool/script on many cores will not help
+* Only few GIS tools have built-in support for parallization 
+* With scrips and diving the data any tool can be run in parallel
 
-
-:::{admonition} Embarrassingly parallel analyses
-:class: note
-
+#### Embarrassingly parallel analyses
 * Many similar, but independent tasks.
 * Tasks split by:
   * Input data: map sheets, rows in a dataframe, data from different time periods etc.
   * Analysis parameters: different scenarios, different variables etc.
 * Note, that especially with map sheets extra care might be needed for border areas, for example use overlapping map sheets with [virtual rasters](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/).
-
-
