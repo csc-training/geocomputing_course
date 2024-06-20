@@ -42,3 +42,8 @@ The Location Innovation Hub (LIH) is a centre of excellence in location informat
 ![](./images/lih.png)
 
 
+## Citing
+
+If you used CSC computing resources and GIS tools or data for your research, please acknowledge CSC and Geoportti in your publications, it is important for project continuation and funding reports. As an example, you can write:
+
+> "The authors wish to thank CSC - IT Center for Science, Finland (urn:nbn:fi:research-infras-2016072531) and the Open Geospatial Information Infrastructure for Research (Geoportti, urn:nbn:fi:research-infras-2016072513) for computational resources and support".
