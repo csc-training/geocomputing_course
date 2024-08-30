@@ -60,10 +60,8 @@ Table of contents
    :maxdepth: 2
    :caption: Jobs
 
-   materials/partitions.md
-   materials/job_types.md
-   materials/fair_share.md
    materials/batch_job.md
+   materials/job_types.md
    materials/job_monitoring.md
    materials/htc.md
    materials/exercise_basics.md
