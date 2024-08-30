@@ -1,18 +1,7 @@
 # Job types
-
 ## Interactive jobs
 
-You already got to know the [interactive web interface for Puhti](https://docs.csc.fi/computing/webinterface/)
-- If you have a heavier job that still requires interactive response (_e.g._ testing, prototyping)
-    - Allocate the resource via the the [interactive partition](https://docs.csc.fi/computing/running/interactive-usage/)
-    - This way your work is performed in a compute node, not on the login node
-
-Disadvantages of interactive jobs: 
-* Blocks your shell until it finishes
-* Connection interruption means that job is gone.
-     * Note: With persistent `compute node shell` from the web interface or using Linux tool [screen](https://www.geeksforgeeks.org/screen-command-in-linux-with-examples/) it is possible to keep a job running while closing the terminal.
-
-Apart from interactive jobs, a job can be classified as **serial, parallel or GPU**, depending on the main requested resource. A serial job is the simplest type of job whereas parallel and GPU jobs may require some advanced methods to fully utilise their capacity. 
+If you want to work with some tool interactively (_e.g._ graphical tools, writing code, testing) allocate the resource via the the [interactive partition](https://docs.csc.fi/computing/running/interactive-usage/). This way your work is performed in a compute node, not on the login node. Interactive partition is often used for applications in the web interface. The resources are limited in interactive partition, but it should have no or very short queue.
 
 ## Serial jobs
 
@@ -27,9 +16,9 @@ Why would your serial job benefit from being executed using CSC's resources inst
 
 ## Parallel jobs
 
-A parallel job distributes the work over several cores in order to achieve a shorter wall time (and/or a larger allocatable memory). 
+A parallel job distributes the work over several cores or nodes in order to achieve a shorter wall time (and/or a larger allocatable memory). 
 
-In this course we will focus on **embarrassingly/naturally/delightfully parallel processes** with methods that are either built-in to the tools or tools that can start multiple jobs from one call. For more advanced usage, there are two major parallelization schemes: [OpenMP](https://en.wikipedia.org/wiki/OpenMP) and [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface). 
+In this course we will focus on **embarrassingly parallel processes** with methods that are either built-in to the tools or tools that can start multiple jobs from one call. For more advanced usage, there are two major parallelization schemes: [OpenMP](https://en.wikipedia.org/wiki/OpenMP) and [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface). 
 
 :::{admonition} Advanced topics - MPI/OpenMP
 :class: dropdown, seealso
@@ -97,32 +86,4 @@ Submitting an array job of 100 members counts the same as 100 individual jobs fr
 
 ## GPU jobs 
 
-A GPU is capable of doing certain type of simultaneous calculations very efficiently. In order to take advantage of this power, a computer program must be programmed to adapt on how GPU handles data. For spatial computations on the GPU, check out for example [RAPIDS cuSpatial](https://docs.rapids.ai/api/cuspatial/stable/user_guide/cuspatial_api_examples/). [CSC's GPU resources](https://docs.csc.fi/computing/overview/#gpu-nodes) are relatively scarce and hence should be used with particular care. A GPU uses 60 times more billing units than a single CPU core. In practice, 1-10 CPU cores (but not more) should be allocated per GPU on Puhti.
-
-:::{admonition} Advanced topics - GPU
-:class: dropdown, seealso
-
-**GPUs can speed up jobs**
-
-- GPUs can be used for science, but are often challenging to program
-   - Not all algorithms can use the full power of GPUs
-- Check the manual if the software can utilize GPUs, don't use GPUs if you're unsure
-   - See our [CSC Docs page on how to check if your batch job used GPU](https://docs.csc.fi/support/tutorials/gpu-ml/#gpu-utilization)
-   - The [CSC usage policy](https://docs.csc.fi/computing/usage-policy/#gpu-nodes) limits GPU usage to where it is most efficient
-   - Also, if you process lots of data, make sure you [use the disk efficiently](https://docs.csc.fi/support/tutorials/ml-data/#using-the-shared-file-system-efficiently)
-- Does your code run on AMD GPUs? [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumig/) has a massive GPU capacity!
-
-- Can your software utilize GPUs?
-   - [GPUs in Puhti batch jobs](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#gpus)
-   - [GPUs in Mahti batch jobs](https://docs.csc.fi/computing/running/creating-job-scripts-mahti/#gpu-batch-jobs)
-   - [GPUs in LUMI batch jobs](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/lumig-job/)
-
-:::
-
-
-:::{admonition} Think about your work
-:class: info
-
-Which job type sounds like it could benefit your work? 
-
-:::
+A GPU is capable of doing certain type of simultaneous calculations very efficiently. In order to take advantage of this power, a computer program must be programmed to adapt on how GPU handles data. [CSC's GPU resources](https://docs.csc.fi/computing/overview/#gpu-nodes) are relatively scarce and hence should be used with particular care. A GPU uses 60 times more billing units than a single CPU core. In spatial analysis context, GPUs are most often used for deep learning.
