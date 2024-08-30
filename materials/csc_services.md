@@ -6,13 +6,13 @@
 * Virtual machines for web services and database: [cPouta](https://research.csc.fi/-/cpouta)
 * Containers for web services : [Rahti](https://research.csc.fi/-/rahti)
 * Sensitive data: [SD services](https://research.csc.fi/sensitive-data-services-for-research), [ePouta](https://research.csc.fi/-/epouta)
-* Juputer and RStudio for courses: [CSC Notebooks](https://docs.csc.fi/cloud/csc_notebooks/)
+* Juputer and RStudio for courses: [CSC Noppe](https://docs.csc.fi/cloud/noppe/)
 
 ## Data services
 
 * Spatial data: [Paituli](https://paituli.csc.fi/)
 * Project lifetime data storage: [Allas](https://research.csc.fi/-/allas)
-* Databases: [Pukki](https://docs.csc.fi/cloud/dbaas/) ([Kaivos](https://research.csc.fi/-/kaivos))
+* Databases: [Pukki](https://docs.csc.fi/cloud/dbaas/) for PostgreSQL, inc PostGIS.
 * Publishing, storing or downloading open data: [OKM Fairdata](https://www.fairdata.fi/en/): IDA, Etsin, Qvain, PAS
 * Teaching materials: [Library of Open Educational Resources](https://aoe.fi/)
 * Sending data: [Funet FileSender](https://filesender.funet.fi/)
