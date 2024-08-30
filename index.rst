@@ -61,7 +61,6 @@ Table of contents
    :caption: Jobs
 
    materials/batch_job.md
-   materials/job_types.md
    materials/job_monitoring.md
    materials/htc.md
    materials/exercise_basics.md
