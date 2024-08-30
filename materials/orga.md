@@ -7,7 +7,7 @@ This course is organized by CSC - IT Center for Science and funded by Geoportti 
 * Owned by ministry of education and culture (70%) and higher education institutions (30%)
 * Headquaters in Keilaniemi, Espoo
 * Side offices and supercomputers in Kajaani
-* ~650 people
+* ~700 people
 
 ![Kajaani](images/kajaani.png)
 
@@ -20,7 +20,7 @@ Geoportti Research Infrastructure (RI) is a shared service for researchers, teac
 * GeoPortti services:
   * At CSC:
       * [Geocomputing services](https://research.csc.fi/geocomputing), inc. [supercomputer geospatial installations](software.md), [local spatial data](spatial_data_at_csc.md), [support](support.md) and [user-guides](https://docs.csc.fi/support/tutorials/#geoinformatics)
-      * [STAC](stac.md)
+      * [Paituli data download service](https://paituli.csc.fi) with [STAC](stac.md)
       * [GIS training](https://research.csc.fi/gis-learning-materials) and [GIS seminars](https://research.csc.fi/geocomputing-seminars)
   * [GeoPortti GeoCubes](https://vm0160.kaj.pouta.csc.fi/geocubes/) - a harmonised, multi-resolution raster geodata repository containing several national datasets
   * [GeoPortti GeoPrivacy](https://geoprivacy.fi/#/) - a service where cyclists and pedestrians can donate GPS tracking data for science.
