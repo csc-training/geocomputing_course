@@ -7,7 +7,6 @@
 * ~13 TB of datasets available:
 	* **Paituli data**, with virtual mosaics for raster data
 	* **Finnish Environmental Institute (SYKE) open datasets**: CORINE land use etc
-	* **LUKE, Multi-source national forest inventory**: 2013, 2015, 2017, 2019 and 2021.
 	* **Forest center: canopy height**, forest mask, gridcells, forest resource plots
 * LUMI and Mahti do not have spatial data on local disk.
 * [CSC Docs: Spatial data in CSC computing environment](https://docs.csc.fi/data/datasets/spatial-data-in-csc-computing-env/)
@@ -56,6 +55,7 @@ Virtual rasters are a useful GDAL concept for managing large raster datasets tha
 * Statistics Finland, Paavo - statistics at post code level
 * **NLS, lidar**
 * Finnish Digital agency, addresses of buildings
+* **LUKE, Multi-source national forest inventory**: 2013, 2015, 2017, 2019 and 2021
 * LUKE, occurrence map for less common tree species
 * Finnish Food Agency, Field plots
 * **FMI, daily and monthly weater statistics and predictions**
