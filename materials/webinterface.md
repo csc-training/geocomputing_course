@@ -1,23 +1,24 @@
 # Connecting
 
-## Puhti web interface
+## Web interface
 
-* **For lightweight entry to Puhti supercomputer**
+* **For lightweight entry to supercomputers**
 * In web interface the resources are limited -> suitable for **developing code and small analysis tasks**
 * Bigger analysis tasks should be run via batch jobs
     * Web interface can be used for starting batch jobs 
 * [Puhti web interface](https://puhti.csc.fi)
+* [LUMI web interface](https://www.lumi.csc.fi,)
 * [CSC Docs: web interface](https://docs.csc.fi/computing/webinterface/)
-* LUMI at the moment does not have a web interface, but will soon have a similar one (with less applications). 
 
 ## Tools in web interface:
 - View, download and upload files
-- **Terminal to Puhti**
-- Info: running jobs, disk usage, project status and Puhti general status
+- **Terminal to login-node**
+- **Terminal to compute-node**
+- Info: running jobs, disk usage, project status and supercomputer's general status
 - Launch interactive apps and open them directly from the browser:
     - Desktop with apps: **QGIS**, GRASS, SagaGIS, SNAP, Zonation etc
     - **Jupyter**
-    - TensorBoard
+    - TensorBoard, MLFlow
     - **Visual Studio Code**
     - **RStudio**
     - MATLAB
@@ -41,6 +42,5 @@ During the course we will access the supercomputer via the webinterface in order
 - To avoid typing your password every time again and to make your connection more secure, you can [set up SSH-keys](https://docs.csc.fi/computing/connecting/#setting-up-ssh-keys).
 - [CSC Docs: Connecting to CSC supercomputers](https://docs.csc.fi/computing/connecting/)
 - [LUMI Docs: Get started](https://docs.lumi-supercomputer.eu/firststeps/).
-- 
 
 :::
