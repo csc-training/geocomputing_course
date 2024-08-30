@@ -2,7 +2,7 @@
 
 :::{admonition} Timing
 :class: note
-* Time: 60 min
+* Time: 45 min
 :::
 
 :::{admonition} Goals
@@ -75,7 +75,7 @@ Web interface is for moving up to 10Gb data, if you have more data use other too
   * Local disk: 0
   * Time: 0:15:00
   * Python: [geoconda](https://docs.csc.fi/apps/geoconda/)
-  * Jupyter type: Lab
+  * Module version: default
   * Working directory: `/users/cscusername`
   * `Launch`
 * Wait a moment for Jupyter to start -> `Connect to Jupyter`
@@ -91,7 +91,7 @@ src.plot()
 * End the session:
    * Delete the Notebook.
    * Close the web tab
-   * In Active sessions view: `Delete`
+   * In Active sessions view: `Cancel`
 
 #### Desktop with QGIS
 
