@@ -37,12 +37,13 @@ srun python myscript.py             # The script to run
 
 To submit the job for computation: `sbatch simple.sh`
 
-Check your jobs status with `sacct`.
+When we submit a batch job script, the job is not started directly, but is sent into a **queue**. Depending on the requested resources and load, the job may need to wait to get started. 
 
 :::{admonition} How many resources to request?
 :class: seealso
 
-* You can use your workstation / laptop as a base measuring stick: If the code runs on your machine, as a first guess you can reserve the same amount of CPUs & memory as your machine has. Before reserving multiple CPUs, check if your code can make use them.
+* You can use your workstation / laptop as a base measuring stick: If the code runs on your machine, as a first guess you can reserve the same amount of CPUs & memory as your machine has.
+* Before reserving multiple CPUs, check if your code can make use them.
 * You can also check more closely what resources are used with `top` on Mac and Linux or `task manager` on Windows when running on your machine
 * Similarly for running time: if you have run it on your machine, you should reserve similar time in the cluster.
 * If your program does the same thing more than once, you can estimate that the `total run time is number of steps times time taken by each step`.
@@ -67,48 +68,22 @@ A **partition** is a set of compute nodes, grouped logically. Resource limitatio
 Check [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/running/batch-job-partitions/) and find suitable partitions for these tasks:
 
 1. Through trial and error Anna has determined that her image processing process takes about 60 min, 16 GB of memory on a single CPU. 
-2. Kalika has profiled her code, and determined that it can run efficiently on 20 cores with 12 GB of memory each. The complete process should be done within 4 days.
-3. Ben wants to visualize a 80 GB file in QGIS.
+2. Laura has profiled her code, and determined that it can run efficiently on 20 cores with 12 GB of memory each. The complete process should be done within 4 days.
+3. Ben wants to visualize a 2 GB file in QGIS.
 4. Neha has written and run some Python code on her own machine. She now wants to move to Puhti and, before running her full pipeline, test that her code executes correctly with a minimal dataset.
 5. Josh wants to run 4 memory heavy tasks (100GB) in parallel. Each job takes about 30 minutes to execute.
 
 :::{admonition} Solution
 :class: dropdown
 
-1. Based on the requirements, she has a few choices,except `test`, `gpu` and `gputest`. She does not need interactive access to her process, so in order to not block any unnecessary resources, Anna chooses `small` partition.
-2. Based on the requirements, Kalika needs to choose `longrun` or adapt her code to get under 3 days runtime (which she might want to do in order to avoid exessively long queueing times).
-3. For the webinterface, only `test`, `small` or `interactive` can be used. According to the resource needs (> 80GB of memory), he needs to use `small` partition. 
+1. She does not need interactive access to her process, so `small` suits best.
+2. She needs to choose `longrun` or adapt her code to get under 3 days runtime (which she might want to do in order to avoid exessively long queueing times).
+3. For the webinterface,`interactive` suits best and should be the first choice. 
 4. This is a very good idea and should always be done first. Neha can get the best and fast experience using `test` partition. This means to keep the runtime under 15 min and the memory needs below 190 GiB at a maximum of 80 tasks.
 5. 400GB memory in total is more than most partitions can take. If this is the least memory possible for the jobs, it has to be run on `hugemem`.
 :::
 :::
 
-
-:::{admonition} Task
-:class: tip
-
-What other `#SBATCH` arguments can you find in [the SLURM documentation](https://slurm.schedmd.com/sbatch.html) that sound useful? 
-
-:::
-
-:::{admonition} What to do if a job fails?
-:class: warning
-
-Does `sacct` show you that your job failed? Or did your job not do what you expected (e.g. write some files, etc)? 
-Some things to check:
-
-1. Did the job run out of time?
-2. Did the job run out of memory?
-3. Did the job actually use the resources you specified?
-   - Problems in the batch job script can cause parameters to be ignored and default values are used instead
-4. Did it fail immediately or did it run for some time?
-   - Jobs failing immediately are often due to something like typos, missing inputs, bad parameters _etc_.
-5. Check the error file captured by the batch job script (default name `slurm-jobid.out`)
-6. Check any other error files and logs your program may have produced
-7. Error messages can sometimes be long, cryptic and a bit intimidating, but ...
-   - Try skimming through them and see if you can spot something "human-readable"
-   - Often you can spot the actual problem, if you go through the whole message. Something like "required input file so-and-so missing" or "parameter X out of range" _etc_.
-8. Consult the [FAQ on common Slurm issues](https://docs.csc.fi/support/faq/why-does-my-batch-job-fail/) in the CSC Docs
 
 :::
 
@@ -116,3 +91,4 @@ More information:
 * [CSC Dosc: Running jobs, Getting started](https://docs.csc.fi/computing/running/getting-started/) for Puhti and Mahti
 * [LUMI Docs: Run jobs](https://docs.lumi-supercomputer.eu/runjobs/)
 * [CSC Docs: Software specific example batch scripts](https://docs.csc.fi/apps/)
+* [SLURM documentation](https://slurm.schedmd.com/sbatch.html)
