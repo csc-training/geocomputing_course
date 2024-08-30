@@ -163,3 +163,59 @@ Note that these guideline numbers are for all operations on all jobs.
     * Not all or nothing
 
 :::
+
+For more advanced usage, there are two major parallelization schemes: [OpenMP](https://en.wikipedia.org/wiki/OpenMP) and [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface). 
+
+:::{admonition} Advanced topics - MPI/OpenMP
+:class: dropdown, seealso
+
+**What is MPI?**
+
+- MPI (Message Passing Interface) is a widely used standard for writing software that runs in parallel
+- MPI utilizes parallel **processes** that _do not share memory_
+   - To exchange information, processes pass data messages back and forth between the cores
+   - Communication can be a performance bottleneck
+- MPI is required when running on multiple nodes
+
+**What is OpenMP?**
+
+- OpenMP (Open Multi-Processing) is a standard that utilizes compute cores that share memory, i.e. **threads**
+   - They do not need to send messages between each other
+- OpenMP is easier for beginners, but problems quickly arise with so-called _race conditions_
+   - This appears when different compute cores process and update the same data without proper synchronization
+- OpenMP is restricted to a single node
+
+**Batch job examples**
+
+- Multicore OpenMP job
+
+
+```bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=X
+```
+
+- Multicore MPI job
+
+```bash
+#SBATCH --nodes=X
+#SBATCH --ntasks-per-node=Y
+#SBATCH --cpus-per-task=1
+```
+
+- `--cpus-per-task` is typically used for OpenMP jobs
+- `--ntasks` is typically used for MPI jobs
+    - A task cannot be split between nodes, but tasks can be on different nodes
+    - `--ntasks-per-node` can be used for finer control
+
+**Self study materials for OpenMP and MPI**
+
+- There are many tutorials available online
+   - Look with simple searches for _e.g._ "MPI tutorial"
+- Check the documented exercise material and model answers from the CSC course "Introduction to Parallel Programming"
+   - Available on [GitHub](https://github.com/csc-training/parallel-prog/)
+   - See also the [materials of CSC Summer School in HPC](https://github.com/csc-training/summerschool)
+
+:::
+
