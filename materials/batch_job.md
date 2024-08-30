@@ -62,12 +62,19 @@ A **partition** is a set of compute nodes, grouped logically. Resource limitatio
 - [LUMI Docs: Slurm particions](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/)
 
 
+## Job types
+
+* **Interactive jobs** for working with some tool interactively, for example graphical tools, writing code, testing. For interactive jobs allocate the resource via the the [interactive partition](https://docs.csc.fi/computing/running/interactive-usage/). This way your work is performed in a compute node, not on the login node. Interactive partition is often used for applications in the web interface. The resources are limited in interactive partition, but it should have no or very short queue.
+* **Serial jobs** work on only one task at a time following a sequence of instructions, while only using one core.
+* **Parallel jobs** distribute the work over several cores or nodes in order to achieve a shorter wall time (and/or a larger allocatable memory). 
+* **GPU jobs** for tools that can benefit from running on GPUs. [CSC's GPU resources](https://docs.csc.fi/computing/overview/#gpu-nodes) are relatively scarce and hence should be used with particular care. A GPU uses 60 times more billing units than a single CPU core. In spatial analysis context, GPUs are most often used for deep learning.
+
 :::{admonition} Which partition to choose?
 :class: tip
 
 Check [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/running/batch-job-partitions/) and find suitable partitions for these tasks:
 
-1. Through trial and error Anna has determined that her image processing process takes about 60 min, 16 GB of memory on a single CPU. 
+1. Through trial and error Anna has determined that her image processing process takes about 60 min and 16 GB of memory. 
 2. Laura has profiled her code, and determined that it can run efficiently on 20 cores with 12 GB of memory each. The complete process should be done within 4 days.
 3. Ben wants to visualize a 2 GB file in QGIS.
 4. Neha has written and run some Python code on her own machine. She now wants to move to Puhti and, before running her full pipeline, test that her code executes correctly with a minimal dataset.
@@ -82,9 +89,6 @@ Check [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/r
 4. This is a very good idea and should always be done first. Neha can get the best and fast experience using `test` partition. This means to keep the runtime under 15 min and the memory needs below 190 GiB at a maximum of 80 tasks.
 5. 400GB memory in total is more than most partitions can take. If this is the least memory possible for the jobs, it has to be run on `hugemem`.
 :::
-:::
-
-
 :::
 
 More information:
