@@ -17,16 +17,14 @@ Typical physical parts of a supercomputer:
  
 ## Compute-nodes
 - The heavy computing should be done on compute-nodes. 
-- One compute node has similar components as your laptop: processors, memory and sometimes also local disk space.
 - Each node has **memory**, which is used for storing information about a current task.
-- Some nodes might have also **local disk space**. 
-- Compute nodes have 2 main types: 
+- Compute nodes have 2 main type of processors: 
   * **CPU-nodes** have only CPUs (central processing unit).
   * **GPU-nodes** have both GPUs (graphical processing unit) and CPUs. GPUs are widely used for deep learning.
   * Each CPU-node includes **cores**, which are the basic computing. There are 40 cores in Puhti and 128 in Mahti and LUMI CPU-nodes.
   * It depends on the used software, if it benefits from GPU or not. Most GIS-tools can not use GPUs.
   * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, that it would be reasonable to use GPU-nodes.
-- While using compute nodes the compute resources have to be defined in advance, and specified if CPU, GPU or local is needed, how many cores or nodes and how much memory.
+- While using compute nodes the compute resources have to be defined in advance, and specified if CPU or/and GPU is needed, how many cores or nodes and how much memory.
 - Specifics of [Puhti](https://docs.csc.fi/computing/systems-puhti/#nodes), [Mahti](https://docs.csc.fi/computing/systems-mahti/) and [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumic/) compute nodes.
 
 
@@ -47,7 +45,7 @@ Typical physical parts of a supercomputer:
 * `scratch` space can be extended, but it would use billing units then.
 
 #### Temporary fast disks 
-
+- Some nodes might have also **local disk space** for temporary use. 
 - [CSC Docs: Login node local tmp](https://docs.csc.fi/computing/disk/#login-nodes)  `$TMPDIR` for compiling, cleaned frequently.
 	
 - [CSC Docs: NVMe](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage) - `$LOCAL_SCRATCH` in batch jobs, 
