@@ -1,7 +1,7 @@
 # Moving data
 
 ## Local computer <-> supercomputer
-### Puhti Web Interface
+### Web Interface
 
 - Graphical, no installations needed.
 - Limited functionality compared to other options.
