@@ -43,10 +43,10 @@ html_css_files = ["custom.css"]
 
 html_theme_options = {
   "repository_url": "https://github.com/csc-training/geocomputing_course",
-  "announcement": 'Psst, remember the <a href="https://csc-training.github.io/geocomputing_course/materials/cheatsheet.html">cheatsheet</a>!',
   "use_repository_button": True,
   "show_toc_level": 3,
 }
+#  "announcement": 'Psst, remember the <a href="https://csc-training.github.io/geocomputing_course/materials/cheatsheet.html">cheatsheet</a>!',
 
 
 
