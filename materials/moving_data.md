@@ -8,7 +8,7 @@
 - For smaller amounts of data, < 10 Gb.
 - Upload, download, moving, creating folders.
 - [Puhti Web Interface](https://puhti.csc.fi) -> Files
-- [CSC Docs: Puhti Web Interface](https://docs.csc.fi/computing/webinterface/)
+- [CSC Docs: Web interfaces for Puhti and Mahti](https://docs.csc.fi/computing/webinterface/)
 
 ### Graphical data transfer tools on local computer
 
