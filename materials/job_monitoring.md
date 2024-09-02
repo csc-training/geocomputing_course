@@ -34,8 +34,8 @@ Some things to check:
 See the resource usage after job has finished: `seff jobid`
 
 More detailed queries can be tailored with `sacct`
-- `sacct -j jobid -o jobid,partition,state,reqmem,maxrss,averss,elapsed`
-- `sacct -S 2024-08-01 -o jobid,partition,state,reqmem,maxrss,averss,elapsed` will show all jobs started after that date
+- Job with ID: `sacct -j jobid -o jobid,partition,state,reqmem,maxrss,averss,elapsed`
+- All jobs started after some date: `sacct -S 2024-08-01 -o jobid,partition,state,reqmem,maxrss,averss,elapsed` 
 
 **Note!** Querying data from the Slurm accounting database with `sacct` can be a very heavy operation. **Don't** query long time intervals or run `sacct` in a loop/using `watch` as this will degrade the performance of the system for all users.
 
