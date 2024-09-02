@@ -1,16 +1,9 @@
 # Job monitoring
 
 * Check the status of your job: `squeue --me`
-* Cancel a job after job submission or during runtime: `scancel jobid`.
-
-More detailed queries can be tailored with `sacct`
-- `sacct -j jobid -o jobid,partition,state,reqmem,maxrss,averss,elapsed`
-- `sacct -S 2024-08-01 -o jobid,partition,state,reqmem,maxrss,averss,elapsed` will show all jobs started after that date
-
-**Note!** Querying data from the Slurm accounting database with `sacct` can be a very heavy operation. **Don't** query long time intervals or run `sacct` in a loop/using `watch` as this will degrade the performance of the system for all users.
 
 ## Job output
-By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from Slurm, your tool or package) are written to the file `slurm-jobid.out`. You can change the default in the batch job script:
+By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from Slurm, your tool or package) are written to the file `slurm-jobid.out` in the same folder as the batch job script. You can change the defaults in the batch job script:
 
 #SBATCH --output=output_%j.txt
 #SBATCH --error=errors_%j.txt
@@ -37,6 +30,12 @@ Some things to check:
 
 ## Resource monitoring
 See the resource usage after job has finished: `seff jobid`
+
+More detailed queries can be tailored with `sacct`
+- `sacct -j jobid -o jobid,partition,state,reqmem,maxrss,averss,elapsed`
+- `sacct -S 2024-08-01 -o jobid,partition,state,reqmem,maxrss,averss,elapsed` will show all jobs started after that date
+
+**Note!** Querying data from the Slurm accounting database with `sacct` can be a very heavy operation. **Don't** query long time intervals or run `sacct` in a loop/using `watch` as this will degrade the performance of the system for all users.
 
 Important aspects to monitor are:
 - [Memory requirements](https://docs.csc.fi/support/faq/how-much-memory-my-job-needs/)
