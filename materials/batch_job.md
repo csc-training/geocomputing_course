@@ -51,6 +51,8 @@ When we submit a batch job script, the job is not started directly, but is sent 
 * Likewise, if your program runs multiple parameters, the `total time needed is number of parameters times the time needed to run the program with one/some parameters`.
 * You can also run a smaller version of the problem and try to estimate how the program will scale when you make the problem bigger.
 * You should always monitor jobs to find out what were the actual resources you requested.
+* When you double the number of cores, the job should run at least 1.5x faster.
+* Some tools run both on CPU and GPU, if unsure which to use, a good rule of thumb is to compare the billing unit (BU) usage and select the one using less. A GPU uses 60 times more billing units than a single CPU core.
 
 Adapted from [Aalto Scientific Computing](https://scicomp.aalto.fi/triton/usage/program-size/)
 :::
@@ -68,7 +70,7 @@ A **partition** is a set of compute nodes, grouped logically. Resource limitatio
 * **Interactive jobs** for working with some tool interactively, for example graphical tools, writing code, testing. For interactive jobs allocate the resource via the the [interactive partition](https://docs.csc.fi/computing/running/interactive-usage/). This way your work is performed in a compute node, not on the login node. Interactive partition is often used for applications in the web interface. The resources are limited in interactive partition, but it should have no or very short queue.
 * **Serial jobs** work on only one task at a time following a sequence of instructions, while only using one core.
 * **Parallel jobs** distribute the work over several cores or nodes in order to achieve a shorter wall time (and/or a larger allocatable memory). 
-* **GPU jobs** for tools that can benefit from running on GPUs. [CSC's GPU resources](https://docs.csc.fi/computing/overview/#gpu-nodes) are relatively scarce and hence should be used with particular care. A GPU uses 60 times more billing units than a single CPU core. In spatial analysis context, GPUs are most often used for deep learning.
+* **GPU jobs** for tools that can benefit from running on GPUs. In spatial analysis context, GPUs are most often used for deep learning.
 
 :::{admonition} Which partition to choose?
 :class: tip
