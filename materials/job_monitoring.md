@@ -3,20 +3,17 @@
 * Check the status of your job: `squeue --me`
 * Cancel a job after job submission or during runtime: `scancel jobid`.
 
-## Job output
-By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from Slurm, your tool or package) are written to the file `slurm-jobid.out`. You can change the default in the batch job script:
-
-#SBATCH --output=output_%j.txt
-#SBATCH --error=errors_%j.txt
-
-:::{admonition} `sacct`
-:class: warning
 More detailed queries can be tailored with `sacct`
 - `sacct -j jobid -o jobid,partition,state,reqmem,maxrss,averss,elapsed`
 - `sacct -S 2024-08-01 -o jobid,partition,state,reqmem,maxrss,averss,elapsed` will show all jobs started after that date
 
 **Note!** Querying data from the Slurm accounting database with `sacct` can be a very heavy operation. **Don't** query long time intervals or run `sacct` in a loop/using `watch` as this will degrade the performance of the system for all users.
-:::
+
+## Job output
+By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from Slurm, your tool or package) are written to the file `slurm-jobid.out`. You can change the default in the batch job script:
+
+#SBATCH --output=output_%j.txt
+#SBATCH --error=errors_%j.txt
 
 :::{admonition} What to do if a job fails?
 :class: warning
@@ -36,6 +33,7 @@ Some things to check:
    - Try skimming through them and see if you can spot something "human-readable"
    - Often you can spot the actual problem, if you go through the whole message. Something like "required input file so-and-so missing" or "parameter X out of range" _etc_.
 8. Consult the [FAQ on common Slurm issues](https://docs.csc.fi/support/faq/why-does-my-batch-job-fail/) in the CSC Docs
+:::
 
 ## Resource monitoring
 See the resource usage after job has finished: `seff jobid`
