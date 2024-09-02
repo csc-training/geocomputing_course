@@ -72,19 +72,8 @@ Keep track of your script versions by using a version control system, like Git(H
 When moving a script from your own computer to Puhti, take care of any hard-coded file dependencies (e.g. `/my/home/dir/file.txt` ). It is not recommended to have hard-coded file paths in your scripts, instead, provide them as command line input to your script or make use of configuration files. No matter where you input your file paths, always make sure that you have the actual data files also available on the supercomputer. Also check that all used packages are available on the supercomputer, on Puhti, e.g. within the [geoconda module](https://docs.csc.fi/apps/geoconda) or the [r-env module](https://docs.csc.fi/apps/r-env). 
 
 
-## Optimizing the performance of your own code
 
 
-You can use profiling tools to find out how much time is spent in different parts of the code
-- Docs CSC: [Performance analysis](https://docs.csc.fi/computing/performance/)
-- [Profiling on LUMI](https://docs.lumi-supercomputer.eu/development/profiling/strategies/)
-When the computing bottlenecks are identified, try to figure out ways to improve the code.
 
 
-:::{admonition} Advanced topic: Developing scripts remotely
-:class: seealso, dropdown
-
-Instead of developing code on your local machine (e.g. laptop) and moving it to the supercomputer for testing, you can also consider to use a local editor and push edited files directly into the remote system via SSH. This works for example with an IDE like _Visual Studio Code_ or a text editor like _Notepad++_. Follow these [detailed instructions to set them up](https://docs.csc.fi/support/tutorials/remote-dev/). Note that [Visual Studio Code](https://docs.csc.fi/computing/webinterface/vscode/) and [Jupyter Notebooks](https://docs.csc.fi/computing/webinterface/jupyter/) are also available through the Puhti web interface
-
-:::
 
