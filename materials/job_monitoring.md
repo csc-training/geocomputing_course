@@ -56,3 +56,10 @@ Important aspects to monitor are:
    - If low GPU usage: better to use CPUs? Is disk I/O the bottleneck?
 - Disk workload
 -    If a lot of I/0, use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage)
+
+## Optimizing the performance of your own code
+
+You can use profiling tools to find out how much time is spent in different parts of the code
+- [CSC Docs: Performance analysis](https://docs.csc.fi/computing/performance/)
+- [LUMI Docs: Profiling on LUMI](https://docs.lumi-supercomputer.eu/development/profiling/strategies/)
+When the computing bottlenecks are identified, try to figure out ways to improve the code.
