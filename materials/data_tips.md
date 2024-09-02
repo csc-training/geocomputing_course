@@ -11,7 +11,7 @@
 - Keep data that is needed longer also in Allas.
 - **Databases**:
 	- Only file databases (SQLite, GeoPackage) can be kept in supercomputer disks.
-	- For PostgreSQL (but not PostGIS) use CSC [CSC Docs: Database-as-service](https://docs.csc.fi/cloud/dbaas/).
+	- For PostgreSQL and PostGIS use [CSC Pukki Database-as-service](https://docs.csc.fi/cloud/dbaas/).
 	- For any other database set up virtual machine in cPouta.
 
 ## Disk status
