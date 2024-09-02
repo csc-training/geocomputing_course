@@ -35,7 +35,8 @@ Example minimal batch script:
 srun python myscript.py             # The script to run  
 ``` 
 
-To submit the job for computation: `sbatch simple.sh`
+* Submit the job for computation: `sbatch simple.sh`
+* Cancel a job after job submission during queueing or runtime: `scancel jobid`.
 
 When we submit a batch job script, the job is not started directly, but is sent into a **queue**. Depending on the requested resources and load, the job may need to wait to get started. 
 
