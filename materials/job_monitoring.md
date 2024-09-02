@@ -40,17 +40,19 @@ More detailed queries can be tailored with `sacct`
 **Note!** Querying data from the Slurm accounting database with `sacct` can be a very heavy operation. **Don't** query long time intervals or run `sacct` in a loop/using `watch` as this will degrade the performance of the system for all users.
 
 Important aspects to monitor are:
-- [Memory efficiency](https://docs.csc.fi/support/faq/how-much-memory-my-job-needs/)
+- Memory efficiency
      - If low memory usage: too much memory requested?
      - If a lot of memory needed, think how to re-write your analysis to use less memory
-- [CPU efficiency](https://docs.csc.fi/computing/running/performance-checklist/#perform-a-scaling-test)
+     - [CSC Docs: How to estimate how much memory my batch job needs?](https://docs.csc.fi/support/faq/how-much-memory-my-job-needs/)
+- CPU efficiency
     - Parallel jobs must always benefit from all requested resources.
-    - **When you double the number of cores, the job should run at least 1.5x faster.**
     - Low CPU Efficiency:
          - Too many cores requested?
          - Cores waiting for other processes?
          - Cores waiting for data from disk?
          - Cores spread over too many nodes?
-- [GPU efficiency](https://docs.csc.fi/computing/usage-policy/#gpu-nodes)
+         - Perform a scaling test. 
+- GPU efficiency
    - If low GPU usage: better to use CPUs? Is disk I/O the bottleneck?
-- [Disk workload](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage)
+- Disk workload
+-    If a lot of I/0, use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage)
