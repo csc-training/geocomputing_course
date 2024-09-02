@@ -5,11 +5,13 @@
 ## Job output
 By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from Slurm, your tool or package) are written to the file `slurm-jobid.out` in the same folder as the batch job script. You can change the defaults in the batch job script:
 
+```
 #SBATCH --output=output_%j.txt
 #SBATCH --error=errors_%j.txt
+```
 
 :::{admonition} What to do if a job fails?
-:class: warning
+:class: seealso
 
 Does `sacct` show you that your job failed? Or did your job not do what you expected (e.g. write some files, etc)? 
 Some things to check:
