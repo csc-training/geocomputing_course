@@ -47,7 +47,7 @@ Table of contents
    materials/supercomputing.md  
    materials/supercomputer_setup.md
    materials/csc_supercomputers.md
-   materials/webinterface.md
+   materials/connecting.md
    materials/exercise_webinterface.md
 
 .. toctree::
