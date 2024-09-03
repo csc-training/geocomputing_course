@@ -45,14 +45,16 @@ When we submit a batch job script, the job is not started directly, but is sent 
 
 * You can use your workstation / laptop as a base measuring stick: If the code runs on your machine, as a first guess you can reserve the same amount of CPUs & memory as your machine has.
 * Before reserving multiple CPUs, check if your code can make use them.
+* Before reserving multiple nodes, check if your code can make use them. Most GIS tools can not.
 * You can also check more closely what resources are used with `top` on Mac and Linux or `task manager` on Windows when running on your machine
-* Similarly for running time: if you have run it on your machine, you should reserve similar time in the cluster.
+* Similarly for running time: if you have run it on your machine, you should reserve similar time in the supercomputer.
 * If your program does the same thing more than once, you can estimate that the `total run time is number of steps times time taken by each step`.
 * Likewise, if your program runs multiple parameters, the `total time needed is number of parameters times the time needed to run the program with one/some parameters`.
 * You can also run a smaller version of the problem and try to estimate how the program will scale when you make the problem bigger.
 * You should always monitor jobs to find out what were the actual resources you requested.
 * When you double the number of cores, the job should run at least 1.5x faster.
 * Some tools run both on CPU and GPU, if unsure which to use, a good rule of thumb is to compare the billing unit (BU) usage and select the one using less. A GPU uses 60 times more billing units than a single CPU core.
+
 
 Adapted from [Aalto Scientific Computing](https://scicomp.aalto.fi/triton/usage/program-size/)
 :::
