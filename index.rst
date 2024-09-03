@@ -70,13 +70,6 @@ Table of contents
    materials/exercise_python.md
    materials/exercise_r.md 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Own environments and code
-
-   materials/installations.md
-   materials/own_project.md
-
 
 .. toctree::
    :maxdepth: 2
@@ -86,6 +79,13 @@ Table of contents
    materials/data_tips.md    
    materials/allas.md  
    materials/exercise_allas.md 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Own environments and code
+
+   materials/installations.md
+   materials/own_project.md
 
 .. toctree::
    :maxdepth: 2
