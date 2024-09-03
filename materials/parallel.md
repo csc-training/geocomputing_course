@@ -1,6 +1,10 @@
 # Parallel computing
 
-For fast computation, supercomputers utilize parallelism. For doing analysis in parallel there are four main options:
+For fast computation, supercomputers utilize parallelism. 
+
+![](./images/parallel.png)
+
+For doing analysis in parallel there are four main options:
 
 1) Tools with built-in parallel support
 2) Python, R or Julia parallel libaries
@@ -53,7 +57,7 @@ Many programming languages have packages for parallel computing:
 * Julia:
    * Multi-core: [multi-threading](https://docs.julialang.org/en/v1/manual/multi-threading/#man-multithreading)
 
-If you have `map()`-functions or **for-loops** or similar in your scripts, it can be rather easy to make the scripts running in parallel.
+If you have for-loops`, `map()`/`*apply()-functions or similar in your scripts, it can be rather easy to make the scripts running in parallel.
 
 ## External tools to run the scripts in parallel
 
