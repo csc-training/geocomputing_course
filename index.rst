@@ -65,7 +65,6 @@ Table of contents
    materials/batch_job.md
    materials/job_monitoring.md
    materials/parallel.md
-   materials/exercise_basics.md
    materials/exercise_gdal.md
    materials/exercise_python.md
    materials/exercise_r.md 
