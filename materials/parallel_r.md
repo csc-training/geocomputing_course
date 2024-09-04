@@ -14,10 +14,9 @@ Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, P
 
 :::
 
-## future-library
+## future and furrr libraries 
 
-
-### Parallelization options
+### Parallelization set-up
 `future`-library supports both serial and parallel computing with different set-ups:
 
 Name |	Description |
@@ -34,9 +33,31 @@ cluster	|	external R sessions on current, local, and/or remote machines, multi-n
 While developing the code, it might be good to start with  multisession or multicore parallelization and then if needed to change to cluster. The required changes to code are small, when changing the parallelization set-up.
 
 ```
-# Just a demo slow function, that waits for 1 second
+# Multi-core, use one of them
+plan(multicore)
+plan(multisession)
+
+# Multi-node
+cl<-getMPIcluster()
+plan(cluster, workers = cl)
+```
+
+### Changes to code
+
+The basic R code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing.
+
+The most simple changes could be:
+
+* For-loops:
+  * Change to `furrr's future_map()`,
+  * If you have several rows of code in your for-loop, make it to a function.
+* `purrr's map()` -> `furrr's future_map()`
+* `*apply()` -> `future.apply` functions
+
+```
+# Just a demo slow function, that waits for 5 seconds
 slow_function<-function(i) {
-  Sys.sleep(1) 
+  Sys.sleep(5) 
   return(i)
 }
 # Input data vector, the slow function is run for each element.
@@ -49,25 +70,68 @@ for(i in input) {
   a[i] <- slow_function(i)
 }
 
+# purrr, map
+library(purrr) 
+a <- map(input, slow_function)
+
+# PARALLEL, furrr future_map
+library(furrr)
+plan(multisession)
+
+a <- future_map(input, slow_function)
+```
+
+If your function has two input variables, see [furrr's map2()](https://furrr.futureverse.org/reference/future_map2.html).
+
+### future.apply library
+If you have used `*apply()`-functions, `future.apply` library provides replacements for these.
+
+```
 # Basic lapply
 b <- lapply(input, slow_function)
 
-# purrr, map
-library(purrr) 
-c <- map(input, slow_function)
-
-# PARALLEL options with future
+# Parallel future.apply lapply
 library(future.apply) 
-plan(multisession)
-#options(future.availableCores.methods = "Slurm")
-future::availableCores()
-
-# Parallel lapply
 d <- future_lapply(input, slow_function)
-
-# Parallel map
-library(furrr) 
-e <- future_map(input, slow_function)
 ```
 
+
+
+:::{admonition} variables with `future`
+:class: tip
+
+* `future` exports needed variables and libraries automatically to the parallel processes
+* The variables must be serializable. Terra's raster objects are not serializable, see [Terra library's recommendations](https://github.com/rspatial/terra/issues/36)
+* Spatial data analysis often includes significant amounts of data. If writing the parallization yourself, it is better to read the data inside the function, that is running parallel. Give as input the file name or study area coordinates etc. 
+Give file names to workers
+
+:::
+
 * [CRAN, future: Unified Parallel and Distributed Processing in R for Everyone](https://cran.r-project.org/web/packages/future/index.html)
+* [CRAN, furrr: Apply Mapping Functions in Parallel using Futures](https://cloud.r-project.org/web/packages/furrr/index.html)
+* [CRAN, future.apply: Apply Function to Elements in Parallel using Futures](https://cran.r-project.org/web/packages/future.apply/index.html)
+
+## Batch job file changes
+### Multi-core jobs
+`multicore´ or `multisession parallization:
+```
+#SBATCH --nodes=1
+#SBATCH --ntasks=4  # Number of tasks. Upper limit depends on number of CPUs per node.
+
+(...)
+
+srun apptainer_wrapper exec Rscript --no-save Calc_contours_future_multicore.R
+```
+
+### Multi-node jobs
+`cluster` parallelization:
+```
+#SBATCH --nodes=2
+#SBATCH --ntasks=40  # Number of tasks. Upper limit depends on number of CPUs per node.
+
+(...)
+
+srun apptainer_wrapper exec RMPISNOW --no-save --slave -f Calc_contours_future_cluster.R
+```
+
+* [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs)
