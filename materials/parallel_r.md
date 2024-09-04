@@ -23,12 +23,10 @@ Name |	Description |
 --- | --- |
 sequential	|	serial, in the current R process
 multisession	|	multi-core, background R sessions, limited to one node
-multicore*	|	multi-core, forked R processes, limited to one node
+multicore*	|	multi-core, forked R processes, limited to one node, not in Windows nor in RStudio
 cluster	|	multi-node, external R sessions
 
-* not in Windows nor in RStudio
-
-While developing the code, it might be good to start with  multisession or multicore parallelization and then if needed to change to cluster. The required changes to code are small, when changing the parallelization set-up.
+While developing the code, it might be good to start with `multisession` or `multicore` parallelization and then if needed change it to `cluster`. The required changes to code are small, when changing the parallelization set-up.
 
 ```
 # Multi-core, use one of them
@@ -49,6 +47,7 @@ The most simple changes could be:
 * For-loops:
   * Change to `furrr's future_map()`,
   * If you have several rows of code in your for-loop, make it to a function.
+  * If your function needs more than one input variable, see [furrr, Map over multiple inputs simultaneously via futures](https://furrr.futureverse.org/reference/future_map2.html)
 * `purrr's map()` -> `furrr's future_map()`
 * `*apply()` -> `future.apply` functions
 
@@ -79,8 +78,6 @@ plan(multisession)
 a <- future_map(input, slow_function)
 ```
 
-If your function has two input variables, see [furrr's map2()](https://furrr.futureverse.org/reference/future_map2.html).
-
 #### future.apply library
 If you have used `*apply()`-functions, `future.apply` library provides replacements for these.
 
@@ -100,8 +97,7 @@ d <- future_lapply(input, slow_function)
 
 * `future` exports needed variables and libraries automatically to the parallel processes
 * The variables must be serializable. Terra's raster objects are not serializable, see [Terra library's recommendations](https://github.com/rspatial/terra/issues/36)
-* Spatial data analysis often includes significant amounts of data. If writing the parallization yourself, it is better to read the data inside the function, that is running parallel. Give as input the file name or study area coordinates etc. 
-Give file names to workers
+* Spatial data analysis often includes significant amounts of data. If writing the parallization yourself, it is better to read the data inside the function, that is running parallel. Avoid moving big size variables from main to parallel process. Give as input the file name or study area coordinates etc. 
 
 :::
 
