@@ -31,31 +31,32 @@ Look from the tool's manual, if it has built-in support for using multiple CPUs/
 Some example geospatial tools with built-in parallel support: 
 * GDAL, some commands e.g. `gdalwarp -multi -wo NUM_THREADS=val/ALL_CPUS ...`
 * FORCE
+* Lastools; many tools support parallel execution by setting `-cores`
 * OpenDronemap
 * OrfeoToolBox
-* Whiteboxtools; many tools support parallel execution without extra action
-* Lastools; many tools support parallel execution by setting `-cores`
-* [PDAL-wrench](https://github.com/PDAL/wrench?tab=readme-ov-file#parallel-processing)
-* SNAP with [Graph Processing Tool](https://docs.csc.fi/apps/snap/#using-snap-with-graph-processing-tool-gpt-command)
+* PDAL-wrench
+* SNAP
 * Zonation
-* Python libraries: osmnx, xarray, dask-geopandas
-* R libraries: raster, terra, lidR
+* Whiteboxtools; many tools support parallel execution without extra action 
+* Python libraries: `osmnx`, `xarray`, `dask-geopandas`
+* R libraries: `raster`, `terra`, `lidR`
+  
+All of these tools are multi-core, but not multi-node. The only exceptions are the Python libraries `xarray` and `dask-geopandas`, which use Dask, then multi-node is possible.
 
-All of these tools are multi-core, but not multi-node.
+:::{admonition} Define number of cores explicitly
+:class: warning
+
+The GIS-tools are not written for supercomputers, so they might not understand HPC specifics correctly and may think that they can use more cores than they actually can. It usually is better to define the number of cores to use explicitly, rather than "use all available cores".
+
+:::
 
 The deep learning libraries have options for [Multi-GPU and multi-node machine learning](https://docs.csc.fi/support/tutorials/ml-multi/).
 
 ## Parallel libaries of scripting languages
 
-Many programming languages have packages for parallel computing: 
-* Python:
-   * Multi-core: `multiprocessing` and `joblib`
-   * Multi-core or multi-node: `dask` and `mpi4py`
-   * See [Parallel Python](parallel_python.md) for more details
-* R:
-   * Multi-core: `parallel`
-   * Multi-core or multi-node: `snow` and `future`
-   * See [Parallel R](parallel_r.md) for more details
+Many programming languages have packages for parallel computing. 
+
+* **Python** and **R** have several packages for multi-core and multi-node parallelization, see [Parallel Python](parallel_python.md) and [Parallel R](parallel_r.md) for more details.
 * [Julia multi-threading](https://docs.julialang.org/en/v1/manual/multi-threading/#man-multithreading)
 * [MATLAB Parallel Computing Toolbox](https://se.mathworks.com/products/parallel-computing.html)
 
