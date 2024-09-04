@@ -83,7 +83,7 @@ a <- future_map(input, slow_function)
 
 If your function has two input variables, see [furrr's map2()](https://furrr.futureverse.org/reference/future_map2.html).
 
-### future.apply library
+#### future.apply library
 If you have used `*apply()`-functions, `future.apply` library provides replacements for these.
 
 ```
@@ -113,7 +113,7 @@ Give file names to workers
 
 ## Batch job file changes
 ### Multi-core jobs
-`multicore´ or `multisession parallization:
+`multicore` or `multisession` parallization:
 ```
 #SBATCH --nodes=1
 #SBATCH --ntasks=4  # Number of tasks. Upper limit depends on number of CPUs per node.
