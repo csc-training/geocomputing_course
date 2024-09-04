@@ -5,12 +5,12 @@ R has many libraries to support parallelization:
    * Multi-core: `parallel`
    * Multi-core or multi-node: **`future`**, `snow`, `foreach`, `Rmpi`, `pbdMPI`.. 
 
-If unsure, start with future, it is one of the newest, most versatile and easy to use. 
+If unsure, start with `future`, it is one of the newest, most versatile and easy to use. 
 
-:::{admonition} Define number of cores explicitly
+:::{admonition} Supercomputer usage
 :class: warning
 
-Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs) for details. These might differ from package's general instructions.
+Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs) for details about some of these packages. These might differ from package's general instructions.
 
 :::
 
@@ -21,12 +21,10 @@ Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, P
 
 Name |	Description |
 --- | --- |
-synchronous, non-parallel: |	
-sequential	|	sequentially in the current R process
-asynchronous, parallel:	|	
-multisession	|	background R sessions (on current machine), limited to one node
-multicore*	|	forked R processes (on current machine), limited to one node
-cluster	|	external R sessions on current, local, and/or remote machines, multi-node possible
+sequential	|	serial, in the current R process
+multisession	|	multi-core, background R sessions, limited to one node
+multicore*	|	multi-core, forked R processes, limited to one node
+cluster	|	multi-node, external R sessions
 
 * not in Windows nor in RStudio
 
