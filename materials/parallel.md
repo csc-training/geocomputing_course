@@ -4,6 +4,23 @@ For fast computation, supercomputers utilize parallelism.
 
 ![](./images/parallel.png)
 
+## What to paralellize?
+Spatial data analysis often allows splitting at least some parts of the analysis to independent parts, that could be run in parallel:
+
+* Dividing data into parts:
+  * Think how to divide the data: rectangular boxes, catchment areas, administrative units, chunks of vector data, data of different time periods, etc.
+  * In many cases the borders need special care, one option is to use overlapping splitting of rasters.
+* Repeating the analysis with different parameters: scenarios, time periods, model settings, etc.
+
+:::{admonition} Think about your own work
+:class: tip
+
+Do you need to run a lot of steps one after another? Or few steps that need a lot of memory? Do steps depend on each other? Which steps could be run in parallel? Which steps cannot be run in parallel? How to split your data?
+
+:::
+
+## How to parallelize?
+
 For doing analysis in parallel there are four main options:
 
 1) Tools with built-in parallel support
@@ -16,13 +33,6 @@ From practival point of view in supercomptuers, it is also important to understa
 * **Multi-node** - it can distribute the work to several nodes of the supercomputer.
 
 For multi-core there is clearly more options. The number of cores in a single node has been recently been increasing, so also multi-core tools can be very useful. 
-
-:::{admonition} Think about your own work
-:class: tip
-
-Do you need to run a lot of steps one after another? Or few steps that need a lot of memory? Do steps depend on each other? Which steps could be run in parallel? Which steps cannot be run in parallel?
-
-:::
 
 ## Tools with built-in parallel support
 
@@ -79,8 +89,6 @@ GNU parallel is a general Linux tool for executing commands or scripts in parall
 Snakemake is a scientific workflow management system, that supports running for example R, bash and Python scripts. It can handle dependecies between the tasks and can be used both multi-core and multi-node set-ups. Snakemake is one of the easiest tools for workflow management.
 
 * [CSC Docs: Running Snakemake workflow on Puhti](https://docs.csc.fi/support/tutorials/snakemake-puhti/)
-
-
 
 ## Write your own parallel code
 
