@@ -22,8 +22,8 @@ Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, P
 Name |	Description |
 --- | --- |
 sequential	|	serial, in the current R process
-multisession	|	multi-core, background R sessions, limited to one node
-multicore*	|	multi-core, forked R processes, limited to one node, not in Windows nor in RStudio
+multisession |	multi-core, background R sessions, limited to one node
+multicore	|	multi-core, forked R processes, limited to one node, not in Windows nor in RStudio
 cluster	|	multi-node, external R sessions
 
 While developing the code, it might be good to start with `multisession` or `multicore` parallelization and then if needed change it to `cluster`. The required changes to code are small, when changing the parallelization set-up.
@@ -52,6 +52,7 @@ The most simple changes could be:
 * `*apply()` -> `future.apply` functions
 
 ```
+# Example of chaning for-loop and purrr's map() to furrr's future_map()
 # Just a demo slow function, that waits for 5 seconds
 slow_function<-function(i) {
   Sys.sleep(5) 
@@ -82,6 +83,7 @@ a <- future_map(input, slow_function)
 If you have used `*apply()`-functions, `future.apply` library provides replacements for these.
 
 ```
+# Example of chaning lapply() to future.apply's future_lapply()
 # Basic lapply
 b <- lapply(input, slow_function)
 
