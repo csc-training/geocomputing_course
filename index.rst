@@ -66,7 +66,9 @@ Table of contents
    materials/job_monitoring.md
    materials/parallel.md
    materials/exercise_gdal.md
+   materials/parallel_python.md
    materials/exercise_python.md
+   materials/parallel_r.md
    materials/exercise_r.md 
 
 
