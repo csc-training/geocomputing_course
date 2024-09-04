@@ -60,7 +60,7 @@ Many programming languages have packages for parallel computing.
 * [Julia multi-threading](https://docs.julialang.org/en/v1/manual/multi-threading/#man-multithreading)
 * [MATLAB Parallel Computing Toolbox](https://se.mathworks.com/products/parallel-computing.html)
 
-If you have for-loops`, `map()`/`*apply()-functions or similar in your scripts, it can be rather easy to make the script run in parallel.
+If you have for-loops, `map()/*apply()`-functions or similar in your scripts, it can be rather easy to make the script run in parallel.
 
 ## External tools to run the scripts in parallel
 
