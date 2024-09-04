@@ -14,7 +14,7 @@ Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, P
 
 :::
 
-## future and furrr libraries 
+## future, furrr and future.apply libraries 
 
 ### Parallelization set-up
 `future`-library supports both serial and parallel computing with different set-ups:
@@ -79,7 +79,6 @@ plan(multisession)
 a <- future_map(input, slow_function)
 ```
 
-#### future.apply library
 If you have used `*apply()`-functions, `future.apply` library provides replacements for these.
 
 ```
