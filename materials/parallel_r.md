@@ -99,7 +99,7 @@ d <- future_lapply(input, slow_function)
 
 * `future` exports needed variables and libraries automatically to the parallel processes
 * The variables must be serializable. Terra's raster objects are not serializable, see [Terra library's recommendations](https://github.com/rspatial/terra/issues/36)
-* Spatial data analysis often includes significant amounts of data. If writing the parallization yourself, it is better to read the data inside the function, that is running parallel. Avoid moving big size variables from main to parallel process. Give as input the file name or study area coordinates etc. 
+* Avoid moving big size variables from main to parallel process. Spatial data analysis often includes significant amounts of data. It is better to read the data inside the parallel function. Give as input the file name or compute area coordinates etc. 
 
 :::
 
@@ -122,7 +122,7 @@ srun apptainer_wrapper exec Rscript --no-save Calc_contours_future_multicore.R
 ### Multi-node jobs
 `cluster` parallelization:
 ```
-#SBATCH --nodes=2
+#SBATCH --nodes=2 #For cluster usage to make sense, this should be more than 1.
 #SBATCH --ntasks=40  # Number of tasks. Upper limit depends on number of CPUs per node.
 
 (...)
