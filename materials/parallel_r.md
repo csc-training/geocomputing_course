@@ -44,7 +44,7 @@ plan(cluster, workers = cl)
 
 ### Changes to code
 
-The basic R code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing.
+The basic R code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing. The changes to code are exactly the same for all parallization set-ups.
 
 The most simple changes could be:
 
