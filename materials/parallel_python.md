@@ -69,11 +69,11 @@ client = Client()
 # With for example 30 cores available, Dask by default would likely create 6 workers.
 # Depending on your analysis, it might be good or not.
 # To select the number of workers explicitly:
-no_of_workers = len(os.sched_getaffinity(0))
-client = Client(n_workers=no_of_workers)
+no_of_cores = len(os.sched_getaffinity(0))
+client = Client(n_workers=no_of_cores)
 ```
 
-**SLURMCluster**:
+**SLURMCluster**
 ```
 from dask_jobqueue import SLURMCluster
 
@@ -99,20 +99,20 @@ In this course we use Delayed functions. Delayed functions are useful in paralle
 The changes to code are exactly the same for all parallization set-ups. The most simple changes could be:
 
 * For-loops:
-  * Change to `Dask's client.map()`,
-  * If you have several rows of code in your for-loop, make it to a function.
+  * Change to Dask's delayed functions,
 * `map()` -> `Dask's client.map()`
 
 ```
 # Example of changing for-loop and map() to Dask
-# Just a demo slow function, that waits for 5 seconds
+# Just a demo slow function, that waits for 2 seconds
 def slow_functio(i):
   time.sleep(2) 
   return(i)
 # Input data vector, the slow function is run for each element.
 input = range(0, 7)
-
-# SERIAL options:
+```
+**Serial**
+```
 # Basic FOR loop
 a = []
 for i in input: 
@@ -123,8 +123,10 @@ print(a)
 # Basic map
 a = map(slow_function, input)
 print(list(a))
+```
 
-# PARALLEL, with Dask delayed functions
+**Parallel, Dask delayed functions**
+```
 from dask import delayed
 from dask import compute
 list_of_delayed_functions = []
@@ -133,14 +135,15 @@ for i in input:
 
 a = compute(list_of_delayed_functions)
 print(a)
+```
 
-# PARALLEL, with Dask futures 
+**Parallel, with Dask futures**
+```
 from dask.distributed import Client
 client = Client() 
 futures = client.map(slow_function, input)
 a = client.gather(futures)
 print(a)
-
 ```
 
 :::{admonition} variables with Dask
