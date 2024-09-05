@@ -3,11 +3,11 @@
 If starting with a new code, the first option could be to look for spatial libraries that have parallelization already built in:
 
 * [Dask-geopandas](https://dask-geopandas.readthedocs.io/) for vector data analysis, still a lot more limited than `geopandas`
-* [xarray](http://xarray.pydata.org/) for basic raster data analysis with Dask
+* [xarray](http://xarray.pydata.org/) for basic raster data analysis
   * The [STAC exercise](exercise_stac.md) is using Dask with `xarray`.
-* [xarray-spatial](https://xarray-spatial.readthedocs.io/en/stable/) for common raster analysis functions with Dask
-* [rioxarray](https://corteva.github.io/rioxarray/stable/index.html) for reading data via GDAL-supported formats and basic merging, clipping etc with Dask
-* [osmnx](https://osmnx.readthedocs.io/en/stable/index.html) for routing with `multiprocessing`
+* [xarray-spatial](https://xarray-spatial.readthedocs.io/en/stable/) for common raster analysis functions
+* [rioxarray](https://corteva.github.io/rioxarray/stable/index.html) for reading data via GDAL-supported formats and basic merging, clipping etc
+* [osmnx](https://osmnx.readthedocs.io/en/stable/index.html) for routing 
   
 These libraries are still developing and do not support very wide range of functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. The basic Python code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing. 
 
@@ -16,7 +16,7 @@ Python has many libraries to support parallelization:
    * Multi-core: `multiprocessing` and `joblib`
    * Multi-core or multi-node: **`dask`** and `mpi4py`
 
-If unsure, start with Dask, it is one of the newest, most versatile and easy to use. But Dask has many options and alternatives, `multiprocessing` might be easier to learn as first.
+If unsure, start with Dask, it is one of the newest, most versatile and easy to use. But Dask has many options and alternatives, `multiprocessing` might be easier to learn as first. All of the above mentioned spatial libraries use Dask, except `osmnx`, which uses `multiprocessing`.
 
 :::{admonition} How many cores I can use?
 :class: tip.
@@ -35,7 +35,21 @@ Do not use `multiprocessing.cpu_count()`, that counts only hardware cores, but d
 
 ## Dask
 
-### Parallelization set-up
+[Dask](https://dask.org/) is a versatile Python library for scalable analytics. 
+
+:::{admonition} Delayed computing
+:class: tip
+
+One general feature of Dask is that it delays computing to the point when the result is actually needed, for example for plotting or saving to a file. So for example when running the code in Jupyter, cells that actually require longer time may run instantly, but later some cell may take a lot of time.
+
+:::
+
+When using Dask, two main decisions have to be made for running code in Parallel, which we will answer next. 
+
+1. How to run the parallel code?
+2. How to make the code parallel?
+
+### How to run the parallel code?
 [Dask](https://docs.dask.org/en/stable/) supports different set-ups for parallel computing, from supercomptuers point of view, the main options are:
 
 * [Default schedulers](https://docs.dask.org/en/stable/scheduler-overview.html) for multi-core jobs.
@@ -79,7 +93,11 @@ cluster.scale(number_of_jobs)
 client = Client(cluster)
 ```
 
-### Changes to code
+### How to make the code parallel?
+Dask provides several options, inc [Dask DataFrames](https://docs.dask.org/en/stable/dataframe.html), [Dask Arrays](https://docs.dask.org/en/stable/array.html), [Dask Bags](https://docs.dask.org/en/stable/bag.html), [Dask Delayed](https://docs.dask.org/en/stable/delayed.html) and [Dask Futures](https://docs.dask.org/en/stable/futures.html). This decision depends on the type of analyzed data and already existing code. Additionally Dask has support for scalable machine learning with [DaskML](https://ml.dask.org/).
+
+In this course we use Delayed functions. Delayed functions are useful in parallelising existing code. This approach delays function calls and creates a graph of the computing process. From the graph, Dask can then divide the work tasks to different workers whenever parallel computing is possible. Keep in mind that the other ways of code parallelisation might suit better in different use cases. 
+
 The changes to code are exactly the same for all parallization set-ups. The most simple changes could be:
 
 * For-loops:
@@ -108,16 +126,7 @@ print(a)
 a = map(slow_function, input)
 print(list(a))
 
-# PARALLEL, with Dask futures with LocalCluster
-# Could be used also with SLURMCluster
-from dask.distributed import Client
-client = Client() 
-futures = client.map(slow_function, input)
-a = client.gather(futures)
-print(a)
-
 # PARALLEL, with Dask delayed functions
-# Can be used with default scheduler, LocalCluster or SLURMCluster
 from dask import delayed
 from dask import compute
 list_of_delayed_functions = []
@@ -127,6 +136,15 @@ for i in input:
 ### This starts the execution with the resources available
 a = compute(list_of_delayed_functions)
 print(a)
+
+# PARALLEL, with Dask futures with LocalCluster
+# Could be used also with SLURMCluster
+from dask.distributed import Client
+client = Client() 
+futures = client.map(slow_function, input)
+a = client.gather(futures)
+print(a)
+
 ```
 
 :::{admonition} variables with Dask
@@ -139,8 +157,8 @@ print(a)
 :::
 
 
-## Batch job file changes
-### Multi-core jobs
+### Batch job file changes
+#### Multi-core jobs
 Default schedulers or `LocalCluster` parallization:
 ```
 #SBATCH --nodes=1
@@ -151,7 +169,7 @@ Default schedulers or `LocalCluster` parallization:
 srun python dask_singlenode.py
 ```
 
-### Multi-node jobs
+#### Multi-node jobs
 `SLURMCluster` parallelization:
 ```
 #SBATCH --nodes=2 #For cluster usage to make sense, this should be more than 1.
@@ -161,3 +179,9 @@ srun python dask_singlenode.py
 
 srun python dask_multinode.py
 ```
+
+Further reading:
+* [CSC Docs, Dask tutorial](https://docs.csc.fi/support/tutorials/dask-python)
+* [CSC geocomputing Python examples](https://github.com/csc-training/geocomputing/tree/master/python/puhti)
+  * Dask DataFrames: [CSC dask-geopandas example](https://github.com/csc-training/geocomputing/edit/master/python/dask_geopandas)
+  * Dask Arrays [CSC STAC example with Xarray](https://github.com/csc-training/geocomputing/edit/master/python/STAC)
