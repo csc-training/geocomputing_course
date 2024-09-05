@@ -2,7 +2,8 @@
 
 If starting with a new code, the first option could be to look for spatial libraries that have parallelization already built in:
 
-* `terra` has some functions in parallel for raster processing 
+* `terra` has some functions in parallel for raster processing
+* `gdalcubes` for multi-dimensional spatial data analysis
 * `lidR` for lidar data analysis
 
 These libraries cover only very limited functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. 
@@ -136,5 +137,9 @@ srun apptainer_wrapper exec Rscript --no-save Calc_contours_future_multicore.R
 srun apptainer_wrapper exec RMPISNOW --no-save --slave -f Calc_contours_future_cluster.R
 ```
 
+Further reading:
 * [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs)
 * [CSC Geocomputing examples for R in Puhti](https://github.com/csc-training/geocomputing/tree/master/R/puhti): `future`, `snow`, `foreach`.
+  * [`lidr`-example ](https://github.com/csc-training/geocomputing/tree/master/R/R_LiDAR/R_lidar_course_exercises)
+  * [STAC-example](https://github.com/csc-training/geocomputing/tree/master/R/STAC): `gdalcubes`
+  * [`raster::predict`-example](https://github.com/csc-training/geocomputing/tree/master/R/raster_predict)
