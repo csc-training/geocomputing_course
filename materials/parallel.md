@@ -48,10 +48,8 @@ Some example geospatial tools with built-in parallel support:
 * SNAP
 * Zonation
 * Whiteboxtools; many tools support parallel execution without extra action 
-* Python libraries: `osmnx`, `xarray`, `dask-geopandas`
-* R libraries: `raster`, `terra`, `lidR`
   
-All of these tools are multi-core, but not multi-node. The only exceptions are the Python libraries `xarray` and `dask-geopandas`, which use Dask, then multi-node is possible.
+All of these tools are multi-core, but not multi-node. 
 
 :::{admonition} Define number of cores explicitly
 :class: warning
