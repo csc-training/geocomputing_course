@@ -1,5 +1,12 @@
 # Parallel R
 
+If starting with a new code, the first option could be to look for spatial libraries that have parallelization already built in:
+
+* `terra` has some functions in parallel for raster processing using `parallel`-library.
+* `lidR` has some support for parallel using `future`-library.
+
+These libraries cover only very limited functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. 
+
 R has many libraries to support parallelization:
 
    * Multi-core: `parallel`
