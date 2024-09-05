@@ -27,6 +27,8 @@ All exercises are done via Puhti web-interface, which you can access via your we
 This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_ and funded by `Geoportti Research Infrastructure <https://www.geoportti.fi/>`_ and the `Location Innvation Hub <https://locationinnovationhub.eu/en/home/>`_. 
 
 
+.. Hidden TOCs
+
 .. toctree::
    :maxdepth: 2
    :caption: Welcome
