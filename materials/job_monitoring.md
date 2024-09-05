@@ -33,14 +33,9 @@ Some things to check:
 ## Testing
 - Before large runs, it's a good idea to do a smaller trial run
 - Start simple and gradually use more complex approaches if needed
-   - Try first running interactively (**not** on a login node) to check how the tool performs on actual input data
+   - Try first running interactively (**not** on a login node) or in the `test`-partition
    - Check that results are as expected
    - Check the resource usage after the test run and adjust accordingly
-   - If developers provide some test or example data, run it first and make sure results are correct
-- You can use the `test`-partition to check that your batch job script is correct and everything is interpreted correctly
-   - Limits : 15 min, 2 nodes
-   - Job turnaround usually very fast even if machine is "full"
-   - Can be useful to spot typos, missing files, _etc_. before submitting a job that might stay waiting in the queue
 
 ## Resource monitoring
 See the resource usage after job has finished: `seff jobid`
