@@ -26,7 +26,7 @@ Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, P
 :::
 
 ## future library
-When using future, two main decisions have to be made for running code in parallel, which we will answer next.
+When using future, two main decisions have to be made for running code in parallel, which we will answer next:
 
 * How to run the parallel code?
 * How to make the code parallel?
@@ -121,7 +121,7 @@ d <- future_lapply(input, slow_function)
 * [CRAN, furrr: Apply Mapping Functions in Parallel using Futures](https://cloud.r-project.org/web/packages/furrr/index.html)
 * [CRAN, future.apply: Apply Function to Elements in Parallel using Futures](https://cran.r-project.org/web/packages/future.apply/index.html)
 
-### Batch job file changes
+### Batch job scripts
 #### Multi-core jobs
 `multicore` or `multisession` parallization:
 ```
