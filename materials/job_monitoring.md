@@ -1,6 +1,7 @@
 # Job monitoring
+## Job status
 
-* Check the status of your job: `squeue --me`
+Check the status of your job: `squeue --me`
 
 ## Job output
 By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from Slurm, your tool or package) are written to the file `slurm-jobid.out` in the same folder as the batch job script. You can change the defaults in the batch job script:
