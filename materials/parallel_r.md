@@ -113,8 +113,8 @@ d <- future_lapply(input, slow_function)
 * [CRAN, furrr: Apply Mapping Functions in Parallel using Futures](https://cloud.r-project.org/web/packages/furrr/index.html)
 * [CRAN, future.apply: Apply Function to Elements in Parallel using Futures](https://cran.r-project.org/web/packages/future.apply/index.html)
 
-## Batch job file changes
-### Multi-core jobs
+### Batch job file changes
+#### Multi-core jobs
 `multicore` or `multisession` parallization:
 ```
 #SBATCH --nodes=1
@@ -125,7 +125,7 @@ d <- future_lapply(input, slow_function)
 srun apptainer_wrapper exec Rscript --no-save Calc_contours_future_multicore.R
 ```
 
-### Multi-node jobs
+#### Multi-node jobs
 `cluster` parallelization:
 ```
 #SBATCH --nodes=2 #For cluster usage to make sense, this should be more than 1.
