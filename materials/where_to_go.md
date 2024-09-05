@@ -25,29 +25,20 @@
 * [CodeRefinery materials on FAIR research software development](https://coderefinery.org/lessons/core/)
 
 ## Documentation
-* [`docs.csc.fi`](https://docs.csc.fi)
-* [CSC and Linux Cheat Sheet](./cheatsheet.md) 
+* [CSC Docs](https://docs.csc.fi)
+* [LUMI Docs](https://docs.lumi-supercomputer.eu/)
 * GIS:
-   * [CSC research pages: Geocomputing using CSC resources](https://research.csc.fi/geocomputing)
    * [Geocomputing examples in github](https://github.com/csc-training/geocomputing)
-   * [CSC research pages: GIS tools](https://research.csc.fi/gis-software)
-   * [CSC research pages: Spatial data sources](https://research.csc.fi/open-gis-data) 
-   * [CSC Docs: Earth Observation tutorial](https://docs.csc.fi/support/tutorials/gis/eo_guide/)
-   * [CSC Docs: GIS tools in CSC supercomputers](https://docs.csc.fi/apps/by_discipline/#geosciences)
-   * [CSC Docs: Using geospatial files directly from cloud, inc Allas](https://docs.csc.fi/support/tutorials/gis/gdal_cloud/)
-   * [CSC Docs: GDAL tutorial](https://docs.csc.fi/support/tutorials/gis/gdal/)
-   * [CSC Docs: Virtual rasters](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/)
-* Python:
-    * [CSC Docs: Python GIS learning materials](https://docs.csc.fi/apps/geoconda/#references)
-    * [CSC Docs: Python parallel jobs](https://docs.csc.fi/apps/python/#python-parallel-jobs)
-    * [CSC Docs: Dask tutorial](https://docs.csc.fi/support/tutorials/dask-python/)
- * R:
-    * [CSC Docs: Spatial R learning materials](https://docs.csc.fi/apps/r-env-for-gis/#references)
-    * [CSC Docs: Parallel jobs using R](https://docs.csc.fi/support/tutorials/parallel-r/)
+   * Tutorials in CSC Docs:
+        * [Earth Observation tutorial](https://docs.csc.fi/support/tutorials/gis/eo_guide/)
+        * [GDAL tutorial](https://docs.csc.fi/support/tutorials/gis/gdal/)
+        * [Virtual rasters](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/)
+    * [Python GIS learning materials](https://docs.csc.fi/apps/geoconda/#references)
+    * [Spatial R learning materials](https://docs.csc.fi/apps/r-env-for-gis/#references)
 * Linux:
+    * [CSC and Linux Cheat Sheet](./cheatsheet.md) (one page summary of the most important Linux commands – handy to have near you during the course)  
     * [CSC Docs: Linux tutorial](https://docs.csc.fi/support/tutorials/env-guide/)
     * [CSC Docs: Bash tutorial](https://docs.csc.fi/support/tutorials/env-guide/linux-bash-scripts/)
-    * [CSC Docs: CSC and Linux Cheat Sheet](./cheatsheet.md) (one page summary of the most important Linux commands – handy to have near you during the course)  
     * [UNIX tutorial for beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/) (the first two topics are a good start, try also some editor)
     * [Basic Linux Commands 10 min tutorial video](https://www.youtube.com/watch?v=uFPly_nGBMg) (sit back and watch)
-    * [Terminal](terminal.md) 
+    * [Terminal basics](terminal.md) 
