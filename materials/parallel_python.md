@@ -56,12 +56,13 @@ When using Dask, two main decisions have to be made for running code in parallel
 
 While developing the code, it might be good to start with default scheduler or `LocalCluster` parallelization and then if needed change it to `SLURMCluster`. The required changes to code are small, when changing the parallelization set-up.
 
-One of the advantages of using LocalCluster, is that then in Jupyter the [Dask-extension](https://github.com/dask/dask-labextension) is able to show progress and resource usage.
+One of the advantages of using `LocalCluster`, is that then in Jupyter the [Dask-extension](https://github.com/dask/dask-labextension) is able to show progress and resource usage.
 
 **Default scheduler** is started automatically, when Dask objects or functions are used.
 
-**LocalCluster**, with default settings:
+**LocalCluster**
 ```
+# With default settings
 from dask.distributed import Client
 client = Client()
 
@@ -72,7 +73,7 @@ no_of_workers = len(os.sched_getaffinity(0))
 client = Client(n_workers=no_of_workers)
 ```
 
-**SLURMCluster:
+**SLURMCluster**:
 ```
 from dask_jobqueue import SLURMCluster
 
