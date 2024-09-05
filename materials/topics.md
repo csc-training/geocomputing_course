@@ -3,12 +3,14 @@
 **General**
 * Choose suitable [CSC computing service](csc_services.md)
 * Get [CSC user account and project](account_project.md)
+* [Look/ask for help](support.md)
+  
+**Supercomputer intro**
 * [Why to use a supercomputer](supercomputing.md)
 * [What is a supercomputer](supercomputer_setup.md)
 * [CSC supercomputers](csc_supercomputers.md)
 * [Connect to supercomputer](connecting.md)  
-* [Look/ask for help](support.md)
-  
+
 **Tools and scripting**
 - Availability:
    - [Pre-installed tools at CSC?](software.md).
