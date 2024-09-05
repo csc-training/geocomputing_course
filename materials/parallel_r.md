@@ -1,10 +1,13 @@
 # Parallel R
+## Spatial libraries with parallel support
 
 If starting with a new code, the first option could be to look for spatial libraries that have parallelization already built in:
 
 * `terra` has some functions in parallel for raster processing
 * `gdalcubes` for multi-dimensional spatial data analysis
 * `lidR` for lidar data analysis
+
+## R parallel libraries
 
 These libraries cover only very limited functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. 
 
