@@ -70,7 +70,7 @@ Many programming languages have packages for parallel computing.
 
 ## External tools to run the scripts in parallel
 
-The external tools enable running the scripts in parallel. This way of running programs is also called task farming or high throughput computing. The tools have different complexity and different features. The simpler of these tools are for running same script with different input paramaters, for example different input files, scenarios, time frames etc. More complicated tools support managing the whole workflow with several steps and with dependecies between steps. Workflow tools also help with making your work more reproducible by recording the computational steps and data. See [CSC Docs: High-throughput computing and workflows](https://docs.csc.fi/computing/running/throughput/) for more information.
+The external tools enable running the scripts in parallel. This way of running programs is also called task farming or high throughput computing. The tools have different complexity and different features. The simpler ones of these tools are for running same script with different input paramaters, for example different input files, scenarios, time frames etc. More complicated tools support managing the whole workflow with several steps and with dependecies between steps. Workflow tools also help with making your work more reproducible by recording the computational steps and data. See [CSC Docs: High-throughput computing and workflows](https://docs.csc.fi/computing/running/throughput/) for more information.
 
 ### GNU Parallel
 
