@@ -1,5 +1,5 @@
 # Parellel Python
-
+## Spatial libraries with parallel support
 If starting with a new code, the first option could be to look for spatial libraries that have parallelization already built in:
 
 * [Dask-geopandas](https://dask-geopandas.readthedocs.io/) for vector data analysis, still a lot more limited than `geopandas`
@@ -8,7 +8,8 @@ If starting with a new code, the first option could be to look for spatial libra
 * [xarray-spatial](https://xarray-spatial.readthedocs.io/en/stable/) for common raster analysis functions
 * [rioxarray](https://corteva.github.io/rioxarray/stable/index.html) for reading data via GDAL-supported formats and basic merging, clipping etc
 * [osmnx](https://osmnx.readthedocs.io/en/stable/index.html) for routing 
-  
+
+## Python parallel libraries
 These libraries are still developing and do not support very wide range of functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. The basic Python code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing. 
 
 Python has many libraries to support parallelization:
