@@ -31,6 +31,7 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
    :maxdepth: 2
    :caption: Welcome
 
+   materials/topics.md
    materials/prerequisites.md
    materials/orga.md
    materials/csc_services.md
@@ -89,7 +90,6 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
    :caption: Wrap-up
   
    materials/support.md
-   materials/wrapup.md
    materials/where_to_go.md
    materials/cheatsheet.md
    materials/terminal.md
