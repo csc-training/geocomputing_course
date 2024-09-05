@@ -76,7 +76,7 @@ The external tools enable running the scripts in parallel. This way of running p
 
 GNU parallel is a general Linux tool for executing commands or scripts in parallel in one node. It iterates over an input list, which can be a list of files or list of input parameters. The number of tasks may be higher than number of cores, it waits with execution as resources become available. GNU Parellel does not support dependecies between the tasks.
 
-* From [GNU Parallel documentation](https://www.gnu.org/software/parallel/)
+* [GNU Parallel documentation](https://www.gnu.org/software/parallel/)
 * Geocomputing examples: [GDAL with GNU-parallel](https://github.com/csc-training/geocomputing/tree/master/gdal) and [PDAL with GNU-parallel](https://github.com/csc-training/geocomputing/tree/master/pdal)
 * A more advanced example for using [GNU-parallel for multi-node](https://docs.csc.fi/support/tutorials/many/) together with another tool.
 
