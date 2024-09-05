@@ -1,4 +1,4 @@
-# Parellel Python
+# Parallel Python
 ## Spatial libraries with parallel support
 If starting with a new code, the first option could be to look for spatial libraries that have parallelization already built in:
 
@@ -42,7 +42,7 @@ One general feature of Dask is that it delays computing to the point when the re
 
 :::
 
-When using Dask, two main decisions have to be made for running code in Parallel, which we will answer next. 
+When using Dask, two main decisions have to be made for running code in parallel, which we will answer next. 
 
 1. How to run the parallel code?
 2. How to make the code parallel?
@@ -58,11 +58,10 @@ While developing the code, it might be good to start with default scheduler or `
 
 One of the advantages of using LocalCluster, is that then in Jupyter the [Dask-extension](https://github.com/dask/dask-labextension) is able to show progress and resource usage.
 
-```
-# Default scheduler is started automatically, when Dask objects or functions are used.
+**Default scheduler** is started automatically, when Dask objects or functions are used.
 
-######################
-# LOCALCLUSTER, with default settings.
+**LocalCluster**, with default settings:
+```
 from dask.distributed import Client
 client = Client()
 
@@ -71,10 +70,10 @@ client = Client()
 # To select the number of workers explicitly:
 no_of_workers = len(os.sched_getaffinity(0))
 client = Client(n_workers=no_of_workers)
+```
 
-
-######################
-# SLURMCLUSTER
+**SLURMCluster:
+```
 from dask_jobqueue import SLURMCluster
 
 cluster = SLURMCluster(
@@ -104,7 +103,7 @@ The changes to code are exactly the same for all parallization set-ups. The most
 * `map()` -> `Dask's client.map()`
 
 ```
-# Example of changing for-loop and map() to client.map()
+# Example of changing for-loop and map() to Dask
 # Just a demo slow function, that waits for 5 seconds
 def slow_functio(i):
   time.sleep(2) 
@@ -131,12 +130,10 @@ list_of_delayed_functions = []
 for i in input:
     list_of_delayed_functions.append(delayed(slow_function)(i))
 
-### This starts the execution with the resources available
 a = compute(list_of_delayed_functions)
 print(a)
 
-# PARALLEL, with Dask futures with LocalCluster
-# Could be used also with SLURMCluster
+# PARALLEL, with Dask futures 
 from dask.distributed import Client
 client = Client() 
 futures = client.map(slow_function, input)
