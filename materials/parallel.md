@@ -28,8 +28,8 @@ For doing analysis in parallel there are four main options:
 3) External tools to run the scripts in parallel
 4) Write your own parallel code
 
-From practival point of view in supercomptuers, it is also important to understand, if the the tool supports:
-* **Multi-core** - it runs in parallel only inside one node of the supercomputer. Currently in Puhti there is 40 cores in a node and in Mahti and LUMI 128.
+From practical point of view in supercomptuers, it is also important to understand, if the the tool/script supports:
+* **Multi-core** - it runs in parallel only inside one node of the supercomputer.
 * **Multi-node** - it can distribute the work to several nodes of the supercomputer.
 
 For multi-core there is clearly more options. The number of cores in a single node has been recently been increasing, so also multi-core tools can be very useful. 
