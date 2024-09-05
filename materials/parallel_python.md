@@ -30,9 +30,6 @@ Do not use `multiprocessing.cpu_count()`, that counts only hardware cores, but d
 
 :::
 
-* [CSC Parallel Python course materials](https://github.com/csc-training/hpc-python/blob/master/docs/mooc/index.md), inc `mpi4py`
-* [Geocomputing examples for Puhti](https://github.com/csc-training/geocomputing/tree/master/python/puhti), inc. `dask`, `multiprocessing` and `joblib`
-
 ## Dask
 
 [Dask](https://dask.org/) is a versatile Python library for scalable analytics. 
@@ -182,6 +179,7 @@ srun python dask_multinode.py
 
 Further reading:
 * [CSC Docs, Dask tutorial](https://docs.csc.fi/support/tutorials/dask-python)
-* [CSC geocomputing Python examples](https://github.com/csc-training/geocomputing/tree/master/python/puhti)
+* [CSC geocomputing Python examples](https://github.com/csc-training/geocomputing/tree/master/python/puhti), inc. `dask`, `multiprocessing` and `joblib`
   * Dask DataFrames: [CSC dask-geopandas example](https://github.com/csc-training/geocomputing/edit/master/python/dask_geopandas)
   * Dask Arrays [CSC STAC example with Xarray](https://github.com/csc-training/geocomputing/edit/master/python/STAC)
+* [CSC Parallel Python course materials](https://github.com/csc-training/hpc-python/blob/master/docs/mooc/index.md), inc `mpi4py` and `cython`
