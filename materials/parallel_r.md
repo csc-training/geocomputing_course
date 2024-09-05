@@ -130,3 +130,4 @@ srun apptainer_wrapper exec RMPISNOW --no-save --slave -f Calc_contours_future_c
 ```
 
 * [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs)
+* [CSC Geocomputing examples for R in Puhti](https://github.com/csc-training/geocomputing/tree/master/R/puhti): `future`, `snow`, `foreach`.
