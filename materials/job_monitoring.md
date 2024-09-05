@@ -30,6 +30,18 @@ Some things to check:
 8. Consult the [FAQ on common Slurm issues](https://docs.csc.fi/support/faq/why-does-my-batch-job-fail/) in the CSC Docs
 :::
 
+## Testing
+- Before large runs, it's a good idea to do a smaller trial run
+- Start simple and gradually use more complex approaches if needed
+   - Try first running interactively (**not** on a login node) to check how the tool performs on actual input data
+   - Check that results are as expected
+   - Check the resource usage after the test run and adjust accordingly
+   - If developers provide some test or example data, run it first and make sure results are correct
+- You can use the `test`-partition to check that your batch job script is correct and everything is interpreted correctly
+   - Limits : 15 min, 2 nodes
+   - Job turnaround usually very fast even if machine is "full"
+   - Can be useful to spot typos, missing files, _etc_. before submitting a job that might stay waiting in the queue
+
 ## Resource monitoring
 See the resource usage after job has finished: `seff jobid`
 
@@ -56,6 +68,19 @@ Important aspects to monitor are:
    - If low GPU usage: better to use CPUs? Is disk I/O the bottleneck?
 - Disk workload
 -    If a lot of I/0, use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage)
+
+:::{admonition} Monitoring interactive jobs
+:class: tip
+If you want to monitor real-time resource usage:
+   - Open a new terminal on the same compute node as where the tool/script is running:
+      - Jupyter and RStudio have Terminal windows.
+      - If it is some other tool, open another terminal to the copmpute node:
+         - Find out the compute node name from the prompt of the interactive job, something like: `r18c02`
+         - Open a new terminal to login node login node,
+         - Connect to compute node, for example: `ssh r18c02`
+   - Use Linux `top -u $USER` command, it gives rough estimate of memory and CPU usage. 
+:::
+
 
 ## Optimizing the performance of your own code
 
