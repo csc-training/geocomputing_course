@@ -156,27 +156,18 @@ print(a)
 :::
 
 
-### Batch job file changes
-#### Multi-core jobs
-Default schedulers or `LocalCluster` parallization:
+### Batch job scripts
+In batch job scripts it is important to set correctly:
+* `nodes` - How many nodes to reserve? 1 for default schedulers or `LocalCluster`, more than 1 for `SLURMCluster`
+* `cpus-per-task` - How many cores to reserver? Depending on needs, 1-n. n depends on number of available CPUs per node. 
+
 ```
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=4  # Number of cores. Upper limit depends on number of CPUs per node.
+#SBATCH --cpus-per-task=4  
 
 (...)
 
-srun python dask_singlenode.py
-```
-
-#### Multi-node jobs
-`SLURMCluster` parallelization:
-```
-#SBATCH --nodes=2 #For cluster usage to make sense, this should be more than 1.
-#SBATCH --cpus-per-task=40  # Number of cores. Upper limit depends on number of CPUs per node.
-
-(...)
-
-srun python dask_multinode.py
+srun python dask_script.py
 ```
 
 Further reading:
