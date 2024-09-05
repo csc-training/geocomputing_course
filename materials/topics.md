@@ -9,11 +9,11 @@
 * [Why to use a supercomputer](supercomputing.md)
 * [What is a supercomputer](supercomputer_setup.md)
 * [CSC supercomputers](csc_supercomputers.md)
-* [Connect to supercomputer](connecting.md)  
+* [Connect to a supercomputer](connecting.md)  
 
 **Tools and scripting**
 - Availability:
-   - [Pre-installed tools at CSC?](software.md).
+   - [Pre-installed tools at CSC](software.md).
    - [Installion of tools or extra packages to Python and R](installations.md)
 - Parallel computing:
    - [Do your analysis in parallel](parallel.md)
@@ -24,7 +24,7 @@
   - [Check the results and resource usage](job_monitoring.md)
 
 **Data**
-- What data will be used for the analysis:
+- Find data:
    - [Spatial data available at CSC ](spatial_data_at_csc.md)
    - [Use STAC for raster data](stac.md)
 - [Move the data to the computing environment](moving_data.md)
