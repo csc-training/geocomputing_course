@@ -10,7 +10,7 @@ If starting with a new code, the first option could be to look for spatial libra
 * [osmnx](https://osmnx.readthedocs.io/en/stable/index.html) for routing 
 
 ## Python parallel libraries
-These libraries are still developing and do not support very wide range of functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. The basic Python code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing. 
+The parallel spatial libraries are still developing and do not support very wide range of functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. The basic Python code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing. 
 
 Python has many libraries to support parallelization:
 
