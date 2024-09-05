@@ -9,7 +9,7 @@ If starting with a new code, the first option could be to look for spatial libra
 
 ## R parallel libraries
 
-These libraries cover only very limited functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. 
+The parallel spatial libraries cover only very limited functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. 
 
 R has many libraries to support parallelization:
 
@@ -25,9 +25,13 @@ Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, P
 
 :::
 
-## future, furrr and future.apply libraries 
+## future library
+When using future, two main decisions have to be made for running code in parallel, which we will answer next.
 
-### Parallelization set-up
+* How to run the parallel code?
+* How to make the code parallel?
+
+### How to run the parallel code?
 `future`-library supports both serial and parallel computing with different set-ups:
 
 Name |	Description |
@@ -49,7 +53,7 @@ cl<-getMPIcluster()
 plan(cluster, workers = cl)
 ```
 
-### Changes to code
+### How to make the code parallel?
 
 The basic R code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing. The changes to code are exactly the same for all parallization set-ups.
 
