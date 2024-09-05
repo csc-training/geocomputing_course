@@ -32,6 +32,7 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
 .. toctree::
    :maxdepth: 2
    :caption: Welcome
+   :hidden:
 
    materials/topics.md
    materials/prerequisites.md
@@ -43,6 +44,7 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
 .. toctree::
    :maxdepth: 2
    :caption: Supercomputer - intro
+   :hidden:
 
    materials/supercomputing.md  
    materials/supercomputer_setup.md
@@ -53,6 +55,7 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
 .. toctree::
    :maxdepth: 2
    :caption: GIS tools and data
+   :hidden:
 
    materials/software.md
    materials/spatial_data_at_csc.md
@@ -61,9 +64,16 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
 .. toctree::
    :maxdepth: 2
    :caption: Jobs
+   :hidden:
 
    materials/batch_job.md
    materials/job_monitoring.md
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Run in parallel
+   :hidden:
+
    materials/parallel.md
    materials/exercise_gdal.md
    materials/parallel_python.md
@@ -75,6 +85,7 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
 .. toctree::
    :maxdepth: 2
    :caption: Data
+   :hidden:
 
    materials/moving_data.md   
    materials/data_tips.md    
@@ -84,12 +95,14 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
 .. toctree::
    :maxdepth: 2
    :caption: Installations
+   :hidden:
 
    materials/installations.md
 
 .. toctree::
    :maxdepth: 2
    :caption: Wrap-up
+   :hidden:
   
    materials/support.md
    materials/where_to_go.md
