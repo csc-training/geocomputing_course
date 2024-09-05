@@ -52,8 +52,7 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
 - [Write batch job script and submit it to SLURM](batch_job.md]
 - [Check the results and resource usage](job_monitoring.md)
 
-Table of contents
-###################
+
 
 .. toctree::
    :maxdepth: 2
