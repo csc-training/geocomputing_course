@@ -24,7 +24,7 @@ Do you need to run a lot of steps one after another? Or few steps that need a lo
 For doing analysis in parallel there are four main options:
 
 1) Tools with built-in parallel support
-2) Parallel libaries of scripting languages
+2) Write your own scripts using parallel libaries of different scripting languages
 3) External tools to run the scripts in parallel
 4) Write your own parallel code
 
