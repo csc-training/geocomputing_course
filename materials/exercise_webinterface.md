@@ -2,7 +2,7 @@
 
 :::{admonition} Timing
 :class: note
-* Time: 45 min
+* Time: 30 min
 :::
 
 :::{admonition} Goals
