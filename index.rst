@@ -60,6 +60,7 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
    materials/software.md
    materials/spatial_data_at_csc.md
    materials/stac.md
+   materials/exercise_stac.md
 
 .. toctree::
    :maxdepth: 2
