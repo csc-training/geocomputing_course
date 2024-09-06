@@ -4,12 +4,7 @@
 Check the status of your job: `squeue --me`
 
 ## Job output
-By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from Slurm, your tool or package) are written to the file `slurm-jobid.out` in the same folder as the batch job script. You can change the defaults in the batch job script:
-
-```
-#SBATCH --output=output_%j.txt
-#SBATCH --error=errors_%j.txt
-```
+By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from Slurm, your tool or package) are written to the file `slurm-<jobid>.out` in the same folder as the batch job script. 
 
 :::{admonition} What to do if a job fails?
 :class: seealso
@@ -23,7 +18,7 @@ Some things to check:
    - Problems in the batch job script can cause parameters to be ignored and default values are used instead
 4. Did it fail immediately or did it run for some time?
    - Jobs failing immediately are often due to something like typos, missing inputs, bad parameters _etc_.
-5. Check the error file captured by the batch job script (default name `slurm-jobid.out`)
+5. Check the error file captured by the batch job script
 6. Check any other error files and logs your program may have produced
 7. Error messages can sometimes be long, cryptic and a bit intimidating, but ...
    - Try skimming through them and see if you can spot something "human-readable"
@@ -34,7 +29,7 @@ Some things to check:
 ## Testing
 - Before large runs, it's a good idea to do a smaller trial run
 - Start simple and gradually use more complex approaches if needed
-   - Try first running interactively (**not** on a login node) or in the `test`-partition
+   - Try first running interactively (**not** on a login node) or with batch jobs in the `test`-partition
    - Check that results are as expected
    - Check the resource usage after the test run and adjust accordingly
 
@@ -58,23 +53,24 @@ Important aspects to monitor are:
          - Too many cores requested?
          - Cores waiting for other processes?
          - Cores waiting for data from disk?
-         - Cores spread over too many nodes?
          - Perform a scaling test. 
 - GPU efficiency
-   - If low GPU usage: better to use CPUs? Is disk I/O the bottleneck?
+   - If low GPU usage:
+      - better to use CPUs?
+      - Is disk I/O the bottleneck?
 - Disk workload
--    If a lot of I/0, use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage)
+   -  If a lot of I/0, use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage)
 
 :::{admonition} Monitoring interactive jobs
 :class: tip
-If you want to monitor real-time resource usage:
+If you want to monitor real-time resource usage of interactive job:
    - Open a new terminal on the same compute node as where the tool/script is running:
       - Jupyter and RStudio have Terminal windows.
       - If it is some other tool, open another terminal to the copmpute node:
          - Find out the compute node name from the prompt of the interactive job, something like: `r18c02`
          - Open a new terminal to login node login node,
          - Connect to compute node, for example: `ssh r18c02`
-   - Use Linux `top -u $USER` command, it gives rough estimate of memory and CPU usage. 
+   - Use Linux `top -u $USER` command, it gives rough estimate of memory and CPU usage.
 :::
 
 
