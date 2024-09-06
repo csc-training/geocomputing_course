@@ -43,10 +43,10 @@ When we submit a batch job script, the job is not started directly, but is sent 
 :::{admonition} How many resources to request?
 :class: seealso
 
-* If you have run the code runs on some other machine (your laptop?), as a first guess you can reserve the same amount of CPUs and memory as your machine has.
-* You can also check more closely what resources are used with `top` on Mac and Linux or `task manager` on Windows when running on your machine.
-* If your program does the same or similar thing more than once, you can estimate that the total run time is number of steps times time taken by each step.
-* The first resource reservation is often a guess, that can be later adjusted.
+* If you have run the code on some other machine (your laptop?), as a first guess you can reserve the same amount of CPUs and memory as that machine has.
+* You can also check more closely what resources are used with `top` on Mac and Linux or `task manager` on Windows when running on the other machine.
+* If your program does the same or similar thing more than once, you can estimate that the total run time by multiplying the one time run time with number of runs.
+* The first resource reservation on supercomputer is often a guess, do not worry too much, just adjust it later.
 * Before reserving multiple CPUs, check if your code can make use them.
 * Before reserving multiple nodes, check if your code can make use them. Most GIS tools can not.
 * When you double the number of cores, the job should run at least 1.5x faster.
