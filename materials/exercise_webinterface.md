@@ -60,39 +60,6 @@ Web interface is for moving up to 10Gb data, if you have more data use other too
 :::
 
 ### Graphical applications
-#### Jupyter
-
-* For Python: any CSC module or own installation
-* [CSC Docs: Jupyter](https://docs.csc.fi/computing/webinterface/jupyter/)
-
-* Open the Jupyter launch page: from front page or `Apps -> Jupyter`
-* Use settings: 
-  * (Reservation: `geocomputing_thu`, only during course)
-  * Project: `project_200xxxx`
-  * Partition: `interactive` (`small` during course)
-  * Number of CPU cores: 1
-  * Memory (Gb): 2
-  * Local disk: 0
-  * Time: 0:15:00
-  * Python: [geoconda](https://docs.csc.fi/apps/geoconda/)
-  * Module version: default
-  * Working directory: `/users/cscusername`
-  * `Launch`
-* Wait a moment for Jupyter to start -> `Connect to Jupyter`
-* Create new Notebook: `+` -> Notebook: Python 3
-* Open Statistic Finland Paavo post code data and plot it, add code and run the it with `Shift + Enter`.
-
-```
-import geopandas
-src = geopandas.read_file('/appl/data/geo/tilastokeskus/paavo/2023/pno_tilasto_2023.shp')
-src.plot()
-```
-
-* End the session:
-   * Delete the Notebook.
-   * Close the web tab
-   * In Active sessions view: `Cancel`
-
 #### Desktop with QGIS
 
 * QGIS, GRASS GIS, SAGA GIS, SNAP etc are available via Desktop
