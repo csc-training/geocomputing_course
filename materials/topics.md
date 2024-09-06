@@ -20,13 +20,13 @@
    - [Run Python scripts in parallel](parallel_python.md)
    - [Run R scripts in parallel](parallel_python.md) 
 - Batch jobs
-  - [Write batch job script and submit it to SLURM](batch_job.md]
+  - [Write batch job script and submit it to SLURM](batch_job.md)
   - [Check the results and resource usage](job_monitoring.md)
 
 **Data**
 - Find data:
    - [Spatial data available at CSC ](spatial_data_at_csc.md)
-   - [Use STAC for raster data](stac.md)
+   - [Use STAC for finding raster data](stac.md)
 - [Move the data to the computing environment](moving_data.md)
 - [Keep more permanent data and backups in Allas](allas.md)
 - [Data tips](data_tips.md)
