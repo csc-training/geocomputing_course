@@ -1,4 +1,4 @@
-# Exercise - Puhti web interface
+# Exercise: Puhti web interface
 
 :::{admonition} Timing
 :class: note
