@@ -14,18 +14,17 @@
    - [More tips to help us to more quickly solve your issue](https://docs.csc.fi/support/support-howto/)
 
 
-## Support pages and channels
+## Support channels
 
 CSC: 
-   * [CSC Docs: `docs.csc.fi`](https://docs.csc.fi)
-   * [`research.csc.fi`](https://research.csc.fi)
    * servicedesk@csc.fi
       * CSC has a team of people helping computing services users with their cases 
-   * [CSC user support session in Zoom](https://ssl.eventilla.com/usersupportcoffee/EN) every Wednesday at 14.00. Sometimes with short talks about interesting topics. 
+   * [CSC weekly online user support session](https://ssl.eventilla.com/usersupportcoffee/EN)
 
 LUMI:
-   * [LUMI Docs: Helpdesk](https://docs.lumi-supercomputer.eu/helpdesk/)
+   * [LUMI Helpdesk](https://docs.lumi-supercomputer.eu/helpdesk/)
    * [LUMI monthly coffee breaks](https://www.lumi-supercomputer.eu/events/usercoffeebreaks/)
+
 
 ## How we can help
 
