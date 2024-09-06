@@ -6,7 +6,7 @@ To make this course as enjoyable as possible for you and to make sure you can ge
 
 * General understanding of geoinformatics, vector and raster data, coordinate systems.
 * General understanding of either Python, R or use of command line tools, e.g. GDAL, PDAL, ...
-* Basic Unix commands (know how to use these commands in a terminal): `cd, ls, mv, cp, rm, chmod, less, tail, echo, mkdir, pwd`.
+* Basic Unix commands (know how to use these commands in a terminal): `cd, ls, mv, cp, rm, chmod, less, tail, echo, mkdir, pwd`. If you need to refresh these commands, go through before the [Terminal](terminal.md)page.
 
 This also means that this course is not an introduction to either of the topics. Please refer to [Where to go from here page](where_to_go.md) to learn more these topics.
 
