@@ -21,7 +21,7 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 
 :::
 
-## Get familiar with STAC and Jupyter
+## Open JupyterLab in Puhti web interface
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
 
@@ -30,8 +30,6 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 * `project_200xxxx` is example project name, replace with your own CSC project name.
 * `cscusername` is example username, replace with your username.
 :::
-
-#### Jupyter
 
 * [CSC Docs: Jupyter](https://docs.csc.fi/computing/webinterface/jupyter/)
 
@@ -51,15 +49,35 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 * Wait a moment for Jupyter to start -> `Connect to Jupyter`
 * Open
 
-* End the session:
-   * Delete the Notebook.
-   * Close the web tab
-   * In Active sessions view: `Cancel`
+## Preparations
+* Open new Termianl window
+* Make a folder for the exercise materials and make it your working directory
+* Change the project name and username.
+```
+mkdir -p /scratch/project_200xxxx/students/cscusername
+cd /scratch/project_200xxxx/students/cscusername
+```
+
+* Copy the example scripts to Puhti.
+```
+git clone https://github.com/csc-training/geocomputing.git
+```
+
+## STAC Notebook
+
+1. In file exporer open: `students/cscusername/geocomputing/python/STAC
+2. Open `STAC_CSC_example.ipynb` notebook
+3. Follow the notebook, use `Shift+Enter` for running cells.
+
+## End the session
+
+ * Close the web tab
+ * In Active sessions view: `Cancel`
     
 :::{admonition} Key points
 :class: important
 
-* Web interface provides easy access to Puhti and its graphical tools.
-* QGIS, SNAP, Jupyter, RStudio, Visual Studio Code are the most used tools.
+* STAC is an easy option for finding and downloading raster data.
+* Jupyter is a nice tool for interactively working with Python.
 
 :::
