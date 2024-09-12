@@ -78,11 +78,16 @@ Some organizations, for example research institutes with IT-services from Valtor
 - [CSC Docs: `wget`](https://docs.csc.fi/data/moving/wget/)
 
 ``` 
-# One file:
+# One file, Depth contours from SYKE open spatial data service:
 wget http://wwwd3.ymparisto.fi/d3/gis_data/spesific/syvyyskayra.zip 
 
-# One folder:
+# One folder, Forest mask from Forest center:
 wget -r -nc ftp://ftp.aineistot.metsaan.fi/Metsamaski/Maakunta/ --cut-dirs=2
+
+# Via API, 10m DEM from Geoportti GeoCubes
+# API url generation service: https://vm0160.kaj.pouta.csc.fi/geocubes/apiaccess/
+# Give file name with -O
+wget https://vm0160.kaj.pouta.csc.fi/geocubes/clip/10/km10/kuntajako:235/2018 -O kauniainen_dem10m.tif
 ```
 
 :::{admonition} More options :class: note
