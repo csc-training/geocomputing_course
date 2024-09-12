@@ -39,8 +39,7 @@
 
 * Interactive working
 * Simple batch job
-* Parallel job
-* Optional, Array job
+* Parallel job with `future` library
 * Additional, you can also check out some of the other R examples in [CSC geocomputing repository](https://github.com/csc-training/geocomputing/blob/master/R).
 
 :::{admonition} Key points
