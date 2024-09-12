@@ -36,9 +36,38 @@ Some things to check:
 ## Resource monitoring
 See the resource usage after job has finished: `seff jobid`
 
+```
+[user@puhti-login11 ~]$ seff 22361601
+Job ID: 22361601
+Cluster: puhti
+User/Group: user/user
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 40
+CPU Utilized: 04:01:36
+CPU Efficiency: 96.13% of 04:11:20 core-walltime
+Job Wall-clock time: 00:06:17
+Memory Utilized: 5.55 GB (estimated maximum)
+Memory Efficiency: 71.04% of 7.81 GB (200.00 MB/core)
+Job consumed 4.27 CSC billing units based on following used resources
+Billed project: project_2001234
+CPU BU: 4.19
+Mem BU: 0.08
+```
+
 More detailed queries can be tailored with `sacct`
 - Job with ID: `sacct -j jobid -o jobid,partition,state,reqmem,maxrss,averss,elapsed`
 - All jobs started after some date: `sacct -S 2024-08-01 -o jobid,partition,state,reqmem,maxrss,averss,elapsed` 
+
+```
+[user@puhti-login15 ~]$ sacct -j 22361601 -o jobid,partition,state,reqmem,maxrss,averss,elapsed
+JobID         Partition      State     ReqMem     MaxRSS     AveRSS    Elapsed
+------------ ---------- ---------- ---------- ---------- ---------- ----------
+22361601           test  COMPLETED      8000M                         00:06:17
+22361601.ba+             COMPLETED                 7286K      7286K   00:06:17
+22361601.ex+             COMPLETED                 2349K      2349K   00:06:17
+22361601.0               COMPLETED               145493K  139994035   00:06:17
+```
 
 **Note!** Querying data from the Slurm accounting database with `sacct` can be a very heavy operation. **Don't** query long time intervals or run `sacct` in a loop/using `watch` as this will degrade the performance of the system for all users.
 
