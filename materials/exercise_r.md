@@ -10,7 +10,7 @@
 :::{admonition} Timing
 :class: note
 
-75 min
+45 min
 
 :::
 
