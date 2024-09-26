@@ -29,7 +29,7 @@ Some things to check:
 ## Testing
 - Before large runs, it's a good idea to do a smaller trial run
 - Start simple and gradually use more complex approaches if needed
-   - Try first running interactively (**not** on a login node) or with batch jobs in the `test`-partition
+   - Try first running interactively (**not** on a login node) or with batch jobs in the `test` partition
    - Check that results are as expected
    - Check the resource usage after the test run and adjust accordingly
 
@@ -95,9 +95,9 @@ Important aspects to monitor are:
 If you want to monitor real-time resource usage of interactive job:
    - Open a new terminal on the same compute node as where the tool/script is running:
       - Jupyter and RStudio have Terminal windows.
-      - If it is some other tool, open another terminal to the copmpute node:
+      - If it is some other tool, open another terminal to the compute node:
          - Find out the compute node name from the prompt of the interactive job, something like: `r18c02`
-         - Open a new terminal to login node login node,
+         - Open a new terminal to login node
          - Connect to compute node, for example: `ssh r18c02`
    - Use Linux `top -u $USER` command, it gives rough estimate of memory and CPU usage.
 :::
