@@ -15,7 +15,7 @@ Puhti:
 
 Mahti:
 * For medium and large scale parallel analysis
-* Projects move from Puhti to Mahti, once Puhti recources become limiting.
+* Projects move from Puhti to Mahti, once Puhti recources become limiting
 * [CSC Docs: Technical details about Mahti](https://docs.csc.fi/computing/systems-mahti/)
 
 LUMI:
