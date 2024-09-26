@@ -9,7 +9,7 @@ If starting with a new code, the first option could be to look for spatial libra
 
 ## R parallel libraries
 
-The parallel spatial libraries cover only very limited functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. 
+The parallel spatial libraries cover only very limited functionality, so often these do not fit all requirements. If you are changing an existing serial code to parallel, the next option is to write parallel code yourself.
 
 R has many libraries to support parallelization:
 
