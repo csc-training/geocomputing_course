@@ -10,19 +10,19 @@ If starting with a new code, the first option could be to look for spatial libra
 * [osmnx](https://osmnx.readthedocs.io/en/stable/index.html) for routing 
 
 ## Python parallel libraries
-The parallel spatial libraries are still developing and do not support very wide range of functionality, so often these do not fit all requirements. Or if you are changing an existing serial code to parallel. Then the next option is to write parallel coude yourself. The basic Python code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing. 
+The parallel spatial libraries are still developing and do not support very wide range of functionality, so often these do not fit all requirements. If you are changing an existing serial code to parallel, the next option is to write parallel code yourself. Basic Python code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing.
 
 Python has many libraries to support parallelization:
 
    * Multi-core: `multiprocessing` and `joblib`
    * Multi-core or multi-node: **`dask`** and `mpi4py`
 
-If unsure, start with Dask, it is one of the newest, most versatile and easy to use. But Dask has many options and alternatives, `multiprocessing` might be easier to learn as first. All of the above mentioned spatial libraries use Dask, except `osmnx`, which uses `multiprocessing`.
+If unsure, start with Dask, it is one of the newest, most versatile and easy to use. But Dask has many options and alternatives, `multiprocessing` might be easier to learn at first. All of the above mentioned spatial libraries use Dask, except `osmnx`, which uses `multiprocessing`.
 
 :::{admonition} How many cores I can use?
 :class: tip.
 
-If you need to check in code, how many cores you can use, use:
+If you need to check in code how many cores you can use, use:
 ```
 len(os.sched_getaffinity(0))
 ```
@@ -48,13 +48,13 @@ When using Dask, two main decisions have to be made for running code in parallel
 2. How to make the code parallel?
 
 ### How to run the parallel code?
-[Dask](https://docs.dask.org/en/stable/) supports different set-ups for parallel computing, from supercomptuers point of view, the main options are:
+[Dask](https://docs.dask.org/en/stable/) supports different set-ups for parallel computing, from supercomputers point of view, the main options are:
 
 * [Default schedulers](https://docs.dask.org/en/stable/scheduler-overview.html) for multi-core jobs.
 * [LocalCluster](https://distributed.dask.org/en/latest/index.html) for multi-core jobs.
 * [SLURMCluster](https://jobqueue.dask.org/en/latest/index.html) for multi-node jobs.
 
-While developing the code, it might be good to start with default scheduler or `LocalCluster` parallelization and then if needed change it to `SLURMCluster`. The required changes to code are small, when changing the parallelization set-up.
+While developing the code, it might be good to start with the default scheduler or `LocalCluster` parallelization and if needed change it to `SLURMCluster`. The required changes to code are small, when changing the parallelization set-up.
 
 One of the advantages of using `LocalCluster`, is that then in Jupyter the [Dask-extension](https://github.com/dask/dask-labextension) is able to show progress and resource usage.
 
@@ -94,7 +94,7 @@ client = Client(cluster)
 ### How to make the code parallel?
 Dask provides several options, inc [Dask DataFrames](https://docs.dask.org/en/stable/dataframe.html), [Dask Arrays](https://docs.dask.org/en/stable/array.html), [Dask Bags](https://docs.dask.org/en/stable/bag.html), [Dask Delayed](https://docs.dask.org/en/stable/delayed.html) and [Dask Futures](https://docs.dask.org/en/stable/futures.html). This decision depends on the type of analyzed data and already existing code. Additionally Dask has support for scalable machine learning with [DaskML](https://ml.dask.org/).
 
-In this course we use Delayed functions. Delayed functions are useful in parallelising existing code. This approach delays function calls and creates a graph of the computing process. From the graph, Dask can then divide the work tasks to different workers whenever parallel computing is possible. Keep in mind that the other ways of code parallelisation might suit better in different use cases. 
+In this course we use Delayed functions. Delayed functions are useful in parallelizing existing code. This approach delays function calls and creates a graph of the computing process. From the graph, Dask can then divide the work tasks to different workers whenever parallel computing is possible. Keep in mind that the other ways of code parallelization might suit better in different use cases. 
 
 The changes to code are exactly the same for all parallization set-ups. The most simple changes could be:
 
