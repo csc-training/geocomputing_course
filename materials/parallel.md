@@ -33,7 +33,7 @@ For doing analysis in parallel there are four main options:
 3) Use external tools to run the scripts in parallel
 4) Write your own parallel code
 
-From practical point of view in supercomptuers, it is also important to understand, if the the tool/script supports:
+From practical point of view in supercomputers, it is also important to understand, if the the tool/script supports:
 * **Multi-core** - it runs in parallel only inside one node of the supercomputer.
 * **Multi-node** - it can distribute the work to several nodes of the supercomputer.
 
@@ -41,7 +41,7 @@ For multi-core there is clearly more options. The number of cores in a single no
 
 ## Tools with built-in parallel support
 
-Look from the tool's manual, if it has built-in support for using multiple CPUs/cores. For command line tools, look for `number_of_cores`, `cores`, `cpu)`, `jobs`, `threads` or similar. Unfortunatelly not many GIS-tools have such option.
+Look from the tool's manual, if it has built-in support for using multiple CPUs/cores. For command line tools, look for `number_of_cores`, `cores`, `cpu)`, `jobs`, `threads` or similar. Unfortunately not many GIS-tools have such option.
 
 Some example geospatial tools with built-in parallel support: 
 * GDAL, some commands e.g. `gdalwarp -multi -wo NUM_THREADS=val/ALL_CPUS ...`
@@ -79,7 +79,7 @@ The external tools enable running the scripts in parallel, with minimal changes 
 
 ### GNU Parallel
 
-GNU parallel is a general Linux tool for executing commands or scripts in parallel in one node. It iterates over an input list, which can be a list of files or list of input parameters. The number of tasks may be higher than number of cores, it waits with execution as resources become available. GNU Parellel does not support dependecies between the tasks.
+GNU parallel is a general Linux tool for executing commands or scripts in parallel in one node. It iterates over an input list, which can be a list of files or list of input parameters. The number of tasks may be higher than number of cores, it waits with execution as resources become available. GNU Parellel does not support dependencies between the tasks.
 
 * [GNU Parallel documentation](https://www.gnu.org/software/parallel/)
 * Geocomputing examples: [GDAL with GNU-parallel](https://github.com/csc-training/geocomputing/tree/master/gdal) and [PDAL with GNU-parallel](https://github.com/csc-training/geocomputing/tree/master/pdal)
@@ -87,7 +87,7 @@ GNU parallel is a general Linux tool for executing commands or scripts in parall
 
 ### Snakemake
 
-Snakemake is a scientific workflow management system, that supports running for example R, bash and Python scripts. It can handle dependecies between the tasks and can be used both multi-core and multi-node set-ups. Snakemake is one of the easiest tools for workflow management.
+Snakemake is a scientific workflow management system, that supports running for example R, bash and Python scripts. It can handle dependencies between the tasks and can be used both multi-core and multi-node set-ups. Snakemake is one of the easiest tools for workflow management.
 
 * [CSC Docs: Running Snakemake workflow on Puhti](https://docs.csc.fi/support/tutorials/snakemake-puhti/)
 
