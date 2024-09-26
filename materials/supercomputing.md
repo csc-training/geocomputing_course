@@ -34,7 +34,7 @@
 
 #### Parallel computing
 * Only few GIS tools have built-in support for parallization 
-* With scrips and diving the data any tool can be run in parallel
+* With scripts and dividing the data any tool can be run in parallel
 
 #### Embarrassingly parallel analyses
 * Many similar, but independent tasks.
