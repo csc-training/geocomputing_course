@@ -1,11 +1,11 @@
-# Research usecases for Puhti
+# Research use cases for Puhti
 
 Check out what others have achieved using CSC supercomputers:
 
-## Some interesting usecases from CSC seminars
+## Some interesting use cases from CSC seminars
 
 ```{figure} images/Atherton.png
-:alt: Path from drone imagery to they can be processed using Puhti batch job with OpenDronemap
+:alt: Path from drone imagery to where they can be processed using Puhti batch job with OpenDronemap
 :width: 700px
 :align: center
 
