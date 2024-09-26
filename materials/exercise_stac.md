@@ -35,8 +35,8 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 
 * Open the Jupyter launch page: from front page or `Apps -> Jupyter`
 * Use settings: 
-  * (Reservation: `geocomputing_thu`, only during course)
-  * Project: `project_200xxxx`
+  * (Reservation: `geocomputing_wed`, only during course)
+  * Project: `project_2011224`
   * Partition: `interactive` (`small` during course)
   * Number of CPU cores: 1
   * Memory (Gb): 8
@@ -44,18 +44,18 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
   * Time: 0:15:00
   * Python: [geoconda](https://docs.csc.fi/apps/geoconda/)
   * Module version: default
-  * Working directory: `/scratch/project_200xxxx`
+  * Working directory: `/scratch/project_2011224`
   * `Launch`
 * Wait a moment for Jupyter to start -> `Connect to Jupyter`
 * Open
 
 ## Preparations
-* Open new Termianl window
+* Open new Terminal window
 * Make a folder for the exercise materials and make it your working directory
 * Change the project name and username.
 ```
-mkdir -p /scratch/project_200xxxx/students/cscusername
-cd /scratch/project_200xxxx/students/cscusername
+mkdir -p /scratch/project_2011224/students/cscusername
+cd /scratch/project_2011224/students/cscusername
 ```
 
 * Copy the example scripts to Puhti.
@@ -65,7 +65,7 @@ git clone https://github.com/csc-training/geocomputing.git
 
 ## STAC Notebook
 
-1. In file exporer open: `students/cscusername/geocomputing/python/STAC
+1. In file explorer open: `students/cscusername/geocomputing/python/STAC
 2. Open `STAC_CSC_example.ipynb` notebook
 3. Follow the notebook, use `Shift+Enter` for running cells.
 
