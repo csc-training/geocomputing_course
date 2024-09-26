@@ -19,7 +19,7 @@
 :::{admonition} Prerequisites
 :class: important
 
-* Access to Puhti webinterface
+* Access to Puhti web interface
 * Some experience with Python and GIS Python tools
 
 :::
@@ -35,6 +35,6 @@ Additional, you can also check out some of the other Python examples in [CSC geo
 :class: important
 
 * GNU parallel for embarassingly parallel tasks, without changing the Python code
-* `dask.delayed` or `multiprocessing` can be used to parallelize for loop
+* `dask.delayed` or `multiprocessing` can be used to parallelize for-loops
 
 :::
