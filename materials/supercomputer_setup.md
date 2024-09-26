@@ -3,27 +3,27 @@
 ![](./images/HPC_basic.png)
 
 Typical physical parts of a supercomputer:
-* Login-nodes
-* Compute-nodes
+* Login nodes
+* Compute nodes
 * Storage
 * High-speed networks between these
 
-## Login-nodes
+## Login nodes
 - Login nodes are used for moving data and scripts, script editing and for starting jobs.
 - When you login to CSC's supercomputers, you enter one of the login nodes of the computer
-- There is only a few login-nodes and they are shared by all users, so they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
+- There is only a few login nodes and they are shared by all users, so they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
 
 ![](./images/HPC_nodes.png)
  
-## Compute-nodes
-- The heavy computing should be done on compute-nodes. 
+## Compute nodes
+- The heavy computing should be done on compute nodes. 
 - Each node has **memory**, which is used for storing information about a current task.
 - Compute nodes have 2 main type of processors: 
-  * **CPU-nodes** have only CPUs (central processing unit).
-  * **GPU-nodes** have both GPUs (graphical processing unit) and CPUs. GPUs are widely used for deep learning.
-  * Each CPU-node includes **cores**, which are the basic computing. There are 40 cores in Puhti and 128 in Mahti and LUMI CPU-nodes.
+  * **CPU nodes** have only CPUs (central processing unit).
+  * **GPU nodes** have both GPUs (graphical processing unit) and CPUs. GPUs are widely used for deep learning.
+  * Each CPU node includes **cores**, which are the basic computing. There are 40 cores in Puhti and 128 in Mahti and LUMI CPU nodes.
   * It depends on the used software, if it benefits from GPU or not. Most GIS-tools can not use GPUs.
-  * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, that it would be reasonable to use GPU-nodes.
+  * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, that it would be reasonable to use GPU nodes.
 - While using compute nodes the compute resources have to be defined in advance, and specified if CPU or/and GPU is needed, how many cores or nodes and how much memory.
 - Specifics of [Puhti](https://docs.csc.fi/computing/systems-puhti/#nodes), [Mahti](https://docs.csc.fi/computing/systems-mahti/) and [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumic/) compute nodes.
 
@@ -83,7 +83,7 @@ Which of the following tasks would suit to run on the login node?
  
  >Note that script names do not always reflect their contents: before launching #3, please check what is inside create_directories.sh and make sure it does what the name suggests.
 
-Running resource-intensive applications on the login node are forbidden. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will anyway want more resources for these, than the login node can provide.
+Running resource-intensive applications on the login node is forbidden. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will anyway want more resources for these, than the login node can provide.
 
 :::
 :::
