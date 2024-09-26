@@ -1,17 +1,17 @@
 # Best practice tips for data
 
 - Take **backups** of important files. Data on Puhti disks is not backed up.
-	- Allas is best CSC option for back-up.
+	- Allas is the best CSC option for back-up.
 	- Github or similar for code.
 - Supercomputer disks do not work well with **too many small files**
 	- Plan your analysis in a way that too many files are not needed.
-    - Keep the small files in one zip-file, unzip it only on local fast disks during the analysis. 
+	- Keep the small files in one zip-file, unzip it only on local fast disks during the analysis. 
 	- Don't create a lot of files in one folder
 - [CSC Docs: Best practice performance tips for using Lustre](https://docs.csc.fi/computing/lustre/#best-practices)
 - Keep data that is needed longer also in Allas.
 - **Databases**:
 	- Only file databases (SQLite, GeoPackage) can be kept in supercomputer disks.
-	- For PostgreSQL and PostGIS use [CSC Pukki Database-as-service](https://docs.csc.fi/cloud/dbaas/).
+	- For PostgreSQL and PostGIS use [CSC Pukki Database as a Service](https://docs.csc.fi/cloud/dbaas/).
 	- For any other database set up virtual machine in cPouta.
 
 ## Disk status
