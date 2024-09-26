@@ -1,6 +1,6 @@
 # Batch jobs
 
-On our own computer, we are used to start a program (job) and the program starts instantly. In an supercomputing environment, the computer is **shared among hundreds of other users**.  All heavy computing must be done on compute nodes, see [Usage policy](https://docs.csc.fi/computing/overview/#usage-policy). For using compute nodes, the user first asks for the computing resources, then waits to have access to the requested resources and first then the job starts. 
+On our own computer, we are used to starting a program (job) and the program starts instantly. In a supercomputing environment, the computer is **shared among hundreds of other users**.  All heavy computing must be done on compute nodes, see [Usage policy](https://docs.csc.fi/computing/overview/#usage-policy). To use the compute nodes, the user first requests computing resources then waits for access to these resources, and then the job starts.
 
 ## SLURM - job management system
 A job management system keeps track of the available and requested computing resources. It aims to share the resources in an efficient and fair way among all users. It optimizes resource usage by filling the compute nodes so that there will be as little idling resources as possible. CSC uses a job management system called SLURM.
@@ -45,7 +45,7 @@ When we submit a batch job script, the job is not started directly, but is sent 
 
 * If you have run the code on some other machine (your laptop?), as a first guess you can reserve the same amount of CPUs and memory as that machine has.
 * You can also check more closely what resources are used with `top` on Mac and Linux or `task manager` on Windows when running on the other machine.
-* If your program does the same or similar thing more than once, you can estimate that the total run time by multiplying the one time run time with number of runs.
+* If your program does the same or similar thing more than once, you can estimate the total run time by multiplying the one-time run time by the number of runs.
 * The first resource reservation on supercomputer is often a guess, do not worry too much, just adjust it later.
 * Before reserving multiple CPUs, check if your code can make use them.
 * Before reserving multiple nodes, check if your code can make use them. Most GIS tools can not.
@@ -58,7 +58,7 @@ Partly adapted from [Aalto Scientific Computing](https://scicomp.aalto.fi/triton
 
 ## Partitions
 
-A **partition** is a set of compute nodes, grouped logically. Resource limitations for a job are defined by the partition (or queue) the job is submitted to. The limitations affect the **maximum run time, available memory and the number of  CPU/GPU cores**. Jobs should be submitted to the smallest partition that matches the required resources. 
+A **partition** is a set of compute nodes, grouped logically. Resource limitations for a job are defined by the partition (or queue) the job is submitted to. The limitations affect the **maximum run time, available memory and the number of CPU/GPU cores**. Jobs should be submitted to the smallest partition that matches the required resources. 
 
 - [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/running/batch-job-partitions/)
 - [LUMI Docs: Slurm particions](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/)
@@ -66,7 +66,7 @@ A **partition** is a set of compute nodes, grouped logically. Resource limitatio
 
 ## Job types
 
-* **Interactive jobs** for working with some tool interactively, for example graphical tools, writing code, testing. For interactive jobs allocate the resource via the the [interactive partition](https://docs.csc.fi/computing/running/interactive-usage/). This way your work is performed in a compute node, not on the login node. Interactive partition is often used for applications in the web interface. The resources are limited in interactive partition, but it should have no or very short queue.
+* **Interactive jobs** for working with some tool interactively, for example graphical tools, writing code, testing. For interactive jobs allocate the resource via the [interactive partition](https://docs.csc.fi/computing/running/interactive-usage/). This way your work is performed in a compute node, not on the login node. Interactive partition is often used for applications in the web interface. The resources are limited in interactive partition, but it should have no or very short queue.
 * **Serial jobs** work on only one task at a time following a sequence of instructions, while only using one core.
 * **Parallel jobs** distribute the work over several cores or nodes in order to achieve a shorter wall time (and/or a larger allocatable memory). 
 * **GPU jobs** for tools that can benefit from running on GPUs. In spatial analysis context, GPUs are most often used for deep learning.
