@@ -23,7 +23,7 @@ CSC:
 
 LUMI:
    * [LUMI Helpdesk](https://docs.lumi-supercomputer.eu/helpdesk/)
-   * [LUMI monthly coffee breaks](https://www.lumi-supercomputer.eu/events/usercoffeebreaks/)
+   * [LUMI monthly coffee breaks](https://www.lumi-supercomputer.eu/events/lumi-user-coffee-breaks/)
 
 
 ## How we can help
