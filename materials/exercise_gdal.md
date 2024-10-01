@@ -10,7 +10,7 @@
 :::{admonition} Goals
 :class: note
 
-Learn how to use commandline tools:
+Learn how to use command-line tools:
 * Interactively
 * With several files in serial mode
 * With several files in parallel

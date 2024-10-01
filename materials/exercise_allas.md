@@ -13,7 +13,7 @@
 Learn how to:
 * Configure connection to Allas and get S3 credentials
 * Sync local folder to Allas (manual back-up)
-* See what data is Allas
+* See what data is in Allas
 * Use s3cmd. 
   * [CSC Docs: s3cmd](https://docs.csc.fi/data/Allas/using_allas/s3_client/) 
 :::
@@ -28,8 +28,8 @@ Learn how to:
 
 :::{admonition} Change the default project and username
 
-* `project_200xxxx` is example project name, replace with your own CSC project name.
-* `cscusername` is example username, replace with your username.
+* `project_200xxxx` is an example project name, replace with your own CSC project name.
+* `cscusername` is an example username, replace with your username.
 :::
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
@@ -40,7 +40,7 @@ Learn how to:
 ```bash
 module load allas
 allas-conf --mode s3cmd
-# It asks to select the project, select the project by number. 
+# It asks to select the project, select the project with the corresponding number. 
 # The configuration takes a moment, please wait.
 ```
 

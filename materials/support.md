@@ -10,8 +10,8 @@
    - A descriptive title
    - What you wanted to achieve and on which computer
    - Which commands you have given
-   - What error messages did you get
-   - [More tips to help us to more quickly solve your issue](https://docs.csc.fi/support/support-howto/)
+   - What error messages you got
+   - [More tips to help us solve your issue quickly](https://docs.csc.fi/support/support-howto/)
 
 
 ## Support channels

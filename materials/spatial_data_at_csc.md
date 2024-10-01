@@ -1,8 +1,8 @@
 # Spatial data in Puhti
 
-* Large commonly used **Finnish geospatial datasets with open license**
+* Large commonly used **Finnish geospatial datasets with open licenses**
 * Removes transfer bottleneck
-* Located at: `/appl/data/geo/`
+* Located in: `/appl/data/geo/`
 * **All Puhti users have read access**
 * ~13 TB of datasets available:
 	* **Paituli data**, with virtual mosaics for raster data
