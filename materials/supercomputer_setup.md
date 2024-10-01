@@ -9,29 +9,29 @@ Typical physical parts of a supercomputer:
 * High-speed networks between these
 
 ## Login nodes
-- Login nodes are used for moving data and scripts, script editing and for starting jobs.
+- Login nodes are used for moving data and scripts, editing scripts, and starting jobs.
 - When you login to CSC's supercomputers, you enter one of the login nodes of the computer
 - There is only a few login nodes and they are shared by all users, so they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
 
 ![](./images/HPC_nodes.png)
  
 ## Compute nodes
-- The heavy computing should be done on compute nodes. 
-- Each node has **memory**, which is used for storing information about a current task.
-- Compute nodes have 2 main type of processors: 
+- Heavy computing should be done on compute-nodes. 
+- Each node has **memory**, which is used for storing information about the current task.
+- Compute nodes can be classified based on the types of processors they have: 
   * **CPU nodes** have only CPUs (central processing unit).
   * **GPU nodes** have both GPUs (graphical processing unit) and CPUs. GPUs are widely used for deep learning.
-  * Each CPU node includes **cores**, which are the basic computing. There are 40 cores in Puhti and 128 in Mahti and LUMI CPU nodes.
-  * It depends on the used software, if it benefits from GPU or not. Most GIS-tools can not use GPUs.
+  * Each CPU has multiple **cores**, which are the basic computing resource. There are 40 cores in Puhti and 128 in Mahti and LUMI CPU-nodes.
+  * Whether your task benefits from a GPU depends on the software used. Most GIS-tools can not use GPUs.
   * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, that it would be reasonable to use GPU nodes.
-- While using compute nodes the compute resources have to be defined in advance, and specified if CPU or/and GPU is needed, how many cores or nodes and how much memory.
+- When using compute nodes, the compute resources have to be defined in advance. You must specify e.g. the amount of GPUs, memory and nodes or CPU cores.
 - Specifics of [Puhti](https://docs.csc.fi/computing/systems-puhti/#nodes), [Mahti](https://docs.csc.fi/computing/systems-mahti/) and [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumic/) compute nodes.
 
 
 ## Storage
 ![](./images/HPC_disks.png)
 
-- **Disk** refers to all storage that can be accessed like a file system. This is generally storage that can hold data permanently, i.e. data is still there even if the computer has been restarted.
+- **Disk** refers to all storage that can be accessed as a file system. This is generally storage that can hold data permanently, i.e. data is still there even if the computer has been restarted.
 - CSC supercomputers use Lustre as the **parallel distributed file system**
 
 ### Puhti disk areas
@@ -45,13 +45,13 @@ Typical physical parts of a supercomputer:
 * `scratch` space can be extended, but it would use billing units then.
 
 #### Temporary fast disks 
-- Some nodes might have also **local disk space** for temporary use. 
+- Some nodes might also have **local disk space** for temporary use. 
 - [CSC Docs: Login node local tmp](https://docs.csc.fi/computing/disk/#login-nodes)  `$TMPDIR` for compiling, cleaned frequently.
 	
 - [CSC Docs: NVMe](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage) - `$LOCAL_SCRATCH` in batch jobs, 
-    - NVMe is accessible only during your job allocation, inc. interactive job
+    - NVMe is accessible only during your job allocation (including any interactive jobs)
 	- You must copy data in and out during your batch job
-    - If your job reads or writes a lot of small files, using this can give 10x performance boost
+    - If your job reads or writes lots of small files, using this can give 10x performance boost
 
 :::{admonition} Avoid unneccesary reading and writing
 :class: seealso
@@ -83,7 +83,7 @@ Which of the following tasks would suit to run on the login node?
  
  >Note that script names do not always reflect their contents: before launching #3, please check what is inside create_directories.sh and make sure it does what the name suggests.
 
-Running resource-intensive applications on the login node is forbidden. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will anyway want more resources for these, than the login node can provide.
+Running resource-intensive applications on the login node is forbidden. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will in any case want more resources for these than the login node can provide.
 
 :::
 :::

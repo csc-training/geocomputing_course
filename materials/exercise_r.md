@@ -1,7 +1,7 @@
 # Exercise: R
 
 ## R in supercomputers
-* `r-env` is the only R module in Puhti with ~1300 packages for all fields of science.
+* `r-env` is the only R module in Puhti. It has ~1300 packages for all fields of science.
 * Mahti does not have R.
 * LUMI has only [EasyBuild recipe for R](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/R/)
 * [CSC Docs: r-env](https://docs.csc.fi/apps/r-env/)
@@ -17,8 +17,8 @@
 :::{admonition} Goals
 :class: note
 
-* Get to know `r-env` R environment on Puhti
-* Running R code interactively and as batch job
+* Get to know the `r-env` R environment on Puhti
+* Running R code interactively and as a batch job
 * Try out different ways of parallelizing R code
 
 
@@ -40,7 +40,7 @@
 * Interactive working
 * Simple batch job
 * Parallel job with `future` library
-* Additional, you can also check out some of the other R examples in [CSC geocomputing repository](https://github.com/csc-training/geocomputing/blob/master/R).
+* Additionally, you can check out some of the other R examples in [CSC geocomputing repository](https://github.com/csc-training/geocomputing/blob/master/R).
 
 :::{admonition} Key points
 :class: important

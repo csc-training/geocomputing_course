@@ -1,6 +1,6 @@
 # Allas – object storage
 
-What it is?
+What is it?
 
 * Allas is a **storage service**, technically object storage
 * **For CSC project lifetime: 1-5 years**
@@ -13,7 +13,7 @@ What it is?
 * LUMI-O is very similar to Allas
 * [LUMI Docs: LUMI-O](https://docs.lumi-supercomputer.eu/storage/lumio/)
 	
-What it is NOT?
+What is it NOT?
 
 - A file system (even though many tools try to fool you to think so). It is just a place to store static data objects.
 - A data management environment. Tools for etc. search, metadata, version control and access management are minimal.
@@ -30,7 +30,7 @@ What it is NOT?
   	- For data organization and access administration
 - Data is stored as **objects** within a bucket
 	- Practically: object = file
-	- In reality, there is no hierarcical directory structure within a bucket, although it sometimes looks like that.
+	- In reality, there is no hierarchical directory structure within a bucket, although it sometimes looks like that.
 		- Object name can be `/data/myfile.zip` and some tools may display it as `data` folder with `myfile.zip` file.
 
 ### Things to consider 
@@ -44,9 +44,8 @@ What it is NOT?
 
 - S3 and SWIFT. 
 	- **For new projects S3 is recommended**
-  	- SWIFT might be soon depricated.
-	- Avoid cross-using SWIFT and S3 based objects!
-
+  	- SWIFT might be soon deprecated.
+	- Avoid cross-using SWIFT- and S3-based objects!
 
 ## Tools for Allas
 

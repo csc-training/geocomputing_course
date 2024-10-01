@@ -1,7 +1,7 @@
 # Parallel R
 ## Spatial libraries with parallel support
 
-If starting with a new code, the first option could be to look for spatial libraries that have parallelization already built in:
+If starting from scratch with new code, the first option would be to look for spatial libraries that have parallelization already built in:
 
 * `terra` has some functions in parallel for raster processing
 * `gdalcubes` for multi-dimensional spatial data analysis
@@ -9,19 +9,22 @@ If starting with a new code, the first option could be to look for spatial libra
 
 ## R parallel libraries
 
-The parallel spatial libraries cover only very limited functionality, so often these do not fit all requirements. If you are changing an existing serial code to parallel, the next option is to write parallel code yourself.
+The parallel spatial libraries cover only very limited functionality, so often
+these do not fit all requirements. They also cannot be used to easily
+parallelize existing serial code. Then the next option is to write parallel
+code yourself.
 
 R has many libraries to support parallelization:
 
    * Multi-core: `parallel`
    * Multi-core or multi-node: **`future`**, `snow`, `foreach`, `Rmpi`, `pbdMPI`.. 
 
-If unsure, start with `future`, it is one of the newest, most versatile and easy to use.
+If unsure, start with `future`. It is one of the newest, most versatile and most easy to use.
 
 :::{admonition} Supercomputer usage
 :class: warning
 
-Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs) for details about some of these packages. These might differ from package's general instructions.
+Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs) for details about some of these packages. These might differ from the package's general instructions.
 
 :::
 
@@ -41,7 +44,7 @@ multisession |	multi-core, background R sessions, limited to one node
 multicore	|	multi-core, forked R processes, limited to one node, not in Windows nor in RStudio
 cluster	|	multi-node, external R sessions
 
-While developing the code, it might be good to start with `multisession` or `multicore` parallelization and then if needed change it to `cluster`. The required changes to code are small, when changing the parallelization set-up.
+While developing the code, it might be good to start with `multisession` or `multicore` parallelization and then if needed change it to `cluster`. The required changes to code are small when changing the parallelization set-up.
 
 ```
 # Multi-core, use one of them
@@ -67,13 +70,13 @@ The most simple changes could be:
 * `*apply()` -> `future.apply` functions
 
 ```
-# Example of changing for-loop and purrr's map() to furrr's future_map()
-# Just a demo slow function, that waits for 5 seconds
+# Example of chaning for-loop and purrr's map() to furrr's future_map()
+# Just a slow demo function that waits for 5 seconds
 slow_function<-function(i) {
   Sys.sleep(5) 
   return(i)
 }
-# Input data vector, the slow function is run for each element.
+# Input data vector. The slow function is run for each element.
 input = 1:7
 
 # SERIAL options
@@ -113,7 +116,7 @@ d <- future_lapply(input, slow_function)
 
 * `future` exports needed variables and libraries automatically to the parallel processes
 * The variables must be serializable. Terra's raster objects are not serializable, see [Terra library's recommendations](https://github.com/rspatial/terra/issues/36)
-* Avoid moving big size variables from main to parallel process. Spatial data analysis often includes significant amounts of data. It is better to read the data inside the parallel function. Give as input the file name or compute area coordinates etc. 
+* Avoid moving variables that refer to large objects from the serial main process to a parallel process. Spatial data analysis often involves significant amounts of data. It is better to read the data inside the parallel function. Give the file name as input, compute area coordinates, etc. 
 
 :::
 

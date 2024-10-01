@@ -33,8 +33,8 @@
    * Deep learning libraries run much faster on GPU.
 
 #### Parallel computing
-* Only few GIS tools have built-in support for parallization 
-* With scripts and dividing the data any tool can be run in parallel
+* Only few GIS tools have built-in support for parallelization 
+* By using scripts and dividing the data, any tool can be run in parallel
 
 #### Embarrassingly parallel analyses
 * Many similar, but independent tasks.

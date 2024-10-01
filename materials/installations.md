@@ -2,8 +2,8 @@
 
 ## Adding some packages to existing modules
 
-* Generally easiest option.
-* [CSC Docs: Installing **Python** packages to existing modules](https://docs.csc.fi/apps/python/#installing-python-packages-to-existing-modules)
+* Generally the easiest option.
+* [CSC Docs: Installing **Python** packages to existing modules](https://docs.csc.fi/support/tutorials/python-usage-guide/#installing-python-packages-to-existing-modules)
   * geoconda, tensorflow, pytorch, python-data etc.
   * The added package must be available via `pip`.
 * [CSC Docs: **R** package installations](https://docs.csc.fi/apps/r-env/#r-package-installations) 
@@ -11,7 +11,7 @@
 
 ## Tykky
 
-* The easiest way to create an own installation is with Tykky
+* The easiest way to create a custom installation is with Tykky
 * Tykky has 3 options, new installation based on:
   * `conda` .yml file
   * `pip` requirement file
@@ -38,48 +38,54 @@
 
 * We will install `lastools` based on [pydo's lastools Docker image](https://hub.docker.com/r/pydo/lastools).
 * We use the `projappl` disk, which is the best place for software installations.
-* Lastools is in Puhti already available, also as newer Linux-native installation.
-* During the course we will use interactive job for doing the installation because of 50 persons doing it at the same time. Usually installations are done on login node.
+* Lastools is already available on Puhti, also as a newer Linux-native installation.
+* During the course we will use an interactive job for doing the installation,
+  because we will have 50 users doing it at the same time, which stresses the
+  shared file system. Usually installations are done on a login node.
 
 :::{admonition} Change the default project and username
 
-* `project_200xxxx` is example project name, replace with your own CSC project name.
-* `cscusername` is example username, replace with your username.
+* `project_20xxxxx` is an example project name, replace with your own CSC project name.
+* `cscusername` is an example username, replace with your username.
 :::
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
-* Open Login node shell OR at least during the course Compute node shell:
+* Open Login node shell
+* Open an interactive job using:
+```
+srun --reservation=geocomputing_thu --account=project_2011224 --mem=4000 --ntasks=1 --time=0:20:00 --gres=nvme:4 --pty bash -i
+```
 
-* Reservation: geocomputing_thu (only during course)
-* Project: project_200xxxx
-* Number of CPU cores: 1
-* Memory: 4 Gb
-* Local disk: 4 Gb
-* Time: 00:30:00
+:::{admonition} Normally, we use `sinteractive` to start interactive jobs.
+:class: important
+We used the previous `srun` command in order to use our course's resource reservation.
+The [`sinteractive` command](https://docs.csc.fi/computing/running/interactive-usage/#the-sinteractive-command)
+provides a more convenient way to launch interactive jobs.
+:::
 
 Make Tykky tools available
 ```
 module load tykky
 ```
 
-Create a new directory for the installation and make the folder **above** it to your working directory
+Create a new directory for the installation and make the folder **above** it your working directory
 ```
-mkdir -p /projappl/project_200xxxx/students/cscusername/lastools
-cd /projappl/project_200xxxx/students/cscusername
+mkdir -p /projappl/project_20xxxxx/students/cscusername/lastools
+cd /projappl/project_20xxxxx/students/cscusername
 ```
 
-Create the new instalaltion
+Create the new installation
 ```
 wrap-container -w /opt/LAStools docker://pydo/lastools:latest --prefix lastools
 ```
 
-* `-w /opt/LAStools` - where are the tools located inside the container, that should be available
-* `docker//:pydo/lastools:latest` - the existing Docker iamge
+* `-w /opt/LAStools` - where the tools are located inside the container, it should be accessible
+* `docker//:pydo/lastools:latest` - the existing Docker image
 * `--prefix lastools` - location of the new installation 
 
 Add the location of your new installation to your PATH. Note that Tykky prints out the correct command for you.
 ```
-export PATH="/projappl/project_200xxxx/students/cscusername/lastools/bin:$PATH"
+export PATH="/projappl/project_20xxxxx/students/cscusername/lastools/bin:$PATH"
 ```
 Test your new installation.
 ```
@@ -89,6 +95,9 @@ lasinfo -i /appl/data/geo/mml/laserkeilaus/2008_latest/2018/W444/1/W4444G4.laz
 
 :::{admonition} PATH setting
 
-PATH defines where system is looking for tools. Changing PATH like above is valid until the Puhti session is alive. PATH (or PYTHONPATH) has to be set each session again, so it is good to add it to your batch job file.
+PATH defines where the system looks for tools. Changes to PATH, like those
+above, are in effect while the Puhti session is alive. PATH (or PYTHONPATH)
+has to be set again in each session, so it is good to add it to your batch job
+file.
 
 :::

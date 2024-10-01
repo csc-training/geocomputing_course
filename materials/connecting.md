@@ -26,7 +26,10 @@
 
 ## Connecting to the supercomputer via SSH
 
-During the course we will access the supercomputer via the web interface in order to not overwhelm you with setups before the course. However, this way may not always be the most convenient. You can also connect to the supercomputer via SSH.
+During the course we will access the supercomputer via the web interface in
+order to not overwhelm you with setups before the course. However, this way
+may not always be the most convenient. You can also connect to the
+supercomputer via SSH.
 
 :::{admonition} Connecting with SSH clients
 :class: seealso, dropdown
@@ -46,7 +49,11 @@ During the course we will access the supercomputer via the web interface in orde
 
 ## Developing scripts remotely
 
-Instead of developing code on your local machine and moving it as files to the supercomputer for testing, you can also consider to use a local editor and push edited files directly into the supercomputer. 
-This works for example with **Visual Studio Code** or **Notepad++**. Note that [Visual Studio Code](https://docs.csc.fi/computing/webinterface/vscode/) is also available through the Puhti web interface.
+Instead of developing code on your local machine and moving it as files to the
+supercomputer for testing, you can also consider to use a local editor and
+push edited files directly to the supercomputer.  This works for example
+with **Visual Studio Code** or **Notepad++**. Note that [Visual Studio
+Code](https://docs.csc.fi/computing/webinterface/vscode/) is also available
+through the Puhti web interface.
 
 - [CSC Docs: Developing scripts remotely](https://docs.csc.fi/support/tutorials/remote-dev/)

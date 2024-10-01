@@ -1,7 +1,7 @@
 # GIS tools
 
-* Puhti has the widest GIS software portfolio of CSC supercomputers, and possibly of all supercomputers in the world
-* Pre-installed software makes it easy to start working with Puhti.
+* Puhti has the widest GIS software portfolio of the CSC supercomputers, and possibly of all supercomputers in the world.
+* Pre-installed software makes it easy to start working on Puhti.
 * GIS tools are originally not planned for supercomputers -> limited ability to utilize the computing power.
 * GIS installations at CSC have been done partly with GeoPortti funding.
 
@@ -9,7 +9,7 @@
 
 * [Ames Stereo Pipeline](https://docs.csc.fi/apps/ames-stereo/) for processing stereo images
 * [ArcGIS Python API](https://docs.csc.fi/apps/arcgis/) 
-* [CloudCompare](https://docs.csc.fi/apps/cloudcompare/) for visualizing, editing and processing poing clouds
+* [CloudCompare](https://docs.csc.fi/apps/cloudcompare/) for visualizing, editing and processing point clouds
 * [FORCE](https://docs.csc.fi/apps/force/) for mass-processing of medium-resolution satellite images
 * [GDAL](https://docs.csc.fi/apps/gdal/) for geospatial data formats
 * **[Geoconda](https://docs.csc.fi/apps/geoconda/)** - Python spatial analysis libraries
@@ -23,8 +23,8 @@
 * [QGIS](https://docs.csc.fi/apps/qgis/) - General purpose GIS software family for viewing, editing and analysing geospatial data
 * **[R for GIS](https://docs.csc.fi/apps/r-env-for-gis/)** - R spatial analysis libraries
 * [SAGA GIS](https://docs.csc.fi/apps/saga-gis/) - General purpose GIS software family for viewing, editing and analysing geospatial data
-* [Sen2Cor](https://docs.csc.fi/apps/sen2cor/) for atmospheric-, terrain and cirrus correction of the Sentinel-2 products
-* [Sen2mosaic](https://docs.csc.fi/apps/sen2mosaic/) for download, preprocessing and mosaicing of Sentinel-2 products
+* [Sen2Cor](https://docs.csc.fi/apps/sen2cor/) for atmospheric, terrain and cirrus correction of the Sentinel-2 products
+* [Sen2mosaic](https://docs.csc.fi/apps/sen2mosaic/) for downloading, preprocessing and mosaicing of Sentinel-2 products
 * **[SNAP](https://docs.csc.fi/apps/snap/)** for remote sensing applications
 * [WhiteboxTools](https://docs.csc.fi/apps/whiteboxtools/) - An advanced geospatial data analysis platform
 * [Zonation](https://docs.csc.fi/apps/zonation/) - Spatial conservation prioritization framework
@@ -50,7 +50,7 @@
 * Additional, easy to install yourself [EasyBuild recepies](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs) for CGAL, GDAL, GEOS, ncview, PROJ, R.
 
 
-:::{admonition} GIS tools NOT available in supercomputers
+:::{admonition} GIS tools NOT available on supercomputers
 :class: caution
 
 * **Servers** -> these can be run in cPouta
@@ -75,10 +75,10 @@
 * LasTools:
 	* Some tools available for "free"
    	* No license from CSC
-  	* Easy to use own license
+  	* Easy to use your own license
 * ArcGIS Python API:
-	* For many tools connection to ArcGIS Online required.
-* In general only tools with floating licenses possible
+	* For many tools, a connection to ArcGIS Online is required.
+* In general, only tools with floating licenses can be used
  	* Tools with node-locked licenses -> cPouta  
 :::
 
@@ -95,25 +95,24 @@
 | SNAP | - | [snappy](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/19300362/How+to+use+the+SNAP+API+from+Python), [snapista](https://snap-contrib.github.io/snapista/gettingstarted.html) | [GPT](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/70503475/Bulk+Processing+with+GPT) |
 | WhiteboxTools | [whiteboxR*](https://github.com/opengeos/whiteboxR) | [WhiteboxTools](https://www.whiteboxgeo.com/manual/wbt_book/python_scripting/using_whitebox_tools.html)| [Yes](https://www.whiteboxgeo.com/manual/wbt_book/command_prompt.html) |
 
-Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonation have commandline interface.
+Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonation have a command-line interface.
 
-\* are not available in Puhti currently, but should be possible to install, ask if you need.
-
+\* are not available in Puhti currently, but should be possible to install, ask if you need any of them.
 
 
 :::{admonition} Modules
 :class: important
 
-* Supercomputers are shared computing environment with many mutually incompatible tools installed
+* Supercomputers are a shared computing environment with many mutually incompatible tools installed
 * By default only basic Linux tools are available
 * Pre-installed tools are available via modules
 * One module: single program or group of similar programs
 * Usage:
 	* Check documentation for available module names and versions.
- 	* Load a module(s) -> the system can find the tools provided by the module
-	* Use tools from the loaded module
+ 	* Load on or more modules -> the system can find the provided tools
+	* Use tools from the loaded module(s)
 
-Example. Loading module for GDAL
+Example: loading the module for GDAL
 
 ```
 module load gdal

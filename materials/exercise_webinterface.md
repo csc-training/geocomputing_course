@@ -29,8 +29,8 @@
 
 :::{admonition} Change the default project and username
 
-* `project_200xxxx` is example project name, replace with your own CSC project name.
-* `cscusername` is example username, replace with your username.
+* `project_200xxxx` is an example project name, replace with your own CSC project name.
+* `cscusername` is an example username, replace with your username.
 :::
 
 ### Info
@@ -55,7 +55,7 @@
   
 :::{admonition} Moving data
 
-Web interface is for moving up to 10Gb data, if you have more data use other tools. More info in [moving data](moving_data.md)
+The web interface can be used for moving up to 10GB of data. If you have more data, use other tools. More info on [moving data](moving_data.md).
 
 :::
 
@@ -94,13 +94,13 @@ Web interface is for moving up to 10Gb data, if you have more data use other too
 * End the session:
    * Close QGIS.
    * Close the web tab
-   * In Active sessions view: `Delete`
+   * Find the session in the Active sessions view and select `Cancel`
       * This only ends the Desktop session, any files written during the session would be available also afterwards.
 
 :::{admonition} QGIS in practice on supercomputer
 
-* QGIS is designed for desktop use and it mostly uses only 1 core, so running it on supercomputer is rather slower than on desktop. QGIS is in Puhti and LUMI mainly for easy viewing of input and output data. 
-* With `qgis_processing` or PyQGIS scripts it is possible to paralellize your data analysis. In general other Python packages are faster, but if you have these scripts already available, they can be used.
+* QGIS is designed for desktop use and it mostly uses only 1 core, so running it on a supercomputer is rather slower than on desktop. QGIS is in Puhti and LUMI mainly for easy viewing of input and output data. 
+* With `qgis_processing` or PyQGIS scripts it is possible to parallelize your data analysis. In general other Python packages are faster, but if you have these scripts already available, they can be used.
 
 :::
 

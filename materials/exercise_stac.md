@@ -27,8 +27,8 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 
 :::{admonition} Change the default project and username
 
-* `project_200xxxx` is example project name, replace with your own CSC project name.
-* `cscusername` is example username, replace with your username.
+* `project_200xxxx` is an example project name, replace with your own CSC project name.
+* `cscusername` is an example username, replace with your username.
 :::
 
 * [CSC Docs: Jupyter](https://docs.csc.fi/computing/webinterface/jupyter/)
@@ -65,14 +65,14 @@ git clone https://github.com/csc-training/geocomputing.git
 
 ## STAC Notebook
 
-1. In file explorer open: `students/cscusername/geocomputing/python/STAC
+1. In the file explorer, open `students/cscusername/geocomputing/python/STAC
 2. Open `STAC_CSC_example.ipynb` notebook
 3. Follow the notebook, use `Shift+Enter` for running cells.
 
 ## End the session
 
  * Close the web tab
- * In Active sessions view: `Cancel`
+ * Find the session in the Active sessions view and select `Cancel`
     
 :::{admonition} Key points
 :class: important

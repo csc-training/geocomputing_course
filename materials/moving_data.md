@@ -40,9 +40,9 @@ scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_200xxxx/dire
 
 #### rsync
 
-- Best for big data transfers: does not copy what is already there, can resume a copy process which disconnected.
+- Best for big data transfers: does not copy what is already there, can resume a copy process which has disconnected.
 - Can warn against accidental over-writes.
-- Available on Linux, Mac and Windows Subsystem Linux (WSL).
+- Available on Linux, Mac and Windows Subsystem for Linux (WSL).
 - Windows Powershell does not have `rsync`, MobaXterm has `rsync`, but it removes write permissions of copied files
 - [CSC Docs: `rsync`](https://docs.csc.fi/data/moving/rsync/)
 
@@ -58,7 +58,7 @@ rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/p
 
 :::{admonition} Firewall limitations
 
-Some organizations, for example research institutes with IT-services from Valtori, have stricter rules and need to use proxy for connecting to CSC. Ask your IT-service or other Puhti users in your organization for extra guidelines. 
+Some organizations, for example research institutes with IT-services from Valtori, have stricter rules and need to use a proxy for connecting to CSC servers. In this case, ask your IT service or other Puhti users in your organization for additional guidelines. 
 
 :::
 
@@ -66,12 +66,12 @@ Some organizations, for example research institutes with IT-services from Valtor
 
 ## External data services -> supercomputer
 
-- When downloading from external services, try to download directly to CSC, not via your local computer
+- When downloading data from external services, try to download directly to CSC servers, not via your local computer
 - Check what APIs/tools the service supports:
 	- Standard APIs: OGC APIs, [STAC](https://csc-training.github.io/geocomputing_course/materials/stac.html)
 	- Custom service APIs
   	- ftp, rsync
-	- wget/curl if HTTP-urls available
+	- wget/curl if there is a URL for the data
 
 ### wget
 

@@ -9,11 +9,11 @@ A typing-based interface is often called a command-line interface, or CLI, to di
 
 Shell is the standard way to interact with a supercomputer. It is worth learning the basics and getting comfortable with the "black box", to make efficient use of the resources.
 
-The terms terminal, command line and shell are often used interchangably, even though they mean slightly different things. 
+The terms terminal, command line and shell are often used interchangeably, even though they mean slightly different things. 
 
 ## Basic Linux commands
 
-Do you remember how you edited some files in the web interface? Let's do the same thing again; only from the command line:
+Do you remember how you edited some files in the web interface? Let's do the same thing again; only now from the command line:
 
 ### Navigating folders
 
@@ -23,14 +23,14 @@ Do you remember how you edited some files in the web interface? Let's do the sam
 pwd
 ```
 
-2. We would like to create a new directory in our projects scratch students directory with our name, let's move there:
+2. In our project's scratch storage, there is a directory called `students`. We would like to create a new subdirectory and give our username as its name. Let's move to `students`:
 
 ```bash
 cd /scratch/project_200xxxx/students
 ```
 
 
-3. Make a directory with your name (you can either type it or use the variable $USER) and see if it appears:
+3. Make a directory with your username (you can either type it or use the variable $USER) and see if it appears:
 
 ```bash
 mkdir $USER    
@@ -45,7 +45,7 @@ cd $USER
 
 :::{admonition} Auto complete
 :class: seealso
-If you just type `cd` and the first letter of the folder name, then hit `tab` key, the terminal completes the name. Handy!
+If you just type `cd` and the first letter of the folder name, then hit the `tab` key, the terminal completes the name. Handy!
 :::
 
 ## Exploring files
@@ -63,13 +63,13 @@ wget https://raw.githubusercontent.com/csc-training/csc-env-eff/master/part-1/pr
 ls -l         # option l is for long format
 ```
 
-3. Use the `less` command to check out what the file looks like:
+3. Use the `less` command to check what the contents of the file look like:
 
 ```bash
 less my-first-file.txt
 ```
 
-4. To exit the `less` preview of the file, hit `q`.
+4. To exit the `less` view of the file, hit `q`.
 
 5. Make a copy of this file:
 
@@ -88,7 +88,7 @@ ls -l
 
 :::{admonition} Moving files
 :class: seealso
-If you don't want to have duplicate files you can use `mv` to 'move/rename' the file. Syntax is the same: `mv /path/to/source/oldname /path/to/destination/newname`.
+If you don't want to have duplicate files you can use `mv` to 'move/rename' the file. The syntax is the same: `mv /path/to/source/oldname /path/to/destination/newname`.
 :::
 
 

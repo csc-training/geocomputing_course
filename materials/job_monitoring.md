@@ -4,7 +4,10 @@
 Check the status of your job: `squeue --me`
 
 ## Job output
-By default, the standard output (e.g. things that you print as part of your script) and standard error (e.g. error messages from Slurm, your tool or package) are written to the file `slurm-<jobid>.out` in the same folder as the batch job script. 
+By default, the standard output (e.g. things that you print as part of your
+script) and standard error (e.g. error messages from Slurm, your tool or
+package) are written to the file `slurm-<jobid>.out` in the same directory as the
+batch job script. 
 
 :::{admonition} What to do if a job fails?
 :class: seealso
@@ -69,7 +72,10 @@ JobID         Partition      State     ReqMem     MaxRSS     AveRSS    Elapsed
 22361601.0               COMPLETED               145493K  139994035   00:06:17
 ```
 
-**Note!** Querying data from the Slurm accounting database with `sacct` can be a very heavy operation. **Don't** query long time intervals or run `sacct` in a loop/using `watch` as this will degrade the performance of the system for all users.
+**Note!** Querying data from the Slurm accounting database with `sacct` can be
+a very heavy operation. **Don't** query long time intervals or run `sacct` in
+a loop/using `watch` as this will degrade the performance of the system for
+all users.
 
 Important aspects to monitor are:
 - Memory efficiency
@@ -85,21 +91,22 @@ Important aspects to monitor are:
          - Perform a scaling test. 
 - GPU efficiency
    - If low GPU usage:
-      - better to use CPUs?
+      - Better to use CPUs?
       - Is disk I/O the bottleneck?
 - Disk workload
    -  If a lot of I/0, use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage)
 
 :::{admonition} Monitoring interactive jobs
 :class: tip
-If you want to monitor real-time resource usage of interactive job:
-   - Open a new terminal on the same compute node as where the tool/script is running:
+If you want to monitor the real-time resource usage of an interactive job:
+   - Open a new shell on the same compute node as where the tool/script is running:
       - Jupyter and RStudio have Terminal windows.
-      - If it is some other tool, open another terminal to the compute node:
-         - Find out the compute node name from the prompt of the interactive job, something like: `r18c02`
-         - Open a new terminal to login node
-         - Connect to compute node, for example: `ssh r18c02`
-   - Use Linux `top -u $USER` command, it gives rough estimate of memory and CPU usage.
+      - If it is some other tool, manually open another shell on the compute node:
+         - Find out the compute node name from the prompt of the interactive
+           job or the output of `squeue --me` (it's something like `r18c02`)
+         - Open a new terminal window or tab on your device and log into the supercomputer
+         - Connect to the compute node from the login node by running `ssh <comp-node-id>` (for example `ssh r18c02`)
+   - Use Linux `top -u $USER` command, it gives a rough estimate of the memory and CPU usage of the job.
 :::
 
 

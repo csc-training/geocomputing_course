@@ -1,6 +1,6 @@
 # Parallel Python
 ## Spatial libraries with parallel support
-If starting with a new code, the first option could be to look for spatial libraries that have parallelization already built in:
+If starting from scratch with a new program, the first option would be to look for spatial libraries that have parallelization already built in:
 
 * [Dask-geopandas](https://dask-geopandas.readthedocs.io/) for vector data analysis, still a lot more limited than `geopandas`
 * [xarray](http://xarray.pydata.org/) for basic raster data analysis
@@ -10,19 +10,28 @@ If starting with a new code, the first option could be to look for spatial libra
 * [osmnx](https://osmnx.readthedocs.io/en/stable/index.html) for routing 
 
 ## Python parallel libraries
-The parallel spatial libraries are still developing and do not support very wide range of functionality, so often these do not fit all requirements. If you are changing an existing serial code to parallel, the next option is to write parallel code yourself. Basic Python code runs in serial mode, so usually some changes to code are needed to benefit from parallel computing.
+
+The parallel spatial libraries are still developing and do not support a very
+wide range of functionality, so often these do not fit all requirements. The
+next option is to write parallel code yourself. The basic Python code runs in
+serial mode, so usually some changes to code are needed to benefit from
+parallel computing. 
 
 Python has many libraries to support parallelization:
 
    * Multi-core: `multiprocessing` and `joblib`
    * Multi-core or multi-node: **`dask`** and `mpi4py`
 
-If unsure, start with Dask, it is one of the newest, most versatile and easy to use. But Dask has many options and alternatives, `multiprocessing` might be easier to learn at first. All of the above mentioned spatial libraries use Dask, except `osmnx`, which uses `multiprocessing`.
+If unsure, start with Dask, it is one of the newest, most versatile and most
+easy to use. There are, of course, many options and alternatives to Dask.
+`multiprocessing` might be the easiest to learn first. All of the
+above-mentioned spatial libraries use Dask, except `osmnx`, which uses
+`multiprocessing`.
 
-:::{admonition} How many cores I can use?
+:::{admonition} How many cores can I use?
 :class: tip.
 
-If you need to check in code how many cores you can use, use:
+To check for the number of cores you can use in your Python code, run:
 ```
 len(os.sched_getaffinity(0))
 ```
@@ -38,7 +47,7 @@ Do not use `multiprocessing.cpu_count()`, that counts only hardware cores, but d
 :::{admonition} Delayed computing
 :class: tip
 
-One general feature of Dask is that it delays computing to the point when the result is actually needed, for example for plotting or saving to a file. So for example when running the code in Jupyter, cells that actually require longer time may run instantly, but later some cell may take a lot of time.
+One general feature of Dask is that it delays computing to the point when the result is actually needed, for example for plotting or saving to a file. So for example when running the code in Jupyter, cells that actually require a longer runtime may run instantly, but another cell may run much later.
 
 :::
 
@@ -48,15 +57,16 @@ When using Dask, two main decisions have to be made for running code in parallel
 2. How to make the code parallel?
 
 ### How to run the parallel code?
-[Dask](https://docs.dask.org/en/stable/) supports different set-ups for parallel computing, from supercomputers point of view, the main options are:
+
+[Dask](https://docs.dask.org/en/stable/) supports different set-ups for parallel computing, from a supercomputing point-of-view, the main options are:
 
 * [Default schedulers](https://docs.dask.org/en/stable/scheduler-overview.html) for multi-core jobs.
 * [LocalCluster](https://distributed.dask.org/en/latest/index.html) for multi-core jobs.
 * [SLURMCluster](https://jobqueue.dask.org/en/latest/index.html) for multi-node jobs.
 
-While developing the code, it might be good to start with the default scheduler or `LocalCluster` parallelization and if needed change it to `SLURMCluster`. The required changes to code are small, when changing the parallelization set-up.
+While developing the code, it might be good to start with the default scheduler or `LocalCluster` parallelization and then, if needed, change it to `SLURMCluster`. The required changes to code are small when changing the parallelization setup.
 
-One of the advantages of using `LocalCluster`, is that then in Jupyter the [Dask-extension](https://github.com/dask/dask-labextension) is able to show progress and resource usage.
+One of the advantages of using `LocalCluster`, is that the Jupyter [Dask-extension](https://github.com/dask/dask-labextension) is able to show progress and resource usage.
 
 **Default scheduler** is started automatically, when Dask objects or functions are used.
 
@@ -94,9 +104,9 @@ client = Client(cluster)
 ### How to make the code parallel?
 Dask provides several options, inc [Dask DataFrames](https://docs.dask.org/en/stable/dataframe.html), [Dask Arrays](https://docs.dask.org/en/stable/array.html), [Dask Bags](https://docs.dask.org/en/stable/bag.html), [Dask Delayed](https://docs.dask.org/en/stable/delayed.html) and [Dask Futures](https://docs.dask.org/en/stable/futures.html). This decision depends on the type of analyzed data and already existing code. Additionally Dask has support for scalable machine learning with [DaskML](https://ml.dask.org/).
 
-In this course we use Delayed functions. Delayed functions are useful in parallelizing existing code. This approach delays function calls and creates a graph of the computing process. From the graph, Dask can then divide the work tasks to different workers whenever parallel computing is possible. Keep in mind that the other ways of code parallelization might suit better in different use cases. 
+In this course we use delayed functions. Delayed functions are useful in parallelizing existing code. This approach delays function calls and creates a graph of the computing process. From the graph, Dask can then divide the work tasks to different workers whenever parallel computing is possible. Keep in mind that the other ways of code parallelization might suit you better in different use cases. 
 
-The changes to code are exactly the same for all parallization set-ups. The most simple changes could be:
+The changes to code are exactly the same for all parallelization setups. The most simple changes could be:
 
 * For-loops:
   * Change to Dask's delayed functions,
@@ -104,11 +114,11 @@ The changes to code are exactly the same for all parallization set-ups. The most
 
 ```
 # Example of changing for-loop and map() to Dask
-# Just a demo slow function, that waits for 2 seconds
+# Just a slow demo function that waits for 2 seconds
 def slow_functio(i):
   time.sleep(2) 
   return(i)
-# Input data vector, the slow function is run for each element.
+# Input data vector. The slow function is run for each element.
 input = range(0, 7)
 ```
 **Serial**
@@ -151,7 +161,11 @@ print(a)
 
 * Dask exports needed variables and libraries automatically to the parallel processes
 * The variables must be serializable.
-* Avoid moving big size variables from main to parallel process. Spatial data analysis often includes significant amounts of data. It is better to read the data inside the parallel function. Give as input the file name or compute area coordinates etc. 
+* Avoid moving variables that refer to large objects from main the main serial
+  process to a parallel process. Spatial data analysis often involves
+  significant amounts of data. It is better to read the data inside the
+  parallel function: give the file name as input, compute area coordinates,
+  etc. 
 
 :::
 
@@ -159,7 +173,7 @@ print(a)
 ### Batch job scripts
 In batch job scripts it is important to set correctly:
 * `nodes` - How many nodes to reserve? 1 for default schedulers or `LocalCluster`, more than 1 for `SLURMCluster`
-* `cpus-per-task` - How many cores to reserver? Depending on needs, 1-n. n depends on number of available CPUs per node. 
+* `cpus-per-task` - How many cores to reserve? Depending on the task, something between 1 and the total number of available CPUs per node. 
 
 ```
 #SBATCH --nodes=1
