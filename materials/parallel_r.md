@@ -67,7 +67,7 @@ The most simple changes could be:
 * `*apply()` -> `future.apply` functions
 
 ```
-# Example of chaning for-loop and purrr's map() to furrr's future_map()
+# Example of changing for-loop and purrr's map() to furrr's future_map()
 # Just a demo slow function, that waits for 5 seconds
 slow_function<-function(i) {
   Sys.sleep(5) 
@@ -123,7 +123,7 @@ d <- future_lapply(input, slow_function)
 
 ### Batch job scripts
 #### Multi-core jobs
-`multicore` or `multisession` parallization:
+`multicore` or `multisession` parallelization:
 ```
 #SBATCH --nodes=1
 #SBATCH --ntasks=4  # Number of tasks. Upper limit depends on number of CPUs per node.
@@ -146,6 +146,7 @@ srun apptainer_wrapper exec RMPISNOW --no-save --slave -f Calc_contours_future_c
 
 Further reading:
 * [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs)
+* [CSC Docs, Parallel jobs using R](https://docs.csc.fi/support/tutorials/parallel-r/)
 * [CSC Geocomputing examples for R in Puhti](https://github.com/csc-training/geocomputing/tree/master/R/puhti): `future`, `snow`, `foreach`.
   * [`lidr`-example ](https://github.com/csc-training/geocomputing/tree/master/R/R_LiDAR/R_lidar_course_exercises)
   * [STAC-example](https://github.com/csc-training/geocomputing/tree/master/R/STAC): `gdalcubes`
