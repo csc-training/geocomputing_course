@@ -11,7 +11,7 @@ Typical physical parts of a supercomputer:
 ## Login nodes
 - Login nodes are used for moving data and scripts, editing scripts, and starting jobs.
 - When you login to CSC's supercomputers, you enter one of the login nodes of the computer
-- There is only a few login nodes and they are shared by all users, so they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
+- There are only a few login nodes and they are shared by all users, so they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
 
 ![](./images/HPC_nodes.png)
  
