@@ -26,7 +26,10 @@
 
 ## Connecting to the supercomputer via SSH
 
-During the course we will access the supercomputer via the webinterface in order to not overwhelm you with setups before the course. However, this way may not always be the most convenient. You can also connect to the supercomputer via SSH.
+During the course we will access the supercomputer via the web interface in
+order to not overwhelm you with setups before the course. However, this way
+may not always be the most convenient. You can also connect to the
+supercomputer via SSH.
 
 :::{admonition} Connecting with SSH clients
 :class: seealso, dropdown
@@ -38,7 +41,7 @@ During the course we will access the supercomputer via the webinterface in order
    - In Windows:
       - `Command Prompt` or `Powershell` are always avaialbe and can be used for basic connections.
       - Special tools like [PuTTY](https://www.putty.org/) or [MobaXterm](https://mobaxterm.mobatek.net/) provide more options, inc possibility to save settings, but need installation.
-- To avoid typing your password every time again and to make your connection more secure, you can [set up SSH-keys](https://docs.csc.fi/computing/connecting/#setting-up-ssh-keys).
+- To avoid typing your password every time again and to make your connection more secure, you can [set up SSH-keys](https://docs.csc.fi/computing/connecting/ssh-keys/).
 - [CSC Docs: Connecting to CSC supercomputers](https://docs.csc.fi/computing/connecting/)
 - [LUMI Docs: Get started](https://docs.lumi-supercomputer.eu/firststeps/).
 
@@ -46,7 +49,11 @@ During the course we will access the supercomputer via the webinterface in order
 
 ## Developing scripts remotely
 
-Instead of developing code on your local machine and moving it as files to the supercomputer for testing, you can also consider to use a local editor and push edited files directly into the supercomputer. 
-This works for example with **Visual Studio Code** or **Notepad++**. Note that [Visual Studio Code](https://docs.csc.fi/computing/webinterface/vscode/) is also available through the Puhti web interface.
+Instead of developing code on your local machine and moving it as files to the
+supercomputer for testing, you can also consider to use a local editor and
+push edited files directly to the supercomputer.  This works for example
+with **Visual Studio Code** or **Notepad++**. Note that [Visual Studio
+Code](https://docs.csc.fi/computing/webinterface/vscode/) is also available
+through the Puhti web interface.
 
 - [CSC Docs: Developing scripts remotely](https://docs.csc.fi/support/tutorials/remote-dev/)

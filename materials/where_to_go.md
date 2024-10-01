@@ -5,7 +5,7 @@
 * (Create or get access to a CSC project with your CSC user account)
 * Choose suitable service for your task
 * [Sign-up for CSC gis-hpc mailing list ](https://postit.csc.fi/sympa/subscribe/gis-hpc)
-* Ask for help, if needed, we don't bite :)
+* Ask for help if you need any, we don't bite :)
     
 ## Training calendars
 * [CSC](https://csc.fi/koulutukset/koulutuskalenteri/)

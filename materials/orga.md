@@ -5,7 +5,7 @@ This course is organized by CSC - IT Center for Science and funded by Geoportti 
 
 * Non-profit company producing IT services for research and higher education
 * Owned by ministry of education and culture (70%) and higher education institutions (30%)
-* Headquaters in Keilaniemi, Espoo
+* Headquarters in Keilaniemi, Espoo
 * Side offices and supercomputers in Kajaani
 * ~700 people
 
@@ -13,7 +13,7 @@ This course is organized by CSC - IT Center for Science and funded by Geoportti 
 
 ## Geoportti Research Infrastructure
 
-Geoportti Research Infrastructure (RI) is a shared service for researchers, teachers and students using geospatial data and geocomputing tools. Geoportti RI helps the researchers in Finland to use, to refine, to preserve and to share their geospatial resources.
+Geoportti Research Infrastructure (RI) is a shared service for researchers, teachers and students using geospatial data and geocomputing tools. Geoportti RI helps researchers in Finland use, refine, preserve and share their geospatial resources.
 
 * [GeoPortti web portal](https://www.geoportti.fi)
 * GeoPortti (oGIIR) projects has been very important for developing geocomputing usage of CSC supercomputers and cloud services.
@@ -33,7 +33,7 @@ Geoportti Research Infrastructure (RI) is a shared service for researchers, teac
 
 ## Location Innovation Hub
 
-The Location Innovation Hub (LIH) is a centre of excellence in location information coordinated by the Finnish Geospatial Research Institute. Our services are produced in conjunction with a partner network. We help companies to grow their business with location information. We also serve the public sector.
+The Location Innovation Hub (LIH) is a centre of excellence in location information coordinated by the Finnish Geospatial Research Institute. Our services are produced in conjunction with a partner network. We help companies grow their business with location information. We also serve the public sector.
 
 * [Location Innovation Hub](https://locationinnovationhub.eu)
 * Consulting to companies and other organizations how to use GIS, trainings, test environments
@@ -44,6 +44,6 @@ The Location Innovation Hub (LIH) is a centre of excellence in location informat
 
 ## Citing
 
-If you used CSC computing resources and GIS tools or data for your research, please acknowledge CSC and Geoportti in your publications, it is important for project continuation and funding reports. As an example, you can write:
+If you used CSC computing resources and GIS tools or data for your research, please acknowledge CSC and Geoportti in your publications. It is important for project continuation and funding reports. As an example, you can write:
 
 > "The authors wish to thank CSC - IT Center for Science, Finland (urn:nbn:fi:research-infras-2016072531) and the Open Geospatial Information Infrastructure for Research (Geoportti, urn:nbn:fi:research-infras-2016072513) for computational resources and support".
