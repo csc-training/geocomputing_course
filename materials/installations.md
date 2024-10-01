@@ -48,11 +48,14 @@
 :::
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
-* Open Login node shell
-* During the course only, open interactive job:
-```
-srun --reservation=geocomputing_fri --account=project_2008648 --mem=4000 --ntasks=1 --time=0:20:00 --gres=nvme:4 --pty bash -i
-```
+* Open Login node shell OR at least during the course Compute node shell:
+
+* Reservation: geocomputing_thu (only during course)
+* Project: project_200xxxx
+* Number of CPU cores: 1
+* Memory: 4 Gb
+* Local disk: 4 Gb
+* Time: 00:30:00
 
 Make Tykky tools available
 ```
