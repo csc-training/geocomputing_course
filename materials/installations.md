@@ -56,7 +56,12 @@
 srun --reservation=geocomputing_fri --account=project_2008648 --mem=4000 --ntasks=1 --time=0:20:00 --gres=nvme:4 --pty bash -i
 ```
 
-:::{admonition} Normally we use `sinteractive` to start interactive jobs. We used the previous command in order to use our course's resource reservation.
+:::{admonition} Normally, we use `sinteractive` to start interactive jobs.
+:class: important
+We used the previous `srun` command in order to use our course's resource reservation.
+The [`sinteractive` command](https://docs.csc.fi/computing/running/interactive-usage/#the-sinteractive-command)
+provides a more convenient way to launch interactive jobs.
+:::
 
 Make Tykky tools available
 ```
