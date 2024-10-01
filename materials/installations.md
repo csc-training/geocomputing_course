@@ -45,7 +45,7 @@
 
 :::{admonition} Change the default project and username
 
-* `project_200xxxx` is an example project name, replace with your own CSC project name.
+* `project_20xxxxx` is an example project name, replace with your own CSC project name.
 * `cscusername` is an example username, replace with your username.
 :::
 
@@ -53,7 +53,7 @@
 * Open Login node shell
 * Open an interactive job using:
 ```
-srun --reservation=geocomputing_fri --account=project_2008648 --mem=4000 --ntasks=1 --time=0:20:00 --gres=nvme:4 --pty bash -i
+srun --reservation=geocomputing_thu --account=project_2011224 --mem=4000 --ntasks=1 --time=0:20:00 --gres=nvme:4 --pty bash -i
 ```
 
 :::{admonition} Normally, we use `sinteractive` to start interactive jobs.
@@ -70,8 +70,8 @@ module load tykky
 
 Create a new directory for the installation and make the folder **above** it your working directory
 ```
-mkdir -p /projappl/project_200xxxx/students/cscusername/lastools
-cd /projappl/project_200xxxx/students/cscusername
+mkdir -p /projappl/project_20xxxxx/students/cscusername/lastools
+cd /projappl/project_20xxxxx/students/cscusername
 ```
 
 Create the new installation
@@ -85,7 +85,7 @@ wrap-container -w /opt/LAStools docker://pydo/lastools:latest --prefix lastools
 
 Add the location of your new installation to your PATH. Note that Tykky prints out the correct command for you.
 ```
-export PATH="/projappl/project_200xxxx/students/cscusername/lastools/bin:$PATH"
+export PATH="/projappl/project_20xxxxx/students/cscusername/lastools/bin:$PATH"
 ```
 Test your new installation.
 ```

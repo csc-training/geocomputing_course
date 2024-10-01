@@ -1,7 +1,7 @@
 # Organizers of this course
 This course is organized by CSC - IT Center for Science and funded by Geoportti Research Infrastructure and the Location Innvation Hub. 
 
-## [CSC - IT center for Science](https://www.csc.fi/)
+## [CSC - IT Center for Science](https://www.csc.fi/)
 
 * Non-profit company producing IT services for research and higher education
 * Owned by ministry of education and culture (70%) and higher education institutions (30%)

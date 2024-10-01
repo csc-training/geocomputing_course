@@ -13,7 +13,7 @@
 
 **Tools and scripting**
 - Availability:
-   - [Pre-installed tools at CSC](software.md).
+   - [Pre-installed tools at CSC](software.md)
    - [Installion of tools or extra packages to Python and R](installations.md)
 - Parallel computing:
    - [Do your analysis in parallel](parallel.md)

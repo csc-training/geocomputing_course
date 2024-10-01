@@ -12,7 +12,7 @@ If starting from scratch with new code, the first option would be to look for sp
 The parallel spatial libraries cover only very limited functionality, so often
 these do not fit all requirements. They also cannot be used to easily
 parallelize existing serial code. Then the next option is to write parallel
-code yourself. 
+code yourself.
 
 R has many libraries to support parallelization:
 
@@ -126,7 +126,7 @@ d <- future_lapply(input, slow_function)
 
 ### Batch job scripts
 #### Multi-core jobs
-`multicore` or `multisession` parallization:
+`multicore` or `multisession` parallelization:
 ```
 #SBATCH --nodes=1
 #SBATCH --ntasks=4  # Number of tasks. Upper limit depends on number of CPUs per node.
@@ -149,6 +149,7 @@ srun apptainer_wrapper exec RMPISNOW --no-save --slave -f Calc_contours_future_c
 
 Further reading:
 * [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs)
+* [CSC Docs, Parallel jobs using R](https://docs.csc.fi/support/tutorials/parallel-r/)
 * [CSC Geocomputing examples for R in Puhti](https://github.com/csc-training/geocomputing/tree/master/R/puhti): `future`, `snow`, `foreach`.
   * [`lidr`-example ](https://github.com/csc-training/geocomputing/tree/master/R/R_LiDAR/R_lidar_course_exercises)
   * [STAC-example](https://github.com/csc-training/geocomputing/tree/master/R/STAC): `gdalcubes`

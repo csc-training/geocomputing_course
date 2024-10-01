@@ -32,7 +32,7 @@ Some things to check:
 ## Testing
 - Before large runs, it's a good idea to do a smaller trial run
 - Start simple and gradually use more complex approaches if needed
-   - Try first running interactively (**not** on a login node) or with batch jobs in the `test`-partition
+   - Try first running interactively (**not** on a login node) or with batch jobs in the `test` partition
    - Check that results are as expected
    - Check the resource usage after the test run and adjust accordingly
 

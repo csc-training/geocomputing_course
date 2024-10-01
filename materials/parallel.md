@@ -41,7 +41,7 @@ For multi-core there are clearly more options. The number of cores in a single n
 
 ## Tools with built-in parallel support
 
-Checj from the tool's manual if it has built-in support for using multiple CPUs/cores. For command line tools, look for `number_of_cores`, `cores`, `cpus`, `jobs`, `threads` or similar. Unfortunately, not many GIS-tools have such options.
+Check from the tool's manual if it has built-in support for using multiple CPUs/cores. For command line tools, look for `number_of_cores`, `cores`, `cpus`, `jobs`, `threads` or similar. Unfortunately, not many GIS-tools have such options.
 
 Some example geospatial tools with built-in parallel support: 
 * GDAL, some commands e.g. `gdalwarp -multi -wo NUM_THREADS=val/ALL_CPUS ...`

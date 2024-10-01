@@ -3,7 +3,7 @@
 ## R in supercomputers
 * `r-env` is the only R module in Puhti. It has ~1300 packages for all fields of science.
 * Mahti does not have R.
-* LUMI has only [EasyBuild recepy for R](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/R/)
+* LUMI has only [EasyBuild recipe for R](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs/r/R/)
 * [CSC Docs: r-env](https://docs.csc.fi/apps/r-env/)
 * [CSC Docs: R for GIS](https://docs.csc.fi/apps/r-env-for-gis/)
 

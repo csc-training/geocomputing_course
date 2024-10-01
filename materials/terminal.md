@@ -13,7 +13,7 @@ The terms terminal, command line and shell are often used interchangeably, even 
 
 ## Basic Linux commands
 
-Do you remember on how you edited some files in the web interface? Let's do the same thing again; only now from the command line:
+Do you remember how you edited some files in the web interface? Let's do the same thing again; only now from the command line:
 
 ### Navigating folders
 
@@ -60,7 +60,7 @@ wget https://raw.githubusercontent.com/csc-training/csc-env-eff/master/part-1/pr
 2. Check what kind of file you got and what size it is using the `ls` command with some extra options:
 
 ```bash
-ls -l         # options are l for long format, 
+ls -l         # option l is for long format
 ```
 
 3. Use the `less` command to check what the contents of the file look like:

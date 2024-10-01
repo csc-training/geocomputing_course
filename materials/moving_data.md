@@ -6,13 +6,13 @@
 - Graphical, no installations needed.
 - Limited functionality compared to other options.
 - For smaller amounts of data, < 10 Gb.
-- Upload, download, moving, creating folders.
+- Upload, download, move, create folders.
 - [Puhti Web Interface](https://puhti.csc.fi) -> Files
 - [CSC Docs: Web interfaces for Puhti and Mahti](https://docs.csc.fi/computing/webinterface/)
 
 ### Graphical data transfer tools on local computer
 
-- For example: **FileZilla**,  WinSCP and CyberDuck
+- For example: **FileZilla**, WinSCP and CyberDuck
 - For medium amounts of data, < 1 Tb.
 - Easy drag-and-drop for moving, but installation required.
 - WinSCP is slower than others.
@@ -101,7 +101,7 @@ wget https://vm0160.kaj.pouta.csc.fi/geocubes/clip/10/km10/kuntajako:235/2018 -O
 :::{admonition} Possible trouble with file transfer between Windows and Linux
 :class: seealso, dropdown
 
-When you transfer text files from a Windows system to a Unix system (Mac, Linux etc.) this can cause problems. Windows encodes its files slightly different than Unix, and adds an extra character to every line.
+When you transfer text files from a Windows system to a Unix system (Mac, Linux etc.) this can cause problems. Windows encodes its files slightly differently than Unix and adds an extra character to the end of every line.
 
 On a Unix system, every line in a file ends with a `\n` (newline). On Windows, every line in a file ends with a `\r\n` (carriage return + newline). This causes problems sometimes.
 
@@ -120,7 +120,7 @@ From [HPC Carpentry](https://carpentries-incubator.github.io/hpc-intro/).
 :::{admonition} Trouble with script execution?
 :class: seealso, dropdown
 
-Sometimes when we transfer scripts the permissions might get messed up. A script you could run with `./myscript.sh` on your own computer cannot be run anymore after transfering to the supercomputer.
+Sometimes when we transfer scripts, the permissions might get messed up. A script you could run with `./myscript.sh` on your own computer cannot be run anymore after transfering to the supercomputer.
 
 You can use `ls -l` to see permissions (r: read, w: write, x: execute):
 
@@ -142,7 +142,7 @@ L file (-), directory (d), symbolic link (l)
 
 What if we want to give different sets of users different permissions?
 
- The command [chmod](https://www.freecodecamp.org/news/how-to-change-file-permissions-with-the-chmod-command-on-linux/) among others also accepts special numeric codes. The numeric codes are as follows: read = 4, write = 2, execute = 1. For each user we will assign permissions based on the sum of these permissions (must be between 7 and 0).
+The command [chmod](https://www.freecodecamp.org/news/how-to-change-file-permissions-with-the-chmod-command-on-linux/) among others also accepts special numeric codes. The numeric codes are as follows: read = 4, write = 2, execute = 1. For each user we will assign permissions based on the sum of these permissions (must be between 7 and 0).
 
 Let’s make an example file and give everyone permission to do everything with it.
 
