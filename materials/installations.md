@@ -50,18 +50,20 @@
 :::
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
-* Open Login node shell
-* Open an interactive job using:
+* Open Compute node shell (outside of the course, also Login node shell could be used)
+
+Reservation: geocomputing_thu (only during the course)
+Project: 2000xxx
+Partition: small
+Number of CPU cores: 1
+Memory (GB): 4
+Local disk (GB): 4
+Time: 00:30:00
+
 ```
 srun --reservation=geocomputing_thu --account=project_2011224 --mem=4000 --ntasks=1 --time=0:20:00 --gres=nvme:4 --pty bash -i
 ```
 
-:::{admonition} Normally, we use `sinteractive` to start interactive jobs.
-:class: important
-We used the previous `srun` command in order to use our course's resource reservation.
-The [`sinteractive` command](https://docs.csc.fi/computing/running/interactive-usage/#the-sinteractive-command)
-provides a more convenient way to launch interactive jobs.
-:::
 
 Make Tykky tools available
 ```
