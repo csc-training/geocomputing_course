@@ -51,19 +51,17 @@
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
 * Open Compute node shell (outside of the course, also Login node shell could be used)
-
-Reservation: geocomputing_thu (only during the course)
-Project: 2000xxx
-Partition: small
-Number of CPU cores: 1
-Memory (GB): 4
-Local disk (GB): 4
-Time: 00:30:00
+  * Reservation: geocomputing_thu (only during the course)
+  * Project: project_20xxxxx
+  * Partition: small
+  * Number of CPU cores: 1
+  * Memory (GB): 4
+  * Local disk (GB): 4
+  * Time: 00:30:00
 
 ```
 srun --reservation=geocomputing_thu --account=project_2011224 --mem=4000 --ntasks=1 --time=0:20:00 --gres=nvme:4 --pty bash -i
 ```
-
 
 Make Tykky tools available
 ```
