@@ -38,7 +38,8 @@ Minimal example of batch script:
 
 ```bash title="simple.sh"
 #!/bin/bash
-#SBATCH --account=project_200xxxx   # Your CSC project. Mandatory.
+#SBATCH --account=project_20xxxxx   # Your CSC project. Mandatory.
+#SBATCH --reservation=geocomputing_wed # Only needed/available during the course
 #SBATCH --partition=test            # Partition, see section below
 #SBATCH --time=00:02:00             # Maximum duration of the job. 
 #SBATCH --ntasks=1                  # How many cores?
