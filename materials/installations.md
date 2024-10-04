@@ -59,10 +59,6 @@
   * Local disk (GB): 4
   * Time: 00:30:00
 
-```
-srun --reservation=geocomputing_thu --account=project_2011224 --mem=4000 --ntasks=1 --time=0:20:00 --gres=nvme:4 --pty bash -i
-```
-
 Make Tykky tools available
 ```
 module load tykky
