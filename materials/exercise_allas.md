@@ -85,7 +85,7 @@ gdalinfo /vsis3/project_200xxxx-cscusername/W3333_COG.tif
 
 # Delete all from Allas
 s3cmd del --recursive --force s3://project_200xxxx-cscusername
-s3cmd rm s3://project_200xxxx-cscusername
+s3cmd rb s3://project_200xxxx-cscusername
 ```
 
 :::{admonition} Key points 
