@@ -22,7 +22,7 @@
 :class: important
 
 * Access to Puhti webinterface
-* Own directory within the course directory `/scratch/project_200xxxx/students/cscusername`
+* Own directory within the course directory `/scratch/project_20xxxxx/students/cscusername`
 
 :::
 
@@ -44,7 +44,7 @@ Let's reserve 10 minutes.
 On the **login node**: Start an interactive job with `srun`, e.g.:
 
 ```bash
-srun  --time=00:10:00 --pty --account=project_200xxxx --partition=interactive  bash      ##replace xxxx with your project number; you can also add --reservation=geocomputing_thu here for the course (not available at other times), change partition to small then
+srun  --time=00:10:00 --pty --account=project_20xxxxx --partition=interactive  bash      ##replace xxxxx with your project number; you can also add --reservation=geocomputing_wed here for the course (not available at other times), change partition to small then
 ```
 
 **or** on Puhti you can also use the `sinteractive` wrapper to start an interactive session from the **login node**, which simplifies the call and asks you for the resources step by step: 
@@ -55,7 +55,7 @@ sinteractive -i
 **or** directly: 
 
 ```bash
-sinteractive --account project_200xxxx --time 00:10:00         # replace xxxx with your CSC project, e.g. project_2001234
+sinteractive --account project_20xxxxx --time 00:10:00         # replace xxxxx with your CSC project, e.g. project_2001234
 ```
 
 :::
@@ -125,7 +125,7 @@ If you use a software that is pre-installed by CSC, please [check its documentat
 1. Go to your own directory in the `/scratch` directory of your project:
 
 ```bash
-cd /scratch/project_200xxxx/students/cscusername      # replace xxxx with your CSC project number and cscusername with your username
+cd /scratch/project_20xxxxx/students/cscusername      # replace xxxxx with your CSC project number and cscusername with your username
 ```
 
 2. Create a file called `my_serial.bash` e.g. with the `nano` text editor:
@@ -138,7 +138,7 @@ nano my_serial.bash
 
 ```bash
 #!/bin/bash
-#SBATCH --account=project_200xxxx   # Choose the billing project. Has to be defined!
+#SBATCH --account=project_20xxxxx   # Choose the billing project. Has to be defined!
 #SBATCH --time=00:02:00             # Maximum duration of the job. Upper limit depends on the partition. 
 #SBATCH --partition=test            # Job queues: test, interactive, small, large, longrun, hugemem, hugemem_longrun
 #SBATCH --ntasks=1                  # Number of tasks. Upper limit depends on partition. For a serial job this should be set to 1!
