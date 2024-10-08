@@ -84,8 +84,8 @@ gdal_translate /vsis3/project_20xxxxx-cscusername/W3333.tif /vsis3/project_20xxx
 gdalinfo /vsis3/project_20xxxxx-cscusername/W3333_COG.tif
 
 # Delete all from Allas
-s3cmd del --recursive --force s3://project_200xxxx-cscusername
-s3cmd rm s3://project_20xxxxx-cscusername
+s3cmd del --recursive --force s3://project_20xxxxx-cscusername
+s3cmd rb s3://project_20xxxxx-cscusername
 ```
 
 :::{admonition} Key points 
