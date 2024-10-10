@@ -129,7 +129,7 @@ You can use `ls -l` to see permissions (r: read, w: write, x: execute):
 | |  |  | | |   |     |    |         |        |    
 | |  |  | | |   |     |    |         |        L filename
 | |  |  | | |   |     |    |         L date and time
-| |  |  | | |   |     |    L size in kB
+| |  |  | | |   |     |    L size in bytes
 | |  |  | | |   |     L groupname
 | |  |  | | |   L username
 | |  |  | | L number of hardlinks
