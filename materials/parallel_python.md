@@ -172,16 +172,49 @@ print(a)
 
 ### Batch job scripts
 In batch job scripts it is important to set correctly:
-* `nodes` - How many nodes to reserve? 1 for default schedulers or `LocalCluster`, more than 1 for `SLURMCluster`
+
+#### Default schedulers and `LocalCluster`
+* `nodes` - 1
 * `cpus-per-task` - How many cores to reserve? Depending on the task, something between 1 and the total number of available CPUs per node. 
 
 ```
 #SBATCH --nodes=1
+#SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4  
 
 (...)
 
 srun python dask_script.py
+```
+
+#### `SLURMCluster`
+The main batch job file reserves only resources for the **master job** of Dask, so 1 node and 1 core is enough. 
+
+```
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1  
+
+(...)
+
+srun python dask_script.py
+```
+
+The worker jobs are reserved on inside Python code. Ideally each job should fill one node. The number of jobs is defined by `cluster.scale()`. `cores` defines how many cores should be reserved. `processes` sets the number of workers in one job.
+
+```
+cluster = SLURMCluster(
+    queue="small",
+    account=project_name,
+    cores=no_of_cores,
+    processes=no_of_cores,
+    memory="12G",
+    walltime="00:10:00",
+    interface="ib0"
+)
+
+cluster.scale(number_of_jobs)
+client = Client(cluster)
 ```
 
 Further reading:
