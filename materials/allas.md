@@ -50,11 +50,13 @@ What is it NOT?
 ## Tools for Allas
 
 - **Web interfaces**:
-	- **cPouta, Mahti web interface**, soon also Puhti web interface 
+	- **cPouta, Puhti, Mahti web interface**
   	- [cPouta web interface](https://pouta.csc.fi/dashboard) -> object store -> containers
-	- cPouta web interface only to see what data is in Allas, upload/download of single files.
- 	- [Mahti web interface](https://mahti.csc.fi) also for bigger amounts of data (based on rclone) 
-	- Log in with CSC username and password
+	- cPouta web interface only to see what data is in Allas, upload/download of single files
+	- Log in with CSC username and password.
+ 	- [Puhti web interface](https://www.puhti.csc.fi/) and [Mahti web interface](https://www.mahti.csc.fi) also for bigger amounts of data (based on rclone) 
+	- See [instructions](https://docs.csc.fi/computing/webinterface/file-browser/#accessing-allas-and-lumi-o) in Docs
+
 - **Graphical tools**:
 	- **Cyberduck, S3 browser** (only for Windows), WinSCP
 	- For medium amounts of data, < 1 Tb.
