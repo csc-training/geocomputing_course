@@ -41,9 +41,10 @@
 ## GIS tools available in LUMI
 
 * [GDAL](https://docs.csc.fi/apps/gdal/) for geospatial data formats
+* **[Geoconda](https://docs.csc.fi/apps/geoconda/)** - Python spatial analysis libraries
 * [GRASS GIS](https://docs.csc.fi/apps/grass/) - General purpose GIS software family for viewing, editing and analysing geospatial data
 * [PDAL](https://docs.csc.fi/apps/pdal/) for point cloud translations and processing
-* [QGIS](https://docs.csc.fi/apps/qgis/) - General purpose GIS software family for viewing, editing and analysing geospatial data
+* **[QGIS](https://docs.csc.fi/apps/qgis/)** - General purpose GIS software family for viewing, editing and analysing geospatial data
 * [SAGA GIS](https://docs.csc.fi/apps/saga-gis/) - General purpose GIS software family for viewing, editing and analysing geospatial data
 * [pytorch](https://docs.csc.fi/apps/pytorch/) for deep learning
 * [tensorflow](https://docs.csc.fi/apps/tensorflow/) for deep learning
@@ -67,7 +68,7 @@
 :::
 
 :::{admonition} Commercial tools
-:class: seealso, dropdown
+:class: seealso
 
 * MATLAB:
 	* Users from universities: license from university + CSC license -> OK
@@ -99,6 +100,7 @@ Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonati
 
 \* are not available in Puhti currently, but should be possible to install, ask if you need any of them.
 
+See also, [GIS tools supporting computing in parallel](parallel.md#tools-with-built-in-parallel-support).
 
 :::{admonition} Modules
 :class: important
@@ -127,3 +129,4 @@ gdalinfo /xx/data.tif
 * [LUMI Docs: Software pages](https://docs.lumi-supercomputer.eu/software/)
 * [CSC Research pages: GIS software](https://research.csc.fi/gis-software)
 * [Geocomputing examples](https://github.com/csc-training/geocomputing)
+  
