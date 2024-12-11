@@ -7,7 +7,7 @@ If starting from scratch with a new program, the first option would be to look f
   * The [STAC exercise](exercise_stac.md) is using Dask with `xarray`.
 * [xarray-spatial](https://xarray-spatial.readthedocs.io/en/stable/) for common raster analysis functions
 * [rioxarray](https://corteva.github.io/rioxarray/stable/index.html) for reading data via GDAL-supported formats and basic merging, clipping etc
-* [osmnx](https://osmnx.readthedocs.io/en/stable/index.html) for routing 
+* [osmnx](https://osmnx.readthedocs.io/en/stable/index.html) for routing
 
 ## Python parallel libraries
 
@@ -27,6 +27,9 @@ easy to use. There are, of course, many options and alternatives to Dask.
 `multiprocessing` might be the easiest to learn first. All of the
 above-mentioned spatial libraries use Dask, except `osmnx`, which uses
 `multiprocessing`.
+
+[Geoconda module](https://docs.csc.fi/apps/geoconda/) in CSC supercomputers includes all of the
+above-mentioned spatial libraries and from Python parallel libraries `multiprocessing`, `joblib` and `dask`, but not `mpi4py`.
 
 :::{admonition} How many cores can I use?
 :class: tip.
@@ -217,7 +220,9 @@ cluster.scale(number_of_jobs)
 client = Client(cluster)
 ```
 
-Further reading:
+## Further reading:
+* [CSC Docs, Geoconda module](https://docs.csc.fi/apps/geoconda/)
+* [CSC Docs, Python user guide](https://docs.csc.fi/support/tutorials/python-usage-guide/)
 * [CSC Docs, Dask tutorial](https://docs.csc.fi/support/tutorials/dask-python)
 * [CSC geocomputing Python examples](https://github.com/csc-training/geocomputing/tree/master/python/puhti), inc. `dask`, `multiprocessing` and `joblib`
   * Dask DataFrames: [CSC dask-geopandas example](https://github.com/csc-training/geocomputing/edit/master/python/dask_geopandas)
