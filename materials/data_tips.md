@@ -9,10 +9,13 @@
 	- Don't create a lot of files in one folder
 - [CSC Docs: Best practice performance tips for using Lustre](https://docs.csc.fi/computing/lustre/#best-practices)
 - Keep data that is needed longer also in Allas.
-- **Databases**:
+- When working with big vector data sets, consider using a **database**:
 	- Only file databases (SQLite, GeoPackage) can be kept on supercomputer disks.
 	- For PostgreSQL and PostGIS use [CSC Pukki Database-as-a-service](https://docs.csc.fi/cloud/dbaas/).
 	- For any other database set up virtual machine in cPouta.
+- Pay attention to data pre-processing:
+	- Remove unnecessary data (clip, select, generalize).
+	- Index the relevant columns of your vector data for faster searches.
 
 ## Disk status
 
@@ -41,5 +44,12 @@ path, total size, in dir size, % of total, % of dir
 ```
 
 
+## Virtual rasters
+
+When working with big raster datasets, virtual rasters might be very helpful. Virtual rasters are a useful GDAL concept for managing large raster datasets that are split into map sheets that do not overlap. Technically a virtual raster is just a small XML file that tells GDAL where the actual data files are, but from user's point of view virtual rasters can be treated much like any other raster format. Virtual rasters can include raster data in any file format GDAL supports. Virtual rasters are useful because they allow handling of large datasets as if they were a single file eliminating the need for locating correct files.
+
+* Virtual rasters are not useful for managing time-series or overlapping rasters, for example remote sensing tiles.
+* Supported by any GDAL based tool, including Python and R spatial packages, ArcGIS, FME, GrassGIS, MapInfo, QGIS, and SagaGIS. 
+* [CSC Docs: Virtual rasters tutorial](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/), inc code examples for R and Python.
 
 
