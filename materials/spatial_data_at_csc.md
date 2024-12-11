@@ -30,16 +30,6 @@
 * Rasters divided to mapsheets as **virtual rasters**
 * Majority via [OGC APIs](https://paituli.csc.fi/webservices.html), both old and new standards
 
-:::{admonition} Virtual rasters
-:class: seealso, dropdown
-
-Virtual rasters are a useful GDAL concept for managing large raster datasets that are split into map sheets that do not overlap. Technically a virtual raster is just a small XML file that tells GDAL where the actual data files are, but from user's point of view virtual rasters can be treated much like any other raster format. Virtual rasters can include raster data in any file format GDAL supports. Virtual rasters are useful because they allow handling of large datasets as if they were a single file eliminating the need for locating correct files.
-
-* Virtual rasters are not useful for managing time-series or overlapping rasters, for example remote sensing tiles.
-* Supported by any GDAL based tool, including Python and R spatial packages, ArcGIS, FME, GrassGIS, MapInfo, QGIS, and SagaGIS. 
-* [CSC Docs: Virtual rasters tutorial](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/), inc code examples for R and Python.
-:::
-
 ### Some popular datasets
 
 * NLS, administrative borders
