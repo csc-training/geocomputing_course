@@ -41,19 +41,8 @@ supercomputer via SSH.
    - In Windows:
       - `Command Prompt` or `Powershell` are always available and can be used for basic connections.
       - Special tools like [PuTTY](https://www.putty.org/) or [MobaXterm](https://mobaxterm.mobatek.net/) provide more options, inc possibility to save settings, but need installation.
-- To avoid typing your password every time and to make your connection more secure, you can [set up SSH-keys](https://docs.csc.fi/computing/connecting/ssh-keys/).
+- Requires setting up [SSH-keys](https://docs.csc.fi/computing/connecting/ssh-keys/).
 - [CSC Docs: Connecting to CSC supercomputers](https://docs.csc.fi/computing/connecting/)
 - [LUMI Docs: Get started](https://docs.lumi-supercomputer.eu/firststeps/).
 
 :::
-
-## Developing scripts remotely
-
-Instead of developing code on your local machine and moving it as files to the
-supercomputer for testing, you can also consider to use a local editor and
-push edited files directly to the supercomputer.  This works for example
-with **Visual Studio Code** or **Notepad++**. Note that [Visual Studio
-Code](https://docs.csc.fi/computing/webinterface/vscode/) is also available
-through the Puhti web interface.
-
-- [CSC Docs: Developing scripts remotely](https://docs.csc.fi/support/tutorials/remote-dev/)
