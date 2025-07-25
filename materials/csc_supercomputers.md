@@ -4,9 +4,10 @@
 
 Name | CPUs | GPUs | Pre-installed GIS tools | Finnish spatial data locally | Scope |
 --- | --- | --- | --- | --- | --- |
-**Puhti** | 28 000 | 240 Nvidia V100 | **20** | **Yes** | Finland |
+**Puhti** | 28 000 | 240 Nvidia V100 | **22** | **Yes** | Finland |
 **Mahti** | 90 000 | 96 Nvidia A100 | 1 | No | Finland |
-**LUMI** | **100 000** | **10 000** AMD MI250X | 5 | No | EU |
+**LUMI** | **100 000** | **10 000** AMD MI250X | 6 | No | EU |
+Roihu (2026) | 185 000 | 528 | ~20 | ? | Finland |
 
 Puhti:
 * From interactive single core to medium scale parallel analysis
@@ -25,6 +26,9 @@ LUMI:
 * **For companies and international projects**
 * [LUMI Docs: Hardware overview](https://docs.lumi-supercomputer.eu/hardware/)
 
+Roihu:
+* CSC'c new national supercomputer, replacing Puhti and Mahti in 2026
+* [CSC Docs: Technical details about Roihu](https://docs.csc.fi/computing/systems-roihu/)
 
 ## Puhti compared to other options
 
