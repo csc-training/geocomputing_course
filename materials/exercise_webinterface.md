@@ -80,7 +80,7 @@ The web interface can be used for moving up to 10GB of data. If you have more da
 * Open Statistic Finland Paavo post code data
    *  `Layer` -> `Add layer` -> `Add vector layer`
       * Source Type: `File`
-      * Source: `/appl/data/geo/tilastokeskus/paavo/2023/pno_tilasto_2023.shp`
+      * Source: `...` -> `/appl/data/geo/tilastokeskus/paavo/2023/pno_tilasto_2023.shp`
 * See file information with GDAL
    * `Processing` -> `Toolbox` -> `GDAL` -> `Vector miscellanious` -> `Vector information`
    * The open dataset is selected by default
