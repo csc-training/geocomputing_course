@@ -73,7 +73,7 @@ STAC - Spatio-Temporal Asset Catalog
 :class: important
 
 * Read more about STAC in general from [Paituli STAC description](https://paituli.csc.fi/stac.html)
-* [See what data is available with Paiituli STAC](https://radiantearth.github.io/stac-browser/#/external/paituli.csc.fi/geoserver/ogc/stac/v1?.language=en)
+* [See what data is available with Paituli STAC](https://radiantearth.github.io/stac-browser/#/external/paituli.csc.fi/geoserver/ogc/stac/v1?.language=en)
 * **Test out the example scripts**:
     * **[Python](https://www.github.com/csc-training/geocomputing/blob/master/python/STAC)**
     * [R](https://www.github.com/csc-training/geocomputing/blob/master/R/STAC)
