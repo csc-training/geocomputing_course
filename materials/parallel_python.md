@@ -164,7 +164,7 @@ print(a)
 
 * Dask exports needed variables and libraries automatically to the parallel processes
 * The variables must be serializable.
-* Avoid moving variables that refer to large objects from main the main serial
+* Avoid moving variables that refer to large objects from main serial
   process to a parallel process. Spatial data analysis often involves
   significant amounts of data. It is better to read the data inside the
   parallel function: give the file name as input, compute area coordinates,
