@@ -70,7 +70,7 @@ The most simple changes could be:
 * `*apply()` -> `future.apply` functions
 
 ```
-# Example of chaning for-loop and purrr's map() to furrr's future_map()
+# Example of changing for-loop and purrr's map() to furrr's future_map()
 # Just a slow demo function that waits for 5 seconds
 slow_function<-function(i) {
   Sys.sleep(5) 
