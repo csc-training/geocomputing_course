@@ -32,10 +32,10 @@
 
 ```
 # One file:
-scp /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_200xxxx/data_dir
+scp /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_2015299/data_dir
 
 # One folder:
-scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_200xxxx/directory 
+scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_2015299/directory 
 ```
 
 #### rsync
@@ -48,10 +48,10 @@ scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_200xxxx/dire
 
 ```
 # One file:
-rsync --info=progress2 -a /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_200xxxx/data_dir
+rsync --info=progress2 -a /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_2015299/data_dir
 
 # One folder:
-rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/project_200xxxx/directory
+rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/project_2015299/directory
 ```
 * `--info=progress2` shows time left and percentage
 

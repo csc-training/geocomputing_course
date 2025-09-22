@@ -29,11 +29,11 @@
 
 ```bash
 module load lue
-lue --display-level=2 /scratch/project_200xxxx/
+lue --display-level=2 /scratch/project_2015299/
 
 path, total size, in dir size, % of total, % of dir
 ---------------------------------------------------
-/scratch/project_200xxxx/dirA        8.4GB  356KB 100.0 100.0
+/scratch/project_2015299/dirA        8.4GB  356KB 100.0 100.0
     results                            3.7GB  458MB 44.15 44.15
         simu1                              2.8GB  522MB 32.84 74.38 NOSIZE:1
         simu2                              521MB  521MB 6.02  13.64 NOSIZE:1

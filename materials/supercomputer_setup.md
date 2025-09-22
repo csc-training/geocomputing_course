@@ -39,8 +39,8 @@ Typical physical parts of a supercomputer:
 | Name     |Access   |Path                 |Cleaning      |Capacity|Number of files| Use |
 |------------|--------|--------------------|---------------------|--------------|----------------|----------------|
 |**[home](https://docs.csc.fi/computing/disk/#home-directory)**    |Personal|`/users/cscusername` |No            |10 GiB              |100 000 files  | personal settings and files |
-|**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/project_200xxxx`|No            |50 GiB              |100 000 files  | installation files |
-|**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/project_200xxxx` |**180 days**      |**1 TiB**              |1 000 000 files  | main working area |
+|**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/project_2015299`|No            |50 GiB              |100 000 files  | installation files |
+|**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/project_2015299` |**180 days**      |**1 TiB**              |1 000 000 files  | main working area |
 
 * `scratch` space can be extended, but it would use billing units then.
 

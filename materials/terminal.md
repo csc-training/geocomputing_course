@@ -26,7 +26,7 @@ pwd
 2. In our project's scratch storage, there is a directory called `students`. We would like to create a new subdirectory and give our username as its name. Let's move to `students`:
 
 ```bash
-cd /scratch/project_200xxxx/students
+cd /scratch/project_2015299/students
 ```
 
 

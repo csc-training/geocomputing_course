@@ -12,7 +12,7 @@ everything, and that not everything written here is "the whole truth".
 * Allas - object storage
 
 ## Unix commands and hints
-(all text within <> is replaced with real names, e.g. `cp /home/user/my-file.txt scratch/project_200xxxx/new-directory`)
+(all text within <> is replaced with real names, e.g. `cp /home/user/my-file.txt scratch/project_2015299/new-directory`)
 Check out all options of the commands with `man <command>` (for *man*ual), exit with `q`.
 
 ### File system exploration
@@ -84,7 +84,7 @@ Process to edit a file in vi:
 
 ## File transfer
 
-* `scp <file name> <username@puhti.csc.fi:/scratch/project_200xxxx/dir_name>` - copy a file from current computer to Puhti
+* `scp <file name> <username@puhti.csc.fi:/scratch/project_2015299/dir_name>` - copy a file from current computer to Puhti
 * `wget <some-url>` or  `curl <some-url>` - get a file from the internet
 
 ## CSC modules

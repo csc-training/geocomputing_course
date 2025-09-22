@@ -29,7 +29,7 @@
 
 :::{admonition} Change the default project and username
 
-* `project_200xxxx` is an example project name, replace with your own CSC project name.
+* `project_2015299` is an example project name, replace with your own CSC project name.
 * `cscusername` is an example username, replace with your username.
 :::
 
