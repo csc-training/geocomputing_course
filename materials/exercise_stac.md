@@ -35,8 +35,8 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 
 * Open the Jupyter launch page: from front page or `Apps -> Jupyter`
 * Use settings: 
-  * (Reservation: `geocomputing_wed`, only during course)
-  * Project: `project_2011224`
+  * (Reservation: `geocomputing_day1`, only during course)
+  * Project: `project_2015299`
   * Partition: `interactive` (`small` during course)
   * Number of CPU cores: 1
   * Memory (Gb): 8
@@ -44,7 +44,7 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
   * Time: 0:15:00
   * Python: [geoconda](https://docs.csc.fi/apps/geoconda/)
   * Module version: default
-  * Working directory: `/scratch/project_2011224`
+  * Working directory: `/scratch/project_2015299`
   * `Launch`
 * Wait a moment for Jupyter to start -> `Connect to Jupyter`
 * Open
@@ -54,8 +54,8 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 * Make a folder for the exercise materials and make it your working directory
 * Change the project name and username.
 ```
-mkdir -p /scratch/project_2011224/students/cscusername
-cd /scratch/project_2011224/students/cscusername
+mkdir -p /scratch/project_2015299/students/cscusername
+cd /scratch/project_2015299/students/cscusername
 ```
 
 * Copy the example scripts to Puhti.

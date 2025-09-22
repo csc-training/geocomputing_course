@@ -45,14 +45,14 @@
 
 :::{admonition} Change the default project and username
 
-* `project_20xxxxx` is an example project name, replace with your own CSC project name.
+* `project_2015299` is an example project name, replace with your own CSC project name.
 * `cscusername` is an example username, replace with your username.
 :::
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
 * Open Compute node shell (outside of the course, also Login node shell could be used)
-  * Reservation: geocomputing_thu (only during the course)
-  * Project: project_20xxxxx
+  * Reservation: geocomputing_day2 (only during the course)
+  * Project: project_2015299
   * Partition: small
   * Number of CPU cores: 1
   * Memory (GB): 4
@@ -66,8 +66,8 @@ module load tykky
 
 Create a new directory for the installation and make the folder **above** it your working directory
 ```
-mkdir -p /projappl/project_20xxxxx/students/cscusername/lastools
-cd /projappl/project_20xxxxx/students/cscusername
+mkdir -p /projappl/project_2015299/students/cscusername/lastools
+cd /projappl/project_2015299/students/cscusername
 ```
 
 Create the new installation
@@ -81,7 +81,7 @@ wrap-container -w /opt/LAStools docker://pydo/lastools:latest --prefix lastools
 
 Add the location of your new installation to your PATH. Note that Tykky prints out the correct command for you.
 ```
-export PATH="/projappl/project_20xxxxx/students/cscusername/lastools/bin:$PATH"
+export PATH="/projappl/project_2015299/students/cscusername/lastools/bin:$PATH"
 ```
 Test your new installation.
 ```

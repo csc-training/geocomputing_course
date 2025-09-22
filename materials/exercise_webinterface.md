@@ -67,8 +67,8 @@ The web interface can be used for moving up to 10GB of data. If you have more da
 
 * Open the Desktop launch page: from front page or `Apps -> Desktop`
 * Use settings: 
-  * (Reservation: `geocomputing_wed`, only during course)
-  * Project: `project_2011224`
+  * (Reservation: `geocomputing_day1`, only during course)
+  * Project: `project_2015299`
   * Partition: interactive (`small` during course)
   * Number of CPU cores: 1
   * Memory (Gb): 4
