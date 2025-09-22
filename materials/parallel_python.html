@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Parallel Python &#8212; Geocomputing course  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f4023507" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'materials/parallel_python';</script>
+    <link rel="icon" href="../_static/csc.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exercise: Python" href="exercise_python.html" />
+    <link rel="prev" title="Exercise: GDAL" href="exercise_gdal.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Geocomputing_on_supercomputer.png" class="logo__image only-light" alt="Geocomputing course  documentation - Home"/>
+    <script>document.write(`<img src="../_static/Geocomputing_on_supercomputer.png" class="logo__image only-dark" alt="Geocomputing course  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topics.html">Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orga.html">Organizers of this course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csc_services.html">CSC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_project.html">Accounts and projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Research use cases for Puhti</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supercomputer - intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="supercomputing.html">Why and how?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer_setup.html">Supercomputer setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csc_supercomputers.html">CSC Supercomputers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_webinterface.html">Exercise: Puhti web interface</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GIS tools and data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="software.html">GIS tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data_at_csc.html">Spatial data in Puhti</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stac.html">STAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_stac.html">Exercise: STAC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Jobs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="batch_job.html">Batch jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job_monitoring.html">Job monitoring</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Run in parallel</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_gdal.html">Exercise: GDAL</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Parallel Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_python.html">Exercise: Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel_r.html">Parallel R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_r.html">Exercise: R</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="moving_data.html">Moving data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_tips.html">Best practice tips for data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="allas.html">Allas – object storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_allas.html">Allas exercise</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Installations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="installations.html">Installing own tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Wrap-up</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="support.html">CSC support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="where_to_go.html">Where to go from here</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">CSC and Unix cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/csc-training/geocomputing_course" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/materials/parallel_python.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Parallel Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-libraries-with-parallel-support">Spatial libraries with parallel support</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-parallel-libraries">Python parallel libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dask">Dask</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run-the-parallel-code">How to run the parallel code?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-the-code-parallel">How to make the code parallel?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-job-scripts">Batch job scripts</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#default-schedulers-and-localcluster">Default schedulers and <code class="docutils literal notranslate"><span class="pre">LocalCluster</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#slurmcluster"><code class="docutils literal notranslate"><span class="pre">SLURMCluster</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="parallel-python">
+<h1>Parallel Python<a class="headerlink" href="#parallel-python" title="Link to this heading">#</a></h1>
+<section id="spatial-libraries-with-parallel-support">
+<h2>Spatial libraries with parallel support<a class="headerlink" href="#spatial-libraries-with-parallel-support" title="Link to this heading">#</a></h2>
+<p>If starting from scratch with a new program, the first option would be to look for spatial libraries that have parallelization already built in:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dask-geopandas.readthedocs.io/">Dask-geopandas</a> for vector data analysis, still a lot more limited than <code class="docutils literal notranslate"><span class="pre">geopandas</span></code></p></li>
+<li><p><a class="reference external" href="http://xarray.pydata.org/">xarray</a> for basic raster data analysis</p>
+<ul>
+<li><p>The <a class="reference internal" href="exercise_stac.html"><span class="std std-doc">STAC exercise</span></a> is using Dask with <code class="docutils literal notranslate"><span class="pre">xarray</span></code>.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://xarray-spatial.readthedocs.io/en/stable/">xarray-spatial</a> for common raster analysis functions</p></li>
+<li><p><a class="reference external" href="https://corteva.github.io/rioxarray/stable/index.html">rioxarray</a> for reading data via GDAL-supported formats and basic merging, clipping etc</p></li>
+<li><p><a class="reference external" href="https://osmnx.readthedocs.io/en/stable/index.html">osmnx</a> for routing</p></li>
+</ul>
+</section>
+<section id="python-parallel-libraries">
+<h2>Python parallel libraries<a class="headerlink" href="#python-parallel-libraries" title="Link to this heading">#</a></h2>
+<p>The parallel spatial libraries are still developing and do not support a very
+wide range of functionality, so often these do not fit all requirements. The
+next option is to write parallel code yourself. The basic Python code runs in
+serial mode, so usually some changes to code are needed to benefit from
+parallel computing.</p>
+<p>Python has many libraries to support parallelization:</p>
+<ul class="simple">
+<li><p>Multi-core: <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> and <code class="docutils literal notranslate"><span class="pre">joblib</span></code></p></li>
+<li><p>Multi-core or multi-node: <strong><code class="docutils literal notranslate"><span class="pre">dask</span></code></strong> and <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code></p></li>
+</ul>
+<p>If unsure, start with Dask, it is one of the newest, most versatile and most
+easy to use. There are, of course, many options and alternatives to Dask.
+<code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> might be the easiest to learn first. All of the
+above-mentioned spatial libraries use Dask, except <code class="docutils literal notranslate"><span class="pre">osmnx</span></code>, which uses
+<code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code>.</p>
+<p><a class="reference external" href="https://docs.csc.fi/apps/geoconda/">Geoconda module</a> in CSC supercomputers includes all of the
+above-mentioned spatial libraries and from Python parallel libraries <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code>, <code class="docutils literal notranslate"><span class="pre">joblib</span></code> and <code class="docutils literal notranslate"><span class="pre">dask</span></code>, but not <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code>.</p>
+<div class="tip admonition">
+<p class="admonition-title">How many cores can I use?</p>
+<p>To check for the number of cores you can use in your Python code, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sched_getaffinity</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Do not use <code class="docutils literal notranslate"><span class="pre">multiprocessing.cpu_count()</span></code>, that counts only hardware cores, but does not understand batch jobs.</p>
+</div>
+</section>
+<section id="dask">
+<h2>Dask<a class="headerlink" href="#dask" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://dask.org/">Dask</a> is a versatile Python library for scalable analytics.</p>
+<div class="tip admonition">
+<p class="admonition-title">Delayed computing</p>
+<p>One general feature of Dask is that it delays computing to the point when the result is actually needed, for example for plotting or saving to a file. So for example when running the code in Jupyter, cells that actually require a longer runtime may run instantly, but another cell may run much later.</p>
+</div>
+<p>When using Dask, two main decisions have to be made for running code in parallel, which we will answer next.</p>
+<ol class="arabic simple">
+<li><p>How to run the parallel code?</p></li>
+<li><p>How to make the code parallel?</p></li>
+</ol>
+<section id="how-to-run-the-parallel-code">
+<h3>How to run the parallel code?<a class="headerlink" href="#how-to-run-the-parallel-code" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://docs.dask.org/en/stable/">Dask</a> supports different set-ups for parallel computing, from a supercomputing point-of-view, the main options are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.dask.org/en/stable/scheduler-overview.html">Default schedulers</a> for multi-core jobs.</p></li>
+<li><p><a class="reference external" href="https://distributed.dask.org/en/latest/index.html">LocalCluster</a> for multi-core jobs.</p></li>
+<li><p><a class="reference external" href="https://jobqueue.dask.org/en/latest/index.html">SLURMCluster</a> for multi-node jobs.</p></li>
+</ul>
+<p>While developing the code, it might be good to start with the default scheduler or <code class="docutils literal notranslate"><span class="pre">LocalCluster</span></code> parallelization and then, if needed, change it to <code class="docutils literal notranslate"><span class="pre">SLURMCluster</span></code>. The required changes to code are small when changing the parallelization setup.</p>
+<p>One of the advantages of using <code class="docutils literal notranslate"><span class="pre">LocalCluster</span></code>, is that the Jupyter <a class="reference external" href="https://github.com/dask/dask-labextension">Dask-extension</a> is able to show progress and resource usage.</p>
+<p><strong>Default scheduler</strong> is started automatically, when Dask objects or functions are used.</p>
+<p><strong>LocalCluster</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># With default settings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dask.distributed</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+
+<span class="c1"># With for example 30 cores available, Dask by default would likely create 6 workers.</span>
+<span class="c1"># Depending on your analysis, it might be good or not.</span>
+<span class="c1"># To select the number of workers explicitly:</span>
+<span class="n">no_of_cores</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sched_getaffinity</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">n_workers</span><span class="o">=</span><span class="n">no_of_cores</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>SLURMCluster</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dask_jobqueue</span><span class="w"> </span><span class="kn">import</span> <span class="n">SLURMCluster</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">SLURMCluster</span><span class="p">(</span>
+    <span class="n">queue</span><span class="o">=</span><span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="n">account</span><span class="o">=</span><span class="n">project_name</span><span class="p">,</span>
+    <span class="n">cores</span><span class="o">=</span><span class="n">no_of_cores</span><span class="p">,</span>
+    <span class="n">processes</span><span class="o">=</span><span class="n">no_of_cores</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="s2">&quot;12G&quot;</span><span class="p">,</span>
+    <span class="n">walltime</span><span class="o">=</span><span class="s2">&quot;00:10:00&quot;</span><span class="p">,</span>
+    <span class="n">interface</span><span class="o">=</span><span class="s2">&quot;ib0&quot;</span>
+<span class="p">)</span>
+
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">number_of_jobs</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="how-to-make-the-code-parallel">
+<h3>How to make the code parallel?<a class="headerlink" href="#how-to-make-the-code-parallel" title="Link to this heading">#</a></h3>
+<p>Dask provides several options, inc <a class="reference external" href="https://docs.dask.org/en/stable/dataframe.html">Dask DataFrames</a>, <a class="reference external" href="https://docs.dask.org/en/stable/array.html">Dask Arrays</a>, <a class="reference external" href="https://docs.dask.org/en/stable/bag.html">Dask Bags</a>, <a class="reference external" href="https://docs.dask.org/en/stable/delayed.html">Dask Delayed</a> and <a class="reference external" href="https://docs.dask.org/en/stable/futures.html">Dask Futures</a>. This decision depends on the type of analyzed data and already existing code. Additionally Dask has support for scalable machine learning with <a class="reference external" href="https://ml.dask.org/">DaskML</a>.</p>
+<p>In this course we use delayed functions. Delayed functions are useful in parallelizing existing code. This approach delays function calls and creates a graph of the computing process. From the graph, Dask can then divide the work tasks to different workers whenever parallel computing is possible. Keep in mind that the other ways of code parallelization might suit you better in different use cases.</p>
+<p>The changes to code are exactly the same for all parallelization setups. The most simple changes could be:</p>
+<ul class="simple">
+<li><p>For-loops:</p>
+<ul>
+<li><p>Change to Dask’s delayed functions,</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">map()</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Dask's</span> <span class="pre">client.map()</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example of changing for-loop and map() to Dask</span>
+<span class="c1"># Just a slow demo function that waits for 2 seconds</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">slow_functio</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+  <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> 
+  <span class="k">return</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="c1"># Input data vector. The slow function is run for each element.</span>
+<span class="nb">input</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Serial</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Basic FOR loop</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">:</span> 
+  <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slow_function</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># Basic map</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">slow_function</span><span class="p">,</span> <span class="nb">input</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><strong>Parallel, Dask delayed functions</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dask</span><span class="w"> </span><span class="kn">import</span> <span class="n">delayed</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dask</span><span class="w"> </span><span class="kn">import</span> <span class="n">compute</span>
+<span class="n">list_of_delayed_functions</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">input</span><span class="p">:</span>
+    <span class="n">list_of_delayed_functions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">delayed</span><span class="p">(</span><span class="n">slow_function</span><span class="p">)(</span><span class="n">i</span><span class="p">))</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">compute</span><span class="p">(</span><span class="n">list_of_delayed_functions</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Parallel, with Dask futures</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dask.distributed</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span> 
+<span class="n">futures</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">slow_function</span><span class="p">,</span> <span class="nb">input</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="n">futures</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">variables with Dask</p>
+<ul class="simple">
+<li><p>Dask exports needed variables and libraries automatically to the parallel processes</p></li>
+<li><p>The variables must be serializable.</p></li>
+<li><p>Avoid moving variables that refer to large objects from main serial
+process to a parallel process. Spatial data analysis often involves
+significant amounts of data. It is better to read the data inside the
+parallel function: give the file name as input, compute area coordinates,
+etc.</p></li>
+</ul>
+</div>
+</section>
+<section id="batch-job-scripts">
+<h3>Batch job scripts<a class="headerlink" href="#batch-job-scripts" title="Link to this heading">#</a></h3>
+<p>In batch job scripts it is important to set correctly:</p>
+<section id="default-schedulers-and-localcluster">
+<h4>Default schedulers and <code class="docutils literal notranslate"><span class="pre">LocalCluster</span></code><a class="headerlink" href="#default-schedulers-and-localcluster" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nodes</span></code> - 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpus-per-task</span></code> - How many cores to reserve? Depending on the task, something between 1 and the total number of available CPUs per node.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks=1</span>
+<span class="c1">#SBATCH --cpus-per-task=4  </span>
+
+<span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+<span class="n">srun</span> <span class="n">python</span> <span class="n">dask_script</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+<section id="slurmcluster">
+<h4><code class="docutils literal notranslate"><span class="pre">SLURMCluster</span></code><a class="headerlink" href="#slurmcluster" title="Link to this heading">#</a></h4>
+<p>The main batch job file reserves only resources for the <strong>master job</strong> of Dask, so 1 node and 1 core is enough.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks=1</span>
+<span class="c1">#SBATCH --cpus-per-task=1  </span>
+
+<span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+<span class="n">srun</span> <span class="n">python</span> <span class="n">dask_script</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>The worker jobs are reserved on inside Python code. Ideally each job should fill one node. The number of jobs is defined by <code class="docutils literal notranslate"><span class="pre">cluster.scale()</span></code>. <code class="docutils literal notranslate"><span class="pre">cores</span></code> defines how many cores should be reserved. <code class="docutils literal notranslate"><span class="pre">processes</span></code> sets the number of workers in one job.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">SLURMCluster</span><span class="p">(</span>
+    <span class="n">queue</span><span class="o">=</span><span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="n">account</span><span class="o">=</span><span class="n">project_name</span><span class="p">,</span>
+    <span class="n">cores</span><span class="o">=</span><span class="n">no_of_cores</span><span class="p">,</span>
+    <span class="n">processes</span><span class="o">=</span><span class="n">no_of_cores</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="s2">&quot;12G&quot;</span><span class="p">,</span>
+    <span class="n">walltime</span><span class="o">=</span><span class="s2">&quot;00:10:00&quot;</span><span class="p">,</span>
+    <span class="n">interface</span><span class="o">=</span><span class="s2">&quot;ib0&quot;</span>
+<span class="p">)</span>
+
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">number_of_jobs</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="further-reading">
+<h2>Further reading:<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.csc.fi/apps/geoconda/">CSC Docs, Geoconda module</a></p></li>
+<li><p><a class="reference external" href="https://docs.csc.fi/support/tutorials/python-usage-guide/">CSC Docs, Python user guide</a></p></li>
+<li><p><a class="reference external" href="https://docs.csc.fi/support/tutorials/dask-python">CSC Docs, Dask tutorial</a></p></li>
+<li><p><a class="reference external" href="https://github.com/csc-training/geocomputing/tree/master/python/puhti">CSC geocomputing Python examples</a>, inc. <code class="docutils literal notranslate"><span class="pre">dask</span></code>, <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> and <code class="docutils literal notranslate"><span class="pre">joblib</span></code></p>
+<ul>
+<li><p>Dask DataFrames: <a class="reference external" href="https://github.com/csc-training/geocomputing/edit/master/python/dask_geopandas">CSC dask-geopandas example</a></p></li>
+<li><p>Dask Arrays <a class="reference external" href="https://github.com/csc-training/geocomputing/edit/master/python/STAC">CSC STAC example with Xarray</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/csc-training/hpc-python/blob/master/docs/mooc/index.md">CSC Parallel Python course materials</a>, inc <code class="docutils literal notranslate"><span class="pre">mpi4py</span></code> and <code class="docutils literal notranslate"><span class="pre">cython</span></code></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="exercise_gdal.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Exercise: GDAL</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="exercise_python.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercise: Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-libraries-with-parallel-support">Spatial libraries with parallel support</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-parallel-libraries">Python parallel libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dask">Dask</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run-the-parallel-code">How to run the parallel code?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-the-code-parallel">How to make the code parallel?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-job-scripts">Batch job scripts</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#default-schedulers-and-localcluster">Default schedulers and <code class="docutils literal notranslate"><span class="pre">LocalCluster</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#slurmcluster"><code class="docutils literal notranslate"><span class="pre">SLURMCluster</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CSC - IT center for Science. This page is available under the Creative Commons 4.0 Share-Alike License.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
