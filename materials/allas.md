@@ -52,10 +52,9 @@ What is it NOT?
 - **Web interfaces**:
 	- **cPouta, Puhti, Mahti web interface**
   	- [cPouta web interface](https://pouta.csc.fi/dashboard) -> object store -> containers
-	- cPouta web interface only to see what data is in Allas, upload/download of single files
-	- Log in with CSC username and password.
+		- cPouta web interface only to see what data is in Allas, upload/download of single files
  	- [Puhti web interface](https://www.puhti.csc.fi/) and [Mahti web interface](https://www.mahti.csc.fi) also for bigger amounts of data (based on rclone) 
-	- See [instructions](https://docs.csc.fi/computing/webinterface/file-browser/#accessing-allas-and-lumi-o) in Docs
+		- [CSC Docs: Accessing Allas and LUMI-O](https://docs.csc.fi/computing/webinterface/file-browser/#accessing-allas-and-lumi-o)
 
 - **Graphical tools**:
 	- **Cyberduck, S3 browser** (only for Windows), WinSCP
@@ -83,3 +82,4 @@ What is it NOT?
 * [CSC Docs: Tutorial - Using geospatial files directly from cloud, inc Allas](https://docs.csc.fi/support/tutorials/gis/gdal_cloud/)
 	* [Example Python code for working with Allas and rasterio and geopandas](https://github.com/csc-training/geocomputing/blob/master/python/allas)
 	* [Example R code for working with Allas and terra and sf](https://github.com/csc-training/geocomputing/blob/master/R/allas/working_with_allas_from_R_S3.R)
+
