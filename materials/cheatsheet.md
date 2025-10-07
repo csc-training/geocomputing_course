@@ -60,8 +60,8 @@ Using a defined or environment (predefined!) variable: `$MYPATH`, e.g. to print 
 Some environment variables:
 * `$HOME` : users home directory
 * `$PATH` : path where executables are looked for
-* `$USERNAME`: current username
-* `$HOSTNAME`: current host system name
+* `$USER`: current username
+
 
 
 ## Command line editors 
@@ -109,7 +109,7 @@ Process to edit a file in vi:
 * Accounts, projects, forgotten password: https://my.csc.fi/
     * on Puhti: `csc-workspaces`
 * CSC services and info: https://research.csc.fi/
-* How to use them: https://docs.csc.fi/, https://docs.csc.fi/support/FAQ/, https://docs.csc.fi/support/tutorials/
+* How to use them: https://docs.csc.fi/
 * Geoinformatics examples: https://github.com/csc-training/geocomputing
 
 ## Git "the way you need it"
