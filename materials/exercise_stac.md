@@ -41,7 +41,7 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
   * Number of CPU cores: 1
   * Memory (Gb): 8
   * Local disk: 0
-  * Time: 0:15:00
+  * Time: 0:30:00
   * Python: [geoconda](https://docs.csc.fi/apps/geoconda/)
   * Module version: default
   * Working directory: `/scratch/project_2015299`
@@ -66,7 +66,7 @@ git clone https://github.com/csc-training/geocomputing.git
 ## STAC Notebook
 
 1. In the file explorer, open `students/cscusername/geocomputing/python/STAC
-2. Open `STAC_CSC_example.ipynb` notebook
+2. Open `STAC_CSC_example_short.ipynb` notebook
 3. Follow the notebook, use `Shift+Enter` for running cells.
 
 ## End the session
