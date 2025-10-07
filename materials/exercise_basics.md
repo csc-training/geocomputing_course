@@ -125,7 +125,7 @@ If you use a software that is pre-installed by CSC, please [check its documentat
 1. Go to your own directory in the `/scratch` directory of your project:
 
 ```bash
-cd /scratch/project_2015299/students/$USER      # replace xxxxx with your CSC project number and $USER with your username
+cd /scratch/project_2015299/students/$USER      # replace xxxxx with your CSC project number
 ```
 
 2. Create a file called `my_serial.bash` e.g. with the `nano` text editor:

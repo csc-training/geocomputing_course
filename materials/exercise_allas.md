@@ -26,10 +26,9 @@ Learn how to:
 
 :::
 
-:::{admonition} Change the default project and username
+:::{admonition} Change the default project 
 
 * `project_2015299` is an example project name, replace with your own CSC project name.
-* `$USER` is an example username, replace with your username.
 :::
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
