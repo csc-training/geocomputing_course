@@ -51,7 +51,7 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 ## Preparations
 * Open new Terminal window
 * Make a folder for the exercise materials and make it your working directory
-* Change the project name and username.
+* Change the project name.
 ```
 mkdir -p /scratch/project_2015299/students/$USER
 cd /scratch/project_2015299/students/$USER
