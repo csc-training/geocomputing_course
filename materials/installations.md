@@ -46,7 +46,7 @@
 :::{admonition} Change the default project and username
 
 * `project_2015299` is an example project name, replace with your own CSC project name.
-* `cscusername` is an example username, replace with your username.
+* `$USER` is an example username, replace with your username.
 :::
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
@@ -66,8 +66,8 @@ module load tykky
 
 Create a new directory for the installation and make the folder **above** it your working directory
 ```
-mkdir -p /projappl/project_2015299/students/cscusername/lastools
-cd /projappl/project_2015299/students/cscusername
+mkdir -p /projappl/project_2015299/students/$USER/lastools
+cd /projappl/project_2015299/students/$USER
 ```
 
 Create the new installation
@@ -81,7 +81,7 @@ wrap-container -w /opt/LAStools docker://pydo/lastools:latest --prefix lastools
 
 Add the location of your new installation to your PATH. Note that Tykky prints out the correct command for you.
 ```
-export PATH="/projappl/project_2015299/students/cscusername/lastools/bin:$PATH"
+export PATH="/projappl/project_2015299/students/$USER/lastools/bin:$PATH"
 ```
 Test your new installation.
 ```

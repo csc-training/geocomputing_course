@@ -28,7 +28,7 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 :::{admonition} Change the default project and username
 
 * `project_2015299` is an example project name, replace with your own CSC project name.
-* `cscusername` is an example username, replace with your username.
+* `$USER` is an example username, replace with your username.
 :::
 
 * [CSC Docs: Jupyter](https://docs.csc.fi/computing/webinterface/jupyter/)
@@ -54,8 +54,8 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 * Make a folder for the exercise materials and make it your working directory
 * Change the project name and username.
 ```
-mkdir -p /scratch/project_2015299/students/cscusername
-cd /scratch/project_2015299/students/cscusername
+mkdir -p /scratch/project_2015299/students/$USER
+cd /scratch/project_2015299/students/$USER
 ```
 
 * Copy the example scripts to Puhti.
@@ -65,7 +65,7 @@ git clone https://github.com/csc-training/geocomputing.git
 
 ## STAC Notebook
 
-1. In the file explorer, open `students/cscusername/geocomputing/python/STAC
+1. In the file explorer, open `students/$USER/geocomputing/python/STAC
 2. Open `STAC_CSC_example_short.ipynb` notebook
 3. Follow the notebook, use `Shift+Enter` for running cells.
 

@@ -30,7 +30,7 @@
 :::{admonition} Change the default project and username
 
 * `project_2015299` is an example project name, replace with your own CSC project name.
-* `cscusername` is an example username, replace with your username.
+* `$USER` is an example username, replace with your username.
 :::
 
 ### Info

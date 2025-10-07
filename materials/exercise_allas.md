@@ -29,7 +29,7 @@ Learn how to:
 :::{admonition} Change the default project and username
 
 * `project_2015299` is an example project name, replace with your own CSC project name.
-* `cscusername` is an example username, replace with your username.
+* `$USER` is an example username, replace with your username.
 :::
 
 * Open [Puhti web interface](https://puhti.csc.fi) and log in
@@ -54,38 +54,38 @@ allas-conf --mode s3cmd
 # Create a new bucket
 # s3cmd mb <name_of_your_bucket>
 
-s3cmd mb s3://project_2015299-cscusername
+s3cmd mb s3://project_2015299-$USER
 
 # Upload (later syncronize) a folder to Allas
 # s3cmd sync <local_folder> s3://<name_of_your_bucket>
-s3cmd sync /appl/data/geo/mml/dem10m/2019/W3/W33/ s3://project_2015299-cscusername
+s3cmd sync /appl/data/geo/mml/dem10m/2019/W3/W33/ s3://project_2015299-$USER
 
 # List all buckets
 s3cmd ls
 
 # List all files in one bucket
 # s3cmd ls s3://<name_of_your_bucket>
-s3cmd ls s3://project_2015299-cscusername
+s3cmd ls s3://project_2015299-$USER
 
 # Read and write directly to Allas with GDAL
 # Make GDAL avaialble
 module load geoconda
 
 # See metadata of a file from GDAL exercise
-gdalinfo /vsis3/project_2015299-cscusername/W3333.tif
+gdalinfo /vsis3/project_2015299-$USER/W3333.tif
 
 # Enable writing with GDAL
 export CPL_VSIL_USE_TEMP_FILE_FOR_RANDOM_WRITE=YES
 
 # Make the .tif file to Cloud-Optimized GeoTiff
-gdal_translate /vsis3/project_2015299-cscusername/W3333.tif /vsis3/project_2015299-cscusername/W3333_COG.tif -of COG
+gdal_translate /vsis3/project_2015299-$USER/W3333.tif /vsis3/project_2015299-$USER/W3333_COG.tif -of COG
 
 # See metadata of the new file
-gdalinfo /vsis3/project_2015299-cscusername/W3333_COG.tif
+gdalinfo /vsis3/project_2015299-$USER/W3333_COG.tif
 
 # Delete all from Allas
-s3cmd del --recursive --force s3://project_2015299-cscusername
-s3cmd rb s3://project_2015299-cscusername
+s3cmd del --recursive --force s3://project_2015299-$USER
+s3cmd rb s3://project_2015299-$USER
 ```
 
 :::{admonition} Key points 
