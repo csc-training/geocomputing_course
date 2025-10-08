@@ -4,10 +4,11 @@
 * Removes transfer bottleneck
 * Located in: `/appl/data/geo/`
 * **All Puhti users have read access**
-* ~13 TB of datasets available:
+* ~15 TB of datasets available:
 	* **Paituli data**, with virtual mosaics for raster data
 	* **Finnish Environmental Institute (SYKE) open datasets**: CORINE land use etc
 	* **Forest center: canopy height**, forest mask, gridcells, forest resource plots
+ 	* NLS automatically classified lidar data	
 * LUMI and Mahti do not have spatial data on local disk.
 * [CSC Docs: Spatial data in CSC computing environment](https://docs.csc.fi/data/datasets/spatial-data-in-csc-computing-env/)
 
@@ -27,7 +28,7 @@
 
 * As files in `/appl/data/geo/`
 * **Raster datasets via [STAC](stac.md)**
-* Rasters divided to mapsheets as **virtual rasters**
+* Rasters divided to mapsheets as **[virtual rasters](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/)**
 * Majority via [OGC APIs](https://paituli.csc.fi/webservices.html), both old and new standards
 
 ### Some popular datasets
@@ -45,7 +46,7 @@
 * Statistics Finland, Paavo - statistics at post code level
 * **NLS, lidar**
 * Finnish Digital agency, addresses of buildings
-* **LUKE, Multi-source national forest inventory**: 2013, 2015, 2017, 2019 and 2021
+* **LUKE, Multi-source national forest inventory**
 * LUKE, occurrence map for less common tree species
 * Finnish Food Agency, Field plots
 * **FMI, daily and monthly weater statistics and predictions**
