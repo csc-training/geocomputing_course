@@ -36,7 +36,7 @@ STAC - Spatio-Temporal Asset Catalog
 
 ## CSC Paituli STAC, Finnish spatial datasets
 
-* ~100 different datasets, inlcuding:
+* ~175 different datasets, inlcuding:
 * [Paituli raster datasets](https://paituli.csc.fi/metadata.html)
    * LUKE, erosion risk maps
    * LUKE, topographic wetness index
