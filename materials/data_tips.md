@@ -16,6 +16,7 @@
 - Pay attention to data pre-processing:
 	- Remove unnecessary data (clip, select, generalize).
 	- Index the relevant columns of your vector data for faster searches.
+- Use checksums, to verify that data transfer has been successful.
 
 ## Disk status
 
