@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Allas – object storage &#8212; Geocomputing course  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f4023507" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'materials/allas';</script>
+    <link rel="icon" href="../_static/csc.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Allas exercise" href="exercise_allas.html" />
+    <link rel="prev" title="Best practice tips for data" href="data_tips.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Geocomputing_on_supercomputer.png" class="logo__image only-light" alt="Geocomputing course  documentation - Home"/>
+    <script>document.write(`<img src="../_static/Geocomputing_on_supercomputer.png" class="logo__image only-dark" alt="Geocomputing course  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topics.html">Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orga.html">Organizers of this course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csc_services.html">CSC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_project.html">Accounts and projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Research use cases for Puhti</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supercomputer - intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="supercomputing.html">Why and how?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer_setup.html">Supercomputer setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csc_supercomputers.html">CSC Supercomputers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_webinterface.html">Exercise: Puhti web interface</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GIS tools and data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="software.html">GIS tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data_at_csc.html">Spatial data in Puhti</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stac.html">STAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_stac.html">Exercise: STAC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Jobs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="batch_job.html">Batch jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job_monitoring.html">Job monitoring</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Run in parallel</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_gdal.html">Exercise: GDAL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel_python.html">Parallel Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_python.html">Exercise: Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel_r.html">Parallel R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_r.html">Exercise: R</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="moving_data.html">Moving data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_tips.html">Best practice tips for data</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Allas – object storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_allas.html">Allas exercise</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Installations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="installations.html">Installing own tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Wrap-up</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="support.html">CSC support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="where_to_go.html">Where to go from here</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">CSC and Unix cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/csc-training/geocomputing_course" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/materials/allas.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Allas – object storage</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allas-terminology">Allas terminology</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#things-to-consider">Things to consider</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allas-apis">Allas APIs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-for-allas">Tools for Allas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-data-directly-from-object-storage">Accessing data directly from object storage</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="allas-object-storage">
+<h1>Allas – object storage<a class="headerlink" href="#allas-object-storage" title="Link to this heading">#</a></h1>
+<p>What is it?</p>
+<ul class="simple">
+<li><p>Allas is a <strong>storage service</strong>, technically object storage</p></li>
+<li><p><strong>For CSC project lifetime: 1-5 years</strong></p></li>
+<li><p><strong>Capacity: 10 - 200 Tb for free</strong>, more with contract</p></li>
+<li><p>Accessible from CSC computing services, own laptop or other servers</p></li>
+<li><p>Private data - access for project members only</p></li>
+<li><p>Possibility to make data public or share with other CSC project</p></li>
+<li><p>For computation the data has to typically be copied to the computing environment</p></li>
+<li><p><a class="reference external" href="https://docs.csc.fi/data/Allas/">CSC Docs: Allas</a></p></li>
+<li><p>LUMI-O is very similar to Allas</p></li>
+<li><p><a class="reference external" href="https://docs.lumi-supercomputer.eu/storage/lumio/">LUMI Docs: LUMI-O</a></p></li>
+</ul>
+<p>What is it NOT?</p>
+<ul class="simple">
+<li><p>A file system (even though many tools try to fool you to think so). It is just a place to store static data objects.</p></li>
+<li><p>A data management environment. Tools for etc. search, metadata, version control and access management are minimal.</p></li>
+<li><p>A foolproof back up service. Project members can delete all the data with just one command.</p></li>
+</ul>
+<p><img alt="&quot;Allas&quot;" src="../_images/allas-access-flavors.png" /></p>
+<section id="allas-terminology">
+<h2>Allas terminology<a class="headerlink" href="#allas-terminology" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Access to Allas is provided per <strong>CSC project</strong></p>
+<ul>
+<li><p>All project members have equal rights to the data, everybody can add and delete.</p></li>
+</ul>
+</li>
+<li><p>Main data unit is <strong>buckets</strong></p>
+<ul>
+<li><p>Name of the bucket must be unique within Allas</p></li>
+<li><p>For data organization and access administration</p></li>
+</ul>
+</li>
+<li><p>Data is stored as <strong>objects</strong> within a bucket</p>
+<ul>
+<li><p>Practically: object = file</p></li>
+<li><p>In reality, there is no hierarchical directory structure within a bucket, although it sometimes looks like that.</p>
+<ul>
+<li><p>Object name can be <code class="docutils literal notranslate"><span class="pre">/data/myfile.zip</span></code> and some tools may display it as <code class="docutils literal notranslate"><span class="pre">data</span></code> folder with <code class="docutils literal notranslate"><span class="pre">myfile.zip</span></code> file.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<section id="things-to-consider">
+<h3>Things to consider<a class="headerlink" href="#things-to-consider" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Should each file be stored as a separate object or should I collect it into bigger chunks?</p>
+<ul>
+<li><p>Depends how you want to use the data later, access to single files or not.</p></li>
+</ul>
+</li>
+<li><p>Compression?</p></li>
+<li><p>What will happen to the data later on?</p></li>
+</ul>
+</section>
+</section>
+<section id="allas-apis">
+<h2>Allas APIs<a class="headerlink" href="#allas-apis" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>S3 and SWIFT.</p>
+<ul>
+<li><p><strong>For new projects S3 is recommended</strong></p></li>
+<li><p>SWIFT might be soon deprecated.</p></li>
+<li><p>Avoid cross-using SWIFT- and S3-based objects!</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="tools-for-allas">
+<h2>Tools for Allas<a class="headerlink" href="#tools-for-allas" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Web interfaces</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://allas.csc.fi">Allas web interface</a></p>
+<ul>
+<li><p><a class="reference external" href="https://docs.csc.fi/data/Allas/using_allas/allas-ui/">CSC Docs: Allas web UI</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.puhti.csc.fi/">Puhti web interface</a> and <a class="reference external" href="https://www.mahti.csc.fi">Mahti web interface</a> also for moving data between supercomputers and Allas.</p>
+<ul>
+<li><p><a class="reference external" href="https://docs.csc.fi/computing/webinterface/file-browser/#accessing-allas-and-lumi-o">CSC Docs: Accessing Allas and LUMI-O</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Graphical tools</strong>:</p>
+<ul>
+<li><p><strong>Cyberduck, S3 browser</strong> (only for Windows), WinSCP</p></li>
+<li><p>For medium amounts of data, &lt; 1 Tb.</p></li>
+<li><p>Very easy, but installation required.</p></li>
+<li><p>WinSCP is slower than others.</p></li>
+</ul>
+</li>
+<li><p><strong>Command line tools</strong>:</p>
+<ul>
+<li><p><strong>s3cmd, rclone</strong>, a-commands</p></li>
+<li><p>For any amount of data, practically required if data size &gt; 1 Tb.</p></li>
+</ul>
+</li>
+<li><p><strong>For scripting</strong>:</p>
+<ul>
+<li><p>Python: <strong>boto3</strong> library</p></li>
+<li><p>R: <strong>aws3</strong> library</p></li>
+</ul>
+</li>
+<li><p>For connecting, these require <strong>S3 access key and secret key</strong></p>
+<ul>
+<li><p>Easiest to <a class="reference external" href="https://docs.csc.fi/data/Allas/using_allas/s3_client/#configuring-s3-connection-in-supercomputers">use Puhti for getting these</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://docs.csc.fi/data/Allas/">CSC Docs: Allas clients</a> -&gt; Allas clients</p></li>
+</ul>
+</section>
+<section id="accessing-data-directly-from-object-storage">
+<h2>Accessing data directly from object storage<a class="headerlink" href="#accessing-data-directly-from-object-storage" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Many GIS tools have good support for working with cloud storage, look for S3 in documentation.</p></li>
+<li><p><strong>GDAL</strong> supports reading and writing directly to Allas.</p>
+<ul>
+<li><p>Applies also to other GDAL based tools: <strong>Python (rasterio, geopandas)</strong> and <strong>R (sf, terra)</strong>.</p></li>
+<li><p>Writing might be more limited.</p></li>
+</ul>
+</li>
+<li><p><strong>QGIS</strong> can read rasters and vectors.</p></li>
+<li><p><strong>ArcGIS</strong> Pro can read rasters.</p></li>
+<li><p><a class="reference external" href="https://docs.csc.fi/support/tutorials/gis/gdal_cloud/">CSC Docs: Tutorial - Using geospatial files directly from cloud, inc Allas</a></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/csc-training/geocomputing/blob/master/python/allas">Example Python code for working with Allas and rasterio and geopandas</a></p></li>
+<li><p><a class="reference external" href="https://github.com/csc-training/geocomputing/blob/master/R/allas/working_with_allas_from_R_S3.R">Example R code for working with Allas and terra and sf</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="data_tips.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Best practice tips for data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="exercise_allas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Allas exercise</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allas-terminology">Allas terminology</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#things-to-consider">Things to consider</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allas-apis">Allas APIs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-for-allas">Tools for Allas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-data-directly-from-object-storage">Accessing data directly from object storage</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CSC - IT center for Science. This page is available under the Creative Commons 4.0 Share-Alike License.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

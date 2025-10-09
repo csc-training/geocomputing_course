@@ -1,0 +1,625 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Parallel computing &#8212; Geocomputing course  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f4023507" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'materials/parallel';</script>
+    <link rel="icon" href="../_static/csc.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exercise: GDAL" href="exercise_gdal.html" />
+    <link rel="prev" title="Job monitoring" href="job_monitoring.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Geocomputing_on_supercomputer.png" class="logo__image only-light" alt="Geocomputing course  documentation - Home"/>
+    <script>document.write(`<img src="../_static/Geocomputing_on_supercomputer.png" class="logo__image only-dark" alt="Geocomputing course  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topics.html">Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orga.html">Organizers of this course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csc_services.html">CSC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_project.html">Accounts and projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Research use cases for Puhti</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supercomputer - intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="supercomputing.html">Why and how?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer_setup.html">Supercomputer setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csc_supercomputers.html">CSC Supercomputers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_webinterface.html">Exercise: Puhti web interface</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GIS tools and data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="software.html">GIS tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data_at_csc.html">Spatial data in Puhti</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stac.html">STAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_stac.html">Exercise: STAC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Jobs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="batch_job.html">Batch jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job_monitoring.html">Job monitoring</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Run in parallel</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Parallel computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_gdal.html">Exercise: GDAL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel_python.html">Parallel Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_python.html">Exercise: Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel_r.html">Parallel R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_r.html">Exercise: R</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="moving_data.html">Moving data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_tips.html">Best practice tips for data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="allas.html">Allas – object storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_allas.html">Allas exercise</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Installations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="installations.html">Installing own tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Wrap-up</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="support.html">CSC support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="where_to_go.html">Where to go from here</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">CSC and Unix cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/csc-training/geocomputing_course" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/materials/parallel.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Parallel computing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-to-parallelize">What to parallelize?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-parallelize">How to parallelize?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-with-built-in-parallel-support">Tools with built-in parallel support</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-libaries-of-scripting-languages">Parallel libaries of scripting languages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#external-tools-to-run-the-scripts-in-parallel">External tools to run the scripts in parallel</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gnu-parallel">GNU Parallel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#snakemake">Snakemake</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-your-own-parallel-code">Write your own parallel code</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="parallel-computing">
+<h1>Parallel computing<a class="headerlink" href="#parallel-computing" title="Link to this heading">#</a></h1>
+<p>For fast computation, supercomputers utilize parallelism.</p>
+<p><img alt="" src="../_images/parallel.png" /></p>
+<section id="what-to-parallelize">
+<h2>What to parallelize?<a class="headerlink" href="#what-to-parallelize" title="Link to this heading">#</a></h2>
+<p>Spatial data analysis often allows splitting at least some parts of the analysis to independent parts, that could be run in parallel:</p>
+<ul class="simple">
+<li><p>Dividing data into parts:</p>
+<ul>
+<li><p>Think how to divide the data: rectangular boxes, catchment areas, administrative units, chunks of vector data, data of different time periods, etc.</p></li>
+<li><p>In many cases the borders need special care, one option is to use overlapping splitting of rasters.</p></li>
+</ul>
+</li>
+<li><p>Repeating the analysis with different parameters: scenarios, time periods, model settings, etc.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Think about your own work</p>
+<ul class="simple">
+<li><p>Do you need to run a lot of steps one after another?</p></li>
+<li><p>Or few steps that need a lot of memory?</p></li>
+<li><p>Do steps depend on each other?</p></li>
+<li><p>Which steps could be run in parallel?</p></li>
+<li><p>Which steps cannot be run in parallel?</p></li>
+<li><p>How to split your data?</p></li>
+</ul>
+</div>
+</section>
+<section id="how-to-parallelize">
+<h2>How to parallelize?<a class="headerlink" href="#how-to-parallelize" title="Link to this heading">#</a></h2>
+<p>For doing analysis in parallel there are four main options:</p>
+<ol class="arabic simple">
+<li><p>Use spatial analysis tools with built-in parallel support</p></li>
+<li><p>Write your own scripts using parallel libaries of different scripting languages</p></li>
+<li><p>Use external tools to run the scripts in parallel</p></li>
+<li><p>Write your own parallel code</p></li>
+</ol>
+<p>When working on supercomputers, it is also important to understand whether the tool/script supports:</p>
+<ul class="simple">
+<li><p><strong>Multi-core</strong> - it runs in parallel only inside one node of the supercomputer.</p></li>
+<li><p><strong>Multi-node</strong> - it can distribute the work to several nodes of the supercomputer.</p></li>
+</ul>
+<p>For multi-core there are clearly more options. The number of cores in a single node has been recently increasing, so also multi-core tools can be very useful.</p>
+</section>
+<section id="tools-with-built-in-parallel-support">
+<h2>Tools with built-in parallel support<a class="headerlink" href="#tools-with-built-in-parallel-support" title="Link to this heading">#</a></h2>
+<p>Check from the tool’s manual if it has built-in support for using multiple CPUs/cores. For command line tools, look for <code class="docutils literal notranslate"><span class="pre">number_of_cores</span></code>, <code class="docutils literal notranslate"><span class="pre">cores</span></code>, <code class="docutils literal notranslate"><span class="pre">cpus</span></code>, <code class="docutils literal notranslate"><span class="pre">jobs</span></code>, <code class="docutils literal notranslate"><span class="pre">threads</span></code> or similar. Unfortunately, not many GIS-tools have such options.</p>
+<p>Some example geospatial tools with built-in parallel support:</p>
+<ul class="simple">
+<li><p>GDAL, some commands e.g. <code class="docutils literal notranslate"><span class="pre">gdalwarp</span> <span class="pre">-multi</span> <span class="pre">-wo</span> <span class="pre">NUM_THREADS=val/ALL_CPUS</span> <span class="pre">...</span></code></p></li>
+<li><p>FORCE</p></li>
+<li><p>Lastools</p></li>
+<li><p>OpenDronemap</p></li>
+<li><p>OrfeoToolBox</p></li>
+<li><p>PDAL-wrench</p></li>
+<li><p>SNAP</p></li>
+<li><p>Zonation</p></li>
+<li><p>Whiteboxtools</p></li>
+</ul>
+<p>All of these tools are multi-core, but not multi-node.</p>
+<div class="warning admonition">
+<p class="admonition-title">Define number of cores explicitly</p>
+<p>GIS-tools are typically not written for supercomputers, so they might not understand HPC specifics correctly and may think that they can use more cores than is actually possible. It usually is better to define the number of cores to use explicitly, rather than “use all available cores”.</p>
+</div>
+<p>The deep learning libraries have options for <a class="reference external" href="https://docs.csc.fi/support/tutorials/ml-multi/">Multi-GPU and multi-node machine learning</a>.</p>
+</section>
+<section id="parallel-libaries-of-scripting-languages">
+<h2>Parallel libaries of scripting languages<a class="headerlink" href="#parallel-libaries-of-scripting-languages" title="Link to this heading">#</a></h2>
+<p>Many programming languages have packages for parallel computing.</p>
+<ul class="simple">
+<li><p><strong>Python</strong> and <strong>R</strong> have several packages for multi-core and multi-node parallelization, see <a class="reference internal" href="parallel_python.html"><span class="std std-doc">Parallel Python</span></a> and <a class="reference internal" href="parallel_r.html"><span class="std std-doc">Parallel R</span></a> for more details.</p></li>
+<li><p><a class="reference external" href="https://docs.csc.fi/apps/julia/#usage">Julia</a></p></li>
+<li><p><a class="reference external" href="https://docs.csc.fi/apps/matlab/#parallel-computing-on-matlab">MATLAB</a></p></li>
+</ul>
+</section>
+<section id="external-tools-to-run-the-scripts-in-parallel">
+<h2>External tools to run the scripts in parallel<a class="headerlink" href="#external-tools-to-run-the-scripts-in-parallel" title="Link to this heading">#</a></h2>
+<p>Some external tools enable running scripts in parallel, with minimal changes
+to the scripts. This way of running programs is also called task farming or
+high-throughput computing. These tools have different levels of complexity and
+different features. The simpler ones are for running the same script with
+different input parameters, for example different input files, scenarios, time
+frames etc. More complicated tools support managing the whole workflow with
+several steps and with dependencies between steps. Workflow tools also help
+with making your work more reproducible by recording the computational steps
+and data. See
+<a class="reference external" href="https://docs.csc.fi/computing/running/throughput/">CSC Docs: High-throughput computing and workflows</a>
+for more information.</p>
+<section id="gnu-parallel">
+<h3>GNU Parallel<a class="headerlink" href="#gnu-parallel" title="Link to this heading">#</a></h3>
+<p>GNU parallel is a general Linux tool for executing commands or scripts in
+parallel on one node. It iterates over an input list, which can be a list of
+files or input parameters. If the number of tasks is higher than the number of
+available cores, the process executes the tasks as the resources become
+available. GNU Parallel does not support dependencies between tasks.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.gnu.org/software/parallel/">GNU Parallel documentation</a></p></li>
+<li><p>Geocomputing examples: <a class="reference external" href="https://github.com/csc-training/geocomputing/tree/master/gdal">GDAL with GNU-parallel</a> and <a class="reference external" href="https://github.com/csc-training/geocomputing/tree/master/pdal">PDAL with GNU-parallel</a></p></li>
+<li><p>A more advanced example for using <a class="reference external" href="https://docs.csc.fi/support/tutorials/many/">GNU-parallel for multi-node</a> together with another tool.</p></li>
+</ul>
+</section>
+<section id="snakemake">
+<h3>Snakemake<a class="headerlink" href="#snakemake" title="Link to this heading">#</a></h3>
+<p>Snakemake is a scientific workflow management system that supports running for example R, bash and Python scripts. It can handle dependencies between the tasks and can be used with both multi-core and multi-node setups. Snakemake is one of the easiest tools for workflow management.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.csc.fi/support/tutorials/snakemake-puhti/">CSC Docs: Running Snakemake workflow on Puhti</a></p></li>
+</ul>
+</section>
+</section>
+<section id="write-your-own-parallel-code">
+<h2>Write your own parallel code<a class="headerlink" href="#write-your-own-parallel-code" title="Link to this heading">#</a></h2>
+<p>Parallel programs are typically parallelized with the <a class="reference external" href="https://en.wikipedia.org/wiki/Message_Passing_Interface">MPI</a> and/or <a class="reference external" href="https://en.wikipedia.org/wiki/OpenMP">OpenMP</a> standards or using GPUs, but in this course we are not going to these topics.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.csc.fi/en/training#training-calendar">CSC training calendar</a>, look for advanced coding courses.</p></li>
+<li><p><a class="reference external" href="https://a3s.fi/CSC_training/11_speed_up_jobs.html#/how-to-speed-up-jobs">CSC Computing Environment, How to speed up jobs</a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="job_monitoring.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Job monitoring</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="exercise_gdal.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercise: GDAL</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-to-parallelize">What to parallelize?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-parallelize">How to parallelize?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-with-built-in-parallel-support">Tools with built-in parallel support</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-libaries-of-scripting-languages">Parallel libaries of scripting languages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#external-tools-to-run-the-scripts-in-parallel">External tools to run the scripts in parallel</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gnu-parallel">GNU Parallel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#snakemake">Snakemake</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-your-own-parallel-code">Write your own parallel code</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CSC - IT center for Science. This page is available under the Creative Commons 4.0 Share-Alike License.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

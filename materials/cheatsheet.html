@@ -1,0 +1,696 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CSC and Unix cheatsheet &#8212; Geocomputing course  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f4023507" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'materials/cheatsheet';</script>
+    <link rel="icon" href="../_static/csc.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Terminal" href="terminal.html" />
+    <link rel="prev" title="Where to go from here" href="where_to_go.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Geocomputing_on_supercomputer.png" class="logo__image only-light" alt="Geocomputing course  documentation - Home"/>
+    <script>document.write(`<img src="../_static/Geocomputing_on_supercomputer.png" class="logo__image only-dark" alt="Geocomputing course  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topics.html">Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orga.html">Organizers of this course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csc_services.html">CSC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_project.html">Accounts and projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Research use cases for Puhti</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supercomputer - intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="supercomputing.html">Why and how?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer_setup.html">Supercomputer setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csc_supercomputers.html">CSC Supercomputers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_webinterface.html">Exercise: Puhti web interface</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GIS tools and data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="software.html">GIS tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data_at_csc.html">Spatial data in Puhti</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stac.html">STAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_stac.html">Exercise: STAC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Jobs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="batch_job.html">Batch jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job_monitoring.html">Job monitoring</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Run in parallel</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_gdal.html">Exercise: GDAL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel_python.html">Parallel Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_python.html">Exercise: Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel_r.html">Parallel R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_r.html">Exercise: R</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="moving_data.html">Moving data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_tips.html">Best practice tips for data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="allas.html">Allas – object storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_allas.html">Allas exercise</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Installations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="installations.html">Installing own tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Wrap-up</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="support.html">CSC support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="where_to_go.html">Where to go from here</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">CSC and Unix cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/csc-training/geocomputing_course" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/materials/cheatsheet.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>CSC and Unix cheatsheet</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#service-names">Service names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unix-commands-and-hints">Unix commands and hints</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-system-exploration">File system exploration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-manipulation">File manipulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permissions">Permissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-file-contents">Check file contents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-editors">Command line editors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nano">Nano</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vi">Vi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-transfer">File transfer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csc-modules">CSC modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csc-batch-jobs">CSC batch jobs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-and-links">Support and links</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-the-way-you-need-it">Git “the way you need it”</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="csc-and-unix-cheatsheet">
+<h1>CSC and Unix cheatsheet<a class="headerlink" href="#csc-and-unix-cheatsheet" title="Link to this heading">#</a></h1>
+<p>Adapted from <a class="reference external" href="https://docs.csc.fi/img/csc-quick-reference/csc-quick-reference.pdf">CSC Quick Reference</a></p>
+<p>Note that this is simplified for beginners’ usage. Once you get more
+experienced, you’ll notice that there are more (and better) options for
+everything, and that not everything written here is “the whole truth”.</p>
+<section id="service-names">
+<h2>Service names<a class="headerlink" href="#service-names" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Puhti, Mahti, LUMI - supercomputers</p></li>
+<li><p>Pouta, Rahti - cloud services</p></li>
+<li><p>Allas - object storage</p></li>
+</ul>
+</section>
+<section id="unix-commands-and-hints">
+<h2>Unix commands and hints<a class="headerlink" href="#unix-commands-and-hints" title="Link to this heading">#</a></h2>
+<p>(all text within &lt;&gt; is replaced with real names, e.g. <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">/home/user/my-file.txt</span> <span class="pre">scratch/project_2015299/new-directory</span></code>)
+Check out all options of the commands with <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">&lt;command&gt;</span></code> (for <em>man</em>ual), exit with <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+<section id="file-system-exploration">
+<h3>File system exploration<a class="headerlink" href="#file-system-exploration" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code> - list current directory contents</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">&lt;directory-to-change-to&gt;</span></code> - change the current directory</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> - change to “one level higher” in directory tree</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code> - (without argument) change to $HOME</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code> - print full path of the current directory</p></li>
+</ul>
+</section>
+<section id="file-manipulation">
+<h3>File manipulation<a class="headerlink" href="#file-manipulation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">&lt;file-to-copy&gt;</span> <span class="pre">&lt;destination&gt;</span></code> - copy a file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">&lt;file-to-move&gt;</span> <span class="pre">&lt;destination/new-file-name&gt;</span></code> - move or rename a file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">&lt;file-to-remove&gt;</span></code> - delete a file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">&lt;new-directory-name&gt;</span></code> - create a directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">&lt;new-file-name&gt;</span></code> - create an empty new file</p></li>
+</ul>
+</section>
+<section id="permissions">
+<h3>Permissions<a class="headerlink" href="#permissions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">&lt;whowhatwhich&gt;</span> <span class="pre">&lt;file-name&gt;</span></code> - change file permissions</p>
+<ul>
+<li><p>who -&gt; u: user , g: group , o: others, a: all</p></li>
+<li><p>what -&gt; -:remove permission, +: add permission</p></li>
+<li><p>which -&gt; r: read, w: write, x: execute</p></li>
+<li><p>example <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">u+x</span> <span class="pre">my-batch-job-script.sh</span></code> adds execution rights for current user to the file</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chgrp</span></code> - change file/folder owner</p></li>
+</ul>
+</section>
+<section id="check-file-contents">
+<h3>Check file contents<a class="headerlink" href="#check-file-contents" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">&lt;text-file&gt;</span></code> - see text file (exit with <code class="docutils literal notranslate"><span class="pre">q</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&lt;file-name&gt;</span></code> - see file content</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">&lt;file-name&gt;</span></code> - list ten first lines of the file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tail</span> <span class="pre">-100</span> <span class="pre">&lt;file-name&gt;</span></code> - show the last 100 lines</p></li>
+</ul>
+</section>
+<section id="other">
+<h3>Other<a class="headerlink" href="#other" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">history</span></code> - show history of commands run</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grep</span></code> - find rows containing a string</p>
+<ul>
+<li><p>example: <code class="docutils literal notranslate"><span class="pre">history</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">&quot;some</span> <span class="pre">strings&quot;</span></code> would show you all commands in your history that contain “some string” (| is called a pipe)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;some</span> <span class="pre">text&quot;</span></code> - prints some text to terminal</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exit</span></code> - quit the session on commandline</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;some</span> <span class="pre">command&gt;</span> <span class="pre">&gt;</span> <span class="pre">&lt;file-name&gt;</span></code> - output of a command to a file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;some</span> <span class="pre">command&gt;</span> <span class="pre">&gt;&gt;</span> <span class="pre">&lt;file-name&gt;</span></code> - append output of a command to a file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">&lt;application-name&gt;</span></code> - shows path to the executable of an application</p></li>
+</ul>
+</section>
+<section id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h3>
+<p>Defining a variable: <code class="docutils literal notranslate"><span class="pre">MYPATH=/home/user/something</span></code>
+Using a defined or environment (predefined!) variable: <code class="docutils literal notranslate"><span class="pre">$MYPATH</span></code>, e.g. to print its content: <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">$MYVAR</span></code>
+Some environment variables:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$HOME</span></code> : users home directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$PATH</span></code> : path where executables are looked for</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$USER</span></code>: current username</p></li>
+</ul>
+</section>
+</section>
+<section id="command-line-editors">
+<h2>Command line editors<a class="headerlink" href="#command-line-editors" title="Link to this heading">#</a></h2>
+<section id="nano">
+<h3>Nano<a class="headerlink" href="#nano" title="Link to this heading">#</a></h3>
+<p>Process to edit a file in nano:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">&lt;file-name&gt;</span></code> - (create and) open file with nano</p>
+<ul>
+<li><p>edit your file</p></li>
+<li><p>when done, use <code class="docutils literal notranslate"><span class="pre">CTRL</span> <span class="pre">+</span> <span class="pre">o</span></code> key combination</p></li>
+<li><p>(edit the filename and) press enter</p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">CTRL</span> <span class="pre">+</span> <span class="pre">x</span></code> key combination to exit the editor</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="vi">
+<h3>Vi<a class="headerlink" href="#vi" title="Link to this heading">#</a></h3>
+<p>Process to edit a file in vi:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">&lt;file-name&gt;</span></code> - (create and) open file with vi</p>
+<ul>
+<li><p>press <code class="docutils literal notranslate"><span class="pre">i</span></code> to switch to “edit mode”</p></li>
+<li><p>edit your file</p></li>
+<li><p>when done, press <code class="docutils literal notranslate"><span class="pre">esc</span></code> to switch to “normal mode”</p></li>
+<li><p>press <code class="docutils literal notranslate"><span class="pre">:wq</span></code> to save (<em>w</em>rite) the file and exit (<em>q</em>uit) the editor</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="file-transfer">
+<h2>File transfer<a class="headerlink" href="#file-transfer" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">&lt;file</span> <span class="pre">name&gt;</span> <span class="pre">&lt;username&#64;puhti.csc.fi:/scratch/project_2015299/dir_name&gt;</span></code> - copy a file from current computer to Puhti</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">&lt;some-url&gt;</span></code> or  <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">&lt;some-url&gt;</span></code> - get a file from the internet</p></li>
+</ul>
+</section>
+<section id="csc-modules">
+<h2>CSC modules<a class="headerlink" href="#csc-modules" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Geoinformatics applications and how to use them: https://docs.csc.fi/apps/by_discipline/#geosciences</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">&lt;application-name&gt;</span></code> - initialize the environment of an application</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code> - list loaded applications</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">purge</span></code> - remove application environments</p></li>
+</ul>
+</section>
+<section id="csc-batch-jobs">
+<h2>CSC batch jobs<a class="headerlink" href="#csc-batch-jobs" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sbatch</span> <span class="pre">&lt;batch-job-file&gt;</span></code> - submit a job</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sacct</span></code> - info about job status</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">squeue</span></code> - see the job status in the queue</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scancel</span> <span class="pre">&lt;jobid&gt;</span></code> - cancel a job</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seff</span> <span class="pre">&lt;jobid&gt;</span></code> - info about completed jobs</p></li>
+</ul>
+</section>
+<section id="support-and-links">
+<h2>Support and links<a class="headerlink" href="#support-and-links" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>E-mail support: servicedesk&#64;csc.fi</p></li>
+<li><p>Weekly virtual user support session (every Wed at 14): https://ssl.eventilla.com/usersupportcoffee</p></li>
+<li><p>Accounts, projects, forgotten password: https://my.csc.fi/</p>
+<ul>
+<li><p>on Puhti: <code class="docutils literal notranslate"><span class="pre">csc-workspaces</span></code></p></li>
+</ul>
+</li>
+<li><p>CSC services and info: https://research.csc.fi/</p></li>
+<li><p>How to use them: https://docs.csc.fi/</p></li>
+<li><p>Geoinformatics examples: https://github.com/csc-training/geocomputing</p></li>
+</ul>
+</section>
+<section id="git-the-way-you-need-it">
+<h2>Git “the way you need it”<a class="headerlink" href="#git-the-way-you-need-it" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://aaltoscicomp.github.io/cheatsheets/git-the-way-you-need-it-cheatsheet.pdf">Cheatsheet by Aalto Scientific Computing</a></p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="where_to_go.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Where to go from here</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="terminal.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Terminal</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#service-names">Service names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unix-commands-and-hints">Unix commands and hints</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-system-exploration">File system exploration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-manipulation">File manipulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permissions">Permissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-file-contents">Check file contents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-editors">Command line editors</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nano">Nano</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vi">Vi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-transfer">File transfer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csc-modules">CSC modules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csc-batch-jobs">CSC batch jobs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-and-links">Support and links</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-the-way-you-need-it">Git “the way you need it”</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CSC - IT center for Science. This page is available under the Creative Commons 4.0 Share-Alike License.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

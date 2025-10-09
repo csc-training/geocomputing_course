@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Job monitoring &#8212; Geocomputing course  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f4023507" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'materials/job_monitoring';</script>
+    <link rel="icon" href="../_static/csc.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Parallel computing" href="parallel.html" />
+    <link rel="prev" title="Batch jobs" href="batch_job.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Geocomputing_on_supercomputer.png" class="logo__image only-light" alt="Geocomputing course  documentation - Home"/>
+    <script>document.write(`<img src="../_static/Geocomputing_on_supercomputer.png" class="logo__image only-dark" alt="Geocomputing course  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Welcome</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topics.html">Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orga.html">Organizers of this course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csc_services.html">CSC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_project.html">Accounts and projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Research use cases for Puhti</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Supercomputer - intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="supercomputing.html">Why and how?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer_setup.html">Supercomputer setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csc_supercomputers.html">CSC Supercomputers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connecting.html">Connecting to supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_webinterface.html">Exercise: Puhti web interface</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GIS tools and data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="software.html">GIS tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spatial_data_at_csc.html">Spatial data in Puhti</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stac.html">STAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_stac.html">Exercise: STAC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Jobs</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="batch_job.html">Batch jobs</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Job monitoring</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Run in parallel</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="parallel.html">Parallel computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_gdal.html">Exercise: GDAL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel_python.html">Parallel Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_python.html">Exercise: Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallel_r.html">Parallel R</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_r.html">Exercise: R</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="moving_data.html">Moving data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_tips.html">Best practice tips for data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="allas.html">Allas – object storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise_allas.html">Allas exercise</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Installations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="installations.html">Installing own tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Wrap-up</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="support.html">CSC support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="where_to_go.html">Where to go from here</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">CSC and Unix cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/csc-training/geocomputing_course" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/materials/job_monitoring.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Job monitoring</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-status">Job status</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-output">Job output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resource-monitoring">Resource monitoring</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizing-the-performance-of-your-own-code">Optimizing the performance of your own code</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="job-monitoring">
+<h1>Job monitoring<a class="headerlink" href="#job-monitoring" title="Link to this heading">#</a></h1>
+<section id="job-status">
+<h2>Job status<a class="headerlink" href="#job-status" title="Link to this heading">#</a></h2>
+<p>Check the status of your job: <code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">--me</span></code></p>
+</section>
+<section id="job-output">
+<h2>Job output<a class="headerlink" href="#job-output" title="Link to this heading">#</a></h2>
+<p>By default, the standard output (e.g. things that you print as part of your
+script) and standard error (e.g. error messages from Slurm, your tool or
+package) are written to the file <code class="docutils literal notranslate"><span class="pre">slurm-&lt;jobid&gt;.out</span></code> in the same directory as the
+batch job script.</p>
+<div class="seealso admonition">
+<p class="admonition-title">What to do if a job fails?</p>
+<p>Does <code class="docutils literal notranslate"><span class="pre">sacct</span></code> show you that your job failed? Or did your job not do what you expected (e.g. write some files, etc)?
+Some things to check:</p>
+<ol class="arabic simple">
+<li><p>Did the job run out of time?</p></li>
+<li><p>Did the job run out of memory?</p></li>
+<li><p>Did the job actually use the resources you specified?</p>
+<ul class="simple">
+<li><p>Problems in the batch job script can cause parameters to be ignored and default values are used instead</p></li>
+</ul>
+</li>
+<li><p>Did it fail immediately or did it run for some time?</p>
+<ul class="simple">
+<li><p>Jobs failing immediately are often due to something like typos, missing inputs, bad parameters <em>etc</em>.</p></li>
+</ul>
+</li>
+<li><p>Check the error file captured by the batch job script</p></li>
+<li><p>Check any other error files and logs your program may have produced</p></li>
+<li><p>Error messages can sometimes be long, cryptic and a bit intimidating, but …</p>
+<ul class="simple">
+<li><p>Try skimming through them and see if you can spot something “human-readable”</p></li>
+<li><p>Often you can spot the actual problem, if you go through the whole message. Something like “required input file so-and-so missing” or “parameter X out of range” <em>etc</em>.</p></li>
+</ul>
+</li>
+<li><p>Consult the <a class="reference external" href="https://docs.csc.fi/support/faq/why-does-my-batch-job-fail/">FAQ on common Slurm issues</a> in the CSC Docs</p></li>
+</ol>
+</div>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Before large runs, it’s a good idea to do a smaller trial run</p></li>
+<li><p>Start simple and gradually use more complex approaches if needed</p>
+<ul>
+<li><p>Try first running interactively (<strong>not</strong> on a login node) or with batch jobs in the <code class="docutils literal notranslate"><span class="pre">test</span></code> partition</p></li>
+<li><p>Check that results are as expected</p></li>
+<li><p>Check the resource usage after the test run and adjust accordingly</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="resource-monitoring">
+<h2>Resource monitoring<a class="headerlink" href="#resource-monitoring" title="Link to this heading">#</a></h2>
+<p>See the resource usage after job has finished: <code class="docutils literal notranslate"><span class="pre">seff</span> <span class="pre">jobid</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[user@puhti-login11 ~]$ seff 22361601
+Job ID: 22361601
+Cluster: puhti
+User/Group: user/user
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 40
+CPU Utilized: 04:01:36
+CPU Efficiency: 96.13% of 04:11:20 core-walltime
+Job Wall-clock time: 00:06:17
+Memory Utilized: 5.55 GB (estimated maximum)
+Memory Efficiency: 71.04% of 7.81 GB (200.00 MB/core)
+Job consumed 4.27 CSC billing units based on following used resources
+Billed project: project_2001234
+CPU BU: 4.19
+Mem BU: 0.08
+</pre></div>
+</div>
+<p>More detailed queries can be tailored with <code class="docutils literal notranslate"><span class="pre">sacct</span></code></p>
+<ul class="simple">
+<li><p>Job with ID: <code class="docutils literal notranslate"><span class="pre">sacct</span> <span class="pre">-j</span> <span class="pre">jobid</span> <span class="pre">-o</span> <span class="pre">jobid,partition,state,reqmem,maxrss,averss,elapsed</span></code></p></li>
+<li><p>All jobs started after some date: <code class="docutils literal notranslate"><span class="pre">sacct</span> <span class="pre">-S</span> <span class="pre">2024-08-01</span> <span class="pre">-o</span> <span class="pre">jobid,partition,state,reqmem,maxrss,averss,elapsed</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[user@puhti-login15 ~]$ sacct -j 22361601 -o jobid,partition,state,reqmem,maxrss,averss,elapsed
+JobID         Partition      State     ReqMem     MaxRSS     AveRSS    Elapsed
+------------ ---------- ---------- ---------- ---------- ---------- ----------
+22361601           test  COMPLETED      8000M                         00:06:17
+22361601.ba+             COMPLETED                 7286K      7286K   00:06:17
+22361601.ex+             COMPLETED                 2349K      2349K   00:06:17
+22361601.0               COMPLETED               145493K  139994035   00:06:17
+</pre></div>
+</div>
+<p><strong>Note!</strong> Querying data from the Slurm accounting database with <code class="docutils literal notranslate"><span class="pre">sacct</span></code> can be
+a very heavy operation. <strong>Don’t</strong> query long time intervals or run <code class="docutils literal notranslate"><span class="pre">sacct</span></code> in
+a loop/using <code class="docutils literal notranslate"><span class="pre">watch</span></code> as this will degrade the performance of the system for
+all users.</p>
+<p>Important aspects to monitor are:</p>
+<ul class="simple">
+<li><p>Memory efficiency</p>
+<ul>
+<li><p>If low memory usage: too much memory requested?</p></li>
+<li><p>If a lot of memory needed, think how to re-write your analysis to use less memory</p></li>
+<li><p><a class="reference external" href="https://docs.csc.fi/support/faq/how-much-memory-my-job-needs/">CSC Docs: How to estimate how much memory my batch job needs?</a></p></li>
+</ul>
+</li>
+<li><p>CPU efficiency</p>
+<ul>
+<li><p>Parallel jobs must always benefit from all requested resources.</p></li>
+<li><p>Low CPU Efficiency:</p>
+<ul>
+<li><p>Too many cores requested?</p></li>
+<li><p>Cores waiting for other processes?</p></li>
+<li><p>Cores waiting for data from disk?</p></li>
+<li><p>Perform a scaling test.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>GPU efficiency</p>
+<ul>
+<li><p>If low GPU usage:</p>
+<ul>
+<li><p>Better to use CPUs?</p></li>
+<li><p>Is disk I/O the bottleneck?</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Disk workload</p>
+<ul>
+<li><p>If a lot of I/0, use <a class="reference external" href="https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage">local disks on compute nodes</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Monitoring interactive jobs</p>
+<p>If you want to monitor the real-time resource usage of an interactive job:</p>
+<ul class="simple">
+<li><p>Open a new shell on the same compute node as where the tool/script is running:</p>
+<ul>
+<li><p>Jupyter and RStudio have Terminal windows.</p></li>
+<li><p>If it is some other tool, manually open another shell on the compute node:</p>
+<ul>
+<li><p>Find out the compute node name from the prompt of the interactive
+job or the output of <code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">--me</span></code> (it’s something like <code class="docutils literal notranslate"><span class="pre">r18c02</span></code>)</p></li>
+<li><p>Open a new terminal window or tab on your device and log into the supercomputer</p></li>
+<li><p>Connect to the compute node from the login node by running <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;comp-node-id&gt;</span></code> (for example <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">r18c02</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Use Linux <code class="docutils literal notranslate"><span class="pre">top</span> <span class="pre">-u</span> <span class="pre">$USER</span></code> command, it gives a rough estimate of the memory and CPU usage of the job.</p></li>
+</ul>
+</div>
+</section>
+<section id="optimizing-the-performance-of-your-own-code">
+<h2>Optimizing the performance of your own code<a class="headerlink" href="#optimizing-the-performance-of-your-own-code" title="Link to this heading">#</a></h2>
+<p>You can use profiling tools to find out how much time is spent in different parts of the code</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.csc.fi/computing/performance/">CSC Docs: Performance analysis</a></p></li>
+<li><p><a class="reference external" href="https://docs.lumi-supercomputer.eu/development/profiling/strategies/">LUMI Docs: Profiling on LUMI</a>
+When the computing bottlenecks are identified, try to figure out ways to improve the code.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="batch_job.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Batch jobs</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="parallel.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Parallel computing</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-status">Job status</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-output">Job output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resource-monitoring">Resource monitoring</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimizing-the-performance-of-your-own-code">Optimizing the performance of your own code</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CSC - IT center for Science. This page is available under the Creative Commons 4.0 Share-Alike License.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
