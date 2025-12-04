@@ -6,7 +6,7 @@ Name | CPUs | GPUs | Pre-installed GIS tools | Finnish spatial data locally | Sc
 --- | --- | --- | --- | --- | --- |
 **Puhti** | 28 000 | 320 Nvidia V100 | **22** | **Yes** | Finland |
 **Mahti** | 90 000 | 96 Nvidia A100 | 1 | No | Finland |
-**LUMI** | **100 000** | **~24 000** AMD MI250X | 6 | No | EU |
+**LUMI** | **100 000** | **~24 000** AMD MI250X GCD | 6 | No | EU |
 Roihu (2026) | 185 000 | 528 Nvidia GH200 | ~20 | ? | Finland |
 
 Puhti:
