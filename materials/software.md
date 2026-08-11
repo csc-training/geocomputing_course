@@ -80,8 +80,8 @@
 | PDAL | - | [pdal](https://pdal.io/en/latest/python.html) | [Yes](https://pdal.io/en/latest/apps/index.html) |
 | QGIS | [qgisprocess*](https://cloud.r-project.org/web/packages/qgisprocess/index.html) | [PyQGIS](https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/) | [qgis_process](https://docs.qgis.org/latest/en/docs/user_manual/processing/standalone.html) |
 | SagaGIS | [Rsagacmd](https://cran.r-project.org/web/packages/Rsagacmd/index.html) | PySAGA* | [saga_cmd](https://sourceforge.net/p/saga-gis/wiki/Executing%20Modules%20with%20SAGA%20CMD/) |
-| SNAP | - | [snappy](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/19300362/How+to+use+the+SNAP+API+from+Python), [snapista](https://snap-contrib.github.io/snapista/gettingstarted.html) | [GPT](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/70503475/Bulk+Processing+with+GPT) |
-| WhiteboxTools | [whiteboxR*](https://github.com/opengeos/whiteboxR) | [WhiteboxTools](https://www.whiteboxgeo.com/manual/wbt_book/python_scripting/using_whitebox_tools.html)| [Yes](https://www.whiteboxgeo.com/manual/wbt_book/command_prompt.html) |
+| SNAP | - | [esa_snappy](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/24051781/Using+SNAP+in+your+Python+programs) | [GPT](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/70503475/Bulk+Processing+with+GPT) |
+| WhiteboxTools | [Whitebox Workflows for R*](https://github.com/jblindsay/whitebox_next_gen/blob/main/crates/wbw_r/README.md) | [Whitebox Workflows for Python](https://github.com/jblindsay/whitebox_next_gen/blob/main/crates/wbw_python/README.md)| - |
 
 Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonation have a command-line interface.
 
@@ -114,6 +114,5 @@ gdalinfo /xx/data.tif
 
 * [CSC Docs: Applications -> geosciences](https://docs.csc.fi/apps/by_discipline/#geosciences)
 * [LUMI Docs: Software pages](https://docs.lumi-supercomputer.eu/software/)
-* [CSC Research pages: GIS software](https://research.csc.fi/gis-software)
 * [Geocomputing examples](https://github.com/csc-training/geocomputing)
-  
+* [Geoportti: geospatial software](https://www.geoportti.fi/services/hpc-geo-processing-and-geoanalytics/geospatial-software/)  

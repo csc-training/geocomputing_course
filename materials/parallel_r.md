@@ -153,4 +153,3 @@ Further reading:
 * [CSC Geocomputing examples for R in Roihu](https://github.com/csc-training/geocomputing/tree/master/R/roihu): `future`, `snow`, `foreach`.
   * [`lidr`-example ](https://github.com/csc-training/geocomputing/tree/master/R/R_LiDAR/R_lidar_course_exercises)
   * [STAC-example](https://github.com/csc-training/geocomputing/tree/master/R/STAC): `gdalcubes`
-  * [`raster::predict`-example](https://github.com/csc-training/geocomputing/tree/master/R/raster_predict)

@@ -103,7 +103,7 @@ available. `xargs` does not support dependencies between tasks.
 
 Snakemake is a scientific workflow management system that supports running for example R, bash and Python scripts. It can handle dependencies between the tasks and can be used with both multi-core and multi-node setups. Snakemake is one of the easiest tools for workflow management.
 
-* [CSC Docs: Snakemake](https://docs.csc.fi/support/apps/snakemake/)
+* [CSC Docs: Snakemake](https://docs.csc.fi/apps/snakemake/)
 
 ## Write your own parallel code
 
