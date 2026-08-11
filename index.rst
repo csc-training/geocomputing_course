@@ -24,7 +24,7 @@ The course is meant both for academic researchers planning to use Roihu supercom
 
 All exercises are done via Roihu web-interface, which you can access via your web browser. You do not need any additional software installed on your own computer.
 
-This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_ and funded by `Geoportti Research Infrastructure <https://www.geoportti.fi/>`_ and the `Location Innvation Hub <https://locationinnovationhub.eu/en/home/>`_. 
+This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_ and funded by `Geoportti Research Infrastructure <https://www.geoportti.fi/>`_. 
 
 
 .. Hidden TOCs
@@ -99,6 +99,7 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
    :hidden:
 
    materials/installations.md
+   materials/exercise_installation.md
 
 .. toctree::
    :maxdepth: 2
