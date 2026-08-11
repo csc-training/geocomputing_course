@@ -45,7 +45,6 @@ Check from the tool's manual if it has built-in support for using multiple CPUs/
 
 Some example geospatial tools with built-in parallel support: 
 * GDAL, some commands e.g. `gdalwarp -multi -wo NUM_THREADS=val/ALL_CPUS ...`
-* FORCE
 * Lastools
 * OpenDronemap
 * OrfeoToolBox

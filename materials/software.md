@@ -83,7 +83,7 @@
 | SNAP | - | [esa_snappy](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/24051781/Using+SNAP+in+your+Python+programs) | [GPT](https://senbox.atlassian.net/wiki/spaces/SNAP/pages/70503475/Bulk+Processing+with+GPT) |
 | WhiteboxTools | [Whitebox Workflows for R*](https://github.com/jblindsay/whitebox_next_gen/blob/main/crates/wbw_r/README.md) | [Whitebox Workflows for Python](https://github.com/jblindsay/whitebox_next_gen/blob/main/crates/wbw_python/README.md)| - |
 
-Additionally Ames Stereo Pipeline, FORCE, LasTools, OpenDroneMap, PCL and Zonation have a command-line interface.
+Additionally LasTools, OpenDroneMap, PCL and Zonation have a command-line interface.
 
 \* are not available in Roihu currently, but should be possible to install, ask if you need any of them.
 
