@@ -33,7 +33,7 @@
         * [Earth Observation tutorial](https://docs.csc.fi/support/tutorials/gis/eo_guide/)
         * [GDAL tutorial](https://docs.csc.fi/support/tutorials/gis/gdal/)
         * [Virtual rasters](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/)
-    * [Python GIS learning materials](https://docs.csc.fi/apps/geoconda/#references)
+    * [Python GIS learning materials](https://docs.csc.fi/apps/python-geo/#references)
     * [Spatial R learning materials](https://docs.csc.fi/apps/r-env-for-gis/#references)
 * Linux:
     * [CSC and Linux Cheat Sheet](./cheatsheet.md) (one page summary of the most important Linux commands – handy to have near you during the course)  

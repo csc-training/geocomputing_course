@@ -10,7 +10,7 @@
     * resource knowledge
     * fair share
 * supercomputer setup
-    * Puhti overview
+    * Roihu overview
     * login vs compute node
 * compute node: interactive usage of some gdal/pdal/ogr command (show how to get it from QGIS)
     * running into limits of interactiveness

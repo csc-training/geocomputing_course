@@ -122,7 +122,7 @@ Check [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/r
    within 4 days.
 3. Ben wants to visualize a 2 GB file in QGIS.
 4. Neha has written and run some Python code on her own machine. She now wants
-   to move to Puhti and, before running her full pipeline, test that her code
+   to move to Roihu and, before running her full pipeline, test that her code
    executes correctly with a minimal dataset.
 5. Josh wants to run 4 memory heavy tasks (100GB) in parallel. Each job takes
    about 30 minutes to execute.
@@ -146,7 +146,7 @@ Check [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/r
 :::
 
 More information:
-* [CSC Dosc: Running jobs, Getting started](https://docs.csc.fi/computing/running/getting-started/) for Puhti and Mahti
+* [CSC Dosc: Running jobs, Getting started](https://docs.csc.fi/computing/running/getting-started/) for Roihu
 * [LUMI Docs: Run jobs](https://docs.lumi-supercomputer.eu/runjobs/)
 * [CSC Docs: Software specific example batch scripts](https://docs.csc.fi/apps/)
 * [SLURM documentation](https://slurm.schedmd.com/sbatch.html)

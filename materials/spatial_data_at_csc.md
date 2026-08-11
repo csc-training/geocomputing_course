@@ -1,15 +1,15 @@
-# Spatial data in Puhti
+# Spatial data in Roihu
 
 * Large commonly used **Finnish geospatial datasets with open licenses**
 * Removes transfer bottleneck
 * Located in: `/appl/data/geo/`
-* **All Puhti users have read access**
+* **All Roihu users have read access**
 * ~15 TB of datasets available:
 	* **Paituli data**, with virtual mosaics for raster data
 	* **Finnish Environmental Institute (SYKE) open datasets**: CORINE land use etc
 	* **Forest center: canopy height**, forest mask, gridcells, forest resource plots
  	* NLS automatically classified lidar data	
-* LUMI and Mahti do not have spatial data on local disk.
+* LUMI does not have spatial data on local disk.
 * [CSC Docs: Spatial data in CSC computing environment](https://docs.csc.fi/data/datasets/spatial-data-in-csc-computing-env/)
 
 ## Paituli
@@ -24,9 +24,9 @@
 
 !["Paituli"](./images/paituli.png "Paituli")
 
-### Paituli data access in Puhti:
+### Paituli data access in Roihu:
 
-* As files in `/appl/data/geo/`
+* As files in `/dataset/project_2019680`
 * **Raster datasets via [STAC](stac.md)**
 * Rasters divided to mapsheets as **[virtual rasters](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/)**
 * Majority via [OGC APIs](https://paituli.csc.fi/webservices.html), both old and new standards
@@ -37,7 +37,6 @@
 * **NLS, topographic database**
 * NLS, basic map and topographic maps
 * NLS, DEM - 2, 10 and 25m
-* **NLS, orthoimages (only infrared in Puhti)**
 * Statistics Finland, population grid 1 km
 * Statistics Finland, municipalities key figures
 * Statistics Finland, educational institutions

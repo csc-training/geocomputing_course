@@ -20,7 +20,7 @@ Learn how to use command-line tools:
 :::{admonition} Prerequisites
 :class: important
 
-* [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and [project](https://docs.csc.fi/accounts/how-to-create-new-project/) with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
+* [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and [project](https://docs.csc.fi/accounts/how-to-create-new-project/) with [access to Roihu](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
 * Basic Linux skills
 
 :::

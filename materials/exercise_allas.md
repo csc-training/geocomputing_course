@@ -21,7 +21,7 @@ Learn how to:
 :::{admonition} Prerequisites 
 :class: important
 
-* [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and [project](https://docs.csc.fi/accounts/how-to-create-new-project/) with [access to Puhti and Allas](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
+* [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and [project](https://docs.csc.fi/accounts/how-to-create-new-project/) with [access to Roihu and Allas](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
 * Basic Linux skills
 
 :::
@@ -31,7 +31,7 @@ Learn how to:
 * `project_2015299` is an example project name, replace with your own CSC project name.
 :::
 
-* Open [Puhti web interface](https://puhti.csc.fi) and log in
+* Open [Roihu web interface](https://roihu.csc.fi) and log in
 * Open `Login node shell` from Tools menu.
 * Set up Allas connection
 
@@ -68,7 +68,7 @@ s3cmd ls s3://project_2015299-$USER
 
 # Read and write directly to Allas with GDAL
 # Make GDAL avaialble
-module load geoconda
+module load python-geo
 
 # See metadata of a file from GDAL exercise
 gdalinfo /vsis3/project_2015299-$USER/W3333.tif

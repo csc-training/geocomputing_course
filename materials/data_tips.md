@@ -1,6 +1,6 @@
 # Best practice tips for data
 
-- Take **backups** of important files. Data on Puhti disks is not backed up.
+- Take **backups** of important files. Data on Roihu disks is not backed up.
 	- Allas is the best option for backups at CSC.
 	- GitHub or similar for code.
 - Supercomputer disks do not work well with **too many small files**

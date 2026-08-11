@@ -52,7 +52,7 @@ What is it NOT?
 - **Web interfaces**:
 	- [Allas web interface](https://allas.csc.fi)
  		- [CSC Docs: Allas web UI](https://docs.csc.fi/data/Allas/using_allas/allas-ui/) 
- 	- [Puhti web interface](https://www.puhti.csc.fi/) and [Mahti web interface](https://www.mahti.csc.fi) also for moving data between supercomputers and Allas.
+ 	- [Roihu web interface](https://www.roihu.csc.fi/) for moving data between supercomputers and Allas.
 		- [CSC Docs: Accessing Allas and LUMI-O](https://docs.csc.fi/computing/webinterface/file-browser/#accessing-allas-and-lumi-o)
 
 - **Graphical tools**:
@@ -67,7 +67,7 @@ What is it NOT?
 	- Python: **boto3** library
 	- R: **aws3** library
 - For connecting, these require **S3 access key and secret key**
-	- Easiest to [use Puhti for getting these](https://docs.csc.fi/data/Allas/using_allas/s3_client/#configuring-s3-connection-in-supercomputers)
+	- Easiest to [use Roihu for getting these](https://docs.csc.fi/data/Allas/using_allas/s3_client/#configuring-s3-connection-in-supercomputers)
 - [CSC Docs: Allas clients](https://docs.csc.fi/data/Allas/) -> Allas clients
 
 ## Accessing data directly from object storage

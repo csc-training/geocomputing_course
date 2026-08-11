@@ -30,7 +30,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # setting title in left panel (default is <projectname> documentation <release>)
-#html_title = "Geocomputing with Puhti supercomputer course"
+#html_title = "Geocomputing with Roihu supercomputer course"
 # setting upper left logo
 
 html_logo = "materials/images/Geocomputing_on_supercomputer.png"

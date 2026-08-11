@@ -21,11 +21,11 @@ Typical physical parts of a supercomputer:
 - Compute nodes can be classified based on the types of processors they have: 
   * **CPU nodes** have only CPUs (central processing unit).
   * **GPU nodes** have both GPUs (graphical processing unit) and CPUs. GPUs are widely used for deep learning.
-  * Each CPU has multiple **cores**, which are the basic computing resource. There are 40 cores in Puhti and 128 in Mahti and LUMI CPU-nodes.
+  * Each CPU has multiple **cores**, which are the basic computing resource. There are 386 cores in Roihu and 128 in LUMI CPU-nodes.
   * Whether your task benefits from a GPU depends on the software used. Most GIS-tools can not use GPUs.
   * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, that it would be reasonable to use GPU nodes.
 - When using compute nodes, the compute resources have to be defined in advance. You must specify e.g. the amount of GPUs, memory and nodes or CPU cores.
-- Specifics of [Puhti](https://docs.csc.fi/computing/systems-puhti/#nodes), [Mahti](https://docs.csc.fi/computing/systems-mahti/) and [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumic/) compute nodes.
+- Specifics of [Roihu](https://docs.csc.fi/computing/systems-roihu/#nodes) and [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumic/) compute nodes.
 
 
 ## Storage
@@ -34,13 +34,14 @@ Typical physical parts of a supercomputer:
 - **Disk** refers to all storage that can be accessed as a file system. This is generally storage that can hold data permanently, i.e. data is still there even if the computer has been restarted.
 - CSC supercomputers use Lustre as the **parallel distributed file system**
 
-### Puhti disk areas
+### Roihu disk areas
 
 | Name     |Access   |Path                 |Cleaning      |Capacity|Number of files| Use |
 |------------|--------|--------------------|---------------------|--------------|----------------|----------------|
-|**[home](https://docs.csc.fi/computing/disk/#home-directory)**    |Personal|`/users/cscusername` |No            |10 GiB              |100 000 files  | personal settings and files |
-|**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/project_2015299`|No            |50 GiB              |100 000 files  | installation files |
-|**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/project_2015299` |**180 days**      |**1 TiB**              |1 000 000 files  | main working area |
+|**[home](https://docs.csc.fi/computing/disk/#home-directory)**    |Personal|`/users/cscusername` |No            |15 GiB              |150 000 files  | personal settings and files |
+|**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/project_2015299`|No            |15 GiB              |150 000 files  | installation files |
+|**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/project_2015299` |**180 days**      |**250 GiB**              |500 000 files  | main working area |
+|**[dataset](https://docs.csc.fi/computing/disk/#dataset-directory)** |Project |`/dataset/project_2015299` |No      |0              |0 files  | permanent data area, must be applied |
 
 * `scratch` space can be extended, but it would use billing units then.
 
@@ -48,7 +49,7 @@ Typical physical parts of a supercomputer:
 - Some nodes might also have **local disk space** for temporary use. 
 - [CSC Docs: Login node local tmp](https://docs.csc.fi/computing/disk/#login-nodes)  `$TMPDIR` for compiling, cleaned frequently.
 	
-- [CSC Docs: NVMe](https://docs.csc.fi/computing/running/creating-job-scripts-puhti/#local-storage) - `$LOCAL_SCRATCH` in batch jobs, 
+- [CSC Docs: NVMe](https://docs.csc.fi/computing/running/creating-job-scripts-roihu/#local-storage) - `$LOCAL_SCRATCH` in batch jobs, 
     - NVMe is accessible only during your job allocation (including any interactive jobs)
 	- You must copy data in and out during your batch job
     - If your job reads or writes lots of small files, using this can give 10x performance boost

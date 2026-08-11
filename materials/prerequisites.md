@@ -12,4 +12,4 @@ This also means that this course is not an introduction to any of the topics abo
 
 ## CSC account
 
-For the exercises, a [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and a [CSC project](https://docs.csc.fi/accounts/how-to-create-new-project/) with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/) are required. For the Allas exercise, the Allas service must be enabled for the project.
+For the exercises, a [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and a [CSC project](https://docs.csc.fi/accounts/how-to-create-new-project/) with [access to Roihu](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/) are required. For the Allas exercise, the Allas service must be enabled for the project.

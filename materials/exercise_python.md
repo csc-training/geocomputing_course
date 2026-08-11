@@ -10,7 +10,7 @@
 :::{admonition} Goals
 :class: note
 
-* Get to know the geoconda Python environment on Puhti
+* Get to know the python-geo Python environment on Roihu
 * Try out different ways of parallelizing Python code
 * Understand when to go for internal vs external parallelization
 
@@ -19,15 +19,15 @@
 :::{admonition} Prerequisites
 :class: important
 
-* Access to the Puhti web interface
+* Access to the Roihu web interface
 * Some experience with Python and GIS Python tools
 
 :::
 
 
-[Python exercise materials in Geocomputing Github](https://github.com/csc-training/geocomputing/tree/master/python/puhti)
+[Python exercise materials in Geocomputing Github](https://github.com/csc-training/geocomputing/tree/master/python/roihu)
 
-Check out at least the sections about [serial jobs](https://github.com/csc-training/geocomputing/blob/master/python/puhti/README.md#serial-job) and [parallelizing within Python](https://github.com/csc-training/geocomputing/blob/master/python/puhti/README.md#internal-parallelization).
+Check out at least the sections about [serial jobs](https://github.com/csc-training/geocomputing/blob/master/python/roihu/README.md#serial-job) and [parallelizing within Python](https://github.com/csc-training/geocomputing/blob/master/python/roihu/README.md#internal-parallelization).
 
 Additionally, you can check out some of the other Python examples in [CSC geocomputing repository](https://github.com/csc-training/geocomputing/blob/master/python).
 

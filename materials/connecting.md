@@ -5,7 +5,7 @@
 * In web interface the resources are limited -> suitable for **developing code and small analysis tasks**
 * Bigger analysis tasks should be run via batch jobs
     * Web interface can be used for starting batch jobs 
-* [Puhti web interface](https://puhti.csc.fi)
+* [Roihu web interface](https://roihu.csc.fi)
 * [LUMI web interface](https://www.lumi.csc.fi)
 * [CSC Docs: web interface](https://docs.csc.fi/computing/webinterface/)
 
@@ -22,7 +22,7 @@
     - **RStudio**
     - MATLAB
 
- ![Puhti web interface](images/ood_main.png)
+ ![Roihu web interface](images/ood_main.png)
 
 ## Connecting to the supercomputer via SSH
 

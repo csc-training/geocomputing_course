@@ -24,7 +24,7 @@ If unsure, start with `future`. It is one of the newest, most versatile and most
 :::{admonition} Supercomputer usage
 :class: warning
 
-Some of the packages require specific settings in Puhti, see [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs) for details about some of these packages. These might differ from the package's general instructions.
+Some of the packages require specific settings in Roihu, see [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs) for details about some of these packages. These might differ from the package's general instructions.
 
 :::
 
@@ -150,7 +150,7 @@ srun apptainer_wrapper exec RMPISNOW --no-save --slave -f Calc_contours_future_c
 Further reading:
 * [CSC Docs, r-env, Parallel batch jobs](https://docs.csc.fi/apps/r-env/#parallel-batch-jobs)
 * [CSC Docs, Parallel jobs using R](https://docs.csc.fi/support/tutorials/parallel-r/)
-* [CSC Geocomputing examples for R in Puhti](https://github.com/csc-training/geocomputing/tree/master/R/puhti): `future`, `snow`, `foreach`.
+* [CSC Geocomputing examples for R in Roihu](https://github.com/csc-training/geocomputing/tree/master/R/roihu): `future`, `snow`, `foreach`.
   * [`lidr`-example ](https://github.com/csc-training/geocomputing/tree/master/R/R_LiDAR/R_lidar_course_exercises)
   * [STAC-example](https://github.com/csc-training/geocomputing/tree/master/R/STAC): `gdalcubes`
   * [`raster::predict`-example](https://github.com/csc-training/geocomputing/tree/master/R/raster_predict)

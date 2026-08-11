@@ -28,7 +28,7 @@ easy to use. There are, of course, many options and alternatives to Dask.
 above-mentioned spatial libraries use Dask, except `osmnx`, which uses
 `multiprocessing`.
 
-[Geoconda module](https://docs.csc.fi/apps/geoconda/) in CSC supercomputers includes all of the
+[Python-geo module](https://docs.csc.fi/apps/python-geo/) in CSC supercomputers includes all of the
 above-mentioned spatial libraries and from Python parallel libraries `multiprocessing`, `joblib` and `dask`, but not `mpi4py`.
 
 :::{admonition} How many cores can I use?
@@ -221,10 +221,10 @@ client = Client(cluster)
 ```
 
 ## Further reading:
-* [CSC Docs, Geoconda module](https://docs.csc.fi/apps/geoconda/)
+* [CSC Docs, Python-geo module](https://docs.csc.fi/apps/python-geo/)
 * [CSC Docs, Python user guide](https://docs.csc.fi/support/tutorials/python-usage-guide/)
 * [CSC Docs, Dask tutorial](https://docs.csc.fi/support/tutorials/dask-python)
-* [CSC geocomputing Python examples](https://github.com/csc-training/geocomputing/tree/master/python/puhti), inc. `dask`, `multiprocessing` and `joblib`
+* [CSC geocomputing Python examples](https://github.com/csc-training/geocomputing/tree/master/python/roihu), inc. `dask`, `multiprocessing` and `joblib`
   * Dask DataFrames: [CSC dask-geopandas example](https://github.com/csc-training/geocomputing/edit/master/python/dask_geopandas)
   * Dask Arrays [CSC STAC example with Xarray](https://github.com/csc-training/geocomputing/edit/master/python/STAC)
 * [CSC Parallel Python course materials](https://github.com/csc-training/hpc-python/blob/master/docs/mooc/index.md), inc `mpi4py` and `cython`

@@ -2,7 +2,7 @@
 
 ## Compute services
 
-* Supercomputers: [Puhti](https://research.csc.fi/-/puhti), [Mahti](https://research.csc.fi/-/mahti), [LUMI](https://www.lumi-supercomputer.eu/)
+* Supercomputers: [Roihu](https://research.csc.fi/-/roihu), [LUMI](https://www.lumi-supercomputer.eu/)
 * Virtual machines for web services and database: [cPouta](https://research.csc.fi/-/cpouta)
 * Containers for web services: [Rahti](https://research.csc.fi/-/rahti)
 * Sensitive data: [SD services](https://research.csc.fi/sensitive-data-services-for-research), [ePouta](https://research.csc.fi/-/epouta)

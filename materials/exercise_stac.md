@@ -8,7 +8,7 @@
 :::{admonition} Goals
 :class: note
 
-* Getting familiar with Jupyter in the Puhti web interface
+* Getting familiar with Jupyter in the Roihu web interface
 * Learn to use STAC for searching for raster data
 
 :::
@@ -17,13 +17,13 @@
 :class: important
 
 * [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and [project](https://docs.csc.fi/accounts/how-to-create-new-project/)
-with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
+with [access to Roihu](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
 
 :::
 
-## Open JupyterLab in Puhti web interface
+## Open JupyterLab in Roihu web interface
 
-* Open [Puhti web interface](https://puhti.csc.fi) and log in
+* Open [Roihu web interface](https://roihu.csc.fi) and log in
 
 :::{admonition} Change the default project
 
@@ -41,7 +41,7 @@ with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-fo
   * Memory (Gb): 8
   * Local disk: 0
   * Time: 0:30:00
-  * Python: [geoconda](https://docs.csc.fi/apps/geoconda/)
+  * Python: [python-geo](https://docs.csc.fi/apps/python-geo/)
   * Module version: default
   * Working directory: `/scratch/project_2015299`
   * `Launch`
@@ -57,7 +57,7 @@ mkdir -p /scratch/project_2015299/students/$USER
 cd /scratch/project_2015299/students/$USER
 ```
 
-* Copy the example scripts to Puhti.
+* Copy the example scripts to Roihu.
 ```
 git clone https://github.com/csc-training/geocomputing.git
 ```

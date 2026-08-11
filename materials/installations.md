@@ -4,7 +4,7 @@
 
 * Generally the easiest option.
 * [CSC Docs: Installing **Python** packages to existing modules](https://docs.csc.fi/support/tutorials/python-usage-guide/#installing-python-packages-to-existing-modules)
-  * geoconda, tensorflow, pytorch, python-data etc.
+  * python-geo, tensorflow, pytorch, python-data etc.
   * The added package must be available via `pip`.
 * [CSC Docs: **R** package installations](https://docs.csc.fi/apps/r-env/#r-package-installations) 
 * [CSC Docs: **Julia**, adding packages to an environment](https://docs.csc.fi/apps/julia/#adding-packages-to-an-environment)
@@ -38,7 +38,7 @@
 
 * We will install `lastools` based on [pydo's lastools Docker image](https://hub.docker.com/r/pydo/lastools).
 * We use the `projappl` disk, which is the best place for software installations.
-* Lastools is already available on Puhti, also as a newer Linux-native installation.
+* Lastools is already available on Roihu, also as a newer Linux-native installation.
 * During the course we will use an interactive job for doing the installation,
   because we will have 50 users doing it at the same time, which stresses the
   shared file system. Usually installations are done on a login node.
@@ -48,7 +48,7 @@
 * `project_2015299` is an example project name, replace with your own CSC project name.
 :::
 
-* Open [Puhti web interface](https://puhti.csc.fi) and log in
+* Open [Roihu web interface](https://roihu.csc.fi) and log in
 * Open Compute node shell (outside of the course, also Login node shell could be used)
   * Reservation: geocomputing_day2 (only during the course)
   * Project: project_2015299
@@ -91,7 +91,7 @@ lasinfo -i /appl/data/geo/mml/laserkeilaus/2008_latest/2018/W444/1/W4444G4.laz
 :::{admonition} PATH setting
 
 PATH defines where the system looks for tools. Changes to PATH, like those
-above, are in effect while the Puhti session is alive. PATH (or PYTHONPATH)
+above, are in effect while the Roihu session is alive. PATH (or PYTHONPATH)
 has to be set again in each session, so it is good to add it to your batch job
 file.
 

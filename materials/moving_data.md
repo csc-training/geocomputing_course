@@ -7,8 +7,8 @@
 - Limited functionality compared to other options.
 - For smaller amounts of data, < 10 Gb.
 - Upload, download, move, create folders.
-- [Puhti Web Interface](https://puhti.csc.fi) -> Files
-- [CSC Docs: Web interfaces for Puhti and Mahti](https://docs.csc.fi/computing/webinterface/)
+- [Roihu Web Interface](https://roihu.csc.fi) -> Files
+- [CSC Docs: Web interfaces for Roihu](https://docs.csc.fi/computing/webinterface/)
 
 ### Graphical data transfer tools on local computer
 
@@ -32,10 +32,10 @@
 
 ```
 # One file:
-scp /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_2015299/data_dir
+scp /path/to/a_file cscusername@roihu.csc.fi:/scratch/project_2015299/data_dir
 
 # One folder:
-scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_2015299/directory 
+scp -r /path/to/directory cscusername@roihu.csc.fi:/scratch/project_2015299/directory 
 ```
 
 #### rsync
@@ -48,17 +48,17 @@ scp -r /path/to/directory cscusername@puhti.csc.fi:/scratch/project_2015299/dire
 
 ```
 # One file:
-rsync --info=progress2 -a /path/to/a_file cscusername@puhti.csc.fi:/scratch/project_2015299/data_dir
+rsync --info=progress2 -a /path/to/a_file cscusername@roihu.csc.fi:/scratch/project_2015299/data_dir
 
 # One folder:
-rsync --info=progress2 -a /path/to/directory cscusername@puhti.csc.fi:/scratch/project_2015299/directory
+rsync --info=progress2 -a /path/to/directory cscusername@roihu.csc.fi:/scratch/project_2015299/directory
 ```
 * `--info=progress2` shows time left and percentage
 
 
 :::{admonition} Firewall limitations
 
-Some organizations, for example research institutes with IT-services from Valtori, have stricter rules and need to use a proxy for connecting to CSC servers. In this case, ask your IT service or other Puhti users in your organization for additional guidelines. 
+Some organizations, for example research institutes with IT-services from Valtori, have stricter rules and need to use a proxy for connecting to CSC servers. In this case, ask your IT service or other Roihu users in your organization for additional guidelines. 
 
 :::
 

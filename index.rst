@@ -16,13 +16,13 @@ Geocomputing on the supercomputer
 
 → This course is intended for you!
 
-**In this course we will learn the basics of geocomputing on a supercomputer through a combination of lectures and hands-on activities.** The main focus of the course is CSC `Puhti supercomputer <https://research.csc.fi/-/puhti>`_, where all hands-on exercises will be done. The CSC services discussed in this course are free-of-charge for academic research, education and training purposes for Finnish higher education institutions and state research institutes (subsidized by the Ministry of Education and Culture, Finland). 
+**In this course we will learn the basics of geocomputing on a supercomputer through a combination of lectures and hands-on activities.** The main focus of the course is CSC `Roihu supercomputer <https://research.csc.fi/-/roihu>`_, where all hands-on exercises will be done. The CSC services discussed in this course are free-of-charge for academic research, education and training purposes for Finnish higher education institutions and state research institutes (subsidized by the Ministry of Education and Culture, Finland). 
 
 Most of the course content also applies to `EuroHPC JU LUMI supercomputer <https://www.lumi-supercomputer.eu/>`_, which is available for academic users and companies. 
 
-The course is meant both for academic researchers planning to use Puhti supercomputer and for data analysts from private companies planning to use LUMI.
+The course is meant both for academic researchers planning to use Roihu supercomputer and for data analysts from private companies planning to use LUMI.
 
-All exercises are done via Puhti web-interface, which you can access via your web browser. You do not need any additional software installed on your own computer.
+All exercises are done via Roihu web-interface, which you can access via your web browser. You do not need any additional software installed on your own computer.
 
 This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_ and funded by `Geoportti Research Infrastructure <https://www.geoportti.fi/>`_ and the `Location Innvation Hub <https://locationinnovationhub.eu/en/home/>`_. 
 

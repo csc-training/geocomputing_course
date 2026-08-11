@@ -103,7 +103,7 @@ available. GNU Parallel does not support dependencies between tasks.
 
 Snakemake is a scientific workflow management system that supports running for example R, bash and Python scripts. It can handle dependencies between the tasks and can be used with both multi-core and multi-node setups. Snakemake is one of the easiest tools for workflow management.
 
-* [CSC Docs: Running Snakemake workflow on Puhti](https://docs.csc.fi/support/tutorials/snakemake-puhti/)
+* [CSC Docs: Running Snakemake workflow on Roihu](https://docs.csc.fi/support/tutorials/snakemake-roihu/)
 
 ## Write your own parallel code
 

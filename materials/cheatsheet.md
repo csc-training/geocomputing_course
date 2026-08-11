@@ -7,7 +7,7 @@ everything, and that not everything written here is "the whole truth".
 
 ## Service names
 
-* Puhti, Mahti, LUMI - supercomputers
+* Roihu, LUMI - supercomputers
 * Pouta, Rahti - cloud services
 * Allas - object storage
 
@@ -84,7 +84,7 @@ Process to edit a file in vi:
 
 ## File transfer
 
-* `scp <file name> <username@puhti.csc.fi:/scratch/project_2015299/dir_name>` - copy a file from current computer to Puhti
+* `scp <file name> <username@roihu.csc.fi:/scratch/project_2015299/dir_name>` - copy a file from current computer to Roihu
 * `wget <some-url>` or  `curl <some-url>` - get a file from the internet
 
 ## CSC modules
@@ -107,7 +107,7 @@ Process to edit a file in vi:
 * E-mail support: servicedesk@csc.fi
 * Weekly virtual user support session (every Wed at 14): https://ssl.eventilla.com/usersupportcoffee
 * Accounts, projects, forgotten password: https://my.csc.fi/
-    * on Puhti: `csc-workspaces`
+    * on Roihu: `csc-workspaces`
 * CSC services and info: https://research.csc.fi/
 * How to use them: https://docs.csc.fi/
 * Geoinformatics examples: https://github.com/csc-training/geocomputing

@@ -17,7 +17,7 @@ Do you remember how you edited some files in the web interface? Let's do the sam
 
 ### Navigating folders
 
-1. Login to the Puhti web interface, and start a login shell; first, check which directory you are in by typing `pwd` and hitting `Enter`:
+1. Login to the Roihu web interface, and start a login shell; first, check which directory you are in by typing `pwd` and hitting `Enter`:
 
 ```bash
 pwd

@@ -1,4 +1,4 @@
-# Exercise: Puhti web interface
+# Exercise: Roihu web interface
 
 :::{admonition} Timing
 :class: note
@@ -8,24 +8,24 @@
 :::{admonition} Goals
 :class: note
 
-* Getting familiar with the Puhti web interface
+* Getting familiar with the Roihu web interface
 * First contact with the supercomputer
     * Files: moving, viewing, editing
     * Graphical tools: Visual Studio Code, QGIS, Jupyter, RStudio
-    * See info about Puhti and your project 
+    * See info about Roihu and your project 
 
 :::
 
 :::{admonition} Prerequisites
 :class: important
 
-* [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and [project](https://docs.csc.fi/accounts/how-to-create-new-project/) with [access to Puhti](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
+* [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and [project](https://docs.csc.fi/accounts/how-to-create-new-project/) with [access to Roihu](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
 
 :::
 
-## Get familiar with Puhti web interface
+## Get familiar with Roihu web interface
 
-* Open [Puhti web interface](https://puhti.csc.fi) and log in
+* Open [Roihu web interface](https://roihu.csc.fi) and log in
 
 :::{admonition} Change the default project
 
@@ -33,7 +33,7 @@
 :::
 
 ### Info
-* Puhti general status: bottom of front page
+* Roihu general status: bottom of front page
    * Sometimes when the `Disk lag` here is high, reading and writing files might get slow.
 * Own projects, remaining billing units: `Tools` -> `Project view`
 * Disk usage of own projects: `Tools` -> `Disk quotas`
@@ -98,7 +98,7 @@ The web interface can be used for moving up to 10GB of data. If you have more da
 
 :::{admonition} QGIS in practice on supercomputer
 
-* QGIS is designed for desktop use and it mostly uses only 1 core, so running it on a supercomputer is rather slower than on desktop. QGIS is in Puhti and LUMI mainly for easy viewing of input and output data. 
+* QGIS is designed for desktop use and it mostly uses only 1 core, so running it on a supercomputer is rather slower than on desktop. QGIS is in Roihu and LUMI mainly for easy viewing of input and output data. 
 * With `qgis_processing` or PyQGIS scripts it is possible to parallelize your data analysis. In general other Python packages are faster, but if you have these scripts already available, they can be used.
 
 :::
@@ -111,7 +111,7 @@ The web interface can be used for moving up to 10GB of data. If you have more da
 :::{admonition} Key points
 :class: important
 
-* Web interface provides easy access to Puhti and its graphical tools.
+* Web interface provides easy access to Roihu and its graphical tools.
 * QGIS, SNAP, Jupyter, RStudio, Visual Studio Code are the most used tools.
 
 :::
