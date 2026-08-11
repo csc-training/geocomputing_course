@@ -1,26 +1,25 @@
 # Connecting to supercomputer
 ## Web interface
 
-* **For lightweight entry to supercomputers**
-* In web interface the resources are limited -> suitable for **developing code and small analysis tasks**
-* Bigger analysis tasks should be run via batch jobs
-* Web interface has also Shell to login can be used for starting batch jobs 
 * [Roihu web interface](https://roihu.csc.fi)
 * [LUMI web interface](https://www.lumi.csc.fi)
 * [CSC Docs: web interface](https://docs.csc.fi/computing/webinterface/)
 
 ## Tools in web interface:
-- View, download and upload files
-- **Terminal to login node**
-- **Terminal to compute node**
+- View, download and upload files, only for small amounts of data
+- **Terminal to login node** for starting batch jobs and moving data
+- **Terminal to compute node** for heavier computing
 - Info: running jobs, disk usage, project status and supercomputer's general status
-- Launch interactive apps and open them directly from the browser:
+- Interactive apps:
     - Desktop with apps: **QGIS**, CloudCompare, GRASS, SagaGIS, SNAP, Zonation etc
     - **Jupyter**
+    - Marimo
     - TensorBoard, MLFlow
     - **Visual Studio Code**
     - **RStudio**
     - MATLAB
+    - Interactive apps have limited resources -> suitable for **developing code and small analysis tasks**
+    - Run bigger analysis tasks via batch jobs
 
  ![Roihu web interface](images/ood_main.png)
 

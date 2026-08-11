@@ -4,7 +4,7 @@
 
 * Generally the easiest option.
 * [CSC Docs: Installing **Python** packages to existing modules](https://docs.csc.fi/support/tutorials/python-usage-guide/#installing-python-packages-to-existing-modules)
-  * python-geo, tensorflow, pytorch, python-data etc.
+  * python-geo, pytorch, python-data etc.
   * The added package must be available via `pip`.
 * [CSC Docs: **R** package installations](https://docs.csc.fi/apps/r-env/#r-package-installations) 
 * [CSC Docs: **Julia**, adding packages to an environment](https://docs.csc.fi/apps/julia/#adding-packages-to-an-environment)
