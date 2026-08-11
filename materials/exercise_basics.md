@@ -65,7 +65,7 @@ sinteractive --account project_2015299 --time 00:10:00         # replace xxxxx w
 You can check [my.csc.fi](https://my.csc.fi/) or list your projects with `csc-projects` in a login node shell.
 :::
 
-Observe how the command prompt (initial text on each row on the command-line) looks now compared to a login node shell e.g. `r07c51`, which refers to a compute node, as opposed to e.g. `roihu-login11`.
+Observe how the command prompt (initial text on each row on the command-line) looks now compared to a login node shell e.g. `r07c51`, which refers to a compute node, as opposed to e.g. `roihu-cpu-login1`.
 
 1. Once on the compute node, you can run commands directly from the command-line. You can e.g. load the `python-geo` module:
 

@@ -87,23 +87,23 @@ and data. See
 [CSC Docs: High-throughput computing and workflows](https://docs.csc.fi/computing/running/throughput/)
 for more information.
 
-### GNU Parallel
+### xargs
 
-GNU parallel is a general Linux tool for executing commands or scripts in
+`xargs` is a general Linux tool for executing commands or scripts in
 parallel on one node. It iterates over an input list, which can be a list of
 files or input parameters. If the number of tasks is higher than the number of
 available cores, the process executes the tasks as the resources become
-available. GNU Parallel does not support dependencies between tasks.
+available. `xargs` does not support dependencies between tasks.
 
-* [GNU Parallel documentation](https://www.gnu.org/software/parallel/)
-* Geocomputing examples: [GDAL with GNU-parallel](https://github.com/csc-training/geocomputing/tree/master/gdal) and [PDAL with GNU-parallel](https://github.com/csc-training/geocomputing/tree/master/pdal)
-* A more advanced example for using [GNU-parallel for multi-node](https://docs.csc.fi/support/tutorials/many/) together with another tool.
+* [`xargs` documentation](https://man7.org/linux/man-pages/man1/xargs.1.html)
+* Geocomputing examples: [GDAL with `xargs`](https://github.com/csc-training/geocomputing/tree/master/gdal) and [PDAL with `xargs`](https://github.com/csc-training/geocomputing/tree/master/pdal)
+* A more advanced example for using [`xargs` for multi-node](https://docs.csc.fi/support/tutorials/many/) together with array jobs.
 
 ### Snakemake
 
 Snakemake is a scientific workflow management system that supports running for example R, bash and Python scripts. It can handle dependencies between the tasks and can be used with both multi-core and multi-node setups. Snakemake is one of the easiest tools for workflow management.
 
-* [CSC Docs: Running Snakemake workflow on Roihu](https://docs.csc.fi/support/tutorials/snakemake-roihu/)
+* [CSC Docs: Snakemake](https://docs.csc.fi/support/apps/snakemake/)
 
 ## Write your own parallel code
 

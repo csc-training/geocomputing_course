@@ -1,11 +1,11 @@
-# Research use cases for Roihu
+# Research use cases for supercomputers
 
 Check out what others have achieved using CSC supercomputers:
 
 ## Some interesting use cases from CSC seminars
 
 ```{figure} images/Atherton.png
-:alt: Path from drone imagery to where they can be processed using Roihu batch job with OpenDronemap
+:alt: Path from drone imagery to where they can be processed using Puhti batch job with OpenDronemap
 :width: 700px
 :align: center
 
@@ -18,7 +18,7 @@ Jon Atherton, UH: [Optical sensing and 4D modelling of plant ecophysiological tr
 :width: 700px
 :align: center
 
-Jiri Pyörälä, UH, NLS/FGI: [Experiences with PCLpy on Roihu](https://a3s.fi/gis-workshops/2022_point_cloud_workshop/pyorala_pclpy.pdf)
+Jiri Pyörälä, UH, NLS/FGI: [Experiences with PCLpy on Puhti](https://a3s.fi/gis-workshops/2022_point_cloud_workshop/pyorala_pclpy.pdf)
 
 ```
 
@@ -34,7 +34,7 @@ Mikko Impiö, SYKE: [Modern machine learning for land cover classification](http
 :alt: Sentinel-2 true color mosaic with its single components in time and space
 :width: 700px
 :align: center
-Arttu Kivimäki, FGI/NLS: [Mosaicking Sentinel-2 data in Roihu](https://a3s.fi/gis-workshops/22_EO_workshop/kivimaki_sen2mosaic.pdf)
+Arttu Kivimäki, FGI/NLS: [Mosaicking Sentinel-2 data in Puhti](https://a3s.fi/gis-workshops/22_EO_workshop/kivimaki_sen2mosaic.pdf)
 
 ```
 ```{figure} images/ICEYE.png
@@ -47,7 +47,7 @@ Tapio Friberg, ICEYE: [LUMI usecase](https://gis-seminars.a3s.fi/2023-06-08-lumi
 ```
 You can find more use case presentations from [CSC: geocomputing seminars page](https://research.csc.fi/geocomputing-seminars).
 
-## Some publications from Finland that used Roihu
+## Some publications from Finland that used Puhti
 
 ```{figure} images/YliHeikkila.png
 :alt: Crop yield predicton workflow from image download to prediction

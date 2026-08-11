@@ -4,7 +4,7 @@
 * **For lightweight entry to supercomputers**
 * In web interface the resources are limited -> suitable for **developing code and small analysis tasks**
 * Bigger analysis tasks should be run via batch jobs
-    * Web interface can be used for starting batch jobs 
+* Web interface has also Shell to login can be used for starting batch jobs 
 * [Roihu web interface](https://roihu.csc.fi)
 * [LUMI web interface](https://www.lumi.csc.fi)
 * [CSC Docs: web interface](https://docs.csc.fi/computing/webinterface/)
@@ -15,7 +15,7 @@
 - **Terminal to compute node**
 - Info: running jobs, disk usage, project status and supercomputer's general status
 - Launch interactive apps and open them directly from the browser:
-    - Desktop with apps: **QGIS**, GRASS, SagaGIS, SNAP, Zonation etc
+    - Desktop with apps: **QGIS**, CloudCompare, GRASS, SagaGIS, SNAP, Zonation etc
     - **Jupyter**
     - TensorBoard, MLFlow
     - **Visual Studio Code**
@@ -35,13 +35,12 @@ supercomputer via SSH.
 :class: seealso, dropdown
 
 - SSH clients give command-line access to a supercomputer or any other Linux server.
-- Basic SSH connection will not allow displaying remote graphics, but it is possible to set up with extra settings.
 - SSH clients:
    - Mac and Linux have Terminal for SSH connections.
    - In Windows:
       - `Command Prompt` or `Powershell` are always available and can be used for basic connections.
       - Special tools like [PuTTY](https://www.putty.org/) or [MobaXterm](https://mobaxterm.mobatek.net/) provide more options, inc possibility to save settings, but need installation.
-- Requires setting up [SSH-keys](https://docs.csc.fi/computing/connecting/ssh-keys/).
+- Requires setting up [SSH-keys](https://docs.csc.fi/computing/connecting/ssh-keys/) and for Roihu downloading daily SSH certifacate.
 - [CSC Docs: Connecting to CSC supercomputers](https://docs.csc.fi/computing/connecting/)
 - [LUMI Docs: Get started](https://docs.lumi-supercomputer.eu/firststeps/).
 

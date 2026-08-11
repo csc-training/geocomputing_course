@@ -2,7 +2,6 @@
 
 * Large commonly used **Finnish geospatial datasets with open licenses**
 * Removes transfer bottleneck
-* Located in: `/appl/data/geo/`
 * **All Roihu users have read access**
 * ~15 TB of datasets available:
 	* **Paituli data**, with virtual mosaics for raster data

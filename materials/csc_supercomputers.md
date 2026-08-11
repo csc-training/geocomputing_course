@@ -24,7 +24,7 @@ LUMI:
 |  | Roihu supercomputer| cPouta virtual machine| my laptop |
 |---|---| ---|---|
 |Max per job: CPU | **23 000** | 48 | 4 |
-|Max per job: memory, Gib | **6037 ** | 240 | 18 |
+|Max per job: memory, Gib | **6037** | 240 | 18 |
 |Max per job: GPU | **40** | 4 | 1 |
 |Pre-installed GIS tools | **Yes** | No | No |
 |Main Finnish datasets  | **Yes** | No | No |

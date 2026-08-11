@@ -37,7 +37,7 @@ STAC - Spatio-Temporal Asset Catalog
 ## CSC Paituli STAC, Finnish spatial datasets
 
 * ~175 different datasets, inlcuding:
-* [Paituli raster datasets](https://paituli.csc.fi/metadata.html)
+* [Paituli raster datasets](https://etsin.fairdata.fi/datasets?facet_keyword=Paituli)
    * LUKE, erosion risk maps
    * LUKE, topographic wetness index
    * LUKE, snow damage risk
@@ -63,16 +63,16 @@ STAC - Spatio-Temporal Asset Catalog
    * **LUKE, Multi-source forest inventory products.**
    * LUKE, Forest wind damage risk map.
    * FMI, Daily wind damage risk map.
-* ESA, **[Sentinel-2 products](https://a3s.fi/sentinel-readme/README.txt)**, processed to Level-2A (Surface Reflectance), a selection of mostly cloud-free products from Finland. Downloaded to CSC Allas by Maria Yli-Heikkilä (LUKE), Arttu Kivimäki (NLS/FGI) and Matias Heino (Aalto).
+* ESA, **[Sentinel-2 products](https://urn.fi/urn:nbn:fi:fd-e1007ae5-1529-3e5c-8bf2-b218c77e25a5)**, processed to Level-2A (Surface Reflectance), a selection of mostly cloud-free products from Finland. Downloaded to CSC Allas by Maria Yli-Heikkilä (LUKE), Arttu Kivimäki (NLS/FGI) and Matias Heino (Aalto).
 
-\* These datasets have several bands in one file, Python `stackstac` does not support it, but search works.
+\* These datasets have several bands in one file, using these datasets via Python/R might be complicated with STAC-libraries, but search works.
 
 
  
 :::{admonition} Next steps 
 :class: important
 
-* Read more about STAC in general from [Paituli STAC description](https://paituli.csc.fi/stac.html)
+* Read more about STAC in general from [Paituli STAC description](https://paituli.csc.fi/stac)
 * [See what data is available with Paituli STAC](https://radiantearth.github.io/stac-browser/#/external/paituli.csc.fi/geoserver/ogc/stac/v1?.language=en)
 * **Test out the example scripts**:
     * **[Python](https://www.github.com/csc-training/geocomputing/blob/master/python/STAC)**

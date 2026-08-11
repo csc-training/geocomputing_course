@@ -40,7 +40,7 @@ Some things to check:
 See the resource usage after job has finished: `seff jobid`
 
 ```
-[user@roihu-login11 ~]$ seff 22361601
+[user@roihu-cpu-login1 ~]$ seff 22361601
 Job ID: 22361601
 Cluster: roihu
 User/Group: user/user
@@ -63,7 +63,7 @@ More detailed queries can be tailored with `sacct`
 - All jobs started after some date: `sacct -S 2024-08-01 -o jobid,partition,state,reqmem,maxrss,averss,elapsed` 
 
 ```
-[user@roihu-login15 ~]$ sacct -j 22361601 -o jobid,partition,state,reqmem,maxrss,averss,elapsed
+[user@roihu-cpu-login1 ~]$ sacct -j 22361601 -o jobid,partition,state,reqmem,maxrss,averss,elapsed
 JobID         Partition      State     ReqMem     MaxRSS     AveRSS    Elapsed
 ------------ ---------- ---------- ---------- ---------- ---------- ----------
 22361601           test  COMPLETED      8000M                         00:06:17

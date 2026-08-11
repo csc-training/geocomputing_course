@@ -32,6 +32,6 @@ Learn how to use command-line tools:
 
 * Use login node for fast small commands - file info etc
 * Use compute nodes for actual computing
-* GNU parallel helps to analyze several files at the same time
+* Use `xargs` to handle several files in parallel
 
 :::

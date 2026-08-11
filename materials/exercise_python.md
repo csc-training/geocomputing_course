@@ -34,7 +34,7 @@ Additionally, you can check out some of the other Python examples in [CSC geocom
 :::{admonition} Key points
 :class: important
 
-* GNU parallel for embarassingly parallel tasks, without changing the Python code
+* `xargs` for embarassingly parallel tasks, without changing the Python code
 * `dask.delayed` or `multiprocessing` can be used to parallelize a for-loop
 
 :::

@@ -34,7 +34,6 @@
 
 ### Info
 * Roihu general status: bottom of front page
-   * Sometimes when the `Disk lag` here is high, reading and writing files might get slow.
 * Own projects, remaining billing units: `Tools` -> `Project view`
 * Disk usage of own projects: `Tools` -> `Disk quotas`
 * Running jobs: `Jobs` -> `Active jobs`
@@ -79,7 +78,7 @@ The web interface can be used for moving up to 10GB of data. If you have more da
 * Open Statistic Finland Paavo post code data
    *  `Layer` -> `Add layer` -> `Add vector layer`
       * Source Type: `File`
-      * Source: `...` -> `/appl/data/geo/tilastokeskus/paavo/2023/pno_tilasto_2023.shp`
+      * Source: `...` -> `/dataset/project_2019680/tilastokeskus/paavo/2023/pno_tilasto_2023.shp`
 * See file information with GDAL
    * `Processing` -> `Toolbox` -> `GDAL` -> `Vector miscellanious` -> `Vector information`
    * The open dataset is selected by default

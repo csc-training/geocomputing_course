@@ -24,18 +24,17 @@
 * **[SNAP](https://docs.csc.fi/apps/snap/)** for remote sensing applications
 * [WhiteboxTools](https://docs.csc.fi/apps/whiteboxtools/) - An advanced geospatial data analysis platform
 * [Zonation](https://docs.csc.fi/apps/zonation/) - Spatial conservation prioritization framework
-* [Whiteboxtools](https://docs.csc.fi/apps/whiteboxtools/)
 * **[pytorch](https://docs.csc.fi/apps/pytorch/)** for deep learning
 
 ## GIS tools available in LUMI
 
 * [GDAL](https://docs.csc.fi/apps/gdal/) for geospatial data formats
-* **[Python-geo](https://docs.csc.fi/apps/python-geo/)** - Python spatial analysis libraries
+* **[geoconda](https://docs.csc.fi/apps/geoconda/)** - Python spatial analysis libraries
 * [GRASS GIS](https://docs.csc.fi/apps/grass/) - General purpose GIS software family for viewing, editing and analysing geospatial data
 * [PDAL](https://docs.csc.fi/apps/pdal/) for point cloud translations and processing
 * **[QGIS](https://docs.csc.fi/apps/qgis/)** - General purpose GIS software family for viewing, editing and analysing geospatial data
 * [SAGA GIS](https://docs.csc.fi/apps/saga-gis/) - General purpose GIS software family for viewing, editing and analysing geospatial data
-* [pytorch](https://docs.csc.fi/apps/pytorch/) for deep learning
+* [pytorch](https://docs.lumi-supercomputer.eu/laif/software/ai-environment/) for deep learning
 * Additional, easy to install yourself [EasyBuild recepies](https://lumi-supercomputer.github.io/LUMI-EasyBuild-docs) for CGAL, GDAL, GEOS, ncview, PROJ, R.
 
 
