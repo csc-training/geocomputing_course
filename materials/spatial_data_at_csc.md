@@ -3,11 +3,11 @@
 * Large commonly used **Finnish geospatial datasets with open licenses**
 * Removes transfer bottleneck
 * **All Roihu users have read access**
-* ~15 TB of datasets available:
+* ~20 TB of datasets available:
 	* **Paituli data**, with virtual mosaics for raster data
 	* **Finnish Environmental Institute (SYKE) open datasets**: CORINE land use etc
 	* **Forest center: canopy height**, forest mask, gridcells, forest resource plots
- 	* NLS automatically classified lidar data	
+    * **NLS automatically classified lidar data**
 * LUMI does not have spatial data on local disk.
 * [CSC Docs: Spatial data in CSC computing environment](https://docs.csc.fi/data/datasets/spatial-data-in-csc-computing-env/)
 

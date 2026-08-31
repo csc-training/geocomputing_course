@@ -27,7 +27,7 @@ with [access to Roihu](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 
 :::{admonition} Change the default project
 
-* `project_2015299` is an example project name, replace with your own CSC project name.
+* `project_2020458` is an example project name, replace with your own CSC project name.
 :::
 
 * [CSC Docs: Jupyter](https://docs.csc.fi/computing/webinterface/jupyter/)
@@ -35,15 +35,14 @@ with [access to Roihu](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 * Open the Jupyter launch page: from front page or `Apps -> Jupyter`
 * Use settings: 
   * (Reservation: `geocomputing_day1`, only during course)
-  * Project: `project_2015299`
+  * Project: `project_2020458`
   * Partition: `interactive` (`small` during course)
   * Number of CPU cores: 1
   * Memory (Gb): 8
-  * Local disk: 0
   * Time: 0:30:00
   * Python: [python-geo](https://docs.csc.fi/apps/python-geo/)
   * Module version: default
-  * Working directory: `/scratch/project_2015299`
+  * Working directory: `/scratch/project_2020458`
   * `Launch`
 * Wait a moment for Jupyter to start -> `Connect to Jupyter`
 * Open
@@ -53,8 +52,8 @@ with [access to Roihu](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 * Make a folder for the exercise materials and make it your working directory
 * Change the project name.
 ```
-mkdir -p /scratch/project_2015299/students/$USER
-cd /scratch/project_2015299/students/$USER
+mkdir -p /scratch/project_2020458/students/$USER
+cd /scratch/project_2020458/students/$USER
 ```
 
 * Copy the example scripts to Roihu.

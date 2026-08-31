@@ -39,9 +39,9 @@ Typical physical parts of a supercomputer:
 | Name     |Access   |Path                 |Cleaning      |Capacity|Number of files| Use |
 |------------|--------|--------------------|---------------------|--------------|----------------|----------------|
 |**[home](https://docs.csc.fi/computing/disk/#home-directory)**    |Personal|`/users/cscusername` |No            |15 GiB              |150 000 files  | personal settings and files |
-|**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/project_2015299`|No            |15 GiB              |150 000 files  | installation files |
-|**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/project_2015299` |**180 days**      |**250 GiB**              |500 000 files  | main working area |
-|**[dataset](https://docs.csc.fi/computing/disk/#dataset-directory)** |Project |`/dataset/project_2015299` |No      |0              |0 files  | permanent data area, must be applied |
+|**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/project_20XXXXX`|No            |15 GiB              |150 000 files  | installation files |
+|**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/project_20XXXXX` |**180 days**      |**250 GiB**              |500 000 files  | main working area |
+|**[dataset](https://docs.csc.fi/computing/disk/#dataset-directory)** |Project |`/dataset/project_20XXXXX` |No      |0              |0 files  | permanent data area, must be applied |
 
 * `scratch` space can be extended, but it would use billing units then.
 

@@ -29,7 +29,7 @@
 
 :::{admonition} Change the default project
 
-* `project_2015299` is an example project name, replace with your own CSC project name.
+* `project_2020458` is an example project name, replace with your own CSC project name.
 :::
 
 ### Info
@@ -66,7 +66,7 @@ The web interface can be used for moving up to 10GB of data. If you have more da
 * Open the Desktop launch page: from front page or `Apps -> Desktop`
 * Use settings: 
   * (Reservation: `geocomputing_day1`, only during course)
-  * Project: `project_2015299`
+  * Project: `project_2020458`
   * Partition: interactive (`small` during course)
   * Number of CPU cores: 1
   * Memory (Gb): 4
