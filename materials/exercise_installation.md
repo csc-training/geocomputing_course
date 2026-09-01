@@ -50,7 +50,7 @@ export PATH="/projappl/project_2020458/students/$USER/lastools/bin:$PATH"
 Test your new installation.
 ```
 lasinfo -version
-lasinfo -i /appl/data/geo/mml/laserkeilaus/2008_latest/2018/W444/1/W4444G4.laz
+lasinfo -i /dataset/project_2019680/mml/laserkeilaus/2008_latest/2018/W444/1/W4444G4.laz
 ```
 
 :::{admonition} PATH setting
