@@ -32,7 +32,7 @@ Learn how to:
 :::
 
 * Open [Roihu web interface](https://roihu.csc.fi) and log in
-* Open `Login node shell` from Tools menu.
+* Open `Login node shell (Roihu-CPU)` from Tools menu.
 * Set up Allas connection
 
      
