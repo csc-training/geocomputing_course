@@ -40,17 +40,8 @@
 
 
 ### Files 
-* Open home directory: `Files` -> `Home Directory`
-* Create new `myfile.txt` file and add some text to it.
-* Create new directory `mydata`
-* Move the new file under `mydata`: 
-   * Mark check-box in front of the file
-   * Click `Copy/Move`
-   * Open `mydata`
-   * Click `Move`
-* Open your `mydata` folder
-* Download your file to your local computer
-  
+* `Files` -> ...
+
 :::{admonition} Moving data
 
 The web interface can be used for moving up to 10GB of data. If you have more data, use other tools. More info on [moving data](moving_data.md).
@@ -70,11 +61,10 @@ The web interface can be used for moving up to 10GB of data. If you have more da
   * Partition: interactive (`small` during course)
   * Number of CPU cores: 1
   * Memory (Gb): 4
-  * Local disk: 0
   * Time: 0:15:00
   * `Launch`
 * Wait a moment for Desktop to start -> `Launch Desktop`
-* Double-click the QGIS icon
+* Start QGIS: ´Applictions` -> `Geosciences` -> `QGIS`
 * Open Statistic Finland Paavo post code data
    *  `Layer` -> `Add layer` -> `Add vector layer`
       * Source Type: `File`
