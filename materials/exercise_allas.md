@@ -38,14 +38,14 @@ Learn how to:
      
 ```bash
 module load allas
-allas-conf --mode s3cmd
+allas-conf
 # It asks to select the project, select the project with the corresponding number. 
 # The configuration takes a moment, please wait.
 ```
 
 :::{admonition} Get your S3 credentials
 
-`allas-conf --mode s3cmd` output includes your S3 credentials: access key and secret key, these are needed for creating the connection with other tools.
+`allas-conf` output includes your S3 credentials: access key and secret key, these are needed for creating the connection with other tools.
 
 :::
 
@@ -57,7 +57,7 @@ s3cmd mb s3://project_2020458-$USER
 
 # Upload (later syncronize) a folder to Allas
 # s3cmd sync <local_folder> s3://<name_of_your_bucket>
-s3cmd sync /appl/data/geo/mml/dem10m/2019/W3/W33/ s3://project_2020458-$USER
+s3cmd sync /dataset/project_2019680/mml/dem10m/2019/W3/W33/ s3://project_2020458-$USER
 
 # List all buckets
 s3cmd ls
