@@ -1,0 +1,81 @@
+# Exercise: STAC
+
+:::{admonition} Timing
+:class: note
+* Time: 20 min
+:::
+
+:::{admonition} Goals
+:class: note
+
+* Getting familiar with Jupyter in the Roihu web interface
+* Learn to use STAC for searching for raster data
+
+:::
+
+:::{admonition} Prerequisites
+:class: important
+
+* [CSC user account](https://docs.csc.fi/accounts/how-to-create-new-user-account/) and [project](https://docs.csc.fi/accounts/how-to-create-new-project/)
+with [access to Roihu](https://docs.csc.fi/accounts/how-to-add-service-access-for-project/).
+
+:::
+
+## Open JupyterLab in Roihu web interface
+
+* Open [Roihu web interface](https://roihu.csc.fi) and log in
+
+:::{admonition} Change the default project
+
+* `project_2020458` is an example project name, replace with your own CSC project name.
+:::
+
+* [CSC Docs: Jupyter](https://docs.csc.fi/computing/webinterface/jupyter/)
+
+* Open the Jupyter launch page: from front page or `Apps -> Jupyter`
+* Use settings: 
+  * (Reservation: `geocomputing_day1`, only during course)
+  * Project: `project_2020458`
+  * Partition: `interactive` (`small` during course)
+  * Number of CPU cores: 1
+  * Memory (Gb): 8
+  * Time: 0:30:00
+  * Python: [python-geo](https://docs.csc.fi/apps/python-geo/)
+  * Module version: default
+  * Working directory: `/scratch/project_2020458`
+  * `Launch`
+* Wait a moment for Jupyter to start -> `Connect to Jupyter`
+* Open
+
+## Preparations
+* Open new Terminal window
+* Make a folder for the exercise materials and make it your working directory
+* Change the project name.
+```
+mkdir -p /scratch/project_2020458/students/$USER
+cd /scratch/project_2020458/students/$USER
+```
+
+* Copy the example scripts to Roihu.
+```
+git clone https://github.com/csc-training/geocomputing.git
+```
+
+## STAC Notebook
+
+1. In the file explorer, open `students/$USER/geocomputing/python/STAC
+2. Open `STAC_CSC_example_short.ipynb` notebook
+3. Follow the notebook, use `Shift+Enter` for running cells.
+
+## End the session
+
+ * Close the web tab
+ * Find the session in the Active sessions view and select `Cancel`
+    
+:::{admonition} Key points
+:class: important
+
+* STAC is an easy option for finding and downloading raster data.
+* Jupyter is a nice tool for interactively working with Python.
+
+:::
