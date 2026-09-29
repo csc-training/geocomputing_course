@@ -45,22 +45,6 @@ Typical physical parts of a supercomputer:
 
 * `scratch` space can be extended, but it would use billing units then.
 
-#### Temporary fast disks 
-- Some nodes might also have **local disk space** for temporary use. 
-- [CSC Docs: Login node local tmp](https://docs.csc.fi/computing/disk/#login-nodes)  `$TMPDIR` for compiling, cleaned frequently.
-	
-- [CSC Docs: NVMe](https://docs.csc.fi/computing/running/creating-job-scripts-roihu/#local-storage) - `$LOCAL_SCRATCH` in batch jobs, 
-    - NVMe is accessible only during your job allocation (including any interactive jobs)
-	- You must copy data in and out during your batch job
-    - If your job reads or writes lots of small files, using this can give 10x performance boost
-
-:::{admonition} Avoid unneccesary reading and writing
-:class: seealso
-Avoid unnecessary reads and writes of data to improve I/O performance
-- Read and write in big chunks and avoid reading/writing lots of small files
-   - If unavoidable, use [fast local NVMe disk](https://docs.csc.fi/computing/disk/#compute-nodes-with-local-ssd-nvme-disks), not Lustre (i.e. `/scratch`)
-:::
-
 ### LUMI disk areas
 - [LUMI docs: storage](https://docs.lumi-supercomputer.eu/storage/)
 - LUMI has similar main disks, but different temporary disks.
