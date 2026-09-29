@@ -47,8 +47,8 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
    :hidden:
 
    materials/supercomputing.md  
-   materials/supercomputer_setup.md
    materials/csc_supercomputers.md
+   materials/supercomputer_setup.md
    materials/connecting.md
    materials/exercise_webinterface.md
 
