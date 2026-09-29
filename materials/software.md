@@ -7,7 +7,6 @@
 
 ## GIS tools available in Roihu
 
-* [ArcGIS Python API](https://docs.csc.fi/apps/arcgis/) 
 * [CloudCompare](https://docs.csc.fi/apps/cloudcompare/) for visualizing, editing and processing point clouds
 * [GDAL](https://docs.csc.fi/apps/gdal/) for geospatial data formats
 * **[Python-geo](https://docs.csc.fi/apps/python-geo/)** - Python spatial analysis libraries
