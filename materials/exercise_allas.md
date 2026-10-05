@@ -76,6 +76,9 @@ gdalinfo /vsis3/project_2020458-$USER/W3333.tif
 # Enable writing with GDAL
 export CPL_VSIL_USE_TEMP_FILE_FOR_RANDOM_WRITE=YES
 
+# Avoid Roihu GDAL bug
+export GDAL_SKIP=TileDB
+
 # Make the .tif file to Cloud-Optimized GeoTiff
 gdal_translate /vsis3/project_2020458-$USER/W3333.tif /vsis3/project_2020458-$USER/W3333_COG.tif -of COG
 
