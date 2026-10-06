@@ -11,7 +11,7 @@ Typical physical parts of a supercomputer:
 ## Login nodes
 - Login nodes are used for moving data and scripts, editing scripts, and starting jobs.
 - When you login to CSC's supercomputers, you enter one of the login nodes of the computer
-- There are only a few login nodes and they are shared by all users, so they are [not intended for heavy computing.](https://docs.csc.fi/computing/overview/#usage-policy)
+- There are only a few login nodes and they are shared by all users, so they are [not intended for heavy computing.](https://docs.csc.fi/computing/usage-policy/#login-nodes)
 
 ![](./images/HPC_nodes.png)
  
@@ -21,7 +21,7 @@ Typical physical parts of a supercomputer:
 - Compute nodes can be classified based on the types of processors they have: 
   * **CPU nodes** have only CPUs (central processing unit).
   * **GPU nodes** have both GPUs (graphical processing unit) and CPUs. GPUs are widely used for deep learning.
-  * Each CPU has multiple **cores**, which are the basic computing resource. There are 386 cores in Roihu and 128 in LUMI CPU-nodes.
+  * Each CPU has multiple **cores**, which are the basic computing resource. There are 384 cores in Roihu and 128 in LUMI CPU-nodes.
   * Whether your task benefits from a GPU depends on the software used. Most GIS-tools can not use GPUs.
   * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, that it would be reasonable to use GPU nodes.
 - When using compute nodes, the compute resources have to be defined in advance. You must specify e.g. the amount of GPUs, memory and nodes or CPU cores.
@@ -38,10 +38,10 @@ Typical physical parts of a supercomputer:
 
 | Name     |Access   |Path                 |Cleaning      |Capacity|Number of files| Use |
 |------------|--------|--------------------|---------------------|--------------|----------------|----------------|
-|**[home](https://docs.csc.fi/computing/disk/#home-directory)**    |Personal|`/users/cscusername` |No            |15 GiB              |150 000 files  | personal settings and files |
-|**[projappl](https://docs.csc.fi/computing/disk/#projappl-directory)**|Project |`/projappl/project_20XXXXX`|No            |15 GiB              |150 000 files  | installation files |
-|**[scratch](https://docs.csc.fi/computing/disk/#scratch-directory)** |Project |`/scratch/project_20XXXXX` |**180 days**      |**250 GiB**              |500 000 files  | main working area |
-|**[dataset](https://docs.csc.fi/computing/disk/#dataset-directory)** |Project |`/dataset/project_20XXXXX` |No      |0              |0 files  | permanent data area, must be applied |
+|**[home](https://docs.csc.fi/computing/roihu-disk/#home-directory)**    |Personal|`/users/cscusername` |No            |15 GiB              |150 000 files  | personal settings and files |
+|**[projappl](https://docs.csc.fi/computing/roihu-disk/#projappl-directory)**|Project |`/projappl/project_20XXXXX`|No            |15 GiB              |150 000 files  | installation files |
+|**[scratch](https://docs.csc.fi/computing/roihu-disk/#scratch-directory)** |Project |`/scratch/project_20XXXXX` |**180 days**      |**250 GiB**              |500 000 files  | main working area |
+|**[dataset](https://docs.csc.fi/computing/roihu-disk/#dataset-directory)** |Project |`/dataset/project_20XXXXX` |No      |0              |0 files  | permanent data area, must be applied |
 
 * `scratch` space can be extended, but it would use billing units then.
 * `dataset` space has to be applied and justified.

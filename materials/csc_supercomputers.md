@@ -5,7 +5,7 @@
 Name | CPUs | GPUs | Pre-installed GIS tools | Finnish spatial data locally | Scope |
 --- | --- | --- | --- | --- | --- |
 **Roihu** | **187 000** | ~500 Nvidia GH200 | **15** | **Yes** | Finland |
-**LUMI** | 100 000 | **~24 000** AMD MI250X GCD | 6 | No | EU |
+**LUMI** | 262 000 | **~24 000** AMD MI250X GCD | 6 | No | EU |
 
 Roihu:
 * CSC'c new national supercomputer
