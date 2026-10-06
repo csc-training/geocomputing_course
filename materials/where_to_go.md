@@ -41,4 +41,6 @@
     * [CSC Docs: Bash tutorial](https://docs.csc.fi/support/tutorials/env-guide/linux-bash-scripts/)
     * [UNIX tutorial for beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/) (the first two topics are a good start, try also some editor)
     * [Basic Linux Commands 10 min tutorial video](https://www.youtube.com/watch?v=uFPly_nGBMg) (sit back and watch)
-    * [Terminal basics](terminal.md) 
+    * [Terminal basics](terminal.md)
+* AI coding
+    * [CSC Docs: AI tools](https://docs.csc.fi/computing/ai-tools/), inc using AI agents in Roihu and Docs MCP server
