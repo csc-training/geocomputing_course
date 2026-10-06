@@ -44,10 +44,11 @@ Typical physical parts of a supercomputer:
 |**[dataset](https://docs.csc.fi/computing/disk/#dataset-directory)** |Project |`/dataset/project_20XXXXX` |No      |0              |0 files  | permanent data area, must be applied |
 
 * `scratch` space can be extended, but it would use billing units then.
+* `dataset` space has to be applied and justified.
 
 ### LUMI disk areas
 - [LUMI docs: storage](https://docs.lumi-supercomputer.eu/storage/)
-- LUMI has similar main disks, but different temporary disks.
+- LUMI has similar main disks.
 
 :::{admonition} Login node etiquette
 :class: tip
@@ -64,10 +65,8 @@ Which of the following tasks would suit to run on the login node?
 :class: dropdown
 
 
- Options #3 creating directories (mkdir), and #5 unpacking software (tar) are common and acceptable tasks for the login node. Option #2 Building software (make) can be done on the login node, but ideally one would use a compute node with local scratch to avoid stressing the filesystem in the process.
+ Options #3 creating directories (mkdir), and #5 unpacking software (tar) are common and acceptable tasks for the login node. Option #2 Building software (make) can be done on the login node, but ideally one would use a compute node to avoid stressing the filesystem in the process.
  
- >Note that script names do not always reflect their contents: before launching #3, please check what is inside create_directories.sh and make sure it does what the name suggests.
-
 Running resource-intensive applications on the login node is forbidden. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will in any case want more resources for these than the login node can provide.
 
 :::
