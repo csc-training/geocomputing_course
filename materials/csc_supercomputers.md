@@ -21,11 +21,11 @@ LUMI:
 
 ## Roihu compared to other options
 
-|  | Roihu supercomputer| cPouta virtual machine| Laptop |
-|---|---| ---|---|
-|Max per job: CPU | **23 000** | 48 | 4 |
-|Max per job: memory, Gib | **6037** | 240 | 18 |
-|Max per job: GPU | **40** | 4 | 1 |
-|Pre-installed GIS tools | **Yes** | No | No |
-|Main Finnish datasets  | **Yes** | No | No |
-|Admin rights | No | **Yes** | Sometimes |
+|  | Roihu | LUMI | cPouta virtual machine| Usual laptop |
+|---|---| ---|---|---|
+|Max per job: CPU | **23 000** | **65 500** | 128 | 8 |
+|Max per job: memory, Gib | **6037** | **4000** | 705 | 16 |
+|Max per job: GPU | **40** | **8192** | 4 | 1 |
+|Pre-installed GIS tools | **Yes** | Some | No | No |
+|Main Finnish datasets  | **Yes** | No | No | No |
+|Admin rights | No | No | **Yes** | Sometimes |
