@@ -6,4 +6,6 @@ See:
 * [CSC, LUMI high performance computing services offer companies a competitive advantage](https://csc.fi/en/about-us/customers/high-performance-computing-for-companies/)
 * [CSC free-of-charge use cases](https://research.csc.fi/free-of-charge-use-cases)
 
-Let's all check now at [https://my.csc.fi](https://my.csc.fi) that you see the course project, and have accepted the terms and conditions of Roihu and Allas. We will need this later.
+Let's all check now that everything is ready for the course:
+* [https://my.csc.fi](https://my.csc.fi) check that you see the course project, and have accepted the terms and conditions of Roihu and Allas. 
+* [https://roihu.csc.fi](https://roihu.csc.fi) try to log in using MFA, if you have not done it earlier already.
