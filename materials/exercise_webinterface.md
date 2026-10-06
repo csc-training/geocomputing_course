@@ -101,6 +101,6 @@ The web interface can be used for moving up to 10GB of data. If you have more da
 :class: important
 
 * Web interface provides easy access to Roihu and its graphical tools.
-* QGIS, SNAP, Jupyter, RStudio, Visual Studio Code are the most used tools.
+* Jupyter, RStudio, Visual Studio Code are the most used graphical tools.
 
 :::
