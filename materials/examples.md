@@ -58,6 +58,16 @@ Image: Seabird detections on Langholmen (Vestfold) during June 2024. Image: Sind
 Written by Anni Jakobsson, CSC
 
 [LUMI AI Factory’s data streaming pilot with SeaBee is revolutionising sea bird monitoring](https://lumi-ai-factory.eu/stories/data-streaming-pilot-with-seabee/)
+
+```{figure} images/toyota.png
+:alt: Streaming data from a research vehicle to a supercomputer
+:width: 700px
+:align: center
+
+LUMI AI Factory data streaming pilot paves the way for autonomous vehicles
+[LUMI AI Factory data streaming pilot paves the way for autonomous vehicles](https://lumi-ai-factory.eu/stories/data-streaming-pilot-smart-car/)
+Image: Smart car integration project carried out with the University of Oulu’s Faculty of Information Technology and Electrical Engineering in Finland
+
 ```
 
 ## Some publications from Finland that used Puhti

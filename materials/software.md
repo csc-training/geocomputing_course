@@ -63,8 +63,6 @@
 	* Some tools available for "free"
    	* No license from CSC
   	* Easy to use your own license
-* ArcGIS Python API:
-	* For many tools, a connection to ArcGIS Online is required.
 * In general, only tools with floating licenses can be used
  	* Tools with node-locked licenses -> cPouta  
 :::

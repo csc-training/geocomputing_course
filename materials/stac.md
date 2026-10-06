@@ -9,7 +9,7 @@ STAC - Spatio-Temporal Asset Catalog
 * **Describes datasets at the level of individual files**
 * It is most commonly used for remote sensing data, but it is suitable for any data with time and location information.
 * Users: ESA, USGS, Microsoft Planetary computer, Google Earth Engine
-* In Finland: FMI and CSC.
+* In Finland: CSC, FMI and Aalto.
 
 ## STAC concepts
 ![](./images/STAC.png)
@@ -27,16 +27,13 @@ STAC - Spatio-Temporal Asset Catalog
 ## Tools for working with STAC
 
 * In web browser: **STAC Browser**, STAC Index
-* QGIS: STAC plugin
-* **Python: pystac-client, stackstac, xarray and dask**
+* ArcGIS, QGIS 
+* **Python: pystac-client, odc-stac, xarray and dask**
 * R: rstac, gdalcubes
-* PDAL: STAC reader
-* ArcGIS for Python API
-* Java, Julia, Ruby, Scala...
 
 ## CSC Paituli STAC, Finnish spatial datasets
 
-* ~175 different datasets, inlcuding:
+* ~190 different datasets, inlcuding:
 * [Paituli raster datasets](https://etsin.fairdata.fi/datasets?facet_keyword=Paituli)
    * LUKE, erosion risk maps
    * LUKE, topographic wetness index
@@ -64,6 +61,8 @@ STAC - Spatio-Temporal Asset Catalog
    * LUKE, Forest wind damage risk map.
    * FMI, Daily wind damage risk map.
 * ESA, **[Sentinel-2 products](https://urn.fi/urn:nbn:fi:fd-e1007ae5-1529-3e5c-8bf2-b218c77e25a5)**, processed to Level-2A (Surface Reflectance), a selection of mostly cloud-free products from Finland. Downloaded to CSC Allas by Maria Yli-Heikkilä (LUKE), Arttu Kivimäki (NLS/FGI) and Matias Heino (Aalto).
+* SYKE, **Sentinel-2 and Landsat mosaics**.
+* AquaInfra, including **CORINE** and **EU-DEM** for all Europe.
 
 \* These datasets have several bands in one file, using these datasets via Python/R might be complicated with STAC-libraries, but search works.
 
@@ -77,5 +76,4 @@ STAC - Spatio-Temporal Asset Catalog
 * **Test out the example scripts**:
     * **[Python](https://www.github.com/csc-training/geocomputing/blob/master/python/STAC)**
     * [R](https://www.github.com/csc-training/geocomputing/blob/master/R/STAC)
-* Use Paituli STAC, end-point: `https://paituli.csc.fi/geoserver/ogc/stac/v1`
 ::: 
