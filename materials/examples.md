@@ -48,6 +48,17 @@ Tapio Friberg, ICEYE: [LUMI usecase](https://gis-seminars.a3s.fi/2023-06-08-lumi
 You can find more use case presentations from [CSC: geocomputing seminars page](https://research.csc.fi/geocomputing-seminars).
 
 ## LUMI AI Factory Success Stories
+
+```{figure} images/seabee.png
+:alt: LUMI AI Factory’s data streaming pilot with SeaBee is revolutionising sea bird monitoring
+:width: 700px
+:align: center
+
+Image: Seabird detections on Langholmen (Vestfold) during June 2024. Image: Sindre Molværsmyr.
+Written by Anni Jakobsson, CSC
+
+[LUMI AI Factory’s data streaming pilot with SeaBee is revolutionising sea bird monitoring](https://lumi-ai-factory.eu/stories/data-streaming-pilot-with-seabee/)
+
 ```{figure} images/toyota.png
 :alt: Streaming data from a research vehicle to a supercomputer
 :width: 700px
@@ -56,6 +67,7 @@ You can find more use case presentations from [CSC: geocomputing seminars page](
 LUMI AI Factory data streaming pilot paves the way for autonomous vehicles
 [LUMI AI Factory data streaming pilot paves the way for autonomous vehicles](https://lumi-ai-factory.eu/stories/data-streaming-pilot-smart-car/)
 Image: Smart car integration project carried out with the University of Oulu’s Faculty of Information Technology and Electrical Engineering in Finland
+
 ```
 
 ## Some publications from Finland that used Puhti
