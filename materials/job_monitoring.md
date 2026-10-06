@@ -94,7 +94,7 @@ Important aspects to monitor are:
       - Better to use CPUs?
       - Is disk I/O the bottleneck?
 - Disk workload
-   -  If a lot of I/0, use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-roihu/#local-storage)
+   -  If a lot of I/0, use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-roihu/#local-temporary-storage)
 
 :::{admonition} Monitoring interactive jobs
 :class: tip

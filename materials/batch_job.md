@@ -3,7 +3,7 @@
 On our own computer, we are used to a started program (job) starting
 instantly. In a supercomputing environment, the computer is **shared among
 hundreds of users**. All heavy computing must be done on compute nodes
-(see [Usage policy](https://docs.csc.fi/computing/overview/#usage-policy)). To
+(see [Usage policy](https://docs.csc.fi/computing/usage-policy/#login-nodes)). To
 use compute nodes, the user first asks for the computing resources and then
 waits for the job to start when the requested resources become available.
 
@@ -74,7 +74,7 @@ may need to wait to get started.
   faster.
 * Some tools run on both CPU and GPU. If unsure which to use, a good rule of
   thumb is to compare the billing unit (BU) usage and select the one consuming
-  fewer units. A GPU uses 60 times more billing units than a single CPU core.
+  fewer units. A GPU uses about 270 times more billing units than a single CPU core.
 * You should always monitor jobs to find out what were the actual resources
   you requested.
 
@@ -124,7 +124,7 @@ Check [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/r
 4. Neha has written and run some Python code on her own machine. She now wants
    to move to Roihu and, before running her full pipeline, test that her code
    executes correctly with a minimal dataset.
-5. Josh wants to run 4 memory heavy tasks (100GB) in parallel. Each job takes
+5. Josh wants to run 20 memory heavy tasks (100GB) in parallel. Each job takes
    about 30 minutes to execute.
 
 :::{admonition} Solution
@@ -139,8 +139,8 @@ Check [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/r
 4. This is a very good idea and should always be done first. Neha can get the
    testing done quickly (= with limited queuing overhead) using the `test`
    partition. This means to keep the runtime under 15 min and the memory needs
-   below 190 GiB at a maximum of 80 tasks.
-5. 400GB memory in total is more than most partitions can provide. If this is the
+   below 744 GiB per node, using at most 384 cores per node (max 2 nodes).
+5. 2000GB memory in total is more than most partitions can provide. If this is the
    least memory possible for the jobs, it has to be run on `hugemem`.
 :::
 :::
