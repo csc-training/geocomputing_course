@@ -24,6 +24,7 @@
 
 ## Documentation
 * [CSC Docs](https://docs.csc.fi)
+    * [CSC quick reference](https://docs.csc.fi/img/csc-quick-reference/csc-quick-reference.pdf)     
 * [LUMI Docs](https://docs.lumi-supercomputer.eu/)
 * GIS:
    * [Geocomputing examples in github](https://github.com/csc-training/geocomputing)
