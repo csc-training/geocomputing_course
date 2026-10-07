@@ -1,21 +1,6 @@
-# Terminal
+# Linux basics
 
-
-## Why would you want to use the terminal?
-
-A terminal is a text input and output environment. A shell is the primary interface that users see when they log in, whose primary purpose is to start other programs. 
-
-A typing-based interface is often called a command-line interface, or CLI, to distinguish it from a graphical user interface, or GUI. The heart of a CLI is a read-evaluate-print loop, or REPL: when the user types a command and then presses the Enter (or Return) key, the computer reads it, executes it, and prints its output. 
-
-Shell is the standard way to interact with a supercomputer. It is worth learning the basics and getting comfortable with the "black box", to make efficient use of the resources.
-
-The terms terminal, command line and shell are often used interchangeably, even though they mean slightly different things. 
-
-## Basic Linux commands
-
-Do you remember how you edited some files in the web interface? Let's do the same thing again; only now from the command line:
-
-### Navigating folders
+A terminal is the standard way to interact with a supercomputer. It is worth learning the basics and getting comfortable with the "black box", to make efficient use of the resources.
 
 1. Login to the Roihu web interface, and start a login shell; first, check which directory you are in by typing `pwd` and hitting `Enter`:
 
@@ -47,9 +32,6 @@ cd $USER
 :class: seealso
 If you just type `cd` and the first letter of the folder name, then hit the `tab` key, the terminal completes the name. Handy!
 :::
-
-## Exploring files
-
 
 1. Download a file into this new folder. Use the command `wget` for downloading from a URL:
 
@@ -86,11 +68,10 @@ rm my-first-file.txt
 ls -l
 ```
 
-:::{admonition} Moving files
-:class: seealso
-If you don't want to have duplicate files you can use `mv` to 'move/rename' the file. The syntax is the same: `mv /path/to/source/oldname /path/to/destination/newname`.
-:::
-
+7. To move or rename a file:
+```bash
+mv $USER-second-file.txt $USER-third-file.txt
+```
 
 :::{admonition} Re-executing commands from `history`
 :class: seealso
