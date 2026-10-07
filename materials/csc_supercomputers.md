@@ -8,7 +8,7 @@ Name | CPUs | GPUs | Pre-installed GIS tools | Finnish spatial data locally | Sc
 **LUMI** | 262 000 | **~24 000** AMD MI250X GCD | 6 | No | EU |
 
 Roihu:
-* CSC'c new national supercomputer
+* CSC's new national supercomputer
 * **The first option to consider for Finnish academic projects**
 * [CSC Docs: Technical details about Roihu](https://docs.csc.fi/computing/systems-roihu/)
 
@@ -24,7 +24,7 @@ LUMI:
 |  | Roihu | LUMI | cPouta virtual machine| Usual laptop |
 |---|---| ---|---|---|
 |Max per job: CPU | **23 000** | **65 500** | 128 | 8 |
-|Max per job: memory, Gib | **6037** | **4000** | 705 | 16 |
+|Max per job: memory, GiB | **6037** | **4000** | 705 | 16 |
 |Max per job: GPU | **40** | **8192** | 4 | 1 |
 |Pre-installed GIS tools | **Yes** | Some | No | No |
 |Main Finnish datasets  | **Yes** | No | No | No |

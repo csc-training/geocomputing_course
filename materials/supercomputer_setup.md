@@ -23,7 +23,7 @@ Typical physical parts of a supercomputer:
   * **GPU nodes** have both GPUs (graphical processing unit) and CPUs. GPUs are widely used for deep learning.
   * Each CPU has multiple **cores**, which are the basic computing resource. There are 384 cores in Roihu and 128 in LUMI CPU-nodes.
   * Whether your task benefits from a GPU depends on the software used. Most GIS-tools can not use GPUs.
-  * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, that it would be reasonable to use GPU nodes.
+  * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, so that it would be reasonable to use GPU nodes.
 - When using compute nodes, the compute resources have to be defined in advance. You must specify e.g. the amount of GPUs, memory and nodes or CPU cores.
 - Specifics of [Roihu](https://docs.csc.fi/computing/systems-roihu/#nodes) and [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumic/) compute nodes.
 
@@ -65,7 +65,7 @@ Which of the following tasks would suit to run on the login node?
 :class: dropdown
 
 
- Options #3 creating directories (mkdir), and #5 unpacking software (tar) are common and acceptable tasks for the login node. Option #2 Building software (make) can be done on the login node, but ideally one would use a compute node to avoid stressing the filesystem in the process.
+ Options #3 creating directories (mkdir), and #5 unpacking software (tar) are common and acceptable tasks for the login node. Option #2 Building software (make) can be done on the login node, but ideally one should use the local disk (`$TMPDIR`) to avoid stressing the shared filesystem in the process.
  
 Running resource-intensive applications on the login node is forbidden. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will in any case want more resources for these than the login node can provide.
 

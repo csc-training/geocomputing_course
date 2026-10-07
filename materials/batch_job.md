@@ -86,11 +86,11 @@ Partly adapted from [Aalto Scientific Computing](https://scicomp.aalto.fi/triton
 A **partition** is a logically grouped set of compute nodes. Resource
 limitations for a job are defined by the partition (or queue) the job is
 submitted to. The limitations affect the **maximum run time, available memory
-and the number of  CPU/GPU cores**. Jobs should be submitted to the smallest
+and the number of CPU/GPU cores**. Jobs should be submitted to the smallest
 partition that matches the required resources. 
 
 - [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/running/batch-job-partitions/)
-- [LUMI Docs: Slurm particions](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/)
+- [LUMI Docs: Slurm partitions](https://docs.lumi-supercomputer.eu/runjobs/scheduled-jobs/partitions/)
 
 ## Job types
 
@@ -146,7 +146,7 @@ Check [CSC Docs: Available batch job partitions](https://docs.csc.fi/computing/r
 :::
 
 More information:
-* [CSC Dosc: Running jobs, Getting started](https://docs.csc.fi/computing/running/getting-started/) for Roihu
+* [CSC Docs: Running jobs, Getting started](https://docs.csc.fi/computing/running/getting-started/) for Roihu
 * [LUMI Docs: Run jobs](https://docs.lumi-supercomputer.eu/runjobs/)
 * [CSC Docs: Software specific example batch scripts](https://docs.csc.fi/apps/)
 * [SLURM documentation](https://slurm.schedmd.com/sbatch.html)
