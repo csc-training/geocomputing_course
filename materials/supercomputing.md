@@ -41,4 +41,4 @@
 * Tasks split by:
   * Input data: map sheets, rows in a dataframe, data from different time periods etc.
   * Analysis parameters: different scenarios, different variables etc.
-* Note, that especially with map sheets extra care might be needed for border areas, for example use overlapping map sheets with [virtual rasters](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/).
+* Note that especially with map sheets extra care might be needed for border areas, for example use overlapping map sheets with [virtual rasters](https://docs.csc.fi/support/tutorials/gis/virtual-rasters/).

@@ -23,7 +23,7 @@ Typical physical parts of a supercomputer:
   * **GPU nodes** have both GPUs (graphical processing unit) and CPUs. GPUs are widely used for deep learning.
   * Each CPU has multiple **cores**, which are the basic computing resource. There are 384 cores in Roihu and 128 in LUMI CPU-nodes.
   * Whether your task benefits from a GPU depends on the software used. Most GIS-tools can not use GPUs.
-  * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, that it would be reasonable to use GPU nodes.
+  * GPUs are more expensive, so in general the software should run at least 3x faster on GPU, so that it would be reasonable to use GPU nodes.
 - When using compute nodes, the compute resources have to be defined in advance. You must specify e.g. the amount of GPUs, memory and nodes or CPU cores.
 - Specifics of [Roihu](https://docs.csc.fi/computing/systems-roihu/#nodes) and [LUMI](https://docs.lumi-supercomputer.eu/hardware/lumic/) compute nodes.
 

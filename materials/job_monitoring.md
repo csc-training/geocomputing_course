@@ -81,7 +81,7 @@ all users.
 Important aspects to monitor are:
 - Memory efficiency
      - If low memory usage: too much memory requested?
-     - If a lot of memory needed, think how to re-write your analysis to use less memory
+     - If a lot of memory is needed, think how to re-write your analysis to use less memory
      - [CSC Docs: How to estimate how much memory my batch job needs?](https://docs.csc.fi/support/faq/how-much-memory-my-job-needs/)
 - CPU efficiency
     - Parallel jobs must always benefit from all requested resources.
@@ -95,7 +95,7 @@ Important aspects to monitor are:
       - Better to use CPUs?
       - Is disk I/O the bottleneck?
 - Disk workload
-   -  If a lot of I/0, try to optimized I/O or use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-roihu/#local-temporary-storage)
+   - If a lot of I/O, try to optimize I/O or use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-roihu/#local-temporary-storage)
 
 :::{admonition} Monitoring interactive jobs
 :class: tip
