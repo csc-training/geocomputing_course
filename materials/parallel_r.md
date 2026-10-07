@@ -3,9 +3,12 @@
 
 If starting from scratch with new code, the first option would be to look for spatial libraries that have parallelization already built in:
 
-* `terra` has some functions in parallel for raster processing
-* `gdalcubes` for multi-dimensional spatial data analysis
-* `lidR` for lidar data analysis
+* [terra](https://cran.r-project.org/web/packages/terra/index.html) - raster data processing, partly
+* [gdalcubes](https://cran.r-project.org/web/packages/gdalcubes/index.html) and [stars](https://cran.r-project.org/web/packages/stars/index.html) - multi-dimensional spatial data analysis
+* [lidR](https://cran.r-project.org/web/packages/lidR/index.html) - lidar data analysis
+* [GWmodel](https://cran.r-project.org/web/packages/GWmodel/index.html) - geographically-weighted models, partly
+* [spdep](https://cran.r-project.org/web/packages/spdep/index.html) - spatial dependence: weighting schemes, statistics and models, partly
+* [geos](https://paleolimbot.github.io/geos/) and [geoarrow](https://geoarrow.org/geoarrow-r/) - parallel I/O
 
 ## R parallel libraries
 
@@ -116,7 +119,7 @@ d <- future_lapply(input, slow_function)
 
 * `future` exports needed variables and libraries automatically to the parallel processes
 * The variables must be serializable. Terra's raster objects are not serializable, see [Terra library's recommendations](https://github.com/rspatial/terra/issues/36)
-* Avoid moving variables that refer to large objects from the serial main process to a parallel process. Spatial data analysis often involves significant amounts of data. It is better to read the data inside the parallel function. Give the file name as input, compute area coordinates, etc. 
+* Avoid moving variables that refer to large objects from the serial main process to a parallel process. Spatial data analysis often involves significant amounts of data. It is better to read the data inside the parallel function. Give the file name as input or bbox coordinates. 
 
 :::
 
@@ -140,7 +143,7 @@ srun apptainer_wrapper exec Rscript --no-save Calc_contours_future_multicore.R
 `cluster` parallelization:
 ```
 #SBATCH --nodes=2 #For cluster usage to make sense, this should be more than 1.
-#SBATCH --ntasks=40  # Number of tasks. Upper limit depends on number of CPUs per node.
+#SBATCH --ntasks-per-node=384  # Number of tasks. Upper limit depends on number of CPUs per node.
 
 (...)
 
