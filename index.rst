@@ -108,5 +108,4 @@ This course is organized by `CSC - IT Center for Science <https://www.csc.fi/>`_
   
    materials/support.md
    materials/where_to_go.md
-   materials/cheatsheet.md
    materials/terminal.md
