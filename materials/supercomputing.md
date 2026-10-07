@@ -28,8 +28,8 @@
 
 ### Faster computing
 * Running most common GIS scripts will be as fast on supercomputer as on laptop
-* To speed up use **parallel computing** or GPUs.
-   * Most GIS-tools have no GPU-support, so the main option is to use parallel computing
+* To speed up use **parallel computing** on CPUs or GPUs.
+   * Most GIS-tools have no GPU-support, so the main option is to use CPU-based parallel computing
    * Deep learning libraries run much faster on GPU.
 
 #### Parallel computing

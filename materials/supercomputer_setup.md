@@ -65,7 +65,7 @@ Which of the following tasks would suit to run on the login node?
 :class: dropdown
 
 
- Options #3 creating directories (mkdir), and #5 unpacking software (tar) are common and acceptable tasks for the login node. Option #2 Building software (make) can be done on the login node, but ideally one would use a compute node to avoid stressing the filesystem in the process.
+ Options #3 creating directories (mkdir), and #5 unpacking software (tar) are common and acceptable tasks for the login node. Option #2 Building software (make) can be done on the login node, but ideally one should use the local disk (`$TMPDIR`) to avoid stressing the shared filesystem in the process.
  
 Running resource-intensive applications on the login node is forbidden. Unless you are sure it will not affect other users, do not run jobs like #1 (python) or #4 (a software). You will in any case want more resources for these than the login node can provide.
 
