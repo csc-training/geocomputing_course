@@ -26,6 +26,7 @@ Some things to check:
 7. Error messages can sometimes be long, cryptic and a bit intimidating, but ...
    - Try skimming through them and see if you can spot something "human-readable"
    - Often you can spot the actual problem, if you go through the whole message. Something like "required input file so-and-so missing" or "parameter X out of range" _etc_.
+   - Ask help from AI tools.
 8. Consult the [FAQ on common Slurm issues](https://docs.csc.fi/support/faq/why-does-my-batch-job-fail/) in the CSC Docs
 :::
 
@@ -94,13 +95,14 @@ Important aspects to monitor are:
       - Better to use CPUs?
       - Is disk I/O the bottleneck?
 - Disk workload
-   -  If a lot of I/0, use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-roihu/#local-temporary-storage)
+   -  If a lot of I/0, try to optimized I/O or use [local disks on compute nodes](https://docs.csc.fi/computing/running/creating-job-scripts-roihu/#local-temporary-storage)
 
 :::{admonition} Monitoring interactive jobs
 :class: tip
 If you want to monitor the real-time resource usage of an interactive job:
    - Open a new shell on the same compute node as where the tool/script is running:
       - Jupyter and RStudio have Terminal windows.
+      - `python-geo` Jupyter shows memory usage also in the bottom info bar.
       - If it is some other tool, manually open another shell on the compute node:
          - Find out the compute node name from the prompt of the interactive
            job or the output of `squeue --me` (it's something like `r18c02`)
