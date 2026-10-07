@@ -2,27 +2,33 @@
 
 A terminal is the standard way to interact with a supercomputer. It is worth learning the basics and getting comfortable with the "black box", to make efficient use of the resources.
 
-1. Login to the Roihu web interface, and start a login shell; first, check which directory you are in by typing `pwd` and hitting `Enter`:
+* Login to the [Roihu web interface](https://roihu.csc.fi), and start a login shell.
+* Check which directory you are in (type the command and hit `Enter`):
 
 ```bash
 pwd
 ```
-
-2. In our project's scratch storage, there is a directory called `students`. We would like to create a new subdirectory and give our username as its name. Let's move to `students`:
-
-```bash
-cd /scratch/project_2020458/students
-```
-
-
-3. Make a directory with your username (you can either type it or use the variable $USER) and see if it appears:
+* Check the contents of the directory:
 
 ```bash
-mkdir $USER    
 ls -l
 ```
 
-4. Go to that directory.
+* Change the to a another directory:
+
+```bash
+cd /scratch/project_2020458/students
+pwd
+```
+
+* Make a new directory with your username:
+
+```bash
+mkdir $USER
+ls -l
+```
+
+* Go to the new directory.
 
 ```bash
 cd $USER      
@@ -33,27 +39,21 @@ cd $USER
 If you just type `cd` and the first letter of the folder name, then hit the `tab` key, the terminal completes the name. Handy!
 :::
 
-1. Download a file into this new folder. Use the command `wget` for downloading from a URL:
+* Download a file into this new folder.
 
 ```bash
 wget https://raw.githubusercontent.com/csc-training/csc-env-eff/master/part-1/prerequisites/my-first-file.txt
+ls -l 
 ```
 
-2. Check what kind of file you got and what size it is using the `ls` command with some extra options:
-
-```bash
-ls -l         # option l is for long format
-```
-
-3. Use the `less` command to check what the contents of the file look like:
+* Check the contents of the file:
 
 ```bash
 less my-first-file.txt
+# To exit the less, hit `q`.
 ```
 
-4. To exit the `less` view of the file, hit `q`.
-
-5. Make a copy of this file:
+* Make a copy of this file:
 
 ```bash
 cp my-first-file.txt $USER-second-file.txt    
@@ -61,16 +61,19 @@ ls -l
 less $USER-second-file.txt                    
 ```
 
-6. Remove the file we originally downloaded (leave your own copy).
-
-```bash
-rm my-first-file.txt
-ls -l
-```
-
-7. To move or rename a file:
+* To move or rename a file:
 ```bash
 mv $USER-second-file.txt $USER-third-file.txt
+ls -l
+less $USER-third-file.txt   
+```
+
+* Remove all files and folders created above
+
+```bash
+cd ..
+rm -r $USER
+ls -l
 ```
 
 :::{admonition} Re-executing commands from `history`
