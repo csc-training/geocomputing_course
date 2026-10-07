@@ -19,7 +19,7 @@
 CSC: 
    * servicedesk@csc.fi
       * CSC has a team of people helping computing services users with their cases 
-   * [CSC weekly online user support session](https://ssl.eventilla.com/usersupportcoffee/EN)
+   * [CSC weekly online user support session](https://csc.fi/en/training-calendar/csc-research-support-coffee-every-wednesday-at-1400-finnish-time-2-2/)
 
 LUMI:
    * [LUMI Helpdesk](https://docs.lumi-supercomputer.eu/helpdesk/)
