@@ -25,11 +25,12 @@
 
 ## Get familiar with Roihu web interface
 
-* Open [Roihu web interface](https://roihu.csc.fi) and log in
+* Open [Roihu](https://roihu.csc.fi) or [LUMI](https://www.lumi.csc.fi) web interface and log in
 
 :::{admonition} Change the default project
 
-* `project_2020458` is an example project name, replace with your own CSC project name.
+* Roihu: `project_2020458` during the course, otherwise replace with your own CSC project name.
+* LUMI: `project_462001780`
 :::
 
 ### Info
@@ -55,20 +56,33 @@ The web interface can be used for moving up to 10GB of data. If you have more da
 * [CSC Docs: Desktop](https://docs.csc.fi/computing/webinterface/desktop/)
 
 * Open the Desktop launch page: from front page or `Apps -> Desktop`
-* Use settings: 
+* Use settings Roihu: 
   * (Reservation: `geocomputing_day1`, only during course)
-  * Project: `project_2020458`
+  * Project: `project_2020458` / 
   * Partition: interactive (`small` during course)
   * Number of CPU cores: 1
   * Memory (Gb): 4
   * Time: 0:15:00
   * `Launch`
+* Use settings LUMI: 
+  * Project: `project_462001780` / 
+  * Partition: interactive 
+  * Number of CPU cores: 2
+  * Time: 0:15:00
+  * `Launch`
 * Wait a moment for Desktop to start -> `Launch Desktop`
-* Start QGIS: ´Applictions` -> `Geosciences` -> `QGIS`
+* Start QGIS:
+   * Roihu: ´Applictions` -> `Geosciences` -> `QGIS`
+   * LUMI: `Menu` -> `Other` -> `QGIS`
 * Open Statistic Finland Paavo post code data
    *  `Layer` -> `Add layer` -> `Add vector layer`
-      * Source Type: `File`
-      * Source: `...` -> `/dataset/project_2019680/tilastokeskus/paavo/2023/pno_tilasto_2023.shp`
+      * Roihu:
+         * Source Type: `File`
+         * Source: `...` -> `/dataset/project_2019680/tilastokeskus/paavo/2023/pno_tilasto_2023.shp`
+      * LUMI
+         * Source Type: Protocol (HTTPS)
+         * Type: HTTP/HTTPS/FTP
+         * URI: https://www.nic.funet.fi/index/geodata/tilastokeskus/paavo/2023/pno_tilasto_2023.shp
 * See file information with GDAL
    * `Processing` -> `Toolbox` -> `GDAL` -> `Vector miscellanious` -> `Vector information`
    * The open dataset is selected by default
