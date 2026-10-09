@@ -136,7 +136,7 @@ d <- future_lapply(input, slow_function)
 
 (...)
 
-srun apptainer_wrapper exec Rscript --no-save Calc_contours_future_multicore.R
+srun Rscript --no-save Calc_contours_future_multicore.R
 ```
 
 #### Multi-node jobs
@@ -147,7 +147,7 @@ srun apptainer_wrapper exec Rscript --no-save Calc_contours_future_multicore.R
 
 (...)
 
-srun apptainer_wrapper exec RMPISNOW --no-save --slave -f Calc_contours_future_cluster.R
+srun RMPISNOW --no-save --slave -f Calc_contours_future_cluster.R
 ```
 
 Further reading:
