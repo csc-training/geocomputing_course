@@ -132,7 +132,7 @@ d <- future_lapply(input, slow_function)
 `multicore` or `multisession` parallelization:
 ```
 #SBATCH --nodes=1
-#SBATCH --ntasks=4  # Number of tasks. Upper limit depends on number of CPUs per node.
+#SBATCH --cpus-per-task=4  # Number of tasks. Upper limit depends on number of CPUs per node.
 
 (...)
 
