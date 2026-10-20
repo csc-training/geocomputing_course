@@ -1,29 +1,14 @@
-# Terminal
+# Linux basics
 
+A terminal is the standard way to interact with a supercomputer. It is worth learning the basics and getting comfortable with the "black box", to make efficient use of the resources.
 
-## Why would you want to use the terminal?
-
-A terminal is a text input and output environment. A shell is the primary interface that users see when they log in, whose primary purpose is to start other programs. 
-
-A typing-based interface is often called a command-line interface, or CLI, to distinguish it from a graphical user interface, or GUI. The heart of a CLI is a read-evaluate-print loop, or REPL: when the user types a command and then presses the Enter (or Return) key, the computer reads it, executes it, and prints its output. 
-
-Shell is the standard way to interact with a supercomputer. It is worth learning the basics and getting comfortable with the "black box", to make efficient use of the resources.
-
-The terms terminal, command line and shell are often used interchangeably, even though they mean slightly different things. 
-
-## Basic Linux commands
-
-Do you remember how you edited some files in the web interface? Let's do the same thing again; only now from the command line:
-
-### Navigating folders
-
-1. Login to the Roihu web interface, and start a login shell; first, check which directory you are in by typing `pwd` and hitting `Enter`:
+* Login to the [Roihu web interface](https://roihu.csc.fi), and start a login shell.
+* Check which directory you are in (type the command and hit `Enter`):
 
 ```bash
 pwd
 ```
-
-2. In our project's scratch storage, there is a directory called `students`. We would like to create a new subdirectory and give our username as its name. Let's move to `students`:
+* Check the contents of the directory:
 
 ```bash
 cd /scratch/project_200XXXX/students
@@ -37,7 +22,8 @@ mkdir $USER
 ls -l
 ```
 
-4. Go to that directory.
+
+* Go to the new directory.
 
 ```bash
 cd $USER      
@@ -48,30 +34,21 @@ cd $USER
 If you just type `cd` and the first letter of the folder name, then hit the `tab` key, the terminal completes the name. Handy!
 :::
 
-## Exploring files
-
-
-1. Download a file into this new folder. Use the command `wget` for downloading from a URL:
+* Download a file into this new folder.
 
 ```bash
 wget https://raw.githubusercontent.com/csc-training/csc-env-eff/master/part-1/prerequisites/my-first-file.txt
+ls -l 
 ```
 
-2. Check what kind of file you got and what size it is using the `ls` command with some extra options:
-
-```bash
-ls -l         # option l is for long format
-```
-
-3. Use the `less` command to check what the contents of the file look like:
+* Check the contents of the file:
 
 ```bash
 less my-first-file.txt
+# To exit the less, hit `q`.
 ```
 
-4. To exit the `less` view of the file, hit `q`.
-
-5. Make a copy of this file:
+* Make a copy of this file:
 
 ```bash
 cp my-first-file.txt $USER-second-file.txt    
@@ -79,18 +56,20 @@ ls -l
 less $USER-second-file.txt                    
 ```
 
-6. Remove the file we originally downloaded (leave your own copy).
-
+* To move or rename a file:
 ```bash
-rm my-first-file.txt
+mv $USER-second-file.txt $USER-third-file.txt
 ls -l
+less $USER-third-file.txt   
 ```
 
-:::{admonition} Moving files
-:class: seealso
-If you don't want to have duplicate files you can use `mv` to 'move/rename' the file. The syntax is the same: `mv /path/to/source/oldname /path/to/destination/newname`.
-:::
+* Remove all files and folders created above
 
+```bash
+cd ..
+rm -r $USER
+ls -l
+```
 
 :::{admonition} Re-executing commands from `history`
 :class: seealso

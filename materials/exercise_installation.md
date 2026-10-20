@@ -23,8 +23,9 @@
   * Local disk (GB): 4
   * Time: 00:30:00
 
-Make Tykky tools available
+Remove other loaded modules and make Tykky tools available
 ```
+module purge
 module load tykky
 ```
 

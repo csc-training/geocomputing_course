@@ -25,10 +25,9 @@
 
 ## Get familiar with Roihu web interface
 
-* Open [Roihu web interface](https://roihu.csc.fi) and log in
+* Open [Roihu](https://roihu.csc.fi) web interface and log in
 
 :::{admonition} Change the default project
-
 * `project_200XXXX` is an example project name, replace with your own CSC project name.
 :::
 
@@ -40,17 +39,8 @@
 
 
 ### Files 
-* Open home directory: `Files` -> `Home Directory`
-* Create new `myfile.txt` file and add some text to it.
-* Create new directory `mydata`
-* Move the new file under `mydata`: 
-   * Mark check-box in front of the file
-   * Click `Copy/Move`
-   * Open `mydata`
-   * Click `Move`
-* Open your `mydata` folder
-* Download your file to your local computer
-  
+* `Files` -> ...
+
 :::{admonition} Moving data
 
 The web interface can be used for moving up to 10GB of data. If you have more data, use other tools. More info on [moving data](moving_data.md).
@@ -64,21 +54,28 @@ The web interface can be used for moving up to 10GB of data. If you have more da
 * [CSC Docs: Desktop](https://docs.csc.fi/computing/webinterface/desktop/)
 
 * Open the Desktop launch page: from front page or `Apps -> Desktop`
-* Use settings: 
+* Use settings Roihu: 
   * (Reservation: `geocomputing_day1`, only during course)
   * Project: `project_200XXXX`
   * Partition: interactive (`small` during course)
   * Number of CPU cores: 1
   * Memory (Gb): 4
-  * Local disk: 0
+  * Time: 0:15:00
+  * `Launch`
+* Use settings LUMI: 
+  * Project: `project_462001780` / 
+  * Partition: interactive 
+  * Number of CPU cores: 2
   * Time: 0:15:00
   * `Launch`
 * Wait a moment for Desktop to start -> `Launch Desktop`
-* Double-click the QGIS icon
+* Start QGIS:
+   * Roihu: ´Applictions` -> `Geosciences` -> `QGIS`
+   * LUMI: `Menu` -> `Other` -> `QGIS`
 * Open Statistic Finland Paavo post code data
    *  `Layer` -> `Add layer` -> `Add vector layer`
-      * Source Type: `File`
-      * Source: `...` -> `/dataset/project_2019680/tilastokeskus/paavo/2023/pno_tilasto_2023.shp`
+	 * Source Type: `File`
+	 * Source: `...` -> `/dataset/project_2019680/tilastokeskus/paavo/2023/pno_tilasto_2023.shp`
 * See file information with GDAL
    * `Processing` -> `Toolbox` -> `GDAL` -> `Vector miscellanious` -> `Vector information`
    * The open dataset is selected by default
@@ -111,6 +108,6 @@ The web interface can be used for moving up to 10GB of data. If you have more da
 :class: important
 
 * Web interface provides easy access to Roihu and its graphical tools.
-* QGIS, SNAP, Jupyter, RStudio, Visual Studio Code are the most used tools.
+* Jupyter, RStudio, Visual Studio Code are the most used graphical tools.
 
 :::

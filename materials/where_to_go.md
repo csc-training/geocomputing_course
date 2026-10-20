@@ -16,16 +16,15 @@
 * [CSC: Spatial data analysis with Python](https://e-learn.csc.fi/course/view.php?id=122)
 * [CSC computing environment](https://ssl.eventilla.com/csccompenvselflearn)
 * [Elements of supercomputing](https://edukamu.fi/elements-of-supercomputing)
-* [Research data management](https://ssl.eventilla.com/event/v8B6B)
   
 ## Materials of past courses
 * [CSC geoinformatics training materials](https://research.csc.fi/gis-learning-materials)
 * [Geocomputing seminars](https://research.csc.fi/geocomputing-seminars)
 * [LUMI training materials](https://lumi-supercomputer.github.io/LUMI-training-materials)
-* [CodeRefinery materials on FAIR research software development](https://coderefinery.org/lessons/core/)
 
 ## Documentation
 * [CSC Docs](https://docs.csc.fi)
+    * [CSC quick reference](https://docs.csc.fi/img/csc-quick-reference/csc-quick-reference.pdf)     
 * [LUMI Docs](https://docs.lumi-supercomputer.eu/)
 * GIS:
    * [Geocomputing examples in github](https://github.com/csc-training/geocomputing)
@@ -41,4 +40,6 @@
     * [CSC Docs: Bash tutorial](https://docs.csc.fi/support/tutorials/env-guide/linux-bash-scripts/)
     * [UNIX tutorial for beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/) (the first two topics are a good start, try also some editor)
     * [Basic Linux Commands 10 min tutorial video](https://www.youtube.com/watch?v=uFPly_nGBMg) (sit back and watch)
-    * [Terminal basics](terminal.md) 
+    * [Terminal basics](terminal.md)
+* AI coding
+    * [CSC Docs: AI tools](https://docs.csc.fi/computing/ai-tools/), inc using AI agents and Docs MCP server

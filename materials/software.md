@@ -7,7 +7,6 @@
 
 ## GIS tools available in Roihu
 
-* [ArcGIS Python API](https://docs.csc.fi/apps/arcgis/) 
 * [CloudCompare](https://docs.csc.fi/apps/cloudcompare/) for visualizing, editing and processing point clouds
 * [GDAL](https://docs.csc.fi/apps/gdal/) for geospatial data formats
 * **[Python-geo](https://docs.csc.fi/apps/python-geo/)** - Python spatial analysis libraries
@@ -64,8 +63,6 @@
 	* Some tools available for "free"
    	* No license from CSC
   	* Easy to use your own license
-* ArcGIS Python API:
-	* For many tools, a connection to ArcGIS Online is required.
 * In general, only tools with floating licenses can be used
  	* Tools with node-locked licenses -> cPouta  
 :::

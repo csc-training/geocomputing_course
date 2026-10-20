@@ -26,14 +26,13 @@ with [access to Roihu](https://docs.csc.fi/accounts/how-to-add-service-access-fo
 * Open [Roihu web interface](https://roihu.csc.fi) and log in
 
 :::{admonition} Change the default project
-
 * `project_200XXXX` is an example project name, replace with your own CSC project name.
 :::
 
 * [CSC Docs: Jupyter](https://docs.csc.fi/computing/webinterface/jupyter/)
 
 * Open the Jupyter launch page: from front page or `Apps -> Jupyter`
-* Use settings: 
+* Use settings Roihu: 
   * (Reservation: `geocomputing_day1`, only during course)
   * Project: `project_200XXXX`
   * Partition: `interactive` (`small` during course)
@@ -43,6 +42,15 @@ with [access to Roihu](https://docs.csc.fi/accounts/how-to-add-service-access-fo
   * Python: [python-geo](https://docs.csc.fi/apps/python-geo/)
   * Module version: default
   * Working directory: `/scratch/project_200XXXX`
+  * `Launch`
+* Use settings LUMI: 
+  * Project: `project_462001780`
+  * Partition: `interactive` 
+  * Number of CPU cores: 5
+  * Time: 0:30:00
+  * Python: [geoconda](https://docs.csc.fi/apps/geoconda/)
+  * Module version: default
+  * Working directory: `/scratch/project_462001780`
   * `Launch`
 * Wait a moment for Jupyter to start -> `Connect to Jupyter`
 * Open

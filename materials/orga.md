@@ -1,12 +1,12 @@
 # Organizers of this course
-This course is organized by CSC - IT Center for Science and funded by Geoportti Research Infrastructure and the Location Innvation Hub. 
+This course is organized by CSC - IT Center for Science and funded by Geoportti Research Infrastructure. 
 
 ## [CSC - IT Center for Science](https://www.csc.fi/)
 
 * Non-profit company producing IT services for research and higher education
 * Owned by ministry of education and culture (70%) and higher education institutions (30%)
 * Headquarters in Keilaniemi, Espoo
-* Side offices and supercomputers in Kajaani
+* Side office and datacenters (inc. supercomputers) in Kajaani
 * ~700 people
 
 ![Kajaani](images/kajaani.png)
@@ -21,7 +21,7 @@ Geoportti Research Infrastructure (RI) is a shared service for researchers, teac
   * At CSC:
       * [Geocomputing services](https://research.csc.fi/geocomputing), inc. [supercomputer geospatial installations](software.md), [local spatial data](spatial_data_at_csc.md), [support](support.md) and [user-guides](https://docs.csc.fi/support/tutorials/#geoinformatics)
       * [Paituli data download service](https://paituli.csc.fi) with [STAC](stac.md)
-      * [GIS training](https://research.csc.fi/gis-learning-materials) and [GIS seminars](https://research.csc.fi/geocomputing-seminars)
+      * [GIS training](https://docs.csc.fi/support/training-material/geocomputing-learning-materials/) and [GIS seminars](https://docs.csc.fi/support/training-material/geocomputing-seminars/)
   * [GeoPortti GeoCubes](https://vm0160.kaj.pouta.csc.fi/geocubes/) - a harmonised, multi-resolution raster geodata repository containing several national datasets
   * [GeoPortti GeoPrivacy](https://geoprivacy.fi/#/) - a service where cyclists and pedestrians can donate GPS tracking data for science.
   * [UEF Drone Lab](https://www.geoportti.fi/tools/drones/)

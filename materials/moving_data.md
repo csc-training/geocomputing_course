@@ -4,6 +4,7 @@
 ### Web Interface
 
 - Graphical, no installations needed.
+- SSH keys and daily SSH certificate are not needed.
 - Limited functionality compared to other options.
 - For smaller amounts of data, < 10 Gb.
 - Upload, download, move, create folders.
@@ -13,9 +14,10 @@
 ### Graphical data transfer tools on local computer
 
 - For example: FileZilla, WinSCP and CyberDuck
+- SSH keys and daily SSH certificate are needed for Roihu.
+- FileZilla requires using SSH agent with Roihu
 - For medium amounts of data, < 1 Tb.
 - Easy drag-and-drop for moving, but installation required.
-- FileZilla requires using SSH agent with Roihu
 - WinSCP is slower than others.
 - [CSC Docs: Graphical data transfer tools](https://docs.csc.fi/data/moving/graphical_transfer/)
 
@@ -24,6 +26,7 @@
 ### Command line tools on local computer
 - For any amount of data, practically required if data size > 1 Tb.
 - Requires knowing the commands.
+- SSH keys and daily SSH certificate are needed.
 
 #### scp
 

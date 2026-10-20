@@ -1,13 +1,17 @@
 # Parallel Python
-## Spatial libraries with parallel support
+## Spatial Python libraries with parallel support
 If starting from scratch with a new program, the first option would be to look for spatial libraries that have parallelization already built in:
 
 * [Dask-geopandas](https://dask-geopandas.readthedocs.io/) for vector data analysis, still a lot more limited than `geopandas`
+* [duckdb](https://duckdb.org/) - spatial SQL queries
+* [pyogrio](https://pyogrio.readthedocs.io/en/latest/) - parallel vector data reading and writing
 * [xarray](http://xarray.pydata.org/) for basic raster data analysis
   * The [STAC exercise](exercise_stac.md) is using Dask with `xarray`.
 * [xarray-spatial](https://xarray-spatial.readthedocs.io/en/stable/) for common raster analysis functions
 * [rioxarray](https://corteva.github.io/rioxarray/stable/index.html) for reading data via GDAL-supported formats and basic merging, clipping etc
-* [osmnx](https://osmnx.readthedocs.io/en/stable/index.html) for routing
+* [osmnx](https://osmnx.readthedocs.io/en/stable/index.html), [networkX](https://networkx.org/en/) and [igraph](https://igraph.org/) for routing
+* [pysal](https://pysal.org/) - spatial analysis, some methods support parallel computing
+* [datashader](https://datashader.org/) - for big data visualization
 
 ## Python parallel libraries
 
@@ -167,8 +171,7 @@ print(a)
 * Avoid moving variables that refer to large objects from main serial
   process to a parallel process. Spatial data analysis often involves
   significant amounts of data. It is better to read the data inside the
-  parallel function: give the file name as input, compute area coordinates,
-  etc. 
+  parallel function: give the file name as input or bbox coordinates. 
 
 :::
 
@@ -203,7 +206,7 @@ The main batch job file reserves only resources for the **master job** of Dask, 
 srun python dask_script.py
 ```
 
-The worker jobs are reserved on inside Python code. Ideally each job should fill one node. The number of jobs is defined by `cluster.scale()`. `cores` defines how many cores should be reserved. `processes` sets the number of workers in one job.
+The worker jobs are reserved inside Python code. Ideally each job should fill one node. The number of jobs is defined by `cluster.scale()`. `cores` defines how many cores should be reserved. `processes` sets the number of workers in one job. The below example gives each worker one core.
 
 ```
 cluster = SLURMCluster(
