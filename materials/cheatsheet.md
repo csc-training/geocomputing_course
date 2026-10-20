@@ -84,7 +84,7 @@ Process to edit a file in vi:
 
 ## File transfer
 
-* `scp <file name> <username@roihu-cpu.csc.fi:/scratch/project_2020458/dir_name>` - copy a file from current computer to Roihu
+* `scp <file name> <username@roihu-cpu.csc.fi:/scratch/project_200XXXX/dir_name>` - copy a file from current computer to Roihu
 * `wget <some-url>` or  `curl <some-url>` - get a file from the internet
 
 ## CSC modules
